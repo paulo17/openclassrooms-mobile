@@ -15,13 +15,22 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kYs-GP-dxM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <color key="barTintColor" red="0.9529411792755127" green="0.58431375026702881" blue="0.22352941334247589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <navigationItem id="gOz-8M-kVF"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-358.5" y="30.5"/>
+            <point key="canvasLocation" x="206.5" y="2.5"/>
         </scene>
         <!--Program View Controller-->
         <scene sceneID="pAJ-9m-ceX">
@@ -40,7 +49,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PgI-Oa-jW8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-358.5" y="821.5"/>
+            <point key="canvasLocation" x="661.5" y="817.5"/>
         </scene>
         <!--Category View Controller-->
         <scene sceneID="jcc-SU-jpt">
@@ -59,7 +68,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dVa-7K-nER" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130.5" y="30.5"/>
+            <point key="canvasLocation" x="-281.5" y="817.5"/>
         </scene>
         <!--Objective View Controller-->
         <scene sceneID="H4s-6Z-3fw">
@@ -78,7 +87,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fEZ-Cv-5ra" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="618.5" y="30.5"/>
+            <point key="canvasLocation" x="206.5" y="817.5"/>
         </scene>
     </scenes>
 </document>

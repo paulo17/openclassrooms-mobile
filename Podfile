@@ -6,5 +6,6 @@
 target 'Openclassroom' do
 pod 'Fabric'
 pod 'Crashlytics'
+pod 'BWWalkthrough'
 end
 

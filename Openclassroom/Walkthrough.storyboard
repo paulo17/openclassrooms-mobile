@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Walkthrough View Controller-->
+        <scene sceneID="VTW-Yj-0ga">
+            <objects>
+                <viewController storyboardIdentifier="walkthrough_master" id="R6f-J0-OkJ" customClass="BWWalkthroughViewController" customModule="BWWalkthrough" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="T0W-h7-M5S"/>
+                        <viewControllerLayoutGuide type="bottom" id="8cg-TR-BpX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iZ6-fS-hUH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tEh-m8-PA2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-185.5" y="458.5"/>
+        </scene>
+        <!--Walkthrough Page View Controller-->
+        <scene sceneID="wgY-uP-MNV">
+            <objects>
+                <viewController storyboardIdentifier="walkthrough1" id="wAf-Ax-Wgr" customClass="BWWalkthroughPageViewController" customModule="BWWalkthrough" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bY4-mI-QfU"/>
+                        <viewControllerLayoutGuide type="bottom" id="eNN-SA-cep"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gtJ-JR-max">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.9529411793" green="0.58431375029999999" blue="0.22352941330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OpX-so-7pF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="256.5" y="458.5"/>
+        </scene>
+        <!--Walkthrough Page View Controller-->
+        <scene sceneID="FYB-uY-m3k">
+            <objects>
+                <viewController storyboardIdentifier="walkthrough2" id="x5M-XZ-hAh" customClass="BWWalkthroughPageViewController" customModule="BWWalkthrough" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="B6I-Ad-xcd"/>
+                        <viewControllerLayoutGuide type="bottom" id="bNB-1k-bcf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Lfr-UM-8Kd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.61568627450000002" blue="0.6705882353" alpha="0.5" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rku-xP-mhn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="701.5" y="458.5"/>
+        </scene>
+        <!--Walkthrough Page View Controller-->
+        <scene sceneID="ykS-So-GfJ">
+            <objects>
+                <viewController storyboardIdentifier="walkthrough3" id="2So-ui-fvv" customClass="BWWalkthroughPageViewController" customModule="BWWalkthrough" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aGz-iw-5nu"/>
+                        <viewControllerLayoutGuide type="bottom" id="0mN-ed-Pzh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yy4-ee-iS5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.33429418100000002" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bgD-2R-oJf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1149.5" y="458.5"/>
+        </scene>
+    </scenes>
+</document>

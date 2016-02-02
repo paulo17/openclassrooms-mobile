@@ -1,13 +1,16 @@
 PODS:
+  - BWWalkthrough (1.0.1)
   - Crashlytics (3.6.0):
     - Fabric (~> 1.6.3)
   - Fabric (1.6.4)
 
 DEPENDENCIES:
+  - BWWalkthrough
   - Crashlytics
   - Fabric
 
 SPEC CHECKSUMS:
+  BWWalkthrough: 760b70d2a1b3f970a520806b771aa3f787fdc4cf
   Crashlytics: e4e8d02914f2608fbc7bf42b1a7af838b0db67a2
   Fabric: ed41fd62173c6bdea24ab02c9d7707161eabb750
 
