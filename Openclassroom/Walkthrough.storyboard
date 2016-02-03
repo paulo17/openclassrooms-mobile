@@ -15,9 +15,21 @@
                     <view key="view" contentMode="scaleToFill" id="iZ6-fS-hUH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="fzE-am-17g">
+                                <rect key="frame" x="168" y="315" width="39" height="37"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fzE-am-17g" firstAttribute="centerY" secondItem="iZ6-fS-hUH" secondAttribute="centerY" id="LTR-Y5-VXO"/>
+                            <constraint firstItem="fzE-am-17g" firstAttribute="centerX" secondItem="iZ6-fS-hUH" secondAttribute="centerX" id="Lfu-bB-V8B"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="pageControl" destination="fzE-am-17g" id="eJa-Bj-vP1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tEh-m8-PA2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
