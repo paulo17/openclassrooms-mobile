@@ -55,15 +55,12 @@ class ViewController: UIViewController, BWWalkthroughViewControllerDelegate {
     // MARK: - Walkthrough delegate
     
     func walkthroughPageDidChange(pageNumber: Int) {
-        if(pageNumber == 2) {
-            if let closeButton = walkthroughMaster.closeButton {
+        if let closeButton = walkthroughMaster.closeButton {
+            if pageNumber == 2 {
                 closeButton.hidden = true
-            }
-        } else {
-            if let closeButton = walkthroughMaster.closeButton {
+            } else {
                 closeButton.hidden = false
             }
-            
         }
     }
     
