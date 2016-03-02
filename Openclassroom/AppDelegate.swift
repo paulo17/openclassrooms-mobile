@@ -16,14 +16,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
+    let app_mode = NSBundle.mainBundle().objectForInfoDictionaryKey("App Mode") as! String
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
         Fabric.with([Crashlytics.self])
         
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        presentWalkthrough()
         
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         UIStatusBarStyle.LightContent
         
         return true
@@ -49,6 +51,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    // MARK - Custom function
+    
+    func presentWalkthrough() {
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        
+        if(!userDefaults.boolForKey("walkthroughClosed") || app_mode == "DEV") {
+            if let window = window {
+                window.rootViewController = WalkthroughViewController()
+            }
+        }
     }
     
     
