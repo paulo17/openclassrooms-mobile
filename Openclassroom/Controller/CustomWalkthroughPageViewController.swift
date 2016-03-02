@@ -9,7 +9,7 @@
 import UIKit
 import BWWalkthrough
 
-class CustomWalkthroughPageViewController: UIViewController, BWWalkthroughPage {
+class CustomWalkthroughPageViewController: UIViewController {
     
     @IBOutlet weak var letsgo: UIButton!
     
@@ -20,14 +20,13 @@ class CustomWalkthroughPageViewController: UIViewController, BWWalkthroughPage {
         letsgo.layer.cornerRadius = 25
         letsgo.layer.borderWidth = 1
         letsgo.layer.borderColor = UIColor.whiteColor().CGColor
-        
     }
     
-    // MARK: BWWalkThroughPage protocol
-    
-    func walkthroughDidScroll(position: CGFloat, offset: CGFloat) {
+    @IBAction func launchApp(sender: AnyObject) {
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let mainViewController = mainStoryboard.instantiateViewControllerWithIdentifier("mainViewController") as! ViewController
         
+        self.presentViewController(mainViewController, animated: false, completion: nil)
     }
-    
     
 }

@@ -13,6 +13,7 @@ import BWWalkthrough
 class ViewController: UIViewController, BWWalkthroughViewControllerDelegate {
     
     lazy var walkthroughMaster: BWWalkthroughViewController = BWWalkthroughViewController()
+    let app_mode = NSBundle.mainBundle().objectForInfoDictionaryKey("App Mode") as! String
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +25,14 @@ class ViewController: UIViewController, BWWalkthroughViewControllerDelegate {
     }
     
     override func viewDidAppear(animated: Bool) {
-        showWalkthrough()
+        super.viewDidAppear(animated)
+        
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        
+        if(!userDefaults.boolForKey("walkthroughClosed") || app_mode == "DEV") {
+            showWalkthrough()
+        }
+        
     }
     
     func showWalkthrough() {
@@ -47,7 +55,6 @@ class ViewController: UIViewController, BWWalkthroughViewControllerDelegate {
     // MARK: - Walkthrough delegate
     
     func walkthroughPageDidChange(pageNumber: Int) {
-        print("Current Page \(pageNumber)")
         if(pageNumber == 2) {
             if let closeButton = walkthroughMaster.closeButton {
                 closeButton.hidden = true
@@ -61,7 +68,15 @@ class ViewController: UIViewController, BWWalkthroughViewControllerDelegate {
     }
     
     func walkthroughCloseButtonPressed() {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let mainViewController = mainStoryboard.instantiateViewControllerWithIdentifier("mainViewController") as! ViewController
+        
+        self.presentViewController(mainViewController, animated: false, completion: nil)
+        
+        // set walkthroughClosed key to true for prevent review
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        userDefaults.setBool(true, forKey: "walkthroughClosed")
+        userDefaults.synchronize()
     }
     
 }

@@ -318,6 +318,9 @@ virtuel. Défnissez votre ojbectif, vos jours de travail, et votre temps de trav
                                 <state key="normal" title="C’EST PARTI">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="launchApp:" destination="2So-ui-fvv" eventType="touchUpInside" id="d07-E4-fVK"/>
+                                </connections>
                             </button>
                         </subviews>
                         <constraints>
