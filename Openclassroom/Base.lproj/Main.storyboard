@@ -30,7 +30,97 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="206.5" y="2.5"/>
+            <point key="canvasLocation" x="-269.5" y="6.5"/>
+        </scene>
+        <!--Sign In View Controller-->
+        <scene sceneID="cZD-W0-s4y">
+            <objects>
+                <viewController id="vSn-kB-Rad" customClass="SignInViewController" customModule="Openclassroom" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XYd-uS-lSN"/>
+                        <viewControllerLayoutGuide type="bottom" id="MPl-q1-fiE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QMm-Hh-Ow4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sign Background" translatesAutoresizingMaskIntoConstraints="NO" id="Gyq-d3-but">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Gyq-d3-but" firstAttribute="top" secondItem="QMm-Hh-Ow4" secondAttribute="top" id="5D0-E7-QmT"/>
+                            <constraint firstItem="MPl-q1-fiE" firstAttribute="top" secondItem="Gyq-d3-but" secondAttribute="bottom" id="Mn3-SM-Fol"/>
+                            <constraint firstItem="Gyq-d3-but" firstAttribute="leading" secondItem="QMm-Hh-Ow4" secondAttribute="leading" id="NmF-Lc-jKI"/>
+                            <constraint firstAttribute="trailing" secondItem="Gyq-d3-but" secondAttribute="trailing" id="tav-cu-32O"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KWo-AP-xz3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="206.5" y="6.5"/>
+        </scene>
+        <!--Register View Controller-->
+        <scene sceneID="mkG-ES-VXa">
+            <objects>
+                <viewController id="NCy-Xn-o2D" customClass="RegisterViewController" customModule="Openclassroom" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mG9-29-Ywo"/>
+                        <viewControllerLayoutGuide type="bottom" id="HX7-DG-33i"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1gi-ho-5O2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sign Background" translatesAutoresizingMaskIntoConstraints="NO" id="nRE-Sn-Peu">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nRE-Sn-Peu" firstAttribute="leading" secondItem="1gi-ho-5O2" secondAttribute="leading" id="41o-gc-87a"/>
+                            <constraint firstItem="HX7-DG-33i" firstAttribute="top" secondItem="nRE-Sn-Peu" secondAttribute="bottom" id="9bJ-9C-r3u"/>
+                            <constraint firstAttribute="trailing" secondItem="nRE-Sn-Peu" secondAttribute="trailing" id="dpq-CQ-E0x"/>
+                            <constraint firstItem="nRE-Sn-Peu" firstAttribute="top" secondItem="1gi-ho-5O2" secondAttribute="top" id="kFw-YG-ukD"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZMp-0J-cgI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="661.5" y="6.5"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="cDs-9m-XGH">
+            <objects>
+                <viewController id="sfH-8S-NlX" customClass="LoginViewController" customModule="Openclassroom" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Qj0-3U-UXx"/>
+                        <viewControllerLayoutGuide type="bottom" id="ju1-v2-0Dn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4wK-aS-NYJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sign Background" translatesAutoresizingMaskIntoConstraints="NO" id="dpj-01-mor">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dpj-01-mor" firstAttribute="leading" secondItem="4wK-aS-NYJ" secondAttribute="leading" id="02z-A0-Qqo"/>
+                            <constraint firstAttribute="trailing" secondItem="dpj-01-mor" secondAttribute="trailing" id="IZw-WB-K2x"/>
+                            <constraint firstItem="dpj-01-mor" firstAttribute="top" secondItem="4wK-aS-NYJ" secondAttribute="top" id="Xae-2W-Yor"/>
+                            <constraint firstItem="ju1-v2-0Dn" firstAttribute="top" secondItem="dpj-01-mor" secondAttribute="bottom" id="tfq-f2-le4"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a2i-aJ-PjE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1138.5" y="6.5"/>
         </scene>
         <!--Program View Controller-->
         <scene sceneID="pAJ-9m-ceX">
@@ -90,4 +180,7 @@
             <point key="canvasLocation" x="206.5" y="817.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Sign Background" width="750" height="1334"/>
+    </resources>
 </document>

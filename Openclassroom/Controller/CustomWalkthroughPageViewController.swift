@@ -26,7 +26,12 @@ class CustomWalkthroughPageViewController: UIViewController {
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let mainViewController = mainStoryboard.instantiateViewControllerWithIdentifier("mainViewController") as! ViewController
         
-        self.presentViewController(mainViewController, animated: false, completion: nil)
+        redirect(from: self, to: mainViewController)
+        
+        // set walkthroughClosed key to true for prevent review
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        userDefaults.setBool(true, forKey: "walkthroughClosed")
+        userDefaults.synchronize()
     }
     
 }
