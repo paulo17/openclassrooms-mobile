@@ -18,6 +18,7 @@
 		6B4BEE7B1C8723A8006D2862 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4BEE7A1C8723A8006D2862 /* RegisterViewController.swift */; };
 		6B4BEE7D1C8723C2006D2862 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4BEE7C1C8723C2006D2862 /* LoginViewController.swift */; };
 		6B4BEE7F1C8723E7006D2862 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4BEE7E1C8723E7006D2862 /* SignInViewController.swift */; };
+		6B4BEE811C87434A006D2862 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4BEE801C87434A006D2862 /* MainViewController.swift */; };
 		6BEA8DD51C60D84800EEA897 /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEA8DD41C60D84800EEA897 /* WalkthroughViewController.swift */; };
 		6BEAA7191C5FBCB80043BEA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEAA7181C5FBCB80043BEA2 /* ViewController.swift */; };
 		6BF23A9C1C5FAE94001B1006 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF23A9B1C5FAE94001B1006 /* AppDelegate.swift */; };
@@ -39,6 +40,7 @@
 		6B4BEE7A1C8723A8006D2862 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		6B4BEE7C1C8723C2006D2862 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6B4BEE7E1C8723E7006D2862 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		6B4BEE801C87434A006D2862 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		6BEA8DD41C60D84800EEA897 /* WalkthroughViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
 		6BEAA7181C5FBCB80043BEA2 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6BF23A981C5FAE94001B1006 /* Openclassroom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Openclassroom.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +111,7 @@
 				6B36B32B1C60BD2500989167 /* ProgramViewController.swift */,
 				6BEA8DD41C60D84800EEA897 /* WalkthroughViewController.swift */,
 				6B4BEE6F1C86FA96006D2862 /* CustomWalkthroughPageViewController.swift */,
+				6B4BEE801C87434A006D2862 /* MainViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				TargetAttributes = {
 					6BF23A971C5FAE94001B1006 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 99D895TFL2;
 					};
 				};
 			};
@@ -308,6 +312,7 @@
 				6B36B32C1C60BD2500989167 /* ProgramViewController.swift in Sources */,
 				6B4BEE7F1C8723E7006D2862 /* SignInViewController.swift in Sources */,
 				6B4BEE721C872195006D2862 /* Redirect.swift in Sources */,
+				6B4BEE811C87434A006D2862 /* MainViewController.swift in Sources */,
 				6BEA8DD51C60D84800EEA897 /* WalkthroughViewController.swift in Sources */,
 				6B4BEE741C872246006D2862 /* Font.swift in Sources */,
 				6B36B32A1C60BCF000989167 /* ObjectiveViewController.swift in Sources */,
@@ -425,6 +430,7 @@
 			baseConfigurationReference = 9FF964DDE5E34DC1072B06D9 /* Pods-Openclassroom.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INFOPLIST_FILE = Openclassroom/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -439,6 +445,7 @@
 			baseConfigurationReference = 7146E8AB1785EFBD25AE1D71 /* Pods-Openclassroom.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INFOPLIST_FILE = Openclassroom/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

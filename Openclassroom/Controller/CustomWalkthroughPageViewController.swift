@@ -24,7 +24,7 @@ class CustomWalkthroughPageViewController: UIViewController {
     
     @IBAction func launchApp(sender: AnyObject) {
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let mainViewController = mainStoryboard.instantiateViewControllerWithIdentifier("mainViewController") as! ViewController
+        let mainViewController = mainStoryboard.instantiateViewControllerWithIdentifier("mainViewController") as! MainViewController
         
         redirect(from: self, to: mainViewController)
         
