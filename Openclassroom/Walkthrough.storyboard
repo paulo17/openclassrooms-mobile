@@ -27,6 +27,9 @@
                                 <rect key="frame" x="137" y="621" width="101" height="26"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                 <state key="normal" title="Passer cette étape"/>
+                                <connections>
+                                    <action selector="close:" destination="R6f-J0-OkJ" eventType="touchUpInside" id="ohG-kG-bim"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.9529411793" green="0.58431375029999999" blue="0.22352941330000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -57,6 +60,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="closeButton" destination="9Dj-C0-yji" id="ZbN-IG-wAn"/>
                         <outlet property="pageControl" destination="mRP-gq-ETD" id="uvP-du-xdq"/>
                     </connections>
                 </viewController>
@@ -92,6 +96,10 @@ virtuel. Défnissez votre ojbectif, vos jours de travail, et votre temps de trav
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ÉTAPE 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQq-fa-zTS">
                                         <rect key="frame" x="93" y="72" width="129" height="39"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="39" id="Ypd-R8-2rK"/>
+                                            <constraint firstAttribute="width" constant="129" id="iCN-Xk-lXq"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="32"/>
                                         <color key="textColor" red="0.9529411793" green="0.58431375029999999" blue="0.22352941330000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -179,6 +187,10 @@ virtuel. Défnissez votre ojbectif, vos jours de travail, et votre temps de trav
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ÉTAPE 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PgX-qO-U6N">
                                         <rect key="frame" x="90" y="30" width="135" height="39"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="135" id="2rW-YX-mQa"/>
+                                            <constraint firstAttribute="height" constant="39" id="cmv-9l-bs8"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="32"/>
                                         <color key="textColor" red="0.9529411793" green="0.58431375029999999" blue="0.22352941330000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -242,10 +254,10 @@ virtuel. Défnissez votre ojbectif, vos jours de travail, et votre temps de trav
             </objects>
             <point key="canvasLocation" x="701.5" y="458.5"/>
         </scene>
-        <!--Walkthrough Page View Controller-->
+        <!--Custom Walkthrough Page View Controller-->
         <scene sceneID="ykS-So-GfJ">
             <objects>
-                <viewController storyboardIdentifier="walkthrough3" id="2So-ui-fvv" customClass="BWWalkthroughPageViewController" customModule="BWWalkthrough" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="walkthrough3" id="2So-ui-fvv" customClass="CustomWalkthroughPageViewController" customModule="Openclassroom" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aGz-iw-5nu"/>
                         <viewControllerLayoutGuide type="bottom" id="0mN-ed-Pzh"/>
@@ -254,7 +266,7 @@ virtuel. Défnissez votre ojbectif, vos jours de travail, et votre temps de trav
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="SeT-SU-Xnu">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="SeT-SU-Xnu">
                                 <rect key="frame" x="-4" y="0.0" width="383" height="667"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mav-hu-QhH">
@@ -266,18 +278,22 @@ virtuel. Défnissez votre ojbectif, vos jours de travail, et votre temps de trav
                                         <color key="textColor" red="0.33725491169999999" green="0.33725491169999999" blue="0.33725491169999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ÉTAPE 3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KgF-qi-eFN">
-                                        <rect key="frame" x="92" y="30" width="131" height="39"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="32"/>
-                                        <color key="textColor" red="0.9529411793" green="0.58431375029999999" blue="0.22352941330000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="programme-iphone" translatesAutoresizingMaskIntoConstraints="NO" id="pur-e0-Et3">
                                         <rect key="frame" x="0.0" y="183" width="315" height="274"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="274" id="sj4-1t-CHu"/>
                                         </constraints>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ÉTAPE 3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KgF-qi-eFN">
+                                        <rect key="frame" x="92" y="30" width="131" height="39"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="39" id="tdr-N5-yep"/>
+                                            <constraint firstAttribute="width" constant="131" id="tyO-om-U93"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="32"/>
+                                        <color key="textColor" red="0.9529411793" green="0.58431375029999999" blue="0.22352941330000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -293,8 +309,11 @@ virtuel. Défnissez votre ojbectif, vos jours de travail, et votre temps de trav
                                     <constraint firstItem="KgF-qi-eFN" firstAttribute="leading" secondItem="mav-hu-QhH" secondAttribute="leading" constant="92" id="uRF-1g-NJd"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q53-mz-ppY">
-                                <rect key="frame" x="122" y="590" width="130" height="32"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q53-mz-ppY">
+                                <rect key="frame" x="60" y="587" width="255" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="W3J-Hh-hLp"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
                                 <state key="normal" title="C’EST PARTI">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -304,23 +323,31 @@ virtuel. Défnissez votre ojbectif, vos jours de travail, et votre temps de trav
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="mav-hu-QhH" secondAttribute="trailing" constant="30" id="2sH-we-YLx"/>
                             <constraint firstItem="0mN-ed-Pzh" firstAttribute="top" secondItem="mav-hu-QhH" secondAttribute="bottom" constant="145" id="5hi-Z2-rtg"/>
-                            <constraint firstItem="0mN-ed-Pzh" firstAttribute="top" secondItem="SeT-SU-Xnu" secondAttribute="bottom" id="Cr6-L4-E29"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="q53-mz-ppY" secondAttribute="trailing" constant="60" id="DRV-1H-qUh"/>
                             <constraint firstItem="mav-hu-QhH" firstAttribute="top" secondItem="aGz-iw-5nu" secondAttribute="bottom" constant="45" id="EoR-BV-On4"/>
+                            <constraint firstItem="0mN-ed-Pzh" firstAttribute="top" secondItem="q53-mz-ppY" secondAttribute="bottom" constant="30" id="Etl-fR-pmB"/>
+                            <constraint firstItem="q53-mz-ppY" firstAttribute="leading" secondItem="yy4-ee-iS5" secondAttribute="leadingMargin" constant="60" id="QFR-eX-vzx"/>
+                            <constraint firstItem="q53-mz-ppY" firstAttribute="top" secondItem="mav-hu-QhH" secondAttribute="bottom" constant="66" id="TZK-fO-xaV"/>
                             <constraint firstItem="mav-hu-QhH" firstAttribute="leading" secondItem="yy4-ee-iS5" secondAttribute="leadingMargin" constant="30" id="USQ-gz-e1l"/>
-                            <constraint firstItem="SeT-SU-Xnu" firstAttribute="leading" secondItem="yy4-ee-iS5" secondAttribute="leadingMargin" constant="-20" id="aUu-yG-cP9"/>
                             <constraint firstItem="mav-hu-QhH" firstAttribute="leading" secondItem="yy4-ee-iS5" secondAttribute="leading" constant="30" id="dit-3u-mmA"/>
+                            <constraint firstAttribute="trailing" secondItem="q53-mz-ppY" secondAttribute="trailing" constant="60" id="eh6-Iv-GHN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mav-hu-QhH" secondAttribute="trailing" constant="30" id="hIC-BE-x1j"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="SeT-SU-Xnu" secondAttribute="trailing" constant="-20" id="nih-ac-QMt"/>
-                            <constraint firstItem="SeT-SU-Xnu" firstAttribute="top" secondItem="yy4-ee-iS5" secondAttribute="topMargin" id="ocU-mW-qvC"/>
+                            <constraint firstItem="q53-mz-ppY" firstAttribute="leading" secondItem="yy4-ee-iS5" secondAttribute="leading" constant="60" id="ilJ-c0-xQ6"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="USQ-gz-e1l"/>
                                 <exclude reference="hIC-BE-x1j"/>
+                                <exclude reference="DRV-1H-qUh"/>
+                                <exclude reference="QFR-eX-vzx"/>
+                                <exclude reference="TZK-fO-xaV"/>
                             </mask>
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="letsgo" destination="q53-mz-ppY" id="Pwa-rY-pQ3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bgD-2R-oJf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
