@@ -108,26 +108,6 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U7f-Cg-QOt">
-                                <rect key="frame" x="37" y="418" width="300" height="44"/>
-                                <color key="backgroundColor" red="0.74901962280273438" green="0.74901962280273438" blue="0.76470589637756348" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="AWt-pB-774"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="MPw-kN-wiR"/>
-                                    <constraint firstAttribute="width" constant="300" id="oYg-SB-ZCG"/>
-                                    <constraint firstAttribute="height" constant="44" id="rA0-tU-DVc"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                                <state key="normal" title="Email">
-                                    <color key="titleColor" red="0.33725491166114807" green="0.33725491166114807" blue="0.33725491166114807" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="AWt-pB-774"/>
-                                        <exclude reference="MPw-kN-wiR"/>
-                                    </mask>
-                                </variation>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p6I-0c-Q94">
                                 <rect key="frame" x="37" y="554" width="300" height="20"/>
                                 <constraints>
@@ -142,8 +122,8 @@
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="jfC-G5-xAn"/>
                                         <exclude reference="1tB-YL-cSa"/>
+                                        <exclude reference="jfC-G5-xAn"/>
                                     </mask>
                                 </variation>
                             </button>
@@ -191,6 +171,26 @@
                                     </mask>
                                 </variation>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U7f-Cg-QOt">
+                                <rect key="frame" x="37" y="416" width="300" height="44"/>
+                                <color key="backgroundColor" red="0.74901962280273438" green="0.74901962280273438" blue="0.76470589637756348" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="AWt-pB-774"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="MPw-kN-wiR"/>
+                                    <constraint firstAttribute="width" constant="300" id="oYg-SB-ZCG"/>
+                                    <constraint firstAttribute="height" constant="44" id="rA0-tU-DVc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                <state key="normal" title="Email">
+                                    <color key="titleColor" red="0.33725491166114807" green="0.33725491166114807" blue="0.33725491166114807" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="AWt-pB-774"/>
+                                        <exclude reference="MPw-kN-wiR"/>
+                                    </mask>
+                                </variation>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -257,14 +257,58 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sign Background" translatesAutoresizingMaskIntoConstraints="NO" id="nRE-Sn-Peu">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qLw-cA-j0K">
+                                <rect key="frame" x="38" y="147" width="299" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirmer le mot de passe" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CCT-7C-UyO">
+                                <rect key="frame" x="37" y="267" width="301" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2J-04-dlq">
+                                <rect key="frame" x="37" y="406" width="301" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="ZgO-II-5dZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                <state key="normal" title="S’INSCRIRE">
+                                    <color key="titleColor" red="0.9529411792755127" green="0.58431375026702881" blue="0.22352941334247589" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mot de passe" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qei-uI-bTy">
+                                <rect key="frame" x="37" y="207" width="301" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="qei-uI-bTy" firstAttribute="leading" secondItem="1gi-ho-5O2" secondAttribute="leading" constant="37" id="0oq-u7-drj"/>
+                            <constraint firstItem="qLw-cA-j0K" firstAttribute="top" secondItem="mG9-29-Ywo" secondAttribute="bottom" constant="127" id="2ue-EB-byD"/>
                             <constraint firstItem="nRE-Sn-Peu" firstAttribute="leading" secondItem="1gi-ho-5O2" secondAttribute="leading" id="41o-gc-87a"/>
+                            <constraint firstItem="qLw-cA-j0K" firstAttribute="top" secondItem="mG9-29-Ywo" secondAttribute="bottom" constant="127" id="81N-RC-bOz"/>
                             <constraint firstItem="HX7-DG-33i" firstAttribute="top" secondItem="nRE-Sn-Peu" secondAttribute="bottom" id="9bJ-9C-r3u"/>
+                            <constraint firstAttribute="trailing" secondItem="i2J-04-dlq" secondAttribute="trailing" constant="37" id="EgI-2B-nU3"/>
+                            <constraint firstItem="CCT-7C-UyO" firstAttribute="leading" secondItem="1gi-ho-5O2" secondAttribute="leading" constant="37" id="EvH-G1-5ee"/>
+                            <constraint firstAttribute="trailing" secondItem="CCT-7C-UyO" secondAttribute="trailing" constant="37" id="RIy-Zw-id5"/>
+                            <constraint firstItem="qei-uI-bTy" firstAttribute="top" secondItem="qLw-cA-j0K" secondAttribute="bottom" constant="30" id="Tto-ga-akg"/>
+                            <constraint firstAttribute="trailing" secondItem="qei-uI-bTy" secondAttribute="trailing" constant="37" id="Xf9-xW-vPY"/>
+                            <constraint firstAttribute="trailing" secondItem="qLw-cA-j0K" secondAttribute="trailing" constant="38" id="ZII-QT-Nye"/>
+                            <constraint firstItem="i2J-04-dlq" firstAttribute="leading" secondItem="1gi-ho-5O2" secondAttribute="leading" constant="37" id="bT1-g4-vWb"/>
                             <constraint firstAttribute="trailing" secondItem="nRE-Sn-Peu" secondAttribute="trailing" id="dpq-CQ-E0x"/>
+                            <constraint firstItem="qLw-cA-j0K" firstAttribute="leading" secondItem="1gi-ho-5O2" secondAttribute="leading" constant="38" id="h6R-2e-5Rx"/>
                             <constraint firstItem="nRE-Sn-Peu" firstAttribute="top" secondItem="1gi-ho-5O2" secondAttribute="top" id="kFw-YG-ukD"/>
+                            <constraint firstItem="CCT-7C-UyO" firstAttribute="top" secondItem="qei-uI-bTy" secondAttribute="bottom" constant="30" id="mTq-k4-r1g"/>
+                            <constraint firstItem="i2J-04-dlq" firstAttribute="top" secondItem="CCT-7C-UyO" secondAttribute="bottom" constant="109" id="vxv-N1-7me"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="81N-RC-bOz"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
