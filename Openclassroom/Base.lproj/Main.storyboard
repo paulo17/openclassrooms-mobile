@@ -266,6 +266,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sign Background" translatesAutoresizingMaskIntoConstraints="NO" id="nRE-Sn-Peu">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qLw-cA-j0K">
                                 <rect key="frame" x="37" y="147" width="301" height="30"/>
                                 <constraints>
@@ -325,10 +328,10 @@
                                 <state key="normal" title="Annuler">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="cancelAction:" destination="NCy-Xn-o2D" eventType="touchUpInside" id="ATk-dd-bHA"/>
+                                </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sign Background" translatesAutoresizingMaskIntoConstraints="NO" id="nRE-Sn-Peu">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -359,6 +362,12 @@
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="qLw-cA-j0K" id="1ad-cl-5Kw"/>
+                        <outlet property="passwordTextField" destination="qei-uI-bTy" id="DbG-ol-AxQ"/>
+                        <outlet property="registerButton" destination="i2J-04-dlq" id="oQw-pj-CRW"/>
+                        <outlet property="repeatTextField" destination="CCT-7C-UyO" id="oDd-Qq-BKD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZMp-0J-cgI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -418,6 +427,9 @@
                                 <state key="normal" title="Annuler">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="cancelAction:" destination="sfH-8S-NlX" eventType="touchUpInside" id="J7m-Cz-HQv"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -446,6 +458,11 @@
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="0HU-dc-mVG" id="KkA-Gi-tIc"/>
+                        <outlet property="loginButton" destination="0oq-qU-4gt" id="xvm-hy-StO"/>
+                        <outlet property="passwordTextField" destination="Of6-WL-fD4" id="0L5-BP-rLQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a2i-aJ-PjE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
