@@ -24,9 +24,9 @@ class CustomWalkthroughPageViewController: UIViewController {
     
     @IBAction func launchApp(sender: AnyObject) {
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let mainViewController = mainStoryboard.instantiateViewControllerWithIdentifier("mainViewController") as! MainViewController
+        let signInViewController = mainStoryboard.instantiateViewControllerWithIdentifier("signIn") as! SignInViewController
         
-        redirect(from: self, to: mainViewController)
+        redirect(from: self, to: signInViewController)
         
         // set walkthroughClosed key to true for prevent review
         let userDefaults = NSUserDefaults.standardUserDefaults()

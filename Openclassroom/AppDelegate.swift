@@ -19,11 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let app_mode = NSBundle.mainBundle().objectForInfoDictionaryKey("App Mode") as! String
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
         
         Fabric.with([Crashlytics.self, Answers.self])
         
         presentWalkthrough()
+        isLoggedIn()
         
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         UIStatusBarStyle.LightContent
@@ -63,6 +63,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 window.rootViewController = WalkthroughViewController()
             }
         }
+    }
+    
+    func isLoggedIn() {
+        // TODO: check login user
+        /*if() {
+        if let window = window {
+        window.rootViewController = MainViewController()
+        }
+        }*/
     }
     
     
