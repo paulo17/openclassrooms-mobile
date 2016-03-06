@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B229B1F1C8C896C0079990A /* OCNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B229B1E1C8C896C0079990A /* OCNavigationBar.swift */; };
 		6B36B3281C60BC7400989167 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B36B3271C60BC7400989167 /* CategoryViewController.swift */; };
 		6B36B32A1C60BCF000989167 /* ObjectiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B36B3291C60BCF000989167 /* ObjectiveViewController.swift */; };
 		6B36B32C1C60BD2500989167 /* ProgramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B36B32B1C60BD2500989167 /* ProgramViewController.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B229B1E1C8C896C0079990A /* OCNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCNavigationBar.swift; sourceTree = "<group>"; };
 		6B36B3271C60BC7400989167 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		6B36B3291C60BCF000989167 /* ObjectiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectiveViewController.swift; sourceTree = "<group>"; };
 		6B36B32B1C60BD2500989167 /* ProgramViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				6B4BEE751C87225C006D2862 /* UIColorFromRGBA.swift */,
 				6B73BAFF1C8B221300BCE574 /* OCButton.swift */,
 				6B73BB011C8B239D00BCE574 /* OCTextField.swift */,
+				6B229B1E1C8C896C0079990A /* OCNavigationBar.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -150,8 +153,8 @@
 		6BF23A9A1C5FAE94001B1006 /* Openclassroom */ = {
 			isa = PBXGroup;
 			children = (
-				6B36B3251C60B6DA00989167 /* Helper */,
 				6B36B3261C60B6DA00989167 /* View */,
+				6B36B3251C60B6DA00989167 /* Helper */,
 				6BEAA7161C5FB9D30043BEA2 /* Controller */,
 				6BEAA7171C5FB9D30043BEA2 /* Model */,
 				6BF23A9B1C5FAE94001B1006 /* AppDelegate.swift */,
@@ -317,6 +320,7 @@
 				6B4BEE7B1C8723A8006D2862 /* RegisterViewController.swift in Sources */,
 				6B36B32C1C60BD2500989167 /* ProgramViewController.swift in Sources */,
 				6B4BEE7F1C8723E7006D2862 /* SignInViewController.swift in Sources */,
+				6B229B1F1C8C896C0079990A /* OCNavigationBar.swift in Sources */,
 				6B4BEE721C872195006D2862 /* Redirect.swift in Sources */,
 				6B73BB021C8B239D00BCE574 /* OCTextField.swift in Sources */,
 				6B4BEE811C87434A006D2862 /* MainViewController.swift in Sources */,
