@@ -688,7 +688,7 @@
         <image name="Background" width="750" height="1334"/>
         <image name="Line" width="112" height="1"/>
         <image name="Sign Background" width="750" height="1334"/>
-        <image name="account" width="39" height="43"/>
-        <image name="calendar" width="42" height="42"/>
+        <image name="account" width="22" height="22"/>
+        <image name="calendar" width="22" height="22"/>
     </resources>
 </document>
