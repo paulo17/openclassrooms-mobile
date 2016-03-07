@@ -18,11 +18,9 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        initializeView()
     }
     
-    func initializeView() {
+    override func viewWillAppear(animated: Bool) {
         navigationBar.OCDefaultNavigationBar()
         startButton.OCdefaultButton(UIColor.whiteColor())
     }
