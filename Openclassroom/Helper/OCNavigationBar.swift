@@ -14,5 +14,14 @@ extension UINavigationBar {
         self.translucent = true
         self.shadowImage = UIImage()
         self.tintColor = UIColor.whiteColor()
+        
+        if let navBarFont = UIFont(name: "SourceSansPro-Light", size: 16) {
+            let navBarAttributesDictionary: [String: AnyObject]?  = [
+                NSForegroundColorAttributeName: UIColorFromRGBA("FFFFFF", alpha: 1.0),
+                NSFontAttributeName: navBarFont
+            ]
+            self.titleTextAttributes = navBarAttributesDictionary
+        }
+        
     }
 }
