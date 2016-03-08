@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //presentWalkthrough()
         isLoggedIn()
         
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         UIStatusBarStyle.LightContent
         
