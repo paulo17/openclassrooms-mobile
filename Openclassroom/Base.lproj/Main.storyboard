@@ -550,14 +550,14 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="leconCell" id="5Dw-VX-ETD" customClass="LeconCollectionViewCell" customModule="Openclassroom" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="15" width="376" height="445"/>
+                                        <rect key="frame" x="0.0" y="15" width="376" height="444.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="376" height="445"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="444.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9XK-jc-ffg">
-                                                    <rect key="frame" x="30" y="19" width="316" height="407"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9XK-jc-ffg">
+                                                    <rect key="frame" x="30" y="23" width="316" height="407"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="video" translatesAutoresizingMaskIntoConstraints="NO" id="Z0V-6Q-LxZ">
                                                             <rect key="frame" x="125" y="175" width="65" height="65"/>
@@ -572,12 +572,6 @@
                                                                 </mask>
                                                             </variation>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 minutes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WXA-p6-8cV">
-                                                            <rect key="frame" x="117" y="59" width="83" height="20"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" red="0.74901962280273438" green="0.74901962280273438" blue="0.76470589637756348" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INTRODUCTION" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NCl-w6-yRb">
                                                             <rect key="frame" x="71" y="27" width="174" height="27"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
@@ -597,7 +591,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9YM-VS-Fri">
-                                                            <rect key="frame" x="85" y="359" width="146" height="40"/>
+                                                            <rect key="frame" x="85" y="358" width="146" height="40"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="40" id="bvS-hZ-YGi"/>
                                                             </constraints>
@@ -606,6 +600,12 @@
                                                                 <color key="titleColor" red="0.74901962280273438" green="0.74901962280273438" blue="0.76470589637756348" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                             </state>
                                                         </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 minutes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WXA-p6-8cV">
+                                                            <rect key="frame" x="116" y="58" width="84" height="20"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                            <color key="textColor" red="0.74901962280273438" green="0.74901962280273438" blue="0.76470589637756348" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
@@ -703,6 +703,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="navigationBar" destination="ewb-PV-4JM" id="BIW-lp-VvC"/>
+                        <outlet property="pageControl" destination="4Xk-wl-Iru" id="yvG-cF-NFh"/>
                         <outlet property="startButton" destination="Msl-be-LxR" id="9ca-L1-adW"/>
                         <outlet property="tasksCollectionView" destination="QeF-84-tz7" id="xKf-AQ-sH5"/>
                     </connections>
