@@ -34,7 +34,7 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func getStaticLecons() -> [Lecon] {
         var lecons: [Lecon] = [Lecon]()
         for leconData in Lecon.lecons {
-            let lecon = Lecon(title: leconData["title"]!)
+            let lecon = Lecon(title: leconData["title"] as! String, time: leconData["time"] as! Int)
             lecons.append(lecon)
         }
         
@@ -57,7 +57,9 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         pageControl.currentPage = indexPath.row // set current page control to current item index
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(cellIdentifier, forIndexPath: indexPath) as! LeconCell
+        
         cell.title.text = lecons[indexPath.row].title
+        cell.time.text = "\(lecons[indexPath.row].time) minutes"
         
         return cell
     }
