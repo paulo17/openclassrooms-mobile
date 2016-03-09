@@ -16,15 +16,31 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     @IBOutlet weak var pageControl: UIPageControl!
     
     private let cellIdentifier = "leconCell"
+    lazy var lecons: [Lecon] = [Lecon]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        pageControl.addTarget(self, action: "pageControlDidTouch", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        self.lecons = getStaticLecons()
     }
     
     override func viewWillAppear(animated: Bool) {
         navigationBar.OCDefaultNavigationBar()
         startButton.OCdefaultButton(UIColor.whiteColor())
     }
+    
+    func getStaticLecons() -> [Lecon] {
+        var lecons: [Lecon] = [Lecon]()
+        for leconData in Lecon.lecons {
+            let lecon = Lecon(title: leconData["title"]!)
+            lecons.append(lecon)
+        }
+        
+        return lecons
+    }
+    
     
     // MARK: - Collection view
     
@@ -33,20 +49,33 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        pageControl.numberOfPages = 4 // set page control number to the number of element in collection view
-        return 4
+        pageControl.numberOfPages = lecons.count // set page control number to the number of element in collection view
+        return lecons.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         pageControl.currentPage = indexPath.row // set current page control to current item index
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(cellIdentifier, forIndexPath: indexPath) as! LeconCollectionViewCell
+        cell.title.text = lecons[indexPath.row].title
         
         return cell
     }
     
+    // MARK: - Scroll view delegate
+    
     func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
         
     }
+    
+    func pageControlDidTouch() {
+        let pageWidth: CGFloat = tasksCollectionView.frame.size.width
+        let scrollTo: CGPoint  = CGPointMake(pageWidth * CGFloat(pageControl.currentPage), 0)
+        
+        tasksCollectionView.setContentOffset(scrollTo, animated: true)
+    }
+    
+    
+    
     
 }
