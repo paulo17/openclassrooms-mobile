@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIScrollViewDelegate {
+class MainViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var tasksCollectionView: UICollectionView!
@@ -21,8 +21,9 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tasksCollectionView.pagingEnabled = true
+        
         self.lecons = getStaticLecons()
-        pageControl.addTarget(self, action: "pageControlDidTouch", forControlEvents: UIControlEvents.TouchUpInside)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -61,18 +62,20 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         return cell
     }
     
+    // remove spacing between page of cell
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
+        return 0
+    }
+    
     // MARK: - Scroll view delegate
     
-    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
-        
-    }
-    
+    /*
     func pageControlDidTouch() {
-        let pageWidth: CGFloat = tasksCollectionView.frame.size.width
-        let scrollTo: CGPoint  = CGPointMake(pageWidth * CGFloat(pageControl.currentPage), 0)
-        
-        tasksCollectionView.setContentOffset(scrollTo, animated: true)
-    }
+    let pageWidth: CGFloat = tasksCollectionView.frame.size.width
+    let scrollTo: CGPoint  = CGPointMake(pageWidth * CGFloat(pageControl.currentPage), 0)
+    
+    tasksCollectionView.setContentOffset(scrollTo, animated: true)
+    }*/
     
     
     
