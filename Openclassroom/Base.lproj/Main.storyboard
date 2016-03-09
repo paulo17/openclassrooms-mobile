@@ -571,7 +571,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9XK-jc-ffg">
                                                     <rect key="frame" x="30" y="23" width="316" height="407"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="video" translatesAutoresizingMaskIntoConstraints="NO" id="Z0V-6Q-LxZ">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VideoIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Z0V-6Q-LxZ">
                                                             <rect key="frame" x="125" y="175" width="65" height="65"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="65" id="3Dh-Hf-qzY"/>
@@ -771,8 +771,8 @@
                                         <size key="customSize" width="376" height="444.5"/>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="mc0-sV-Y6a"/>
                                                 <exclude reference="gy7-vO-zAY"/>
+                                                <exclude reference="mc0-sV-Y6a"/>
                                                 <exclude reference="ptH-gk-e6r"/>
                                             </mask>
                                         </variation>
@@ -883,8 +883,8 @@
                                         <size key="customSize" width="376" height="444.5"/>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="WHS-Mh-84c"/>
                                                 <exclude reference="Hcd-Q9-0lX"/>
+                                                <exclude reference="WHS-Mh-84c"/>
                                                 <exclude reference="baa-ra-Yrm"/>
                                             </mask>
                                         </variation>
@@ -1028,6 +1028,7 @@
         <image name="Background" width="750" height="1334"/>
         <image name="Line" width="112" height="1"/>
         <image name="Sign Background" width="750" height="1334"/>
+        <image name="VideoIcon" width="132" height="132"/>
         <image name="account" width="22" height="22"/>
         <image name="calendar" width="22" height="22"/>
         <image name="video" width="132" height="132"/>

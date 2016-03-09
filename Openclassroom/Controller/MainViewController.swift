@@ -21,12 +21,11 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tasksCollectionView.pagingEnabled = true
-        
         self.lecons = getStaticLecons()
     }
     
     override func viewWillAppear(animated: Bool) {
+        tasksCollectionView.pagingEnabled = true
         navigationBar.OCDefaultNavigationBar()
         startButton.OCdefaultButton(UIColor.whiteColor())
     }
@@ -34,7 +33,13 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func getStaticLecons() -> [Lecon] {
         var lecons: [Lecon] = [Lecon]()
         for leconData in Lecon.lecons {
-            let lecon = Lecon(title: leconData["title"] as! String, time: leconData["time"] as! Int)
+            let type = Lecon.parseStringTypeToEnum(leconData["type"] as! String)
+            let lecon = Lecon(
+                title: leconData["title"] as! String,
+                time: leconData["time"] as! Int,
+                type: type,
+                status: leconData["status"] as! Bool)
+            
             lecons.append(lecon)
         }
         
@@ -57,9 +62,7 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         pageControl.currentPage = indexPath.row // set current page control to current item index
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(cellIdentifier, forIndexPath: indexPath) as! LeconCell
-        
-        cell.title.text = lecons[indexPath.row].title
-        cell.time.text = "\(lecons[indexPath.row].time) minutes"
+        cell.initializeCellWithContent(lecons[indexPath.row])
         
         return cell
     }

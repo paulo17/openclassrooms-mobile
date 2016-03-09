@@ -25,4 +25,15 @@ class LeconCell: UICollectionViewCell {
         downloadButton.OCborderButton(UIColorFromRGBA("BFBFC3"))
     }
     
+    func initializeCellWithContent(lecon: Lecon) {
+        title.text = lecon.title
+        time.text = "\(lecon.time) minutes"
+        
+        let name = lecon.status ? "\(lecon.type)Icon" : "\(lecon.type)DisableIcon"
+        
+        if let imageIcon = UIImage(named: name) {
+            icon.image = imageIcon
+        }
+    }
+    
 }
