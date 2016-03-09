@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LeconCollectionViewCell: UICollectionViewCell {
+class LeconCell: UICollectionViewCell {
     
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var time: UILabel!
