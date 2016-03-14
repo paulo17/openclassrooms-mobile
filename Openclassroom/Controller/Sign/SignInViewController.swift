@@ -16,10 +16,10 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var emailButton: UIButton!
     
     override func viewDidLoad() {
-        initializeView()
+        
     }
     
-    func initializeView() {
+    override func viewWillAppear(animated: Bool) {
         facebookButton.OCdefaultButton(UIColorFromRGBA("3B5998"))
         googleButton.OCdefaultButton(UIColorFromRGBA("D13832"))
         linkedinButton.OCdefaultButton(UIColorFromRGBA("2162A6"))
