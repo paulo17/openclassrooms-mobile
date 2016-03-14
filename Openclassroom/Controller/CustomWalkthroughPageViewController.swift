@@ -15,11 +15,6 @@ class CustomWalkthroughPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        letsgo.backgroundColor = UIColor.clearColor()
-        letsgo.layer.cornerRadius = 25
-        letsgo.layer.borderWidth = 1
-        letsgo.layer.borderColor = UIColor.whiteColor().CGColor
     }
     
     @IBAction func launchApp(sender: AnyObject) {
