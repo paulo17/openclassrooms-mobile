@@ -35,10 +35,17 @@ class WalkthroughViewController: UIViewController, BWWalkthroughViewControllerDe
         
     }
     
+    func setStatusBarBackground(controller: UIViewController) {
+        let statusBarView: UIView = UIView(frame: CGRectMake(0, 0, self.view.frame.size.width, 22))
+        statusBarView.backgroundColor = UIColorFromRGBA("F39539")
+        controller.view.addSubview(statusBarView)
+    }
+    
     func showWalkthrough() {
         let walkthroughStoryboard = UIStoryboard(name: "Walkthrough", bundle: nil)
         
         walkthroughMaster = walkthroughStoryboard.instantiateViewControllerWithIdentifier("walkthrough_master") as! BWWalkthroughViewController
+        setStatusBarBackground(walkthroughMaster)
         
         let page_one = walkthroughStoryboard.instantiateViewControllerWithIdentifier("walkthrough1")
         let page_two = walkthroughStoryboard.instantiateViewControllerWithIdentifier("walkthrough2")
