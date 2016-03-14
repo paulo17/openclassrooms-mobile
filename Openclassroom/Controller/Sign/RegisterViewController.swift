@@ -26,7 +26,4 @@ class RegisterViewController: UIViewController {
         registerButton.OCdefaultButton(UIColorFromRGBA("FFFFFF"))
     }
     
-    @IBAction func cancelAction(sender: AnyObject) {
-        dismissViewControllerAnimated(true, completion: nil)
-    }
 }

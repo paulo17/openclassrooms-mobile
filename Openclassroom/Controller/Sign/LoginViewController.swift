@@ -25,7 +25,4 @@ class LoginViewController: UIViewController {
         loginButton.OCdefaultButton(UIColorFromRGBA("FFFFFFF"))
     }
     
-    @IBAction func cancelAction(sender: AnyObject) {
-        dismissViewControllerAnimated(true, completion: nil)
-    }
 }
