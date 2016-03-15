@@ -19,15 +19,15 @@
 		6B4BEE7D1C8723C2006D2862 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4BEE7C1C8723C2006D2862 /* LoginViewController.swift */; };
 		6B4BEE7F1C8723E7006D2862 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4BEE7E1C8723E7006D2862 /* SignInViewController.swift */; };
 		6B4BEE811C87434A006D2862 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4BEE801C87434A006D2862 /* MainViewController.swift */; };
-		6B50FDE71C8F0C9700475CD9 /* lecon.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B50FDE61C8F0C9700475CD9 /* lecon.json */; };
-		6B50FDEA1C8F0CFA00475CD9 /* LeconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B50FDE91C8F0CFA00475CD9 /* LeconCell.swift */; };
-		6B50FDEF1C9057B600475CD9 /* Lecon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B50FDEE1C9057B600475CD9 /* Lecon.swift */; };
-		6B50FDF11C905F4800475CD9 /* TextLeconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B50FDF01C905F4700475CD9 /* TextLeconCell.swift */; };
-		6B50FDF31C905F7400475CD9 /* FinishLeconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B50FDF21C905F7400475CD9 /* FinishLeconCell.swift */; };
 		6B73BB001C8B221300BCE574 /* OCButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B73BAFF1C8B221300BCE574 /* OCButton.swift */; };
 		6B73BB021C8B239D00BCE574 /* OCTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B73BB011C8B239D00BCE574 /* OCTextField.swift */; };
 		6BA0F81A1C984BB0001AA68E /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA0F8191C984BB0001AA68E /* WalkthroughViewController.swift */; };
 		6BA0F81C1C984CEE001AA68E /* CustomWalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA0F81B1C984CEE001AA68E /* CustomWalkthroughPageViewController.swift */; };
+		6BA0F8201C9858A0001AA68E /* lecon.json in Resources */ = {isa = PBXBuildFile; fileRef = 6BA0F81E1C9858A0001AA68E /* lecon.json */; };
+		6BA0F8211C9858A0001AA68E /* Lecon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA0F81F1C9858A0001AA68E /* Lecon.swift */; };
+		6BA0F8261C9858B0001AA68E /* FinishLeconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA0F8231C9858B0001AA68E /* FinishLeconCell.swift */; };
+		6BA0F8271C9858B0001AA68E /* LeconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA0F8241C9858B0001AA68E /* LeconCell.swift */; };
+		6BA0F8281C9858B0001AA68E /* TextLeconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA0F8251C9858B0001AA68E /* TextLeconCell.swift */; };
 		6BEAA7191C5FBCB80043BEA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEAA7181C5FBCB80043BEA2 /* ViewController.swift */; };
 		6BF23A9C1C5FAE94001B1006 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF23A9B1C5FAE94001B1006 /* AppDelegate.swift */; };
 		6BF23AA11C5FAE94001B1006 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BF23A9F1C5FAE94001B1006 /* Main.storyboard */; };
@@ -49,15 +49,15 @@
 		6B4BEE7C1C8723C2006D2862 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6B4BEE7E1C8723E7006D2862 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		6B4BEE801C87434A006D2862 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		6B50FDE61C8F0C9700475CD9 /* lecon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lecon.json; sourceTree = "<group>"; };
-		6B50FDE91C8F0CFA00475CD9 /* LeconCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeconCell.swift; sourceTree = "<group>"; };
-		6B50FDEE1C9057B600475CD9 /* Lecon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lecon.swift; sourceTree = "<group>"; };
-		6B50FDF01C905F4700475CD9 /* TextLeconCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextLeconCell.swift; sourceTree = "<group>"; };
-		6B50FDF21C905F7400475CD9 /* FinishLeconCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishLeconCell.swift; sourceTree = "<group>"; };
 		6B73BAFF1C8B221300BCE574 /* OCButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCButton.swift; sourceTree = "<group>"; };
 		6B73BB011C8B239D00BCE574 /* OCTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCTextField.swift; sourceTree = "<group>"; };
 		6BA0F8191C984BB0001AA68E /* WalkthroughViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
 		6BA0F81B1C984CEE001AA68E /* CustomWalkthroughPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomWalkthroughPageViewController.swift; sourceTree = "<group>"; };
+		6BA0F81E1C9858A0001AA68E /* lecon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lecon.json; sourceTree = "<group>"; };
+		6BA0F81F1C9858A0001AA68E /* Lecon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lecon.swift; sourceTree = "<group>"; };
+		6BA0F8231C9858B0001AA68E /* FinishLeconCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishLeconCell.swift; sourceTree = "<group>"; };
+		6BA0F8241C9858B0001AA68E /* LeconCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeconCell.swift; sourceTree = "<group>"; };
+		6BA0F8251C9858B0001AA68E /* TextLeconCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextLeconCell.swift; sourceTree = "<group>"; };
 		6BEAA7181C5FBCB80043BEA2 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6BF23A981C5FAE94001B1006 /* Openclassroom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Openclassroom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BF23A9B1C5FAE94001B1006 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,7 +106,7 @@
 		6B36B3261C60B6DA00989167 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				6B50FDE81C8F0CBE00475CD9 /* Cell */,
+				6BA0F8221C9858B0001AA68E /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -128,30 +128,24 @@
 				6BA0F8191C984BB0001AA68E /* WalkthroughViewController.swift */,
 			);
 			path = Walkthrough;
-		6B50FDE51C8F0C8100475CD9 /* Json */ = {
+			sourceTree = "<group>";
+		};
+		6BA0F81D1C9858A0001AA68E /* Json */ = {
 			isa = PBXGroup;
 			children = (
-				6B50FDE61C8F0C9700475CD9 /* lecon.json */,
+				6BA0F81E1C9858A0001AA68E /* lecon.json */,
 			);
 			path = Json;
 			sourceTree = "<group>";
 		};
-		6B50FDE81C8F0CBE00475CD9 /* Cell */ = {
+		6BA0F8221C9858B0001AA68E /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				6B50FDEB1C90433800475CD9 /* Lecon */,
+				6BA0F8231C9858B0001AA68E /* FinishLeconCell.swift */,
+				6BA0F8241C9858B0001AA68E /* LeconCell.swift */,
+				6BA0F8251C9858B0001AA68E /* TextLeconCell.swift */,
 			);
 			path = Cell;
-			sourceTree = "<group>";
-		};
-		6B50FDEB1C90433800475CD9 /* Lecon */ = {
-			isa = PBXGroup;
-			children = (
-				6B50FDE91C8F0CFA00475CD9 /* LeconCell.swift */,
-				6B50FDF01C905F4700475CD9 /* TextLeconCell.swift */,
-				6B50FDF21C905F7400475CD9 /* FinishLeconCell.swift */,
-			);
-			name = Lecon;
 			sourceTree = "<group>";
 		};
 		6BEAA7161C5FB9D30043BEA2 /* Controller */ = {
@@ -171,8 +165,8 @@
 		6BEAA7171C5FB9D30043BEA2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				6B50FDE51C8F0C8100475CD9 /* Json */,
-				6B50FDEE1C9057B600475CD9 /* Lecon.swift */,
+				6BA0F81D1C9858A0001AA68E /* Json */,
+				6BA0F81F1C9858A0001AA68E /* Lecon.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -285,7 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BF23AA61C5FAE94001B1006 /* LaunchScreen.storyboard in Resources */,
-				6B50FDE71C8F0C9700475CD9 /* lecon.json in Resources */,
+				6BA0F8201C9858A0001AA68E /* lecon.json in Resources */,
 				6B36B32E1C60C4AE00989167 /* Walkthrough.storyboard in Resources */,
 				6BF23AA31C5FAE94001B1006 /* Assets.xcassets in Resources */,
 				6BF23AA11C5FAE94001B1006 /* Main.storyboard in Resources */,
@@ -361,26 +355,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B4BEE7D1C8723C2006D2862 /* LoginViewController.swift in Sources */,
-				6B50FDEF1C9057B600475CD9 /* Lecon.swift in Sources */,
 				6BEAA7191C5FBCB80043BEA2 /* ViewController.swift in Sources */,
 				6B36B3281C60BC7400989167 /* CategoryViewController.swift in Sources */,
 				6BA0F81C1C984CEE001AA68E /* CustomWalkthroughPageViewController.swift in Sources */,
 				6B4BEE7B1C8723A8006D2862 /* RegisterViewController.swift in Sources */,
 				6B36B32C1C60BD2500989167 /* ProgramViewController.swift in Sources */,
 				6B4BEE7F1C8723E7006D2862 /* SignInViewController.swift in Sources */,
-				6B50FDEA1C8F0CFA00475CD9 /* LeconCell.swift in Sources */,
 				6B229B1F1C8C896C0079990A /* OCNavigationBar.swift in Sources */,
-				6B50FDF31C905F7400475CD9 /* FinishLeconCell.swift in Sources */,
 				6B4BEE721C872195006D2862 /* Redirect.swift in Sources */,
 				6B73BB021C8B239D00BCE574 /* OCTextField.swift in Sources */,
 				6B4BEE811C87434A006D2862 /* MainViewController.swift in Sources */,
+				6BA0F8261C9858B0001AA68E /* FinishLeconCell.swift in Sources */,
 				6B4BEE741C872246006D2862 /* Font.swift in Sources */,
 				6B73BB001C8B221300BCE574 /* OCButton.swift in Sources */,
-				6B50FDF11C905F4800475CD9 /* TextLeconCell.swift in Sources */,
 				6B36B32A1C60BCF000989167 /* ObjectiveViewController.swift in Sources */,
 				6BF23A9C1C5FAE94001B1006 /* AppDelegate.swift in Sources */,
+				6BA0F8211C9858A0001AA68E /* Lecon.swift in Sources */,
 				6BA0F81A1C984BB0001AA68E /* WalkthroughViewController.swift in Sources */,
 				6B4BEE761C87225C006D2862 /* UIColorFromRGBA.swift in Sources */,
+				6BA0F8271C9858B0001AA68E /* LeconCell.swift in Sources */,
+				6BA0F8281C9858B0001AA68E /* TextLeconCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

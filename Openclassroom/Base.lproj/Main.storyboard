@@ -1076,8 +1076,7 @@
     </scenes>
     <resources>
         <image name="Background" width="750" height="1334"/>
-        <image name="Line" width="112" height="1"/>
-        <image name="Sign Background" width="750" height="1334"/>
+        <image name="Logo" width="346" height="217"/>
         <image name="VideoIcon" width="132" height="132"/>
         <image name="account" width="22" height="22"/>
         <image name="calendar" width="22" height="22"/>
