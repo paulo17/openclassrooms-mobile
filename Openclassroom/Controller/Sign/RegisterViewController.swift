@@ -19,11 +19,10 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        initializeView()
     }
     
-    func initializeView() {
-        registerButton.OCdefaultButton(UIColorFromRGBA("FFFFFF"))
+    override func viewWillAppear(animated: Bool) {
+        registerButton.OCdefaultButton(UIColorFromRGBA("F39539"))
     }
     
 }
