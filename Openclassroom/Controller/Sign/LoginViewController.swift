@@ -17,15 +17,10 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        initializeView()
     }
     
-    func initializeView() {
-        loginButton.OCdefaultButton(UIColorFromRGBA("FFFFFFF"))
+    override func viewWillAppear(animated: Bool) {
+        loginButton.OCdefaultButton(UIColorFromRGBA("F39539"))
     }
     
-    @IBAction func cancelAction(sender: AnyObject) {
-        dismissViewControllerAnimated(true, completion: nil)
-    }
 }

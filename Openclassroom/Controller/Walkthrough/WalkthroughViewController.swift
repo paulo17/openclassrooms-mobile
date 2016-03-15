@@ -49,9 +49,11 @@ class WalkthroughViewController: UIViewController, BWWalkthroughViewControllerDe
         
         let page_one = walkthroughStoryboard.instantiateViewControllerWithIdentifier("walkthrough1")
         let page_two = walkthroughStoryboard.instantiateViewControllerWithIdentifier("walkthrough2")
-        let page_three = walkthroughStoryboard.instantiateViewControllerWithIdentifier("walkthrough3")
+        let page_three = walkthroughStoryboard.instantiateViewControllerWithIdentifier("walkthrough3") as! CustomWalkthroughPageViewController
         
         walkthroughMaster.delegate = self
+        page_three.masterWalkthroughViewController = walkthroughMaster // add masterWaltkrought reference for close
+        
         walkthroughMaster.addViewController(page_one)
         walkthroughMaster.addViewController(page_two)
         walkthroughMaster.addViewController(page_three)

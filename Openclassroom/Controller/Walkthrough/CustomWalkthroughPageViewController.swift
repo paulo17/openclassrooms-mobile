@@ -13,15 +13,19 @@ class CustomWalkthroughPageViewController: UIViewController {
     
     @IBOutlet weak var letsgo: UIButton!
     
+    var masterWalkthroughViewController: BWWalkthroughViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     @IBAction func launchApp(sender: AnyObject) {
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let signInViewController = mainStoryboard.instantiateViewControllerWithIdentifier("signIn") as! SignInViewController
+        let loginNavigationController = mainStoryboard.instantiateViewControllerWithIdentifier("loginNavigationController") as! UINavigationController
         
-        redirect(from: self, to: signInViewController)
+        if let masterWalkthrough = masterWalkthroughViewController {
+            redirect(from: masterWalkthrough, to: loginNavigationController)
+        }
         
         // set walkthroughClosed key to true for prevent review
         let userDefaults = NSUserDefaults.standardUserDefaults()
