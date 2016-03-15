@@ -1076,17 +1076,11 @@
     </scenes>
     <resources>
         <image name="Background" width="750" height="1334"/>
-<<<<<<< HEAD
-        <image name="Logo" width="346" height="217"/>
-        <image name="account" width="39" height="43"/>
-        <image name="calendar" width="42" height="42"/>
-=======
         <image name="Line" width="112" height="1"/>
         <image name="Sign Background" width="750" height="1334"/>
         <image name="VideoIcon" width="132" height="132"/>
         <image name="account" width="22" height="22"/>
         <image name="calendar" width="22" height="22"/>
         <image name="video" width="132" height="132"/>
->>>>>>> feature/mainViewController
     </resources>
 </document>
