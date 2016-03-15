@@ -10,7 +10,6 @@ import UIKit
 
 class MainViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var tasksCollectionView: UICollectionView!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var pageControl: UIPageControl!
@@ -26,7 +25,6 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     override func viewWillAppear(animated: Bool) {
         tasksCollectionView.pagingEnabled = true
-        navigationBar.OCDefaultNavigationBar()
         startButton.OCdefaultButton(UIColor.whiteColor())
     }
     

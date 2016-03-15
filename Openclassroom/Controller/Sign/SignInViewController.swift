@@ -14,6 +14,7 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var googleButton: UIButton!
     @IBOutlet weak var linkedinButton: UIButton!
     @IBOutlet weak var emailButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +23,9 @@ class SignInViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         facebookButton.OCdefaultButton(UIColorFromRGBA("3B5998"))
-        googleButton.OCdefaultButton(UIColorFromRGBA("D13832"))
-        linkedinButton.OCdefaultButton(UIColorFromRGBA("2162A6"))
-        emailButton.OCdefaultButton(UIColorFromRGBA("B2B1B6"))
+        googleButton.OCdefaultButton(UIColorFromRGBA("DC4E41"))
+        linkedinButton.OCdefaultButton(UIColorFromRGBA("0077B5"))
+        emailButton.OCdefaultButton(UIColorFromRGBA("F9F9F9"))
+        loginButton.OCborderButton(UIColorFromRGBA("F39539"))
     }
 }

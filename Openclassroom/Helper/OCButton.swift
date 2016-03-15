@@ -17,8 +17,8 @@ extension UIButton {
     }
     
     func OCborderButton(color: UIColor) {
-        self.layer.cornerRadius = 20
-        self.layer.borderWidth = 2
+        self.layer.cornerRadius = 5
+        self.layer.borderWidth = 1
         self.layer.borderColor = color.CGColor
     }
 }
