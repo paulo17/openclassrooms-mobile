@@ -7,6 +7,5 @@ target 'Openclassroom' do
 pod 'Fabric'
 pod 'Crashlytics'
 pod 'BWWalkthrough'
-pod 'Reusable', '~> 2.2'
 end
 
