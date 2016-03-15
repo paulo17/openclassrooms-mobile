@@ -16,6 +16,7 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var emailButton: UIButton!
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         
     }
     
