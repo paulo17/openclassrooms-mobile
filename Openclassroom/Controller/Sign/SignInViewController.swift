@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Cartography
 
 class SignInViewController: UIViewController {
     
@@ -27,5 +28,16 @@ class SignInViewController: UIViewController {
         linkedinButton.OCdefaultButton(UIColorFromRGBA("0077B5"))
         emailButton.OCdefaultButton(UIColorFromRGBA("F9F9F9"))
         loginButton.OCborderButton(UIColorFromRGBA("F39539"))
+        
+        let facebookView = UIImageView(image: UIImage(named: "facebook"))
+        facebookButton.addSubview(facebookView)
+        
+        constrain(facebookView, facebookButton) { facebookView, facebookButton in
+            facebookView.height == 22
+            facebookView.width == 10
+            facebookView.centerX == facebookButton.centerX
+            facebookView.centerY == facebookButton.centerY
+        }
+        
     }
 }

@@ -28,6 +28,7 @@
 		6BA0F8261C9858B0001AA68E /* FinishLeconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA0F8231C9858B0001AA68E /* FinishLeconCell.swift */; };
 		6BA0F8271C9858B0001AA68E /* LeconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA0F8241C9858B0001AA68E /* LeconCell.swift */; };
 		6BA0F8281C9858B0001AA68E /* TextLeconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA0F8251C9858B0001AA68E /* TextLeconCell.swift */; };
+		6BA0F82A1C98A0DA001AA68E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA0F8291C98A0DA001AA68E /* User.swift */; };
 		6BEAA7191C5FBCB80043BEA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEAA7181C5FBCB80043BEA2 /* ViewController.swift */; };
 		6BF23A9C1C5FAE94001B1006 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF23A9B1C5FAE94001B1006 /* AppDelegate.swift */; };
 		6BF23AA11C5FAE94001B1006 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BF23A9F1C5FAE94001B1006 /* Main.storyboard */; };
@@ -49,6 +50,7 @@
 		6B4BEE7C1C8723C2006D2862 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6B4BEE7E1C8723E7006D2862 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		6B4BEE801C87434A006D2862 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		6B4E30EF1C98B14C00BE42CB /* Cartography.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cartography.framework; path = "Pods/../build/Debug-iphoneos/Cartography.framework"; sourceTree = "<group>"; };
 		6B73BAFF1C8B221300BCE574 /* OCButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCButton.swift; sourceTree = "<group>"; };
 		6B73BB011C8B239D00BCE574 /* OCTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCTextField.swift; sourceTree = "<group>"; };
 		6BA0F8191C984BB0001AA68E /* WalkthroughViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 		6BA0F8231C9858B0001AA68E /* FinishLeconCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishLeconCell.swift; sourceTree = "<group>"; };
 		6BA0F8241C9858B0001AA68E /* LeconCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeconCell.swift; sourceTree = "<group>"; };
 		6BA0F8251C9858B0001AA68E /* TextLeconCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextLeconCell.swift; sourceTree = "<group>"; };
+		6BA0F8291C98A0DA001AA68E /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6BEAA7181C5FBCB80043BEA2 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6BF23A981C5FAE94001B1006 /* Openclassroom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Openclassroom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BF23A9B1C5FAE94001B1006 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +88,7 @@
 		2EE19F69585937A8CB6CD648 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6B4E30EF1C98B14C00BE42CB /* Cartography.framework */,
 				9D4D82A87B766E1444FCE186 /* Pods_Openclassroom.framework */,
 			);
 			name = Frameworks;
@@ -167,6 +171,7 @@
 			children = (
 				6BA0F81D1C9858A0001AA68E /* Json */,
 				6BA0F81F1C9858A0001AA68E /* Lecon.swift */,
+				6BA0F8291C98A0DA001AA68E /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -364,6 +369,7 @@
 				6B229B1F1C8C896C0079990A /* OCNavigationBar.swift in Sources */,
 				6B4BEE721C872195006D2862 /* Redirect.swift in Sources */,
 				6B73BB021C8B239D00BCE574 /* OCTextField.swift in Sources */,
+				6BA0F82A1C98A0DA001AA68E /* User.swift in Sources */,
 				6B4BEE811C87434A006D2862 /* MainViewController.swift in Sources */,
 				6BA0F8261C9858B0001AA68E /* FinishLeconCell.swift in Sources */,
 				6B4BEE741C872246006D2862 /* Font.swift in Sources */,
@@ -488,6 +494,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = Openclassroom/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -503,6 +513,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = Openclassroom/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

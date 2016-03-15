@@ -23,4 +23,12 @@ class LoginViewController: UIViewController {
         loginButton.OCdefaultButton(UIColorFromRGBA("F39539"))
     }
     
+    // MARK: - IBAction
+    
+    @IBAction func loginAction(sender: AnyObject) {
+        if let mainViewController = storyboard?.instantiateViewControllerWithIdentifier("mainViewController") {
+            mainViewController.modalTransitionStyle = .FlipHorizontal
+            self.presentViewController(mainViewController, animated: true, completion: nil)
+        }
+    }
 }
