@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6B229B1F1C8C896C0079990A /* OCNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B229B1E1C8C896C0079990A /* OCNavigationBar.swift */; };
-		6B36B3281C60BC7400989167 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B36B3271C60BC7400989167 /* CategoryViewController.swift */; };
 		6B36B32A1C60BCF000989167 /* ObjectiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B36B3291C60BCF000989167 /* ObjectiveViewController.swift */; };
 		6B36B32C1C60BD2500989167 /* ProgramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B36B32B1C60BD2500989167 /* ProgramViewController.swift */; };
 		6B36B32E1C60C4AE00989167 /* Walkthrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B36B32D1C60C4AE00989167 /* Walkthrough.storyboard */; };
@@ -19,6 +18,7 @@
 		6B4BEE7D1C8723C2006D2862 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4BEE7C1C8723C2006D2862 /* LoginViewController.swift */; };
 		6B4BEE7F1C8723E7006D2862 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4BEE7E1C8723E7006D2862 /* SignInViewController.swift */; };
 		6B4BEE811C87434A006D2862 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4BEE801C87434A006D2862 /* MainViewController.swift */; };
+		6B4E30F31C99A23B00BE42CB /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4E30F21C99A23B00BE42CB /* CategoryViewController.swift */; };
 		6B73BB001C8B221300BCE574 /* OCButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B73BAFF1C8B221300BCE574 /* OCButton.swift */; };
 		6B73BB021C8B239D00BCE574 /* OCTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B73BB011C8B239D00BCE574 /* OCTextField.swift */; };
 		6BA0F81A1C984BB0001AA68E /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA0F8191C984BB0001AA68E /* WalkthroughViewController.swift */; };
@@ -39,7 +39,6 @@
 
 /* Begin PBXFileReference section */
 		6B229B1E1C8C896C0079990A /* OCNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCNavigationBar.swift; sourceTree = "<group>"; };
-		6B36B3271C60BC7400989167 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		6B36B3291C60BCF000989167 /* ObjectiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectiveViewController.swift; sourceTree = "<group>"; };
 		6B36B32B1C60BD2500989167 /* ProgramViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramViewController.swift; sourceTree = "<group>"; };
 		6B36B32D1C60C4AE00989167 /* Walkthrough.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Walkthrough.storyboard; sourceTree = "<group>"; };
@@ -51,6 +50,7 @@
 		6B4BEE7E1C8723E7006D2862 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		6B4BEE801C87434A006D2862 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		6B4E30EF1C98B14C00BE42CB /* Cartography.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cartography.framework; path = "Pods/../build/Debug-iphoneos/Cartography.framework"; sourceTree = "<group>"; };
+		6B4E30F21C99A23B00BE42CB /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		6B73BAFF1C8B221300BCE574 /* OCButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCButton.swift; sourceTree = "<group>"; };
 		6B73BB011C8B239D00BCE574 /* OCTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCTextField.swift; sourceTree = "<group>"; };
 		6BA0F8191C984BB0001AA68E /* WalkthroughViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +125,14 @@
 			path = Sign;
 			sourceTree = "<group>";
 		};
+		6B4E30F11C99A20100BE42CB /* Setup */ = {
+			isa = PBXGroup;
+			children = (
+				6B4E30F21C99A23B00BE42CB /* CategoryViewController.swift */,
+			);
+			path = Setup;
+			sourceTree = "<group>";
+		};
 		6BA0F8181C984BB0001AA68E /* Walkthrough */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,10 +163,10 @@
 		6BEAA7161C5FB9D30043BEA2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6B4E30F11C99A20100BE42CB /* Setup */,
 				6BA0F8181C984BB0001AA68E /* Walkthrough */,
 				6B4BEE791C8723A8006D2862 /* Sign */,
 				6BEAA7181C5FBCB80043BEA2 /* ViewController.swift */,
-				6B36B3271C60BC7400989167 /* CategoryViewController.swift */,
 				6B36B3291C60BCF000989167 /* ObjectiveViewController.swift */,
 				6B36B32B1C60BD2500989167 /* ProgramViewController.swift */,
 				6B4BEE801C87434A006D2862 /* MainViewController.swift */,
@@ -361,12 +369,12 @@
 			files = (
 				6B4BEE7D1C8723C2006D2862 /* LoginViewController.swift in Sources */,
 				6BEAA7191C5FBCB80043BEA2 /* ViewController.swift in Sources */,
-				6B36B3281C60BC7400989167 /* CategoryViewController.swift in Sources */,
 				6BA0F81C1C984CEE001AA68E /* CustomWalkthroughPageViewController.swift in Sources */,
 				6B4BEE7B1C8723A8006D2862 /* RegisterViewController.swift in Sources */,
 				6B36B32C1C60BD2500989167 /* ProgramViewController.swift in Sources */,
 				6B4BEE7F1C8723E7006D2862 /* SignInViewController.swift in Sources */,
 				6B229B1F1C8C896C0079990A /* OCNavigationBar.swift in Sources */,
+				6B4E30F31C99A23B00BE42CB /* CategoryViewController.swift in Sources */,
 				6B4BEE721C872195006D2862 /* Redirect.swift in Sources */,
 				6B73BB021C8B239D00BCE574 /* OCTextField.swift in Sources */,
 				6BA0F82A1C98A0DA001AA68E /* User.swift in Sources */,
