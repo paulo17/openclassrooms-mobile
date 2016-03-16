@@ -23,7 +23,7 @@ class SignInViewController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-        
+        loginButton.OCborderButton(UIColorFromRGBA("F39539"))
     }
     
 }

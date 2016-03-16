@@ -152,16 +152,6 @@
                                 <color key="textColor" red="0.33725491169999999" green="0.33725491169999999" blue="0.33725491169999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ClR-Zh-DbL">
-                                <rect key="frame" x="236" y="550" width="109" height="29"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
-                                <state key="normal" title="CONNEXION">
-                                    <color key="titleColor" red="0.9529411792755127" green="0.58431375026702881" blue="0.22352941334247589" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="sfH-8S-NlX" kind="show" id="Qfo-Mm-sRb"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U7f-Cg-QOt">
                                 <rect key="frame" x="30" y="271" width="315" height="44"/>
                                 <color key="backgroundColor" red="0.97647058963775635" green="0.97647058963775635" blue="0.97647058963775635" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -193,6 +183,16 @@
                                     <constraint firstAttribute="width" constant="186" id="fKN-3Q-GOi"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ClR-Zh-DbL">
+                                <rect key="frame" x="236" y="550" width="109" height="29"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                <state key="normal" title="CONNEXION">
+                                    <color key="titleColor" red="0.9529411792755127" green="0.58431375026702881" blue="0.22352941334247589" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="sfH-8S-NlX" kind="show" id="Qfo-Mm-sRb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
