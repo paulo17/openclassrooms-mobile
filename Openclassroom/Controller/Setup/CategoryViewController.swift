@@ -10,8 +10,11 @@ import UIKit
 
 class CategoryViewController: UIViewController {
     
+    @IBOutlet weak var validateButton: UIButton!
+    @IBOutlet weak var categoryCollectionView: UICollectionView!
+    
     override func viewDidLoad() {
-        
+        super.viewDidLoad()
     }
     
     override func viewWillAppear(animated: Bool) {
