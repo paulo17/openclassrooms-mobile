@@ -59,7 +59,7 @@
         <!--Navigation Controller-->
         <scene sceneID="xkD-Ub-1T1">
             <objects>
-                <navigationController id="mMn-ya-Y2m" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="setupNavigationController" id="mMn-ya-Y2m" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SAP-cH-K21">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -81,7 +81,7 @@
         <!--Choisir un objectif-->
         <scene sceneID="2q4-Vj-yYt">
             <objects>
-                <viewController id="9R2-YA-rL9" customClass="CategoryViewController" customModule="Openclassroom" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="categoryViewController" id="9R2-YA-rL9" customClass="CategoryViewController" customModule="Openclassroom" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SMV-eS-V6Y"/>
                         <viewControllerLayoutGuide type="bottom" id="yaN-oD-S0q"/>

@@ -107,7 +107,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p1S-mV-Cb1">
-                                <rect key="frame" x="30" y="131" width="315" height="470"/>
+                                <rect key="frame" x="30" y="116" width="315" height="485"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Étape 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQq-fa-zTS">
                                         <rect key="frame" x="93" y="20" width="129" height="39"/>
@@ -119,20 +119,20 @@
                                         <color key="textColor" red="0.9529411793" green="0.58431375029999999" blue="0.22352941330000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notification-iphone" translatesAutoresizingMaskIntoConstraints="NO" id="5at-G9-eBH">
+                                        <rect key="frame" x="0.0" y="211" width="315" height="274"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="274" id="XhF-Re-tnc"/>
+                                        </constraints>
+                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVf-3k-T0H">
-                                        <rect key="frame" x="17" y="67" width="281" height="85"/>
+                                        <rect key="frame" x="17" y="67" width="281" height="100"/>
                                         <string key="text">Paramétrez votre coach
 virtuel. Défnissez votre ojbectif, vos jours de travail, et votre temps de travail quotidien.</string>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                         <color key="textColor" red="0.33725491169999999" green="0.33725491169999999" blue="0.33725491169999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notification-iphone" translatesAutoresizingMaskIntoConstraints="NO" id="5at-G9-eBH">
-                                        <rect key="frame" x="0.0" y="196" width="315" height="274"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="274" id="XhF-Re-tnc"/>
-                                        </constraints>
-                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -151,7 +151,7 @@ virtuel. Défnissez votre ojbectif, vos jours de travail, et votre temps de trav
                         </subviews>
                         <constraints>
                             <constraint firstItem="p1S-mV-Cb1" firstAttribute="leading" secondItem="gtJ-JR-max" secondAttribute="leading" constant="30" id="0HU-wk-bMi"/>
-                            <constraint firstItem="p1S-mV-Cb1" firstAttribute="top" secondItem="bY4-mI-QfU" secondAttribute="bottom" constant="111" id="806-fm-WSp"/>
+                            <constraint firstItem="p1S-mV-Cb1" firstAttribute="top" secondItem="bY4-mI-QfU" secondAttribute="bottom" constant="96" id="806-fm-WSp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="p1S-mV-Cb1" secondAttribute="trailing" constant="30" id="HmM-sJ-O6y"/>
                             <constraint firstItem="eNN-SA-cep" firstAttribute="top" secondItem="p1S-mV-Cb1" secondAttribute="bottom" constant="66" id="Ucf-9V-wbo"/>
                             <constraint firstAttribute="trailing" secondItem="p1S-mV-Cb1" secondAttribute="trailing" constant="30" id="hdO-mq-I5E"/>
@@ -183,7 +183,7 @@ virtuel. Défnissez votre ojbectif, vos jours de travail, et votre temps de trav
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6qe-ml-dhN">
-                                <rect key="frame" x="30" y="131" width="315" height="470"/>
+                                <rect key="frame" x="30" y="116" width="315" height="485"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Étape 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PgX-qO-U6N">
                                         <rect key="frame" x="90" y="30" width="135" height="39"/>
@@ -196,13 +196,13 @@ virtuel. Défnissez votre ojbectif, vos jours de travail, et votre temps de trav
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Votre coach vous motivera et vous accompagnera pour atteindre votre objectif." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jLR-Hx-x13">
-                                        <rect key="frame" x="17" y="89" width="281" height="77"/>
+                                        <rect key="frame" x="17" y="89" width="281" height="92"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                         <color key="textColor" red="0.33725491169999999" green="0.33725491169999999" blue="0.33725491169999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notification-iphone" translatesAutoresizingMaskIntoConstraints="NO" id="dcC-Dy-jgY">
-                                        <rect key="frame" x="0.0" y="196" width="315" height="274"/>
+                                        <rect key="frame" x="0.0" y="211" width="315" height="274"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="250" id="aWU-pp-WjB"/>
                                             <constraint firstAttribute="height" constant="274" id="e4v-zu-q7J"/>
@@ -235,7 +235,7 @@ virtuel. Défnissez votre ojbectif, vos jours de travail, et votre temps de trav
                             <constraint firstItem="bNB-1k-bcf" firstAttribute="top" secondItem="6qe-ml-dhN" secondAttribute="bottom" constant="66" id="aG5-Ft-JiT"/>
                             <constraint firstItem="6qe-ml-dhN" firstAttribute="leading" secondItem="Lfr-UM-8Kd" secondAttribute="leading" constant="30" id="fPG-Gc-BLP"/>
                             <constraint firstAttribute="trailing" secondItem="6qe-ml-dhN" secondAttribute="trailing" constant="30" id="jRs-hn-F5Q"/>
-                            <constraint firstItem="6qe-ml-dhN" firstAttribute="top" secondItem="B6I-Ad-xcd" secondAttribute="bottom" constant="111" id="vM5-YS-TEK"/>
+                            <constraint firstItem="6qe-ml-dhN" firstAttribute="top" secondItem="B6I-Ad-xcd" secondAttribute="bottom" constant="96" id="vM5-YS-TEK"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -263,10 +263,10 @@ virtuel. Défnissez votre ojbectif, vos jours de travail, et votre temps de trav
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mav-hu-QhH">
-                                <rect key="frame" x="30" y="131" width="315" height="470"/>
+                                <rect key="frame" x="30" y="116" width="315" height="485"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Un coaching personnalisé pour suivre les cours OpenClassrooms à votre rythme." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2vi-Aw-7cd">
-                                        <rect key="frame" x="19" y="89" width="277" height="77"/>
+                                        <rect key="frame" x="19" y="89" width="277" height="92"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                         <color key="textColor" red="0.33725491169999999" green="0.33725491169999999" blue="0.33725491169999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -282,7 +282,7 @@ virtuel. Défnissez votre ojbectif, vos jours de travail, et votre temps de trav
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="programme-iphone" translatesAutoresizingMaskIntoConstraints="NO" id="pur-e0-Et3">
-                                        <rect key="frame" x="0.0" y="196" width="315" height="274"/>
+                                        <rect key="frame" x="0.0" y="211" width="315" height="274"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="274" id="sj4-1t-CHu"/>
                                         </constraints>
@@ -321,7 +321,7 @@ virtuel. Défnissez votre ojbectif, vos jours de travail, et votre temps de trav
                             <constraint firstAttribute="trailing" secondItem="mav-hu-QhH" secondAttribute="trailing" constant="30" id="2sH-we-YLx"/>
                             <constraint firstItem="0mN-ed-Pzh" firstAttribute="top" secondItem="mav-hu-QhH" secondAttribute="bottom" constant="66" id="5hi-Z2-rtg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="q53-mz-ppY" secondAttribute="trailing" constant="60" id="DRV-1H-qUh"/>
-                            <constraint firstItem="mav-hu-QhH" firstAttribute="top" secondItem="aGz-iw-5nu" secondAttribute="bottom" constant="111" id="EoR-BV-On4"/>
+                            <constraint firstItem="mav-hu-QhH" firstAttribute="top" secondItem="aGz-iw-5nu" secondAttribute="bottom" constant="96" id="EoR-BV-On4"/>
                             <constraint firstItem="0mN-ed-Pzh" firstAttribute="top" secondItem="q53-mz-ppY" secondAttribute="bottom" constant="12" id="Etl-fR-pmB"/>
                             <constraint firstItem="q53-mz-ppY" firstAttribute="leading" secondItem="yy4-ee-iS5" secondAttribute="leadingMargin" constant="60" id="QFR-eX-vzx"/>
                             <constraint firstItem="q53-mz-ppY" firstAttribute="top" secondItem="mav-hu-QhH" secondAttribute="bottom" constant="66" id="TZK-fO-xaV"/>

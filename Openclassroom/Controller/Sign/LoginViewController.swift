@@ -26,9 +26,9 @@ class LoginViewController: UIViewController {
     // MARK: - IBAction
     
     @IBAction func loginAction(sender: AnyObject) {
-        if let mainViewController = storyboard?.instantiateViewControllerWithIdentifier("mainViewController") {
-            mainViewController.modalTransitionStyle = .FlipHorizontal
-            self.presentViewController(mainViewController, animated: true, completion: nil)
-        }
+        let setupNavigationController = storyboard?.instantiateViewControllerWithIdentifier("setupNavigationController") as! UINavigationController
+        
+        setupNavigationController.modalTransitionStyle = .FlipHorizontal
+        self.presentViewController(setupNavigationController, animated: true, completion: nil)
     }
 }
