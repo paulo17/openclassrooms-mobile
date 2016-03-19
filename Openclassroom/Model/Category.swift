@@ -19,7 +19,7 @@ class Category {
         ["name": "Dev entreprise", "image": "dev-entreprise"],
         ["name": "Dev mobile", "image": "dev-mobile"],
         ["name": "Marketing digital", "image": "marketing-digital"],
-        ["name": "Gestion de projet", "image": "gestion-de-projet"],
+        ["name": "Gestion de projet", "image": "gestion-projet"],
         ["name": "Developpement", "image": "developpement"]
     ]
     

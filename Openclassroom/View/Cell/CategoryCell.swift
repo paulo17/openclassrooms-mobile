@@ -10,4 +10,14 @@ import UIKit
 
 class CategoryCell: UICollectionViewCell {
     
+    @IBOutlet weak var categoryImage: UIImageView!
+    @IBOutlet weak var categoryName: UILabel!
+    
+    func initializeCellWithContent(category: Category) {
+        categoryName.text = category.name
+        
+        if let imageIcon = UIImage(named: category.image) {
+            categoryImage.image = imageIcon
+        }
+    }
 }

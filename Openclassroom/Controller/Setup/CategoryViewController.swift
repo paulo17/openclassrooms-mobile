@@ -14,9 +14,12 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     
     let categoryCellIdentifier = "categoryCell"
+    lazy var categories = [Category]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.categories = getStaticCategory()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -24,14 +27,27 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
         categoryCollectionView.dataSource = self
     }
     
+    func getStaticCategory() -> [Category] {
+        var categories = [Category]()
+        
+        for category in Category.categories {
+            categories.append(Category(name: category["name"]!, image: category["image"]!))
+        }
+        
+        return categories
+    }
+    
     // MARK: - UICollectionView
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return categories.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(categoryCellIdentifier, forIndexPath: indexPath) as! CategoryCell
+        
+        let category = categories[indexPath.row]
+        cell.initializeCellWithContent(category)
         
         return cell
     }
