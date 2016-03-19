@@ -15,6 +15,7 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     let categoryCellIdentifier = "categoryCell"
     lazy var categories = [Category]()
+    var selectedCategory: Category?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,8 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     override func viewWillAppear(animated: Bool) {
+        validateButton.OCdefaultButton(UIColorFromRGBA("ceced2"))
+        
         categoryCollectionView.delegate = self
         categoryCollectionView.dataSource = self
     }
@@ -50,5 +53,24 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
         cell.initializeCellWithContent(category)
         
         return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        //let selectedCell = collectionView.cellForItemAtIndexPath(indexPath) as! CategoryCell
+        
+        validateButton.OCdefaultButton(UIColorFromRGBA("F39539"))
+        selectedCategory = categories[indexPath.row]
+    }
+    
+    // MARK: - Navigation
+    
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        if identifier == "categoryToObjective" {
+            guard (selectedCategory != nil) else {
+                return false
+            }
+        }
+        
+        return true
     }
 }
