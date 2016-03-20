@@ -8,6 +8,7 @@
 
 class Category {
     
+    var id: Int
     var name: String
     var image: String
     
@@ -23,7 +24,8 @@ class Category {
         ["name": "Developpement", "image": "developpement"]
     ]
     
-    init(name: String, image: String) {
+    init(id: Int, name: String, image: String) {
+        self.id = id
         self.name = name
         self.image = image
     }

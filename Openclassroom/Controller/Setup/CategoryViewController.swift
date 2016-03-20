@@ -32,9 +32,11 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     func getStaticCategory() -> [Category] {
         var categories = [Category]()
+        var i = 1
         
         for category in Category.categories {
-            categories.append(Category(name: category["name"]!, image: category["image"]!))
+            categories.append(Category(id: i, name: category["name"]!, image: category["image"]!))
+            i++
         }
         
         return categories
@@ -50,16 +52,27 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(categoryCellIdentifier, forIndexPath: indexPath) as! CategoryCell
         
         let category = categories[indexPath.row]
-        cell.initializeCellWithContent(category)
+        
+        if let selected = selectedCategory {
+            cell.initializeCellWithContent(current: category, selected: selected)
+        } else {
+            cell.initializeCellWithContent(category)
+        }
         
         return cell
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        //let selectedCell = collectionView.cellForItemAtIndexPath(indexPath) as! CategoryCell
+        let selectedCell = collectionView.cellForItemAtIndexPath(indexPath) as! CategoryCell
+        let status = selectedCell.toggleSelect()
         
-        validateButton.OCdefaultButton(UIColorFromRGBA("F39539"))
-        selectedCategory = categories[indexPath.row]
+        if status {
+            validateButton.OCdefaultButton(UIColorFromRGBA("F39539"))
+            selectedCategory = categories[indexPath.row]
+        } else {
+            validateButton.OCdefaultButton(UIColorFromRGBA("ceced2"))
+            selectedCategory = nil
+        }
     }
     
     // MARK: - Navigation
