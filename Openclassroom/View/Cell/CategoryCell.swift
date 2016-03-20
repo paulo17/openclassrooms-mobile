@@ -19,8 +19,6 @@ class CategoryCell: UICollectionViewCell {
         if let imageIcon = UIImage(named: category.image) {
             categoryImage.alpha = 0.5
             categoryImage.image = imageIcon
-            
-            print(categoryImage.highlighted)
         }
     }
     
@@ -35,6 +33,7 @@ class CategoryCell: UICollectionViewCell {
     
     func toggleSelect() -> Bool {
         categoryImage.highlighted = !categoryImage.highlighted
+        categoryImage.alpha = categoryImage.highlighted ? 1.0 : 0.5
         
         return categoryImage.highlighted
     }
