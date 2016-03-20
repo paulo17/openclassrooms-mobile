@@ -64,15 +64,18 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let selectedCell = collectionView.cellForItemAtIndexPath(indexPath) as! CategoryCell
-        let status = selectedCell.toggleSelect()
+        selectedCell.categoryImage.alpha = 1.0
         
-        if status {
-            validateButton.OCdefaultButton(UIColorFromRGBA("F39539"))
-            selectedCategory = categories[indexPath.row]
-        } else {
-            validateButton.OCdefaultButton(UIColorFromRGBA("ceced2"))
-            selectedCategory = nil
-        }
+        validateButton.OCdefaultButton(UIColorFromRGBA("F39539"))
+        selectedCategory = categories[indexPath.row]
+    }
+    
+    func collectionView(collectionView: UICollectionView, didDeselectItemAtIndexPath indexPath: NSIndexPath) {
+        let selectedCell = collectionView.cellForItemAtIndexPath(indexPath) as! CategoryCell
+        selectedCell.categoryImage.alpha = 0.5
+        
+        validateButton.OCdefaultButton(UIColorFromRGBA("ceced2"))
+        selectedCategory = nil
     }
     
     // MARK: - Navigation

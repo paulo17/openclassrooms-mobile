@@ -27,14 +27,7 @@ class CategoryCell: UICollectionViewCell {
         
         if category.id == selectedCategory.id {
             categoryImage.alpha = 1.0
-            categoryImage.highlighted = true
+            self.selected = true
         }
-    }
-    
-    func toggleSelect() -> Bool {
-        categoryImage.highlighted = !categoryImage.highlighted
-        categoryImage.alpha = categoryImage.highlighted ? 1.0 : 0.5
-        
-        return categoryImage.highlighted
     }
 }
