@@ -10,4 +10,5 @@ import UIKit
 
 class ObjectiveCell: UITableViewCell {
     
+    @IBOutlet weak var objectiveName: UILabel!
 }
