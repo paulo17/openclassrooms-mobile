@@ -280,16 +280,24 @@ numérique</string>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Découvrez les solutions CMS" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdg-tD-Qvo">
-                                                    <rect key="frame" x="10" y="12" width="212" height="20"/>
+                                                    <rect key="frame" x="10" y="12" width="355" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.33725491166114807" green="0.33725491166114807" blue="0.33725491166114807" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="fdg-tD-Qvo" secondAttribute="trailing" constant="10" id="1R0-qc-XiR"/>
                                                 <constraint firstItem="fdg-tD-Qvo" firstAttribute="leading" secondItem="B9F-Nf-ypg" secondAttribute="leading" constant="10" id="82N-RL-M7b"/>
+                                                <constraint firstAttribute="bottom" secondItem="fdg-tD-Qvo" secondAttribute="bottom" constant="12" id="CtH-98-ieL"/>
                                                 <constraint firstItem="fdg-tD-Qvo" firstAttribute="centerY" secondItem="B9F-Nf-ypg" secondAttribute="centerY" id="f0J-uz-gNT"/>
+                                                <constraint firstItem="fdg-tD-Qvo" firstAttribute="top" secondItem="B9F-Nf-ypg" secondAttribute="top" constant="12" id="pt4-8F-Bz9"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="f0J-uz-gNT"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="objectiveName" destination="fdg-tD-Qvo" id="qCP-0u-sn5"/>

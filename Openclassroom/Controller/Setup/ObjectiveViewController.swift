@@ -21,6 +21,9 @@ class ObjectiveViewController: UIViewController, UITableViewDelegate, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        objectiveTableView.rowHeight = UITableViewAutomaticDimension
+        objectiveTableView.estimatedRowHeight = 20.0
+        
         objectives = getStaticObjective()
     }
     
