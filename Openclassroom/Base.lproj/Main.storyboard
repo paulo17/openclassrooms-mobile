@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mMn-ya-Y2m">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mMn-ya-Y2m">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -241,9 +241,95 @@ numérique</string>
                     <view key="view" contentMode="scaleToFill" id="ZfA-Hd-lX2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ReM-9a-ggA">
+                                <rect key="frame" x="0.0" y="64" width="375" height="130"/>
+                                <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="Yos-Zi-eX6"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Initiation numérique" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgD-Pz-Pwi">
+                                <rect key="frame" x="100" y="99" width="230" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" red="0.33725491166114807" green="0.33725491166114807" blue="0.33725491166114807" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="initiation-numerique" translatesAutoresizingMaskIntoConstraints="NO" id="w2H-AK-ZMo">
+                                <rect key="frame" x="16" y="94" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="28Z-jo-UK5"/>
+                                    <constraint firstAttribute="height" constant="64" id="o4e-Wb-Vlx"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 cours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvx-Q0-vTZ">
+                                <rect key="frame" x="99" y="132" width="69" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.74901962280273438" green="0.74901962280273438" blue="0.76470589637756348" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ryy-qT-ZTU">
+                                <rect key="frame" x="0.0" y="194" width="375" height="473"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="objectiveCell" id="aEf-AV-Hl2" customClass="ObjectiveCell" customModule="Openclassroom" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aEf-AV-Hl2" id="B9F-Nf-ypg">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Découvrez les solutions CMS" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdg-tD-Qvo">
+                                                    <rect key="frame" x="10" y="12" width="355" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.33725491166114807" green="0.33725491166114807" blue="0.33725491166114807" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="fdg-tD-Qvo" secondAttribute="trailing" constant="10" id="1R0-qc-XiR"/>
+                                                <constraint firstItem="fdg-tD-Qvo" firstAttribute="leading" secondItem="B9F-Nf-ypg" secondAttribute="leading" constant="10" id="82N-RL-M7b"/>
+                                                <constraint firstAttribute="bottom" secondItem="fdg-tD-Qvo" secondAttribute="bottom" constant="12" id="CtH-98-ieL"/>
+                                                <constraint firstItem="fdg-tD-Qvo" firstAttribute="centerY" secondItem="B9F-Nf-ypg" secondAttribute="centerY" id="f0J-uz-gNT"/>
+                                                <constraint firstItem="fdg-tD-Qvo" firstAttribute="top" secondItem="B9F-Nf-ypg" secondAttribute="top" constant="12" id="pt4-8F-Bz9"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="f0J-uz-gNT"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="objectiveName" destination="fdg-tD-Qvo" id="qCP-0u-sn5"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="w2H-AK-ZMo" firstAttribute="leading" secondItem="ZfA-Hd-lX2" secondAttribute="leading" constant="16" id="2Za-JI-SR1"/>
+                            <constraint firstItem="ReM-9a-ggA" firstAttribute="top" secondItem="KwS-re-xPX" secondAttribute="bottom" id="2dd-xy-9l7"/>
+                            <constraint firstItem="ryy-qT-ZTU" firstAttribute="top" secondItem="ReM-9a-ggA" secondAttribute="bottom" id="3Lv-kb-lSU"/>
+                            <constraint firstItem="fvx-Q0-vTZ" firstAttribute="top" secondItem="hgD-Pz-Pwi" secondAttribute="bottom" constant="4" id="3o1-Fv-kFB"/>
+                            <constraint firstItem="41C-ys-gks" firstAttribute="top" secondItem="ryy-qT-ZTU" secondAttribute="bottom" id="5oI-pc-fIp"/>
+                            <constraint firstAttribute="trailing" secondItem="ReM-9a-ggA" secondAttribute="trailing" id="AsN-1N-WAm"/>
+                            <constraint firstItem="hgD-Pz-Pwi" firstAttribute="leading" secondItem="w2H-AK-ZMo" secondAttribute="trailing" constant="20" id="G0t-lW-VWr"/>
+                            <constraint firstItem="w2H-AK-ZMo" firstAttribute="top" secondItem="KwS-re-xPX" secondAttribute="bottom" constant="30" id="P6C-Ec-yEc"/>
+                            <constraint firstItem="fvx-Q0-vTZ" firstAttribute="leading" secondItem="w2H-AK-ZMo" secondAttribute="trailing" constant="19" id="T0n-cS-83C"/>
+                            <constraint firstItem="ryy-qT-ZTU" firstAttribute="leading" secondItem="ZfA-Hd-lX2" secondAttribute="leading" id="eWg-HP-6yQ"/>
+                            <constraint firstItem="hgD-Pz-Pwi" firstAttribute="top" secondItem="KwS-re-xPX" secondAttribute="bottom" constant="35" id="oDs-Gu-6Mb"/>
+                            <constraint firstItem="ReM-9a-ggA" firstAttribute="leading" secondItem="ZfA-Hd-lX2" secondAttribute="leading" id="vdw-rK-BMw"/>
+                            <constraint firstAttribute="trailing" secondItem="ryy-qT-ZTU" secondAttribute="trailing" id="wCQ-tT-HjP"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="categoryImage" destination="w2H-AK-ZMo" id="j5r-n9-BbW"/>
+                        <outlet property="categoryName" destination="hgD-Pz-Pwi" id="b1L-ye-bZ0"/>
+                        <outlet property="categoryObjectiveNumber" destination="fvx-Q0-vTZ" id="VOp-wR-GuH"/>
+                        <outlet property="objectiveTableView" destination="ryy-qT-ZTU" id="JyQ-QY-GIe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8zF-iA-llI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -847,7 +933,7 @@ numérique</string>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="leconCell" id="5Dw-VX-ETD" customClass="LeconCell" customModule="Openclassroom" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="-7" width="376" height="445"/>
+                                        <rect key="frame" x="0.0" y="-8" width="376" height="445"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="376" height="445"/>
@@ -959,7 +1045,7 @@ numérique</string>
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="textCell" id="3rs-CY-Y64" customClass="TextLeconCell" customModule="Openclassroom" customModuleProvider="target">
-                                        <rect key="frame" x="386" y="-7" width="376" height="445"/>
+                                        <rect key="frame" x="386" y="-8" width="376" height="445"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="376" height="445"/>
@@ -1071,7 +1157,7 @@ numérique</string>
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="finishCell" id="T3d-46-Q3k" customClass="FinishLeconCell" customModule="Openclassroom" customModuleProvider="target">
-                                        <rect key="frame" x="772" y="-7" width="376" height="445"/>
+                                        <rect key="frame" x="772" y="-8" width="376" height="445"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="376" height="445"/>
@@ -1332,6 +1418,7 @@ numérique</string>
         <image name="calendar" width="22" height="22"/>
         <image name="facebook button" width="630" height="88"/>
         <image name="google button" width="630" height="88"/>
+        <image name="initiation-numerique" width="190" height="190"/>
         <image name="linkedin button" width="630" height="88"/>
         <image name="video" width="132" height="132"/>
     </resources>

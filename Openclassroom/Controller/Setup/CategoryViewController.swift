@@ -20,23 +20,23 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        categoryCollectionView.delegate = self
+        categoryCollectionView.dataSource = self
+        
+        validateButton.OCdefaultButton(UIColorFromRGBA("ceced2"))
+        
         self.categories = getStaticCategory()
     }
     
     override func viewWillAppear(animated: Bool) {
-        validateButton.OCdefaultButton(UIColorFromRGBA("ceced2"))
-        
-        categoryCollectionView.delegate = self
-        categoryCollectionView.dataSource = self
+        self.title = "Choisir une catégorie"
     }
     
     func getStaticCategory() -> [Category] {
         var categories = [Category]()
-        var i = 1
         
-        for category in Category.categories {
-            categories.append(Category(id: i, name: category["name"]!, image: category["image"]!))
-            i++
+        for (index, category) in Category.categories.enumerate() {
+            categories.append(Category(id: index, name: category["name"]!, image: category["image"]!))
         }
         
         return categories
@@ -88,5 +88,14 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
         }
         
         return true
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "categoryToObjective" {
+            navigationItem.title = "" // remove navigation title
+            
+            let objectiveController = segue.destinationViewController as! ObjectiveViewController
+            objectiveController.category = selectedCategory
+        }
     }
 }
