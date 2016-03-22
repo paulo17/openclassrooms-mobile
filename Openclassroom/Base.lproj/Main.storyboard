@@ -102,17 +102,6 @@
                                 <color key="textColor" red="0.74901962280273438" green="0.74901962280273438" blue="0.76470589637756348" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ux-Sr-zPQ">
-                                <rect key="frame" x="35" y="593" width="305" height="44"/>
-                                <color key="backgroundColor" red="0.80784314870834351" green="0.80784314870834351" blue="0.82352942228317261" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                <state key="normal" title="Valider">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="WrT-HP-psT" kind="show" identifier="categoryToObjective" id="tuO-Yc-9qT"/>
-                                </connections>
-                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ceP-4d-5zN">
                                 <rect key="frame" x="10" y="179" width="355" height="384"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -191,6 +180,17 @@ numérique</string>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ux-Sr-zPQ">
+                                <rect key="frame" x="35" y="593" width="305" height="44"/>
+                                <color key="backgroundColor" red="0.76470588235294112" green="0.76470588235294112" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <state key="normal" title="Valider">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="WrT-HP-psT" kind="show" identifier="categoryToObjective" id="tuO-Yc-9qT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -301,6 +301,7 @@ numérique</string>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="objectiveName" destination="fdg-tD-Qvo" id="qCP-0u-sn5"/>
+                                            <segue destination="XkL-aL-3n7" kind="show" id="CC6-Xj-0Lf"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -366,9 +367,80 @@ numérique</string>
                     <view key="view" contentMode="scaleToFill" id="WyY-3g-U7S">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vos jours disponibles" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0oU-qU-X2Y">
+                                <rect key="frame" x="10" y="94" width="244" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" red="0.33725491166114807" green="0.33725491166114807" blue="0.33725491166114807" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KyO-1N-El2">
+                                <rect key="frame" x="35" y="593" width="305" height="44"/>
+                                <color key="backgroundColor" red="0.76470588235294112" green="0.76470588235294112" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <state key="normal" title="Valider">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="x8V-Dd-TRC">
+                                <rect key="frame" x="0.0" y="153" width="375" height="410"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="timeCell" id="gXr-Rf-GvJ" customClass="DayCell" customModule="Openclassroom" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gXr-Rf-GvJ" id="hDL-Nr-6yP">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lundi" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BbS-AI-OVY">
+                                                    <rect key="frame" x="10" y="12" width="43" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.74901962280273438" green="0.74901962280273438" blue="0.76470589637756348" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JBW-UV-pmd">
+                                                    <rect key="frame" x="316" y="6" width="51" height="31"/>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="JBW-UV-pmd" firstAttribute="top" secondItem="hDL-Nr-6yP" secondAttribute="top" constant="6" id="3qC-l3-YON"/>
+                                                <constraint firstAttribute="trailing" secondItem="JBW-UV-pmd" secondAttribute="trailing" constant="10" id="K4c-Y8-jQS"/>
+                                                <constraint firstItem="BbS-AI-OVY" firstAttribute="leading" secondItem="hDL-Nr-6yP" secondAttribute="leading" constant="10" id="Mxp-LV-Hek"/>
+                                                <constraint firstItem="BbS-AI-OVY" firstAttribute="top" secondItem="hDL-Nr-6yP" secondAttribute="top" constant="12" id="TPq-cP-5LG"/>
+                                                <constraint firstAttribute="bottom" secondItem="JBW-UV-pmd" secondAttribute="bottom" constant="6" id="je5-qX-FrP"/>
+                                                <constraint firstAttribute="bottom" secondItem="BbS-AI-OVY" secondAttribute="bottom" constant="12" id="mUY-22-fMm"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="x8V-Dd-TRC" firstAttribute="leading" secondItem="WyY-3g-U7S" secondAttribute="leading" id="DyT-dh-yy9"/>
+                            <constraint firstItem="KyO-1N-El2" firstAttribute="leading" secondItem="WyY-3g-U7S" secondAttribute="leading" constant="35" id="Gie-M1-M8p"/>
+                            <constraint firstAttribute="trailing" secondItem="KyO-1N-El2" secondAttribute="trailing" constant="35" id="Irf-4q-0HI"/>
+                            <constraint firstItem="KyO-1N-El2" firstAttribute="top" secondItem="x8V-Dd-TRC" secondAttribute="bottom" constant="30" id="L3s-mQ-2we"/>
+                            <constraint firstItem="0oU-qU-X2Y" firstAttribute="leading" secondItem="WyY-3g-U7S" secondAttribute="leading" constant="10" id="NdY-QR-pBS"/>
+                            <constraint firstItem="lKo-ou-BbW" firstAttribute="top" secondItem="KyO-1N-El2" secondAttribute="bottom" constant="30" id="gqY-dH-wkZ"/>
+                            <constraint firstItem="x8V-Dd-TRC" firstAttribute="top" secondItem="0oU-qU-X2Y" secondAttribute="bottom" constant="30" id="lDu-Kr-x83"/>
+                            <constraint firstItem="lKo-ou-BbW" firstAttribute="top" secondItem="x8V-Dd-TRC" secondAttribute="bottom" constant="104" id="nHL-9F-oQh"/>
+                            <constraint firstItem="0oU-qU-X2Y" firstAttribute="top" secondItem="EZn-wU-GEk" secondAttribute="bottom" constant="30" id="pkQ-hE-lce"/>
+                            <constraint firstItem="0oU-qU-X2Y" firstAttribute="top" secondItem="EZn-wU-GEk" secondAttribute="bottom" constant="30" id="vKs-2a-chH"/>
+                            <constraint firstAttribute="trailing" secondItem="x8V-Dd-TRC" secondAttribute="trailing" id="yxB-8G-w6i"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="pkQ-hE-lce"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="timeTableView" destination="x8V-Dd-TRC" id="5ZI-Xn-t2Y"/>
+                        <outlet property="validateButton" destination="KyO-1N-El2" id="gGg-pl-yhU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pqr-KF-NcR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -857,7 +929,7 @@ numérique</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a2i-aJ-PjE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1102.5" y="-641.5"/>
+            <point key="canvasLocation" x="991.5" y="-634.5"/>
         </scene>
         <!--Program View Controller-->
         <scene sceneID="pAJ-9m-ceX">
