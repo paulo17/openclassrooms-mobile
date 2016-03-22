@@ -93,6 +93,11 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        navigationItem.title = ""
+        if segue.identifier == "categoryToObjective" {
+            navigationItem.title = "" // remove navigation title
+            
+            let objectiveController = segue.destinationViewController as! ObjectiveViewController
+            objectiveController.category = selectedCategory
+        }
     }
 }

@@ -16,6 +16,8 @@ class ObjectiveViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var objectiveTableView: UITableView!
     
     let objectiveCellIdentifier = "objectiveCell"
+    
+    var category: Category?
     lazy var objectives = [Objective]()
     
     override func viewDidLoad() {
@@ -30,6 +32,12 @@ class ObjectiveViewController: UIViewController, UITableViewDelegate, UITableVie
     override func viewWillAppear(animated: Bool) {
         objectiveTableView.delegate = self
         objectiveTableView.dataSource = self
+        
+        if let category = self.category {
+            categoryName.text = category.name
+            categoryImage.image = UIImage(named: category.image)
+            categoryObjectiveNumber.text = "\(objectives.count) cours"
+        }
         
         self.title = "Choisir un objectif"
     }
