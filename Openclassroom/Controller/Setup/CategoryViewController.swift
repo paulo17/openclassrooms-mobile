@@ -20,14 +20,16 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        categoryCollectionView.delegate = self
+        categoryCollectionView.dataSource = self
+        
+        validateButton.OCdefaultButton(UIColorFromRGBA("ceced2"))
+        
         self.categories = getStaticCategory()
     }
     
     override func viewWillAppear(animated: Bool) {
-        validateButton.OCdefaultButton(UIColorFromRGBA("ceced2"))
-        
-        categoryCollectionView.delegate = self
-        categoryCollectionView.dataSource = self
+        navigationItem.title = "Choisir une catégorie"
     }
     
     func getStaticCategory() -> [Category] {
@@ -88,5 +90,9 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
         }
         
         return true
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        navigationItem.title = ""
     }
 }

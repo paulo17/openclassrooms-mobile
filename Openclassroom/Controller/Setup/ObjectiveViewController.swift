@@ -27,6 +27,8 @@ class ObjectiveViewController: UIViewController, UITableViewDelegate, UITableVie
     override func viewWillAppear(animated: Bool) {
         objectiveTableView.delegate = self
         objectiveTableView.dataSource = self
+        
+        self.title = "Choisir un objectif"
     }
     
     func getStaticObjective() -> [Objective] {
