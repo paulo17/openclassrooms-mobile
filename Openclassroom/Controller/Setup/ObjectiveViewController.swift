@@ -16,9 +16,12 @@ class ObjectiveViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var objectiveTableView: UITableView!
     
     let objectiveCellIdentifier = "objectiveCell"
+    lazy var objectives = [Objective]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        objectives = getStaticObjective()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -26,14 +29,29 @@ class ObjectiveViewController: UIViewController, UITableViewDelegate, UITableVie
         objectiveTableView.dataSource = self
     }
     
+    func getStaticObjective() -> [Objective] {
+        var objectives = [Objective]()
+        var i = 1
+        
+        for objective in Objective.objectives {
+            objectives.append(Objective(id: i, name: objective["name"]!))
+            i++
+        }
+        
+        return objectives
+    }
+    
     // MARK: - TableView
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return objectives.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = objectiveTableView.dequeueReusableCellWithIdentifier(objectiveCellIdentifier, forIndexPath: indexPath) as! ObjectiveCell
+        let objective = objectives[indexPath.row]
+        
+        cell.initializeCellWithContent(objective)
         
         return cell
     }

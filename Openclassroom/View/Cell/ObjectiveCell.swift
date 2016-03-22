@@ -11,4 +11,8 @@ import UIKit
 class ObjectiveCell: UITableViewCell {
     
     @IBOutlet weak var objectiveName: UILabel!
+    
+    func initializeCellWithContent(objective: Objective) {
+        objectiveName.text = objective.name
+    }
 }
