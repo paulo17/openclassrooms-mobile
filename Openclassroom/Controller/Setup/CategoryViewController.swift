@@ -34,11 +34,9 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     func getStaticCategory() -> [Category] {
         var categories = [Category]()
-        var i = 1
         
-        for category in Category.categories {
-            categories.append(Category(id: i, name: category["name"]!, image: category["image"]!))
-            i++
+        for (index, category) in Category.categories.enumerate() {
+            categories.append(Category(id: index, name: category["name"]!, image: category["image"]!))
         }
         
         return categories

@@ -44,11 +44,9 @@ class ObjectiveViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func getStaticObjective() -> [Objective] {
         var objectives = [Objective]()
-        var i = 1
-        
-        for objective in Objective.objectives {
-            objectives.append(Objective(id: i, name: objective["name"]!))
-            i++
+
+        for (index, objective) in Objective.objectives.enumerate() {
+            objectives.append(Objective(id: index, name: objective["name"]!))
         }
         
         return objectives
