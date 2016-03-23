@@ -399,8 +399,11 @@ numérique</string>
                                                     <color key="textColor" red="0.74901962280273438" green="0.74901962280273438" blue="0.76470589637756348" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JBW-UV-pmd">
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JBW-UV-pmd">
                                                     <rect key="frame" x="316" y="6" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="switchChangedAction:" destination="gXr-Rf-GvJ" eventType="valueChanged" id="l9T-sX-dJF"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <constraints>
@@ -412,6 +415,10 @@ numérique</string>
                                                 <constraint firstAttribute="bottom" secondItem="BbS-AI-OVY" secondAttribute="bottom" constant="12" id="mUY-22-fMm"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dayLabel" destination="BbS-AI-OVY" id="cpD-8g-AtQ"/>
+                                            <outlet property="daySwitch" destination="JBW-UV-pmd" id="i1q-Rs-dJ0"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
