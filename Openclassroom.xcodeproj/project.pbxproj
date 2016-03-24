@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6B229B1F1C8C896C0079990A /* OCNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B229B1E1C8C896C0079990A /* OCNavigationBar.swift */; };
+		6B2CA85E1CA1E12A002FB444 /* DayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CA85D1CA1E12A002FB444 /* DayCell.swift */; };
 		6B36B32E1C60C4AE00989167 /* Walkthrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B36B32D1C60C4AE00989167 /* Walkthrough.storyboard */; };
 		6B4BEE721C872195006D2862 /* Redirect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4BEE711C872195006D2862 /* Redirect.swift */; };
 		6B4BEE741C872246006D2862 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4BEE731C872246006D2862 /* Font.swift */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		6B229B1E1C8C896C0079990A /* OCNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCNavigationBar.swift; sourceTree = "<group>"; };
+		6B2CA85D1CA1E12A002FB444 /* DayCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayCell.swift; sourceTree = "<group>"; };
 		6B36B32D1C60C4AE00989167 /* Walkthrough.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Walkthrough.storyboard; sourceTree = "<group>"; };
 		6B4BEE711C872195006D2862 /* Redirect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Redirect.swift; sourceTree = "<group>"; };
 		6B4BEE731C872246006D2862 /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				6BA0F8251C9858B0001AA68E /* TextLeconCell.swift */,
 				6B4E30FE1C9D78C600BE42CB /* CategoryCell.swift */,
 				6BF8B39C1CA0576400051D54 /* ObjectiveCell.swift */,
+				6B2CA85D1CA1E12A002FB444 /* DayCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 				6B4E30FB1C99A48500BE42CB /* TimeViewController.swift in Sources */,
 				6B4BEE7D1C8723C2006D2862 /* LoginViewController.swift in Sources */,
 				6BEAA7191C5FBCB80043BEA2 /* ViewController.swift in Sources */,
+				6B2CA85E1CA1E12A002FB444 /* DayCell.swift in Sources */,
 				6BA0F81C1C984CEE001AA68E /* CustomWalkthroughPageViewController.swift in Sources */,
 				6BF8B39F1CA05B4D00051D54 /* Objective.swift in Sources */,
 				6B4BEE7B1C8723A8006D2862 /* RegisterViewController.swift in Sources */,
