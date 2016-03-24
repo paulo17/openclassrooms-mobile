@@ -35,6 +35,16 @@ class DayViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         self.title = "Vos disponiblités"
     }
     
+    func toggleValidateButton() {
+        if selectedDays.count > 0 {
+            validateButton.enabled = true
+            validateButton.OCdefaultButton(UIColorFromRGBA("F39539"))
+        } else {
+            validateButton.enabled = false
+            validateButton.OCdefaultButton(UIColorFromRGBA("ceced2"))
+        }
+    }
+    
     // MARK: - TableView
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -49,6 +59,8 @@ class DayViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         return cell
     }
     
+    // MARK: - DaySwitchDelegate
+    
     func didChangeSwitchState(sender: DayCell, status: Bool) {
         if let day = sender.dayLabel.text {
             if status {
@@ -57,5 +69,9 @@ class DayViewController: UIViewController, UITableViewDelegate, UITableViewDataS
                 selectedDays.removeValueForKey(sender.index)
             }
         }
+        
+        // set button color enable/disable
+        toggleValidateButton()
     }
+    
 }
