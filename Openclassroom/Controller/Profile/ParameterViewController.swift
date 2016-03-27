@@ -9,11 +9,14 @@
 import UIKit
 
 class ParameterViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
+        self.title = "Vos paramètres"
     }
 }
