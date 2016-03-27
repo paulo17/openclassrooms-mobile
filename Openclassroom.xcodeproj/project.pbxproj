@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6B229B1F1C8C896C0079990A /* OCNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B229B1E1C8C896C0079990A /* OCNavigationBar.swift */; };
+		6B2351421CA825EF00B16B8C /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2351411CA825EF00B16B8C /* Array.swift */; };
 		6B2CA85E1CA1E12A002FB444 /* DayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CA85D1CA1E12A002FB444 /* DayCell.swift */; };
 		6B36B32E1C60C4AE00989167 /* Walkthrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B36B32D1C60C4AE00989167 /* Walkthrough.storyboard */; };
 		6B4BEE721C872195006D2862 /* Redirect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4BEE711C872195006D2862 /* Redirect.swift */; };
@@ -34,6 +35,8 @@
 		6BA0F8271C9858B0001AA68E /* LeconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA0F8241C9858B0001AA68E /* LeconCell.swift */; };
 		6BA0F8281C9858B0001AA68E /* TextLeconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA0F8251C9858B0001AA68E /* TextLeconCell.swift */; };
 		6BA0F82A1C98A0DA001AA68E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA0F8291C98A0DA001AA68E /* User.swift */; };
+		6BBC5F901CA487C600EC7EFE /* ParameterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC5F8F1CA487C600EC7EFE /* ParameterViewController.swift */; };
+		6BD1DA0E1CA7E6370075057F /* ParameterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD1DA0D1CA7E6370075057F /* ParameterView.swift */; };
 		6BEAA7191C5FBCB80043BEA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEAA7181C5FBCB80043BEA2 /* ViewController.swift */; };
 		6BF23A9C1C5FAE94001B1006 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF23A9B1C5FAE94001B1006 /* AppDelegate.swift */; };
 		6BF23AA11C5FAE94001B1006 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BF23A9F1C5FAE94001B1006 /* Main.storyboard */; };
@@ -46,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		6B229B1E1C8C896C0079990A /* OCNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCNavigationBar.swift; sourceTree = "<group>"; };
+		6B2351411CA825EF00B16B8C /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		6B2CA85D1CA1E12A002FB444 /* DayCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayCell.swift; sourceTree = "<group>"; };
 		6B36B32D1C60C4AE00989167 /* Walkthrough.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Walkthrough.storyboard; sourceTree = "<group>"; };
 		6B4BEE711C872195006D2862 /* Redirect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Redirect.swift; sourceTree = "<group>"; };
@@ -73,6 +77,8 @@
 		6BA0F8241C9858B0001AA68E /* LeconCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeconCell.swift; sourceTree = "<group>"; };
 		6BA0F8251C9858B0001AA68E /* TextLeconCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextLeconCell.swift; sourceTree = "<group>"; };
 		6BA0F8291C98A0DA001AA68E /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		6BBC5F8F1CA487C600EC7EFE /* ParameterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterViewController.swift; sourceTree = "<group>"; };
+		6BD1DA0D1CA7E6370075057F /* ParameterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterView.swift; sourceTree = "<group>"; };
 		6BEAA7181C5FBCB80043BEA2 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6BF23A981C5FAE94001B1006 /* Openclassroom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Openclassroom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BF23A9B1C5FAE94001B1006 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +123,7 @@
 				6B73BAFF1C8B221300BCE574 /* OCButton.swift */,
 				6B73BB011C8B239D00BCE574 /* OCTextField.swift */,
 				6B229B1E1C8C896C0079990A /* OCNavigationBar.swift */,
+				6B2351411CA825EF00B16B8C /* Array.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -124,6 +131,7 @@
 		6B36B3261C60B6DA00989167 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6BD1DA0C1CA7E6210075057F /* CustomView */,
 				6BA0F8221C9858B0001AA68E /* Cell */,
 			);
 			path = View;
@@ -181,9 +189,26 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		6BBC5F8E1CA487AE00EC7EFE /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				6BBC5F8F1CA487C600EC7EFE /* ParameterViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		6BD1DA0C1CA7E6210075057F /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				6BD1DA0D1CA7E6370075057F /* ParameterView.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
 		6BEAA7161C5FB9D30043BEA2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6BBC5F8E1CA487AE00EC7EFE /* Profile */,
 				6B4E30F11C99A20100BE42CB /* Setup */,
 				6BA0F8181C984BB0001AA68E /* Walkthrough */,
 				6B4BEE791C8723A8006D2862 /* Sign */,
@@ -393,11 +418,14 @@
 				6B4BEE7D1C8723C2006D2862 /* LoginViewController.swift in Sources */,
 				6BEAA7191C5FBCB80043BEA2 /* ViewController.swift in Sources */,
 				6B2CA85E1CA1E12A002FB444 /* DayCell.swift in Sources */,
+				6B2351421CA825EF00B16B8C /* Array.swift in Sources */,
 				6BA0F81C1C984CEE001AA68E /* CustomWalkthroughPageViewController.swift in Sources */,
 				6BF8B39F1CA05B4D00051D54 /* Objective.swift in Sources */,
 				6B4BEE7B1C8723A8006D2862 /* RegisterViewController.swift in Sources */,
 				6B4E30F51C99A3A000BE42CB /* ObjectiveViewController.swift in Sources */,
+				6BD1DA0E1CA7E6370075057F /* ParameterView.swift in Sources */,
 				6B4BEE7F1C8723E7006D2862 /* SignInViewController.swift in Sources */,
+				6BBC5F901CA487C600EC7EFE /* ParameterViewController.swift in Sources */,
 				6B229B1F1C8C896C0079990A /* OCNavigationBar.swift in Sources */,
 				6B4E30F31C99A23B00BE42CB /* CategoryViewController.swift in Sources */,
 				6B4BEE721C872195006D2862 /* Redirect.swift in Sources */,

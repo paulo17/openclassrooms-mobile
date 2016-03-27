@@ -74,4 +74,10 @@ class DayViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         toggleValidateButton()
     }
     
+    // MARK: - Navigation
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        navigationItem.title = "" // remove navigation title
+    }
+    
 }
