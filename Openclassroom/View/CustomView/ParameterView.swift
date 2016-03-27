@@ -14,6 +14,7 @@ class ParameterView: UIView {
     @IBOutlet weak var content: UILabel!
     @IBOutlet weak var button: UIButton!
     
+    var identifier: String!
     var delegate: ParameterViewDelegate?
     
     required init?(coder aDecoder: NSCoder) {
@@ -39,7 +40,7 @@ class ParameterView: UIView {
     // MARK: - Action
     
     @IBAction func changeParameter() {
-        self.delegate?.changeProfileParameter("test")
+        self.delegate?.changeProfileParameter(self.identifier)
     }
     
 }

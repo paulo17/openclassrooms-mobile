@@ -17,6 +17,7 @@ class ParameterViewController: UIViewController, ParameterViewDelegate {
     @IBOutlet weak var objectiveView: ParameterView!
     @IBOutlet weak var dayView: ParameterView!
     @IBOutlet weak var timeView: ParameterView!
+    @IBOutlet weak var validateButton: UIButton!
     
     var objective: Objective?
 
@@ -26,6 +27,12 @@ class ParameterViewController: UIViewController, ParameterViewDelegate {
         objectiveView.delegate = self
         dayView.delegate = self
         timeView.delegate = self
+        
+        objectiveView.identifier = "objective"
+        dayView.identifier = "day"
+        timeView.identifier = "time"
+        
+        validateButton.OCborderButton(UIColorFromRGBA("F39539"))
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -37,7 +44,26 @@ class ParameterViewController: UIViewController, ParameterViewDelegate {
     
     // MARK: - ParameterView Delegate
     
-    func changeProfileParameter(parameterType: String) {
-        print("change this in controller")
+    func changeProfileParameter(identifier: String) {
+        var setupController: UIViewController?
+        
+        switch identifier {
+        case "objective":
+             setupController = storyboard?.instantiateViewControllerWithIdentifier("categoryViewController") as! CategoryViewController
+            break
+        case "day":
+             setupController = storyboard?.instantiateViewControllerWithIdentifier("dayViewController") as! DayViewController
+            break
+        case "time":
+            setupController = storyboard?.instantiateViewControllerWithIdentifier("timeViewController") as! TimeViewController
+            break
+        default:
+            break
+        }
+        
+        if let controller = setupController {
+            navigationController?.pushViewController(controller, animated: true)
+        }
     }
+    
 }

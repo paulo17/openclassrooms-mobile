@@ -102,6 +102,17 @@
                                 <color key="textColor" red="0.74901962280273438" green="0.74901962280273438" blue="0.76470589637756348" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ux-Sr-zPQ">
+                                <rect key="frame" x="35" y="593" width="305" height="44"/>
+                                <color key="backgroundColor" red="0.76470588235294112" green="0.76470588235294112" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <state key="normal" title="Valider">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="WrT-HP-psT" kind="show" identifier="categoryToObjective" id="tuO-Yc-9qT"/>
+                                </connections>
+                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ceP-4d-5zN">
                                 <rect key="frame" x="10" y="179" width="355" height="384"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -180,17 +191,6 @@ numérique</string>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ux-Sr-zPQ">
-                                <rect key="frame" x="35" y="593" width="305" height="44"/>
-                                <color key="backgroundColor" red="0.76470588235294112" green="0.76470588235294112" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                <state key="normal" title="Valider">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="WrT-HP-psT" kind="show" identifier="categoryToObjective" id="tuO-Yc-9qT"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -359,7 +359,7 @@ numérique</string>
         <!--Day View Controller-->
         <scene sceneID="JpL-AF-EIO">
             <objects>
-                <viewController id="XkL-aL-3n7" customClass="DayViewController" customModule="Openclassroom" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="dayViewController" id="XkL-aL-3n7" customClass="DayViewController" customModule="Openclassroom" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EZn-wU-GEk"/>
                         <viewControllerLayoutGuide type="bottom" id="lKo-ou-BbW"/>
@@ -464,7 +464,7 @@ numérique</string>
                         <viewControllerLayoutGuide type="top" id="fLB-ao-Jci"/>
                         <viewControllerLayoutGuide type="bottom" id="4dY-5A-sGm"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="sih-UR-NfM">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="timeViewController" id="sih-UR-NfM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1131,6 +1131,7 @@ numérique</string>
                         <outlet property="dayView" destination="lGN-fO-5Lh" id="fVF-ZG-XeV"/>
                         <outlet property="objectiveView" destination="bTh-Wn-NzU" id="1AK-4y-8QB"/>
                         <outlet property="timeView" destination="KcN-23-QVj" id="74r-uI-lyn"/>
+                        <outlet property="validateButton" destination="unh-eA-7tE" id="CrL-Eb-t41"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gbB-KK-Zrq" userLabel="First Responder" sceneMemberID="firstResponder"/>
