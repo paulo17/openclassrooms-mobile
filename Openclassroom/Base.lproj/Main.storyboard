@@ -968,18 +968,6 @@ numérique</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bTh-Wn-NzU" customClass="ParameterView" customModule="Openclassroom" customModuleProvider="target">
                                 <rect key="frame" x="15" y="180" width="345" height="110"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Votre objectif" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAx-1P-8fb">
-                                        <rect key="frame" x="30" y="22" width="142" height="29"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <color key="textColor" red="0.33725491166114807" green="0.33725491166114807" blue="0.33725491166114807" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Initiation numérique" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kaP-ai-N1X">
-                                        <rect key="frame" x="30" y="59" width="160" height="22"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <color key="textColor" red="0.74901962280273438" green="0.74901962280273438" blue="0.76470589637756348" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="RaY-PF-T0t">
                                         <rect key="frame" x="313" y="45" width="12" height="20"/>
                                         <constraints>
@@ -987,6 +975,18 @@ numérique</string>
                                             <constraint firstAttribute="width" constant="12" id="wDD-zV-C9Q"/>
                                         </constraints>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Initiation numérique" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kaP-ai-N1X">
+                                        <rect key="frame" x="30" y="59" width="160" height="22"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" red="0.74901962280273438" green="0.74901962280273438" blue="0.76470589637756348" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Votre objectif" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAx-1P-8fb">
+                                        <rect key="frame" x="30" y="22" width="142" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" red="0.33725491166114807" green="0.33725491166114807" blue="0.33725491166114807" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -998,40 +998,10 @@ numérique</string>
                                     <constraint firstAttribute="trailing" secondItem="RaY-PF-T0t" secondAttribute="trailing" constant="20" id="eFl-0x-JeJ"/>
                                     <constraint firstItem="kaP-ai-N1X" firstAttribute="top" secondItem="YAx-1P-8fb" secondAttribute="bottom" constant="8" id="wiz-62-Cal"/>
                                 </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KcN-23-QVj" customClass="ParameterView" customModule="Openclassroom" customModuleProvider="target">
-                                <rect key="frame" x="15" y="440" width="345" height="110"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Votre temps disponible" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ib-Bl-I4Z">
-                                        <rect key="frame" x="30" y="22" width="246" height="29"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <color key="textColor" red="0.33725491169999999" green="0.33725491169999999" blue="0.33725491169999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="6iT-uH-aZ7">
-                                        <rect key="frame" x="313" y="45" width="12" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="12" id="TOG-1S-dFy"/>
-                                            <constraint firstAttribute="height" constant="20" id="W7r-un-Xav"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25 minutes" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucd-jy-mZS">
-                                        <rect key="frame" x="30" y="59" width="90" height="22"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <color key="textColor" red="0.74901962280000001" green="0.74901962280000001" blue="0.76470589639999997" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="0Ib-Bl-I4Z" firstAttribute="leading" secondItem="KcN-23-QVj" secondAttribute="leading" constant="30" id="3Mz-bu-wvR"/>
-                                    <constraint firstItem="0Ib-Bl-I4Z" firstAttribute="top" secondItem="KcN-23-QVj" secondAttribute="top" constant="22" id="D1E-Sg-EeS"/>
-                                    <constraint firstItem="ucd-jy-mZS" firstAttribute="top" secondItem="0Ib-Bl-I4Z" secondAttribute="bottom" constant="8" id="Raz-Id-seG"/>
-                                    <constraint firstItem="6iT-uH-aZ7" firstAttribute="centerY" secondItem="KcN-23-QVj" secondAttribute="centerY" id="XLV-ww-NXA"/>
-                                    <constraint firstItem="ucd-jy-mZS" firstAttribute="leading" secondItem="KcN-23-QVj" secondAttribute="leading" constant="30" id="h8k-7J-ahU"/>
-                                    <constraint firstAttribute="trailing" secondItem="6iT-uH-aZ7" secondAttribute="trailing" constant="20" id="lnu-lb-Xp7"/>
-                                    <constraint firstAttribute="height" constant="110" id="njS-CG-9N2"/>
-                                </constraints>
+                                <connections>
+                                    <outlet property="content" destination="kaP-ai-N1X" id="2A4-Kn-RQQ"/>
+                                    <outlet property="title" destination="YAx-1P-8fb" id="8dj-FS-QBU"/>
+                                </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="unh-eA-7tE">
                                 <rect key="frame" x="30" y="585" width="315" height="44"/>
@@ -1077,6 +1047,48 @@ numérique</string>
                                     <constraint firstItem="UPk-di-MuQ" firstAttribute="centerY" secondItem="lGN-fO-5Lh" secondAttribute="centerY" id="nZS-Dd-hpG"/>
                                     <constraint firstItem="UMT-2r-MsU" firstAttribute="top" secondItem="lGN-fO-5Lh" secondAttribute="top" constant="22" id="r8R-ps-cHx"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="content" destination="xa1-kd-sZ7" id="cFv-gJ-4xH"/>
+                                    <outlet property="title" destination="UMT-2r-MsU" id="HCR-vL-rAe"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KcN-23-QVj" customClass="ParameterView" customModule="Openclassroom" customModuleProvider="target">
+                                <rect key="frame" x="15" y="440" width="345" height="110"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Votre temps disponible" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ib-Bl-I4Z">
+                                        <rect key="frame" x="30" y="22" width="246" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" red="0.33725491169999999" green="0.33725491169999999" blue="0.33725491169999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="6iT-uH-aZ7">
+                                        <rect key="frame" x="313" y="45" width="12" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="12" id="TOG-1S-dFy"/>
+                                            <constraint firstAttribute="height" constant="20" id="W7r-un-Xav"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25 minutes" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucd-jy-mZS">
+                                        <rect key="frame" x="30" y="59" width="90" height="22"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" red="0.74901962280000001" green="0.74901962280000001" blue="0.76470589639999997" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="0Ib-Bl-I4Z" firstAttribute="leading" secondItem="KcN-23-QVj" secondAttribute="leading" constant="30" id="3Mz-bu-wvR"/>
+                                    <constraint firstItem="0Ib-Bl-I4Z" firstAttribute="top" secondItem="KcN-23-QVj" secondAttribute="top" constant="22" id="D1E-Sg-EeS"/>
+                                    <constraint firstItem="ucd-jy-mZS" firstAttribute="top" secondItem="0Ib-Bl-I4Z" secondAttribute="bottom" constant="8" id="Raz-Id-seG"/>
+                                    <constraint firstItem="6iT-uH-aZ7" firstAttribute="centerY" secondItem="KcN-23-QVj" secondAttribute="centerY" id="XLV-ww-NXA"/>
+                                    <constraint firstItem="ucd-jy-mZS" firstAttribute="leading" secondItem="KcN-23-QVj" secondAttribute="leading" constant="30" id="h8k-7J-ahU"/>
+                                    <constraint firstAttribute="trailing" secondItem="6iT-uH-aZ7" secondAttribute="trailing" constant="20" id="lnu-lb-Xp7"/>
+                                    <constraint firstAttribute="height" constant="110" id="njS-CG-9N2"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="content" destination="ucd-jy-mZS" id="cXU-Pe-biR"/>
+                                    <outlet property="title" destination="0Ib-Bl-I4Z" id="fcE-VV-719"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1100,6 +1112,11 @@ numérique</string>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="dayView" destination="lGN-fO-5Lh" id="fVF-ZG-XeV"/>
+                        <outlet property="objectiveView" destination="bTh-Wn-NzU" id="1AK-4y-8QB"/>
+                        <outlet property="timeView" destination="KcN-23-QVj" id="74r-uI-lyn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gbB-KK-Zrq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
