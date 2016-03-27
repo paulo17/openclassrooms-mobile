@@ -10,14 +10,25 @@ import UIKit
 
 class ParameterView: UIView {
 
-    @IBOutlet weak var content: UILabel!
     @IBOutlet var title: UILabel!
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
-    
+    @IBOutlet weak var content: UILabel!
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        
+        setUI()
     }
+    
+    func initializeViewWithContent(content: String) {
+        self.content.text = content
+    }
+    
+    func setUI() {
+        let leftBorder = CALayer()
+        leftBorder.backgroundColor = UIColorFromRGBA("00c6ae").CGColor
+        leftBorder.frame = CGRectMake(0, 0, 10.0, CGRectGetHeight(self.frame)) // create rectangle
+        
+        self.layer.addSublayer(leftBorder)
+    }
+    
 }
