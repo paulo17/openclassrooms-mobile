@@ -8,7 +8,11 @@
 
 import UIKit
 
-class ParameterViewController: UIViewController {
+protocol ParameterViewDelegate: class {
+    func changeProfileParameter(parameterType: String)
+}
+
+class ParameterViewController: UIViewController, ParameterViewDelegate {
     
     @IBOutlet weak var objectiveView: ParameterView!
     @IBOutlet weak var dayView: ParameterView!
@@ -18,6 +22,10 @@ class ParameterViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        objectiveView.delegate = self
+        dayView.delegate = self
+        timeView.delegate = self
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -25,5 +33,11 @@ class ParameterViewController: UIViewController {
         
         self.title = "Vos paramètres"
         self.navigationItem.setHidesBackButton(true, animated: true)
+    }
+    
+    // MARK: - ParameterView Delegate
+    
+    func changeProfileParameter(parameterType: String) {
+        print("change this in controller")
     }
 }

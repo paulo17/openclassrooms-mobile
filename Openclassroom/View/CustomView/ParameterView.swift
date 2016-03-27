@@ -10,14 +10,19 @@ import UIKit
 
 class ParameterView: UIView {
 
-    @IBOutlet var title: UILabel!
+    @IBOutlet weak var title: UILabel!
     @IBOutlet weak var content: UILabel!
-
+    @IBOutlet weak var button: UIButton!
+    
+    var delegate: ParameterViewDelegate?
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
         setUI()
     }
+    
+     // MARK: - UI
     
     func initializeViewWithContent(content: String) {
         self.content.text = content
@@ -29,6 +34,12 @@ class ParameterView: UIView {
         leftBorder.frame = CGRectMake(0, 0, 10.0, CGRectGetHeight(self.frame)) // create rectangle
         
         self.layer.addSublayer(leftBorder)
+    }
+    
+    // MARK: - Action
+    
+    @IBAction func changeParameter() {
+        self.delegate?.changeProfileParameter("test")
     }
     
 }
