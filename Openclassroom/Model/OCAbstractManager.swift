@@ -11,6 +11,8 @@ import CoreData
 
 class OCAbstractManager<Entity: OCManagedObject> {
     
+    // MARK: - CRUD Core Data
+    
     class func createObject() -> Entity {
         let entityDescription = NSEntityDescription.entityForName(Entity.entityName(), inManagedObjectContext: managedObjectContext)
         
@@ -18,6 +20,32 @@ class OCAbstractManager<Entity: OCManagedObject> {
         
         return object
     }
+    
+    static func deleteObject(object: Entity, saveContext: Bool = true) {
+        managedObjectContext.deleteObject(object)
+        self.saveContext()
+    }
+    
+    // MARK: - Core Data Accessor
+    
+    static func objects() -> [Entity] {
+        let entityDescription = NSEntityDescription.entityForName(Entity.entityName(), inManagedObjectContext: managedObjectContext)
+                
+        // initialize request
+        let request = NSFetchRequest()
+        request.entity = entityDescription
+        
+        // execute request
+        do {
+            let results = try managedObjectContext.executeFetchRequest(request)
+            return results as! [Entity]
+        } catch let error as NSError {
+            print(error)
+        }
+        
+        return []
+    }
+
     
     // MARK: - Managed Object Context
     
@@ -37,8 +65,6 @@ class OCAbstractManager<Entity: OCManagedObject> {
             do {
                 try managedObjectContext.save()
             } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
                 let nserror = error as NSError
                 NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
                 abort()

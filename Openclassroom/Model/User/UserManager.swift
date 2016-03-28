@@ -11,5 +11,13 @@ import CoreData
 
 class UserManager<Entity: User>: OCAbstractManager<User> {
     
-    
+    static func createUser(email: String, password: String) -> User {
+        let user = createObject()
+        user.email = email
+        user.password = password
+        
+        self.saveContext()
+        
+        return user
+    }
 }

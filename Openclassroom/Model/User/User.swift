@@ -11,6 +11,7 @@ class User: OCManagedObject {
     @NSManaged var firstname: String?
     @NSManaged var lastname: String?
     @NSManaged var email: String?
+    @NSManaged var password: String?
     
     @NSManaged var category: String?
     @NSManaged var objective: String?
