@@ -744,27 +744,11 @@ numérique</string>
                                     <constraint firstAttribute="height" constant="30" id="ts7-jC-E07"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="done"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="5jH-uU-Hsp"/>
                                         <exclude reference="azo-OC-jWx"/>
-                                    </mask>
-                                </variation>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mot de passe" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qei-uI-bTy">
-                                <rect key="frame" x="30" y="375" width="315" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="0e4-AE-7Ry"/>
-                                    <constraint firstAttribute="height" constant="60" id="c3A-18-l22"/>
-                                    <constraint firstAttribute="height" constant="30" id="iGk-xs-8VN"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="0e4-AE-7Ry"/>
-                                        <exclude reference="c3A-18-l22"/>
                                     </mask>
                                 </variation>
                             </textField>
@@ -798,6 +782,22 @@ numérique</string>
                                     <action selector="registerAction:" destination="NCy-Xn-o2D" eventType="touchUpInside" id="V2W-bS-omW"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mot de passe" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qei-uI-bTy">
+                                <rect key="frame" x="30" y="375" width="315" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="0e4-AE-7Ry"/>
+                                    <constraint firstAttribute="height" constant="60" id="c3A-18-l22"/>
+                                    <constraint firstAttribute="height" constant="30" id="iGk-xs-8VN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0e4-AE-7Ry"/>
+                                        <exclude reference="c3A-18-l22"/>
+                                    </mask>
+                                </variation>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -862,7 +862,7 @@ numérique</string>
                                     <constraint firstAttribute="height" constant="30" id="k0D-oo-4NF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mot de passe" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Of6-WL-fD4">
                                 <rect key="frame" x="30" y="375" width="315" height="30"/>
@@ -870,7 +870,7 @@ numérique</string>
                                     <constraint firstAttribute="height" constant="30" id="FjM-3I-Am8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="HPh-oH-2tT">
                                 <rect key="frame" x="94" y="53" width="186" height="131"/>

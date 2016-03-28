@@ -26,9 +26,28 @@ class LoginViewController: UIViewController {
     // MARK: - IBAction
     
     @IBAction func loginAction(sender: AnyObject) {
+        guard let email = emailTextField.text where !email.isEmpty,
+            let password = passwordTextField.text where !password.isEmpty else {
+                
+                let alert = UIAlertController(title: "Données invalides", message: "Veuillez renseigner tous les champs", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+                return self.presentViewController(alert, animated: true, completion: nil)
+        }
+        
+        guard UserManager.authenticateUser(email, password: password) != nil else {
+            let alert = UIAlertController(title: "Données invalides", message: "L'email ou le mot de passe est invalide", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+            
+            passwordTextField.text = ""
+            
+            return self.presentViewController(alert, animated: true, completion: nil)
+        }
+        
+        // redirect to setup pipe
         let setupNavigationController = storyboard?.instantiateViewControllerWithIdentifier("setupNavigationController") as! UINavigationController
         
         setupNavigationController.modalTransitionStyle = .FlipHorizontal
-        self.presentViewController(setupNavigationController, animated: true, completion: nil)
+        return self.presentViewController(setupNavigationController, animated: true, completion: nil)
     }
+    
 }

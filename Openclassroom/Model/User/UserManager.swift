@@ -20,4 +20,27 @@ class UserManager<Entity: User>: OCAbstractManager<User> {
         
         return user
     }
+    
+    static func authenticateUser(email: String, password: String) -> User? {
+        let entityDescription = NSEntityDescription.entityForName(User.entityName(), inManagedObjectContext: managedObjectContext)
+        
+        // initialize request
+        let request = NSFetchRequest()
+        request.entity = entityDescription
+        
+        // add predicate
+        let predicateEmail = NSPredicate(format: "email = %@", email)
+        let predicatePassword = NSPredicate(format: "password = %@", password)
+        request.predicate = NSCompoundPredicate(type: .AndPredicateType, subpredicates: [predicateEmail, predicatePassword])
+        
+        // execute request
+        do {
+            let results = try managedObjectContext.executeFetchRequest(request)
+            return results.first as? User
+        } catch let error as NSError {
+            print(error)
+        }
+        
+        return nil
+    }
 }

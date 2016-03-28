@@ -21,7 +21,7 @@ class OCAbstractManager<Entity: OCManagedObject> {
         return object
     }
     
-    static func deleteObject(object: Entity, saveContext: Bool = true) {
+    class func deleteObject(object: Entity, saveContext: Bool = true) {
         managedObjectContext.deleteObject(object)
         self.saveContext()
     }
@@ -44,6 +44,34 @@ class OCAbstractManager<Entity: OCManagedObject> {
         }
         
         return []
+    }
+    
+    static func objects(findByKey key: String, WithValue value: AnyObject) -> [Entity] {
+        let entityDescription = NSEntityDescription.entityForName(Entity.entityName(), inManagedObjectContext: managedObjectContext)
+        
+        // initialize request
+        let request = NSFetchRequest()
+        request.entity = entityDescription
+        
+        // add predicate
+        let predicate = NSPredicate(format: "\(key) = %@", argumentArray: [value])
+        request.predicate = predicate
+        
+        // execute request
+        do {
+            let results = try managedObjectContext.executeFetchRequest(request)
+            return results as! [Entity]
+        } catch let error as NSError {
+            print(error)
+        }
+        
+        return []
+    }
+    
+    static func objectByKey(key: String, value: AnyObject) -> Entity? {
+        let objectArray = self.objects(findByKey: key, WithValue: value)
+        
+        return objectArray.first
     }
 
     
