@@ -44,7 +44,7 @@ class LoginViewController: UIViewController {
         }
         
         // share user accross application with singleton pattern
-        DataContainer.sharedDataContainer.user = user
+        DataContainer.sharedDataContainer.currentUser = user
         
         // redirect to setup pipe
         let setupNavigationController = storyboard?.instantiateViewControllerWithIdentifier("setupNavigationController") as! UINavigationController

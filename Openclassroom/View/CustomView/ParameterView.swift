@@ -25,10 +25,6 @@ class ParameterView: UIView {
     
      // MARK: - UI
     
-    func initializeViewWithContent(content: String) {
-        self.content.text = content
-    }
-    
     func setUI() {
         let leftBorder = CALayer()
         leftBorder.backgroundColor = UIColorFromRGBA("00c6ae").CGColor

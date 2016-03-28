@@ -33,6 +33,12 @@ class ParameterViewController: UIViewController, ParameterViewDelegate {
         timeView.identifier = "time"
         
         validateButton.OCborderButton(UIColorFromRGBA("F39539"))
+        
+        showUserParemeters()
+    }
+    
+    func showUserParemeters() {
+        objectiveView.content.text = DataContainer.sharedDataContainer.currentUser.category
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -64,6 +70,13 @@ class ParameterViewController: UIViewController, ParameterViewDelegate {
         if let controller = setupController {
             navigationController?.pushViewController(controller, animated: true)
         }
+    }
+    
+    // MARK: - IB Action
+    
+    @IBAction func confirmParameterAction(sender: UIButton) {
+        // save user parameter to database
+        //let user = DataContainer.sharedDataContainer.currentUser
     }
     
 }

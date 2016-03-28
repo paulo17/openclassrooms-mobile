@@ -12,7 +12,7 @@ import UIKit
 class DataContainer {
     static let sharedDataContainer = DataContainer()
     
-    var user: User?
+    var currentUser: User!
     
     var goToBackgroundObserver: AnyObject?
     
@@ -20,7 +20,7 @@ class DataContainer {
     {
         let defaults = NSUserDefaults.standardUserDefaults()
         
-        user = defaults.objectForKey("User") as! User?
+        currentUser = defaults.objectForKey("User") as! User?
         
         //Add an obsever for the UIApplicationDidEnterBackgroundNotification.
         //When the app goes to the background, the code block saves our properties to NSUserDefaults.
@@ -33,7 +33,7 @@ class DataContainer {
             
             let defaults = NSUserDefaults.standardUserDefaults()
             
-            defaults.setObject(self.user, forKey: "User")
+            defaults.setObject(self.currentUser, forKey: "User")
         
             //Tell NSUserDefaults to save to disk now.
             defaults.synchronize()
