@@ -34,7 +34,7 @@ class LoginViewController: UIViewController {
                 return self.presentViewController(alert, animated: true, completion: nil)
         }
         
-        guard UserManager.authenticateUser(email, password: password) != nil else {
+        guard let user = UserManager.authenticateUser(email, password: password) else {
             let alert = UIAlertController(title: "Données invalides", message: "L'email ou le mot de passe est invalide", preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
             
@@ -42,6 +42,9 @@ class LoginViewController: UIViewController {
             
             return self.presentViewController(alert, animated: true, completion: nil)
         }
+        
+        // share user accross application with singleton pattern
+        DataContainer.sharedDataContainer.user = user
         
         // redirect to setup pipe
         let setupNavigationController = storyboard?.instantiateViewControllerWithIdentifier("setupNavigationController") as! UINavigationController
