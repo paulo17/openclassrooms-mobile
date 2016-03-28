@@ -34,8 +34,12 @@
 		6BA0F8261C9858B0001AA68E /* FinishLeconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA0F8231C9858B0001AA68E /* FinishLeconCell.swift */; };
 		6BA0F8271C9858B0001AA68E /* LeconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA0F8241C9858B0001AA68E /* LeconCell.swift */; };
 		6BA0F8281C9858B0001AA68E /* TextLeconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA0F8251C9858B0001AA68E /* TextLeconCell.swift */; };
-		6BA0F82A1C98A0DA001AA68E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA0F8291C98A0DA001AA68E /* User.swift */; };
 		6BBC5F901CA487C600EC7EFE /* ParameterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC5F8F1CA487C600EC7EFE /* ParameterViewController.swift */; };
+		6BBDB8B21CA940FB001361DA /* OC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6BBDB8B01CA940FB001361DA /* OC.xcdatamodeld */; };
+		6BBDB8DB1CA94824001361DA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBDB8DA1CA94824001361DA /* User.swift */; };
+		6BBDB8DD1CA9486F001361DA /* OCManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBDB8DC1CA9486F001361DA /* OCManagedObject.swift */; };
+		6BBDB8E11CA94BC7001361DA /* OCAbstractManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBDB8E01CA94BC7001361DA /* OCAbstractManager.swift */; };
+		6BBDB8E31CA961D5001361DA /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBDB8E21CA961D5001361DA /* UserManager.swift */; };
 		6BD1DA0E1CA7E6370075057F /* ParameterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD1DA0D1CA7E6370075057F /* ParameterView.swift */; };
 		6BEAA7191C5FBCB80043BEA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEAA7181C5FBCB80043BEA2 /* ViewController.swift */; };
 		6BF23A9C1C5FAE94001B1006 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF23A9B1C5FAE94001B1006 /* AppDelegate.swift */; };
@@ -76,8 +80,12 @@
 		6BA0F8231C9858B0001AA68E /* FinishLeconCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishLeconCell.swift; sourceTree = "<group>"; };
 		6BA0F8241C9858B0001AA68E /* LeconCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeconCell.swift; sourceTree = "<group>"; };
 		6BA0F8251C9858B0001AA68E /* TextLeconCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextLeconCell.swift; sourceTree = "<group>"; };
-		6BA0F8291C98A0DA001AA68E /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6BBC5F8F1CA487C600EC7EFE /* ParameterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterViewController.swift; sourceTree = "<group>"; };
+		6BBDB8B11CA940FB001361DA /* OC.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OC.xcdatamodel; sourceTree = "<group>"; };
+		6BBDB8DA1CA94824001361DA /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		6BBDB8DC1CA9486F001361DA /* OCManagedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCManagedObject.swift; sourceTree = "<group>"; };
+		6BBDB8E01CA94BC7001361DA /* OCAbstractManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCAbstractManager.swift; sourceTree = "<group>"; };
+		6BBDB8E21CA961D5001361DA /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		6BD1DA0D1CA7E6370075057F /* ParameterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterView.swift; sourceTree = "<group>"; };
 		6BEAA7181C5FBCB80043BEA2 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6BF23A981C5FAE94001B1006 /* Openclassroom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Openclassroom.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -197,6 +205,15 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		6BBDB8D91CA94814001361DA /* User */ = {
+			isa = PBXGroup;
+			children = (
+				6BBDB8DA1CA94824001361DA /* User.swift */,
+				6BBDB8E21CA961D5001361DA /* UserManager.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 		6BD1DA0C1CA7E6210075057F /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,11 +238,13 @@
 		6BEAA7171C5FB9D30043BEA2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6BBDB8D91CA94814001361DA /* User */,
 				6BA0F81D1C9858A0001AA68E /* Json */,
 				6BA0F81F1C9858A0001AA68E /* Lecon.swift */,
-				6BA0F8291C98A0DA001AA68E /* User.swift */,
 				6B4E30FC1C9D76B400BE42CB /* Category.swift */,
 				6BF8B39E1CA05B4D00051D54 /* Objective.swift */,
+				6BBDB8DC1CA9486F001361DA /* OCManagedObject.swift */,
+				6BBDB8E01CA94BC7001361DA /* OCAbstractManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -261,6 +280,7 @@
 				6B36B32D1C60C4AE00989167 /* Walkthrough.storyboard */,
 				6BF23AA21C5FAE94001B1006 /* Assets.xcassets */,
 				6BF23AA71C5FAE94001B1006 /* Info.plist */,
+				6BBDB8B01CA940FB001361DA /* OC.xcdatamodeld */,
 			);
 			path = Openclassroom;
 			sourceTree = "<group>";
@@ -430,17 +450,21 @@
 				6B4E30F31C99A23B00BE42CB /* CategoryViewController.swift in Sources */,
 				6B4BEE721C872195006D2862 /* Redirect.swift in Sources */,
 				6B73BB021C8B239D00BCE574 /* OCTextField.swift in Sources */,
-				6BA0F82A1C98A0DA001AA68E /* User.swift in Sources */,
 				6B4E30FF1C9D78C600BE42CB /* CategoryCell.swift in Sources */,
+				6BBDB8E31CA961D5001361DA /* UserManager.swift in Sources */,
 				6B4BEE811C87434A006D2862 /* MainViewController.swift in Sources */,
+				6BBDB8B21CA940FB001361DA /* OC.xcdatamodeld in Sources */,
 				6BA0F8261C9858B0001AA68E /* FinishLeconCell.swift in Sources */,
 				6BF8B39D1CA0576400051D54 /* ObjectiveCell.swift in Sources */,
 				6B4BEE741C872246006D2862 /* Font.swift in Sources */,
+				6BBDB8DB1CA94824001361DA /* User.swift in Sources */,
+				6BBDB8DD1CA9486F001361DA /* OCManagedObject.swift in Sources */,
 				6B4E30FD1C9D76B400BE42CB /* Category.swift in Sources */,
 				6B73BB001C8B221300BCE574 /* OCButton.swift in Sources */,
 				6BF23A9C1C5FAE94001B1006 /* AppDelegate.swift in Sources */,
 				6BA0F8211C9858A0001AA68E /* Lecon.swift in Sources */,
 				6BA0F81A1C984BB0001AA68E /* WalkthroughViewController.swift in Sources */,
+				6BBDB8E11CA94BC7001361DA /* OCAbstractManager.swift in Sources */,
 				6B4BEE761C87225C006D2862 /* UIColorFromRGBA.swift in Sources */,
 				6B4E30F71C99A41B00BE42CB /* ProgramViewController.swift in Sources */,
 				6BA0F8271C9858B0001AA68E /* LeconCell.swift in Sources */,
@@ -611,6 +635,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6BBDB8B01CA940FB001361DA /* OC.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6BBDB8B11CA940FB001361DA /* OC.xcdatamodel */,
+			);
+			currentVersion = 6BBDB8B11CA940FB001361DA /* OC.xcdatamodel */;
+			path = OC.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 6BF23A901C5FAE94001B1006 /* Project object */;
 }
