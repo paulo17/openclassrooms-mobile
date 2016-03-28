@@ -20,7 +20,7 @@ class LoginViewController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-        loginButton.OCdefaultButton(UIColorFromRGBA("F39539"))
+        loginButton.OCdefaultButton(UIColor.OCDustyOrangeColor())
     }
     
     // MARK: - IBAction

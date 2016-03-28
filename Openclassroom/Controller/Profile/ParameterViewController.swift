@@ -32,7 +32,7 @@ class ParameterViewController: UIViewController, ParameterViewDelegate {
         dayView.identifier = "day"
         timeView.identifier = "time"
         
-        validateButton.OCborderButton(UIColorFromRGBA("F39539"))
+        validateButton.OCborderButton(UIColor.OCDustyOrangeColor())
     }
     
     override func viewWillAppear(animated: Bool) {

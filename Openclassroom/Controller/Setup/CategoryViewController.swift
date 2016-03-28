@@ -74,7 +74,7 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
         let selectedCell = collectionView.cellForItemAtIndexPath(indexPath) as! CategoryCell
         selectedCell.categoryImage.alpha = 0.5
         
-        validateButton.OCdefaultButton(UIColorFromRGBA("ceced2"))
+        validateButton.OCdefaultButton(UIColor.OCSilverTwoColor())
         selectedCategory = nil
     }
     

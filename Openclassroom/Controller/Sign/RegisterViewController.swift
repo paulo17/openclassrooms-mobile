@@ -22,8 +22,8 @@ class RegisterViewController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-        registerButton.OCdefaultButton(UIColorFromRGBA("F39539"))
-        loginButton.OCborderButton(UIColorFromRGBA("F39539"))
+        registerButton.OCdefaultButton(UIColor.OCDustyOrangeColor())
+        loginButton.OCborderButton(UIColor.OCDustyOrangeColor())
     }
     
     // MARK: - IBAction

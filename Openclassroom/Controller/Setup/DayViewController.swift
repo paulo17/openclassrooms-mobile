@@ -28,7 +28,7 @@ class DayViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         timeTableView.delegate = self
         timeTableView.dataSource = self
         
-        validateButton.OCdefaultButton(UIColorFromRGBA("ceced2"))
+        validateButton.OCdefaultButton(UIColor.OCSilverTwoColor())
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -38,10 +38,10 @@ class DayViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     func toggleValidateButton() {
         if selectedDays.count > 0 {
             validateButton.enabled = true
-            validateButton.OCdefaultButton(UIColorFromRGBA("F39539"))
+            validateButton.OCdefaultButton(UIColor.OCDustyOrangeColor())
         } else {
             validateButton.enabled = false
-            validateButton.OCdefaultButton(UIColorFromRGBA("ceced2"))
+            validateButton.OCdefaultButton(UIColor.OCSilverTwoColor())
         }
     }
     
