@@ -90,16 +90,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choisir une discipline" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kmg-6z-4eJ">
-                                <rect key="frame" x="13" y="94" width="246" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choisir une catégorie" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kmg-6z-4eJ">
+                                <rect key="frame" x="13" y="94" width="245" height="29"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <color key="textColor" red="0.33725491166114807" green="0.33725491166114807" blue="0.33725491166114807" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choisissez la discipline  de votre objectif" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8q-j8-sgD">
-                                <rect key="frame" x="13" y="127" width="342" height="22"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" red="0.74901962280273438" green="0.74901962280273438" blue="0.76470589637756348" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ux-Sr-zPQ">
@@ -114,7 +108,7 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ceP-4d-5zN">
-                                <rect key="frame" x="10" y="179" width="355" height="384"/>
+                                <rect key="frame" x="10" y="149" width="355" height="414"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="35" minimumInteritemSpacing="0.0" id="qWR-vW-HW9">
@@ -195,19 +189,16 @@ numérique</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="yaN-oD-S0q" firstAttribute="top" secondItem="ceP-4d-5zN" secondAttribute="bottom" constant="104" id="0ha-JK-QKh"/>
-                            <constraint firstAttribute="trailing" secondItem="h8q-j8-sgD" secondAttribute="trailing" constant="20" id="2Df-NC-LFH"/>
                             <constraint firstAttribute="trailing" secondItem="ceP-4d-5zN" secondAttribute="trailing" id="2vU-1P-cCF"/>
                             <constraint firstItem="ceP-4d-5zN" firstAttribute="leading" secondItem="tuM-C4-Ypu" secondAttribute="leading" id="8U7-qO-zrf"/>
+                            <constraint firstItem="ceP-4d-5zN" firstAttribute="top" secondItem="Kmg-6z-4eJ" secondAttribute="bottom" constant="26" id="CSz-1Q-reE"/>
                             <constraint firstItem="1ux-Sr-zPQ" firstAttribute="leading" secondItem="tuM-C4-Ypu" secondAttribute="leading" constant="35" id="CoU-jr-AYG"/>
-                            <constraint firstItem="ceP-4d-5zN" firstAttribute="top" secondItem="h8q-j8-sgD" secondAttribute="bottom" constant="30" id="S9h-27-zhc"/>
-                            <constraint firstItem="h8q-j8-sgD" firstAttribute="top" secondItem="Kmg-6z-4eJ" secondAttribute="bottom" constant="4" id="aZG-V2-VZz"/>
                             <constraint firstAttribute="trailing" secondItem="Kmg-6z-4eJ" secondAttribute="trailing" constant="135" id="bEk-IB-wyz"/>
                             <constraint firstItem="yaN-oD-S0q" firstAttribute="top" secondItem="1ux-Sr-zPQ" secondAttribute="bottom" constant="30" id="d5R-bC-AKo"/>
                             <constraint firstItem="Kmg-6z-4eJ" firstAttribute="top" secondItem="SMV-eS-V6Y" secondAttribute="bottom" constant="30" id="e4e-l6-JAv"/>
                             <constraint firstItem="Kmg-6z-4eJ" firstAttribute="leading" secondItem="tuM-C4-Ypu" secondAttribute="leading" constant="13" id="eDe-ju-6DG"/>
                             <constraint firstAttribute="trailing" secondItem="ceP-4d-5zN" secondAttribute="trailing" constant="10" id="ees-0c-pnh"/>
                             <constraint firstItem="1ux-Sr-zPQ" firstAttribute="top" secondItem="ceP-4d-5zN" secondAttribute="bottom" constant="30" id="lBO-Hm-NoW"/>
-                            <constraint firstItem="h8q-j8-sgD" firstAttribute="leading" secondItem="tuM-C4-Ypu" secondAttribute="leading" constant="13" id="oT7-WX-UEu"/>
                             <constraint firstAttribute="trailing" secondItem="1ux-Sr-zPQ" secondAttribute="trailing" constant="35" id="rJE-Nu-OOT"/>
                             <constraint firstItem="ceP-4d-5zN" firstAttribute="leading" secondItem="tuM-C4-Ypu" secondAttribute="leading" constant="10" id="sNp-Lf-WgJ"/>
                         </constraints>
@@ -219,7 +210,7 @@ numérique</string>
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Choisir un objectif" id="ltd-j5-TUF"/>
+                    <navigationItem key="navigationItem" title="Etape 1 sur 3" id="ltd-j5-TUF"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="categoryCollectionView" destination="ceP-4d-5zN" id="bts-CG-KdO"/>
@@ -276,7 +267,7 @@ numérique</string>
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aEf-AV-Hl2" id="B9F-Nf-ypg">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Découvrez les solutions CMS" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdg-tD-Qvo">
@@ -382,7 +373,7 @@ numérique</string>
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gXr-Rf-GvJ" id="hDL-Nr-6yP">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lundi" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BbS-AI-OVY">
@@ -953,8 +944,8 @@ numérique</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Récapitulatif" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ri-zL-Wxn">
-                                <rect key="frame" x="15" y="94" width="147" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Votre objectif" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ri-zL-Wxn">
+                                <rect key="frame" x="15" y="94" width="155" height="29"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <color key="textColor" red="0.33725491166114807" green="0.33725491166114807" blue="0.33725491166114807" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -972,7 +963,7 @@ numérique</string>
                                     <constraint firstAttribute="height" constant="44" id="CdA-bo-dcM"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                <state key="normal" title="Valider">
+                                <state key="normal" title="Commencer">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -1071,8 +1062,8 @@ numérique</string>
                                         <color key="textColor" red="0.74901962280273438" green="0.74901962280273438" blue="0.76470589637756348" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Votre objectif" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAx-1P-8fb">
-                                        <rect key="frame" x="30" y="22" width="142" height="29"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Votre cours" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAx-1P-8fb">
+                                        <rect key="frame" x="30" y="22" width="122" height="29"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <color key="textColor" red="0.33725491166114807" green="0.33725491166114807" blue="0.33725491166114807" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1193,10 +1184,10 @@ numérique</string>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="leconCell" id="5Dw-VX-ETD" customClass="LeconCell" customModule="Openclassroom" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="-7" width="376" height="445"/>
+                                        <rect key="frame" x="0.0" y="-7.5" width="376" height="444.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="376" height="445"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="444.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9XK-jc-ffg">
@@ -1305,10 +1296,10 @@ numérique</string>
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="textCell" id="3rs-CY-Y64" customClass="TextLeconCell" customModule="Openclassroom" customModuleProvider="target">
-                                        <rect key="frame" x="386" y="-7" width="376" height="445"/>
+                                        <rect key="frame" x="386" y="-7.5" width="376" height="444.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="376" height="445"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="444.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OQO-BY-8fA">
@@ -1417,10 +1408,10 @@ numérique</string>
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="finishCell" id="T3d-46-Q3k" customClass="FinishLeconCell" customModule="Openclassroom" customModuleProvider="target">
-                                        <rect key="frame" x="772" y="-7" width="376" height="445"/>
+                                        <rect key="frame" x="772" y="-7.5" width="376" height="444.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="376" height="445"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="444.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EAr-Iz-iMr">

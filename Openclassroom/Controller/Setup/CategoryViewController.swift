@@ -29,7 +29,7 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     override func viewWillAppear(animated: Bool) {
-        self.title = "Choisir une catégorie"
+        self.title = "Etape 1 sur 3"
     }
     
     func getStaticCategory() -> [Category] {

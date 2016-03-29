@@ -32,7 +32,7 @@ class DayViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     }
     
     override func viewWillAppear(animated: Bool) {
-        self.title = "Vos disponiblités"
+        self.title = "Etape 2 sur 3"
     }
     
     func toggleValidateButton() {
