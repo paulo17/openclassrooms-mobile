@@ -710,7 +710,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="leconCell" id="5Dw-VX-ETD" customClass="LeconCell" customModule="Openclassroom" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="-7" width="376" height="444.5"/>
+                                        <rect key="frame" x="0.0" y="-7.5" width="376" height="444.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="376" height="444.5"/>
@@ -822,7 +822,7 @@
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="textCell" id="3rs-CY-Y64" customClass="TextLeconCell" customModule="Openclassroom" customModuleProvider="target">
-                                        <rect key="frame" x="386" y="-7" width="376" height="444.5"/>
+                                        <rect key="frame" x="386" y="-7.5" width="376" height="444.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="376" height="444.5"/>
@@ -934,7 +934,7 @@
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="finishCell" id="T3d-46-Q3k" customClass="FinishLeconCell" customModule="Openclassroom" customModuleProvider="target">
-                                        <rect key="frame" x="772" y="-7" width="376" height="444.5"/>
+                                        <rect key="frame" x="772" y="-7.5" width="376" height="444.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="376" height="444.5"/>
