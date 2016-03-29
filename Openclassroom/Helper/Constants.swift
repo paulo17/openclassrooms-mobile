@@ -8,6 +8,7 @@
 
 import UIKit
 
-
-let colorGradientLeft = try! UIColor(rgba_throws: "#F39539")
-let colorGradientRight = try! UIColor(rgba_throws: "#C21945")
+let colorMain = try! UIColor(rgba_throws: "#F39539")
+let colorSecondary = try! UIColor(rgba_throws: "#C21945")
+let colorGradientLeft = colorMain
+let colorGradientRight = colorSecondary

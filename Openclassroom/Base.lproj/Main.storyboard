@@ -128,13 +128,69 @@
                                 <rect key="frame" x="-4" y="64" width="383" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="2q1-4k-Cpp">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="objective_cell" id="2q1-4k-Cpp" customClass="ObjectiveCell" customModule="Openclassroom" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="383" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2q1-4k-Cpp" id="ded-Fq-ct2">
                                             <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qKo-1a-mty">
+                                                    <rect key="frame" x="20" y="6" width="32" height="32"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MYq-6T-Ap8">
+                                                            <rect key="frame" x="8" y="8" width="16" height="16"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="16" id="pS8-hc-EG7"/>
+                                                                <constraint firstAttribute="width" constant="16" id="srl-Tc-U0o"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="MYq-6T-Ap8" firstAttribute="centerY" secondItem="qKo-1a-mty" secondAttribute="centerY" id="9xl-He-eZ3"/>
+                                                        <constraint firstAttribute="width" constant="32" id="dwE-0c-kck"/>
+                                                        <constraint firstAttribute="height" constant="32" id="hk0-Bb-MsO"/>
+                                                        <constraint firstItem="MYq-6T-Ap8" firstAttribute="centerX" secondItem="qKo-1a-mty" secondAttribute="centerX" id="v6d-xI-tiE"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFf-Nk-pP8">
+                                                    <rect key="frame" x="64" y="11" width="311" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="33z-3U-qOZ"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVm-b0-4e0">
+                                                    <rect key="frame" x="20" y="-3.5" width="343" height="50.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="Csd-J2-qkp"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="rVm-b0-4e0" firstAttribute="leading" secondItem="ded-Fq-ct2" secondAttribute="leadingMargin" constant="12" id="Dhp-VD-Pa1"/>
+                                                <constraint firstItem="FFf-Nk-pP8" firstAttribute="centerY" secondItem="ded-Fq-ct2" secondAttribute="centerY" id="O5h-CE-ZfQ"/>
+                                                <constraint firstItem="FFf-Nk-pP8" firstAttribute="leading" secondItem="qKo-1a-mty" secondAttribute="trailing" constant="12" id="PYa-TI-J3s"/>
+                                                <constraint firstItem="FFf-Nk-pP8" firstAttribute="trailing" secondItem="ded-Fq-ct2" secondAttribute="trailingMargin" id="SLE-VO-yFG"/>
+                                                <constraint firstItem="rVm-b0-4e0" firstAttribute="trailing" secondItem="ded-Fq-ct2" secondAttribute="trailingMargin" constant="-12" id="UTx-Lo-5QH"/>
+                                                <constraint firstItem="qKo-1a-mty" firstAttribute="leading" secondItem="ded-Fq-ct2" secondAttribute="leadingMargin" constant="12" id="iUO-Hx-XQA"/>
+                                                <constraint firstItem="rVm-b0-4e0" firstAttribute="centerY" secondItem="ded-Fq-ct2" secondAttribute="centerY" id="rju-C3-IKq"/>
+                                                <constraint firstItem="qKo-1a-mty" firstAttribute="centerY" secondItem="ded-Fq-ct2" secondAttribute="centerY" id="wgV-wt-BER"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="finishButton" destination="rVm-b0-4e0" id="GYB-NT-AV9"/>
+                                            <outlet property="numberLabel" destination="MYq-6T-Ap8" id="ykm-9I-4Cd"/>
+                                            <outlet property="roundBackgroundView" destination="qKo-1a-mty" id="xum-Fm-5pU"/>
+                                            <outlet property="titleLabel" destination="FFf-Nk-pP8" id="bqb-jD-US9"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
