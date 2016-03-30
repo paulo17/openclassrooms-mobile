@@ -8,9 +8,9 @@
 
 import UIKit
 
-func generateStyleLabel(label: UILabel, font: String, color: String, size: CGFloat, alpha: Float, text: String?) {
+func generateStyleLabel(label: UILabel, font: String, color: UIColor, size: CGFloat, alpha: Float, text: String?) {
     label.font = UIFont(name: "\(font)", size: size)
-    label.textColor = UIColorFromRGBA("\(color)", alpha: alpha)
+    label.textColor = color
     label.text = "\(text)"
 }
 

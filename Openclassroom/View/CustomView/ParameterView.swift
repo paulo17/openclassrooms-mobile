@@ -25,13 +25,9 @@ class ParameterView: UIView {
     
      // MARK: - UI
     
-    func initializeViewWithContent(content: String) {
-        self.content.text = content
-    }
-    
     func setUI() {
         let leftBorder = CALayer()
-        leftBorder.backgroundColor = UIColorFromRGBA("00c6ae").CGColor
+        leftBorder.backgroundColor = UIColor.OCTurquoiseColor().CGColor
         leftBorder.frame = CGRectMake(0, 0, 10.0, CGRectGetHeight(self.frame)) // create rectangle
         
         self.layer.addSublayer(leftBorder)

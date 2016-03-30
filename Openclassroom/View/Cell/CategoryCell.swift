@@ -17,17 +17,8 @@ class CategoryCell: UICollectionViewCell {
         categoryName.text = category.name
         
         if let imageIcon = UIImage(named: category.image) {
-            categoryImage.alpha = 0.5
-            categoryImage.image = imageIcon
-        }
-    }
-    
-    func initializeCellWithContent(current category: Category, selected selectedCategory: Category) {
-        self.initializeCellWithContent(category)
-        
-        if category.id == selectedCategory.id {
             categoryImage.alpha = 1.0
-            self.selected = true
+            categoryImage.image = imageIcon
         }
     }
 }

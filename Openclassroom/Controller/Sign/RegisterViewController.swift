@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -19,6 +19,9 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        repeatTextField.delegate = self
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -29,9 +32,52 @@ class RegisterViewController: UIViewController {
     // MARK: - IBAction
     
     @IBAction func registerAction(sender: AnyObject) {
+        guard let email = emailTextField.text where !email.isEmpty,
+            let password = passwordTextField.text where !password.isEmpty,
+            let repeatPassword = repeatTextField.text where !repeatPassword.isEmpty
+            else {
+                
+                let alert = UIAlertController(title: "Données invalides", message: "Veuillez renseigner tous les champs", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "Annuler", style: UIAlertActionStyle.Cancel, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+                
+                return
+        }
+        
+        guard password == repeatPassword else {
+            let alert = UIAlertController(title: "Données invalides", message: "Les mots de passes ne correspondent pas", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Annuler", style: UIAlertActionStyle.Cancel, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+
+            passwordTextField.text = ""
+            repeatTextField.text = ""
+            
+            return
+        }
+        
+        UserManager.createUser(email, password: password)
+        
         if let mainViewController = storyboard?.instantiateViewControllerWithIdentifier("mainViewController") {
             mainViewController.modalTransitionStyle = .FlipHorizontal
             self.presentViewController(mainViewController, animated: true, completion: nil)
         }
     }
+    
+    // MARK: - Textfield Delegate
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        let nextTag: Int = textField.tag + 1
+        
+        // recursive search of uiview by tag
+        let nextResponder: UIResponder? = textField.superview?.viewWithTag(nextTag)
+        
+        if let nextR = nextResponder {
+            nextR.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
+        
+        return false
+    }
+
 }

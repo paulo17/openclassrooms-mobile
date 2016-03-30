@@ -39,7 +39,7 @@ class ObjectiveViewController: UIViewController, UITableViewDelegate, UITableVie
             categoryObjectiveNumber.text = "\(objectives.count) cours"
         }
         
-        self.title = "Choisir un objectif"
+        self.title = "Etape 1 sur 3"
     }
     
     func getStaticObjective() -> [Objective] {
@@ -65,6 +65,10 @@ class ObjectiveViewController: UIViewController, UITableViewDelegate, UITableVie
         cell.initializeCellWithContent(objective)
         
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        DataContainer.sharedDataContainer.currentUser.objective = objectives[indexPath.row].name
     }
     
     // MARK: - Navigation
