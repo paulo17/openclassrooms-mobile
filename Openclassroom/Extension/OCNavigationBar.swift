@@ -17,7 +17,7 @@ extension UINavigationBar {
         
         if let navBarFont = UIFont(name: "SourceSansPro-Light", size: 16) {
             let navBarAttributesDictionary: [String: AnyObject]?  = [
-                NSForegroundColorAttributeName: UIColorFromRGBA("FFFFFF", alpha: 1.0),
+                NSForegroundColorAttributeName: UIColor.whiteColor(),
                 NSFontAttributeName: navBarFont
             ]
             self.titleTextAttributes = navBarAttributesDictionary

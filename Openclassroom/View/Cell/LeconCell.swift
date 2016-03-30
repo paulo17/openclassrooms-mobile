@@ -22,7 +22,7 @@ class LeconCell: UICollectionViewCell {
     }
     
     override func awakeFromNib() {
-        downloadButton.OCborderButton(UIColorFromRGBA("BFBFC3"))
+        downloadButton.OCborderButton(UIColor.OCSilverColor())
     }
     
     func initializeCellWithContent(lecon: Lecon) {

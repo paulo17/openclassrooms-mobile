@@ -47,7 +47,7 @@ class ProgramViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell: ObjectiveCell = objectivesTableView.dequeueReusableCellWithIdentifier("objective_cell", forIndexPath: indexPath) as! ObjectiveCell
+        let cell = objectivesTableView.dequeueReusableCellWithIdentifier("program_cell", forIndexPath: indexPath) as! ProgramCell
         
         cell.selectionStyle = .None
         
@@ -110,5 +110,4 @@ class ProgramViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         return height
     }
-    ////
 }
