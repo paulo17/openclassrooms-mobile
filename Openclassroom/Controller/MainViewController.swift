@@ -20,6 +20,8 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print(UserManager.objects().count)
+        
         self.lecons = getStaticLecons()
     }
     

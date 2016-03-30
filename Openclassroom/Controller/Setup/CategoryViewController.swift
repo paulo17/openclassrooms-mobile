@@ -67,6 +67,8 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
             
             let objectiveController = segue.destinationViewController as! ObjectiveViewController
             objectiveController.category = selectedCategory
+            
+            DataContainer.sharedDataContainer.currentUser.category = selectedCategory?.name
         }
     }
 }

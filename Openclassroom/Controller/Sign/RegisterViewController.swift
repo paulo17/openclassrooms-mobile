@@ -18,7 +18,6 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -26,9 +25,38 @@ class RegisterViewController: UIViewController {
         loginButton.OCborderButton(UIColor.OCDustyOrangeColor())
     }
     
+    func handleRegister() {
+        
+    }
+    
     // MARK: - IBAction
     
     @IBAction func registerAction(sender: AnyObject) {
+        guard let email = emailTextField.text where !email.isEmpty,
+            let password = passwordTextField.text where !password.isEmpty,
+            let repeatPassword = repeatTextField.text where !repeatPassword.isEmpty
+            else {
+                
+                let alert = UIAlertController(title: "Données invalides", message: "Veuillez renseigner tous les champs", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "Annuler", style: UIAlertActionStyle.Cancel, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+                
+                return
+        }
+        
+        guard password == repeatPassword else {
+            let alert = UIAlertController(title: "Données invalides", message: "Les mots de passes ne correspondent pas", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Annuler", style: UIAlertActionStyle.Cancel, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+
+            passwordTextField.text = ""
+            repeatTextField.text = ""
+            
+            return
+        }
+        
+        UserManager.createUser(email, password: password)
+        
         if let mainViewController = storyboard?.instantiateViewControllerWithIdentifier("mainViewController") {
             mainViewController.modalTransitionStyle = .FlipHorizontal
             self.presentViewController(mainViewController, animated: true, completion: nil)

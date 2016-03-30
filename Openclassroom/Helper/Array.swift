@@ -8,16 +8,24 @@
 
 extension Array {
     
-    func arrayContainsElements<S : SequenceType where S.Generator.Element : Equatable>
-        (src:S, lookFor:S) -> Bool {
-        
-        for v:S.Generator.Element in lookFor {
-            if !src.contains(v) {
-                return false
+    func contains<T where T : Equatable>(obj: T) -> Bool {
+        return self.filter({$0 as? T == obj}).count > 0
+    }
+    
+    mutating func removeObject<U: Equatable>(object: U) {
+        var index: Int?
+        for (idx, objectToCompare) in self.enumerate() {
+            if let to = objectToCompare as? U {
+                if object == to {
+                    index = idx
+                }
             }
         }
         
-        return true
+        if (index != nil) {
+            self.removeAtIndex(index!)
+        }
     }
+
     
 }
