@@ -33,10 +33,10 @@
             </objects>
             <point key="canvasLocation" x="-773.5" y="-641.5"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Expand Navigation Controller-->
         <scene sceneID="to6-Zo-J8M">
             <objects>
-                <navigationController storyboardIdentifier="loginNavigationController" id="qIh-i3-oft" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="loginNavigationController" id="qIh-i3-oft" customClass="OCExpandNavigationController" customModule="Openclassroom" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="VZE-42-v3s">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -248,7 +248,7 @@ numérique</string>
                                 <rect key="frame" x="0.0" y="194" width="375" height="473"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="objectiveCell" id="aEf-AV-Hl2" customClass="ObjectiveCell" customModule="Openclassroom" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="objectiveCell" id="aEf-AV-Hl2" customClass="ObjectiveCell" customModule="Openclassroom" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aEf-AV-Hl2" id="B9F-Nf-ypg">
@@ -1552,10 +1552,10 @@ numérique</string>
             </objects>
             <point key="canvasLocation" x="-305.5" y="139.5"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Expand Navigation Controller-->
         <scene sceneID="sSl-W1-Puz">
             <objects>
-                <navigationController id="GMh-Us-NwN" sceneMemberID="viewController">
+                <navigationController id="GMh-Us-NwN" customClass="OCExpandNavigationController" customModule="Openclassroom" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="QbZ-v1-JWJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
