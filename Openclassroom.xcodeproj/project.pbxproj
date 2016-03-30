@@ -40,6 +40,7 @@
 		6BA776F41CABDB0A001CDD78 /* OCManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA776EB1CABDB0A001CDD78 /* OCManagedObject.swift */; };
 		6BA776F51CABDB0A001CDD78 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA776ED1CABDB0A001CDD78 /* User.swift */; };
 		6BA776F61CABDB0A001CDD78 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA776EE1CABDB0A001CDD78 /* UserManager.swift */; };
+		6BA776F91CABDC11001CDD78 /* OC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6BA776F71CABDC11001CDD78 /* OC.xcdatamodeld */; };
 		6BBC5F901CA487C600EC7EFE /* ParameterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC5F8F1CA487C600EC7EFE /* ParameterViewController.swift */; };
 		6BBDB8E91CA9767F001361DA /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBDB8E81CA9767F001361DA /* UIColor.swift */; };
 		6BD1DA0E1CA7E6370075057F /* ParameterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD1DA0D1CA7E6370075057F /* ParameterView.swift */; };
@@ -87,6 +88,7 @@
 		6BA776EB1CABDB0A001CDD78 /* OCManagedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCManagedObject.swift; sourceTree = "<group>"; };
 		6BA776ED1CABDB0A001CDD78 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6BA776EE1CABDB0A001CDD78 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		6BA776F81CABDC11001CDD78 /* OC.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OC.xcdatamodel; sourceTree = "<group>"; };
 		6BBC5F8F1CA487C600EC7EFE /* ParameterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterViewController.swift; sourceTree = "<group>"; };
 		6BBDB8E81CA9767F001361DA /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		6BD1DA0D1CA7E6370075057F /* ParameterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterView.swift; sourceTree = "<group>"; };
@@ -316,6 +318,7 @@
 				6B36B32D1C60C4AE00989167 /* Walkthrough.storyboard */,
 				6BF23AA21C5FAE94001B1006 /* Assets.xcassets */,
 				6BF23AA71C5FAE94001B1006 /* Info.plist */,
+				6BA776F71CABDC11001CDD78 /* OC.xcdatamodeld */,
 			);
 			path = Openclassroom;
 			sourceTree = "<group>";
@@ -491,6 +494,7 @@
 				6B4BEE721C872195006D2862 /* Redirect.swift in Sources */,
 				6B73BB021C8B239D00BCE574 /* OCTextField.swift in Sources */,
 				6B4E30FF1C9D78C600BE42CB /* CategoryCell.swift in Sources */,
+				6BA776F91CABDC11001CDD78 /* OC.xcdatamodeld in Sources */,
 				6B4BEE811C87434A006D2862 /* MainViewController.swift in Sources */,
 				6BA0F8261C9858B0001AA68E /* FinishLeconCell.swift in Sources */,
 				6BA776F41CABDB0A001CDD78 /* OCManagedObject.swift in Sources */,
@@ -671,6 +675,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6BA776F71CABDC11001CDD78 /* OC.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6BA776F81CABDC11001CDD78 /* OC.xcdatamodel */,
+			);
+			currentVersion = 6BA776F81CABDC11001CDD78 /* OC.xcdatamodel */;
+			path = OC.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 6BF23A901C5FAE94001B1006 /* Project object */;
 }
