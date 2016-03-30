@@ -20,15 +20,15 @@ class LoginViewController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-        loginButton.OCdefaultButton(UIColorFromRGBA("F39539"))
+        loginButton.OCdefaultButton(UIColor.OCDustyOrangeColor())
     }
     
     // MARK: - IBAction
     
     @IBAction func loginAction(sender: AnyObject) {
-        if let mainViewController = storyboard?.instantiateViewControllerWithIdentifier("mainViewController") {
-            mainViewController.modalTransitionStyle = .FlipHorizontal
-            self.presentViewController(mainViewController, animated: true, completion: nil)
-        }
+        let setupNavigationController = storyboard?.instantiateViewControllerWithIdentifier("setupNavigationController") as! UINavigationController
+        
+        setupNavigationController.modalTransitionStyle = .FlipHorizontal
+        self.presentViewController(setupNavigationController, animated: true, completion: nil)
     }
 }

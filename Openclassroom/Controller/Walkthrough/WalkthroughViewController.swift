@@ -37,7 +37,7 @@ class WalkthroughViewController: UIViewController, BWWalkthroughViewControllerDe
     
     func setStatusBarBackground(controller: UIViewController) {
         let statusBarView: UIView = UIView(frame: CGRectMake(0, 0, self.view.frame.size.width, 22))
-        statusBarView.backgroundColor = UIColorFromRGBA("F39539")
+        statusBarView.backgroundColor = UIColor.OCDustyOrangeColor()
         controller.view.addSubview(statusBarView)
     }
     
