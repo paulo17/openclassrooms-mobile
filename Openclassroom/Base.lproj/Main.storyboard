@@ -56,10 +56,10 @@
             </objects>
             <point key="canvasLocation" x="-306.5" y="-641.5"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Expand Navigation Controller-->
         <scene sceneID="xkD-Ub-1T1">
             <objects>
-                <navigationController storyboardIdentifier="setupNavigationController" id="mMn-ya-Y2m" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="setupNavigationController" id="mMn-ya-Y2m" customClass="OCExpandNavigationController" customModule="Openclassroom" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SAP-cH-K21">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

@@ -14,7 +14,7 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     let categoryCellIdentifier = "categoryCell"
     lazy var categories = [Category]()
-    var selectedCategory: Category?
+    var selectedCategory: Category!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +57,8 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
         let selectedCell = collectionView.cellForItemAtIndexPath(indexPath) as! CategoryCell
         selectedCell.categoryImage.alpha = 1.0
         selectedCategory = categories[indexPath.row]
+        
+        DataContainer.sharedDataContainer.currentUser.category = selectedCategory.name
     }
     
     // MARK: - Navigation
@@ -67,8 +69,6 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
             
             let objectiveController = segue.destinationViewController as! ObjectiveViewController
             objectiveController.category = selectedCategory
-            
-            DataContainer.sharedDataContainer.currentUser.category = selectedCategory?.name
         }
     }
 }
