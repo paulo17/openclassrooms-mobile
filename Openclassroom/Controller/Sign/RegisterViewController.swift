@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -18,15 +18,15 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        repeatTextField.delegate = self
     }
     
     override func viewWillAppear(animated: Bool) {
         registerButton.OCdefaultButton(UIColor.OCDustyOrangeColor())
         loginButton.OCborderButton(UIColor.OCDustyOrangeColor())
-    }
-    
-    func handleRegister() {
-        
     }
     
     // MARK: - IBAction
@@ -62,4 +62,22 @@ class RegisterViewController: UIViewController {
             self.presentViewController(mainViewController, animated: true, completion: nil)
         }
     }
+    
+    // MARK: - Textfield Delegate
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        let nextTag: Int = textField.tag + 1
+        
+        // recursive search of uiview by tag
+        let nextResponder: UIResponder? = textField.superview?.viewWithTag(nextTag)
+        
+        if let nextR = nextResponder {
+            nextR.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
+        
+        return false
+    }
+
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -17,6 +17,9 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -51,6 +54,23 @@ class LoginViewController: UIViewController {
         
         setupNavigationController.modalTransitionStyle = .FlipHorizontal
         return self.presentViewController(setupNavigationController, animated: true, completion: nil)
+    }
+    
+    // MARK: - Textfield Delegate
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        let nextTag: Int = textField.tag + 1
+        
+        // recursive search of uiview by tag
+        let nextResponder: UIResponder? = textField.superview?.viewWithTag(nextTag)
+        
+        if let nextR = nextResponder {
+            nextR.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
+        
+        return false
     }
     
 }
