@@ -71,7 +71,7 @@
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="9R2-YA-rL9" kind="relationship" relationship="rootViewController" id="jnN-s0-me7"/>
+                        <segue destination="9R2-YA-rL9" kind="relationship" relationship="rootViewController" id="UhI-rB-Wgr"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KAz-f6-Dlp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -252,7 +252,7 @@ numérique</string>
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aEf-AV-Hl2" id="B9F-Nf-ypg">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Découvrez les solutions CMS" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdg-tD-Qvo">
@@ -277,7 +277,6 @@ numérique</string>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="objectiveName" destination="fdg-tD-Qvo" id="qCP-0u-sn5"/>
-                                            <segue destination="XkL-aL-3n7" kind="show" id="CC6-Xj-0Lf"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -323,10 +322,94 @@ numérique</string>
                     <view key="view" contentMode="scaleToFill" id="Lzx-nS-c5W">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="P4K-vX-VFr">
+                                <rect key="frame" x="-4" y="64" width="383" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="program_cell" id="oww-8y-lj8" customClass="ProgramCell" customModule="Openclassroom" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="383" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oww-8y-lj8" id="rGz-0h-zC6">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hdz-kE-cgi">
+                                                    <rect key="frame" x="20" y="6" width="32" height="32"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ose-je-K8I">
+                                                            <rect key="frame" x="8" y="8" width="16" height="16"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="16" id="AIm-j9-e1M"/>
+                                                                <constraint firstAttribute="width" constant="16" id="vim-7I-EaS"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="32" id="KZt-Um-hs7"/>
+                                                        <constraint firstItem="ose-je-K8I" firstAttribute="centerY" secondItem="Hdz-kE-cgi" secondAttribute="centerY" id="WPf-tD-CIv"/>
+                                                        <constraint firstAttribute="width" constant="32" id="Z0C-t8-Rjx"/>
+                                                        <constraint firstItem="ose-je-K8I" firstAttribute="centerX" secondItem="Hdz-kE-cgi" secondAttribute="centerX" id="pXZ-J1-LYP"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="de0-Hw-nKi">
+                                                    <rect key="frame" x="76" y="11" width="287" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="EUs-vG-MZx"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajV-uc-pgR">
+                                                    <rect key="frame" x="18" y="2" width="345" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="iWK-bh-vuo"/>
+                                                    </constraints>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ajV-uc-pgR" firstAttribute="centerY" secondItem="rGz-0h-zC6" secondAttribute="centerY" id="IeT-g6-voq"/>
+                                                <constraint firstItem="ajV-uc-pgR" firstAttribute="leading" secondItem="rGz-0h-zC6" secondAttribute="leadingMargin" constant="10" id="Rtq-mt-Ii1"/>
+                                                <constraint firstItem="Hdz-kE-cgi" firstAttribute="centerY" secondItem="rGz-0h-zC6" secondAttribute="centerY" id="XGM-9Y-IK5"/>
+                                                <constraint firstItem="de0-Hw-nKi" firstAttribute="centerY" secondItem="rGz-0h-zC6" secondAttribute="centerY" id="b1S-gz-7Im"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="de0-Hw-nKi" secondAttribute="trailing" constant="12" id="kBR-HT-t8N"/>
+                                                <constraint firstItem="de0-Hw-nKi" firstAttribute="trailing" secondItem="ajV-uc-pgR" secondAttribute="trailing" id="kSx-uU-aol"/>
+                                                <constraint firstItem="Hdz-kE-cgi" firstAttribute="leading" secondItem="rGz-0h-zC6" secondAttribute="leadingMargin" constant="12" id="oiK-NN-eP0"/>
+                                                <constraint firstItem="de0-Hw-nKi" firstAttribute="leading" secondItem="Hdz-kE-cgi" secondAttribute="trailing" constant="24" id="rZk-V9-y3c"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="finishButton" destination="ajV-uc-pgR" id="47j-A2-jvF"/>
+                                            <outlet property="numberLabel" destination="ose-je-K8I" id="poA-zM-d5P"/>
+                                            <outlet property="roundBackgroundView" destination="Hdz-kE-cgi" id="XnC-ms-gVt"/>
+                                            <outlet property="titleLabel" destination="de0-Hw-nKi" id="gjL-Cd-B5Z"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="DnJ-tf-YS0" id="kIH-lt-dS2"/>
+                                    <outlet property="delegate" destination="DnJ-tf-YS0" id="gBX-eP-ZZO"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oIf-Gl-FIe" firstAttribute="top" secondItem="P4K-vX-VFr" secondAttribute="bottom" id="6x3-ct-9fR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="P4K-vX-VFr" secondAttribute="trailing" constant="-20" id="Qyc-W9-EbM"/>
+                            <constraint firstItem="P4K-vX-VFr" firstAttribute="top" secondItem="Ngw-ao-Y8V" secondAttribute="bottom" id="i6i-sj-7Dd"/>
+                            <constraint firstItem="P4K-vX-VFr" firstAttribute="leading" secondItem="Lzx-nS-c5W" secondAttribute="leadingMargin" constant="-20" id="wcm-dH-63m"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GWB-Fq-EZ2"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="objectivesTableView" destination="P4K-vX-VFr" id="CUM-WC-U0I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a9F-sU-TmM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -358,7 +441,7 @@ numérique</string>
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gXr-Rf-GvJ" id="hDL-Nr-6yP">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lundi" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BbS-AI-OVY">
@@ -1172,10 +1255,10 @@ numérique</string>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="leconCell" id="5Dw-VX-ETD" customClass="LeconCell" customModule="Openclassroom" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="-7" width="376" height="445"/>
+                                        <rect key="frame" x="0.0" y="-7.5" width="376" height="444.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="376" height="445"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="444.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9XK-jc-ffg">
@@ -1284,7 +1367,7 @@ numérique</string>
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="textCell" id="3rs-CY-Y64" customClass="TextLeconCell" customModule="Openclassroom" customModuleProvider="target">
-                                        <rect key="frame" x="386" y="-7" width="376" height="445"/>
+                                        <rect key="frame" x="386" y="-7.5" width="376" height="444.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="376" height="444.5"/>
@@ -1396,7 +1479,7 @@ numérique</string>
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="finishCell" id="T3d-46-Q3k" customClass="FinishLeconCell" customModule="Openclassroom" customModuleProvider="target">
-                                        <rect key="frame" x="772" y="-7" width="376" height="445"/>
+                                        <rect key="frame" x="772" y="-7.5" width="376" height="444.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="376" height="444.5"/>
