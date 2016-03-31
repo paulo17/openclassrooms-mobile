@@ -20,7 +20,7 @@ class DayViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     let timeCellIdentifier = "timeCell"
     let daysOfWeek = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"]
     
-    lazy var selectedDays = [Int: String]()
+    lazy var selectedDays = Dictionary<Int, String>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,7 @@ class DayViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         timeTableView.delegate = self
         timeTableView.dataSource = self
         
-        validateButton.OCdefaultButton(UIColor.OCSilverTwoColor())
+        validateButton.OCdefaultButton(UIColor.OCWarmGreyColor())
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -41,7 +41,7 @@ class DayViewController: UIViewController, UITableViewDelegate, UITableViewDataS
             validateButton.OCdefaultButton(UIColor.OCDustyOrangeColor())
         } else {
             validateButton.enabled = false
-            validateButton.OCdefaultButton(UIColor.OCSilverTwoColor())
+            validateButton.OCdefaultButton(UIColor.OCWarmGreyColor())
         }
     }
     

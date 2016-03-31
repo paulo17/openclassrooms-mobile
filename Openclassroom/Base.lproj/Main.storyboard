@@ -244,20 +244,26 @@ numérique</string>
                                 <color key="textColor" red="0.74901962280273438" green="0.74901962280273438" blue="0.76470589637756348" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ryy-qT-ZTU">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ryy-qT-ZTU">
                                 <rect key="frame" x="0.0" y="194" width="375" height="473"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="objectiveCell" id="aEf-AV-Hl2" customClass="ObjectiveCell" customModule="Openclassroom" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="objectiveCell" rowHeight="60" id="aEf-AV-Hl2" customClass="ObjectiveCell" customModule="Openclassroom" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aEf-AV-Hl2" id="B9F-Nf-ypg">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Découvrez les solutions CMS" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdg-tD-Qvo">
-                                                    <rect key="frame" x="10" y="12" width="355" height="19"/>
+                                                    <rect key="frame" x="10" y="10" width="355" height="19.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.33725491166114807" green="0.33725491166114807" blue="0.33725491166114807" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="72 heures" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iwm-AT-URM">
+                                                    <rect key="frame" x="10" y="31" width="68" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                                     <color key="textColor" red="0.33725491166114807" green="0.33725491166114807" blue="0.33725491166114807" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -266,16 +272,21 @@ numérique</string>
                                                 <constraint firstAttribute="trailing" secondItem="fdg-tD-Qvo" secondAttribute="trailing" constant="10" id="1R0-qc-XiR"/>
                                                 <constraint firstItem="fdg-tD-Qvo" firstAttribute="leading" secondItem="B9F-Nf-ypg" secondAttribute="leading" constant="10" id="82N-RL-M7b"/>
                                                 <constraint firstAttribute="bottom" secondItem="fdg-tD-Qvo" secondAttribute="bottom" constant="12" id="CtH-98-ieL"/>
+                                                <constraint firstItem="Iwm-AT-URM" firstAttribute="leading" secondItem="B9F-Nf-ypg" secondAttribute="leading" constant="10" id="MPN-UN-oJL"/>
                                                 <constraint firstItem="fdg-tD-Qvo" firstAttribute="centerY" secondItem="B9F-Nf-ypg" secondAttribute="centerY" id="f0J-uz-gNT"/>
-                                                <constraint firstItem="fdg-tD-Qvo" firstAttribute="top" secondItem="B9F-Nf-ypg" secondAttribute="top" constant="12" id="pt4-8F-Bz9"/>
+                                                <constraint firstItem="fdg-tD-Qvo" firstAttribute="top" secondItem="B9F-Nf-ypg" secondAttribute="top" constant="10" id="pt4-8F-Bz9"/>
+                                                <constraint firstItem="Iwm-AT-URM" firstAttribute="top" secondItem="fdg-tD-Qvo" secondAttribute="bottom" constant="2" id="tMS-DC-tvh"/>
+                                                <constraint firstAttribute="bottom" secondItem="Iwm-AT-URM" secondAttribute="bottom" constant="10" id="zeo-oP-bWy"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
+                                                    <exclude reference="CtH-98-ieL"/>
                                                     <exclude reference="f0J-uz-gNT"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="objectiveDuration" destination="Iwm-AT-URM" id="FEa-uG-CGt"/>
                                             <outlet property="objectiveName" destination="fdg-tD-Qvo" id="qCP-0u-sn5"/>
                                             <segue destination="DnJ-tf-YS0" kind="show" id="6O5-V9-UNX"/>
                                         </connections>
@@ -332,7 +343,7 @@ numérique</string>
                                         <rect key="frame" x="0.0" y="92" width="383" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oww-8y-lj8" id="rGz-0h-zC6">
-                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hdz-kE-cgi">
@@ -437,7 +448,7 @@ numérique</string>
                                         <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gXr-Rf-GvJ" id="hDL-Nr-6yP">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lundi" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BbS-AI-OVY">
@@ -471,7 +482,7 @@ numérique</string>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KyO-1N-El2">
                                 <rect key="frame" x="35" y="593" width="305" height="44"/>
-                                <color key="backgroundColor" red="0.76470588235294112" green="0.76470588235294112" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.60784316062927246" green="0.60784316062927246" blue="0.60784316062927246" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <state key="normal" title="Valider">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1149,7 +1160,7 @@ numérique</string>
                                         </constraints>
                                         <state key="normal" backgroundImage="Arrow"/>
                                         <connections>
-                                            <action selector="changeParameter" destination="bTh-Wn-NzU" eventType="touchUpInside" id="9Xz-Zw-2vr"/>
+                                            <action selector="changeParameter" destination="bTh-Wn-NzU" eventType="touchUpInside" id="3rp-Lh-wrC"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1257,7 +1268,7 @@ numérique</string>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="leconCell" id="5Dw-VX-ETD" customClass="LeconCell" customModule="Openclassroom" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="-7" width="376" height="444.5"/>
+                                        <rect key="frame" x="0.0" y="-7.5" width="376" height="444.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="376" height="444.5"/>
@@ -1369,7 +1380,7 @@ numérique</string>
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="textCell" id="3rs-CY-Y64" customClass="TextLeconCell" customModule="Openclassroom" customModuleProvider="target">
-                                        <rect key="frame" x="386" y="-7" width="376" height="444.5"/>
+                                        <rect key="frame" x="386" y="-7.5" width="376" height="444.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="376" height="444.5"/>
@@ -1481,7 +1492,7 @@ numérique</string>
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="finishCell" id="T3d-46-Q3k" customClass="FinishLeconCell" customModule="Openclassroom" customModuleProvider="target">
-                                        <rect key="frame" x="772" y="-7" width="376" height="444.5"/>
+                                        <rect key="frame" x="772" y="-7.5" width="376" height="444.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="376" height="444.5"/>

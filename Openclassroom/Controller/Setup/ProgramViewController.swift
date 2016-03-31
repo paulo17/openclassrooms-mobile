@@ -30,18 +30,18 @@ class ProgramViewController: UIViewController, UITableViewDelegate, UITableViewD
             ["type": "title", "text": "Les langages du Web", "nb": "2"],
             ["type": "subtitle", "text": "Les langages client"],
             ["type": "subtitle", "text": "Les langages serveur"],
-            ["type": "btn", "text": "Valider"]
+            ["type": "btn", "text": "Choisir"]
         ]
         
         objectivesTableView.tableFooterView = UIView()
     }
     
     override func viewWillAppear(animated: Bool) {
-        
+        self.title = "Comprendre le web"
     }
-    ////
     
     // MARK: - Delegate functions
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return objectives.count
     }
@@ -110,4 +110,11 @@ class ProgramViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         return height
     }
+    
+    // MARK: - Navigation
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        navigationItem.title = "" // remove navigation title
+    }
+
 }

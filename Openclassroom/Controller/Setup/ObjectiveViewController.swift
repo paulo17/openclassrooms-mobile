@@ -24,7 +24,7 @@ class ObjectiveViewController: UIViewController, UITableViewDelegate, UITableVie
         super.viewDidLoad()
         
         objectiveTableView.rowHeight = UITableViewAutomaticDimension
-        objectiveTableView.estimatedRowHeight = 20.0
+        objectiveTableView.estimatedRowHeight = 60.0
         
         objectives = getStaticObjective()
     }
@@ -46,7 +46,7 @@ class ObjectiveViewController: UIViewController, UITableViewDelegate, UITableVie
         var objectives = [Objective]()
 
         for (index, objective) in Objective.objectives.enumerate() {
-            objectives.append(Objective(id: index, name: objective["name"]!))
+            objectives.append(Objective(id: index, name: objective["name"]!, duration: Int(objective["duration"]!)!))
         }
         
         return objectives

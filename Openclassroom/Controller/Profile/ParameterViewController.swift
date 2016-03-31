@@ -47,7 +47,7 @@ class ParameterViewController: UIViewController, ParameterViewDelegate {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.title = "Vos paramètres"
+        self.title = "Paramètres de l'objectif"
         self.navigationItem.setHidesBackButton(true, animated: true)
     }
     

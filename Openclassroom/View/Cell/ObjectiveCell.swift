@@ -11,8 +11,10 @@ import UIKit
 class ObjectiveCell: UITableViewCell {
     
     @IBOutlet weak var objectiveName: UILabel!
+    @IBOutlet weak var objectiveDuration: UILabel!
     
     func initializeCellWithContent(objective: Objective) {
         objectiveName.text = objective.name
+        objectiveDuration.text = "\(objective.duration) heures"
     }
 }
