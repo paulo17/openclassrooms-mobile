@@ -119,7 +119,7 @@
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMs-OH-eGx">
                                                             <rect key="frame" x="0.0" y="99" width="100" height="37"/>
-                                                            <string key="text">Initiation 
+                                                            <string key="text">Initiation
 numérique</string>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                             <color key="textColor" red="0.33725491166114807" green="0.33725491166114807" blue="0.33725491166114807" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -1287,7 +1287,7 @@ numérique</string>
                                         <rect key="frame" x="386" y="-7" width="376" height="445"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="376" height="445"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="444.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OQO-BY-8fA">
@@ -1399,7 +1399,7 @@ numérique</string>
                                         <rect key="frame" x="772" y="-7" width="376" height="445"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="376" height="445"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="444.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EAr-Iz-iMr">
