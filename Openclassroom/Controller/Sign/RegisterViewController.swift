@@ -55,11 +55,13 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             return
         }
         
-        UserManager.createUser(email, password: password)
+        let user = UserManager.createUser(email, password: password)
+        DataContainer.sharedDataContainer.currentUser = user
         
-        if let mainViewController = storyboard?.instantiateViewControllerWithIdentifier("mainViewController") {
-            mainViewController.modalTransitionStyle = .FlipHorizontal
-            self.presentViewController(mainViewController, animated: true, completion: nil)
+        // redirect to setup pipe
+        if let setupNavigationController = storyboard?.instantiateViewControllerWithIdentifier("setupNavigationController") {
+            setupNavigationController.modalTransitionStyle = .FlipHorizontal
+            return self.presentViewController(setupNavigationController, animated: true, completion: nil)
         }
     }
     

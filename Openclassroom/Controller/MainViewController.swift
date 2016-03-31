@@ -20,8 +20,6 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(UserManager.objects().count)
-        
         self.lecons = getStaticLecons()
     }
     
@@ -70,6 +68,14 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     // remove spacing between page of cell
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
         return 0
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        return CGSizeMake(tasksCollectionView.bounds.width, tasksCollectionView.bounds.height)
     }
     
     // MARK: - Scroll view delegate
