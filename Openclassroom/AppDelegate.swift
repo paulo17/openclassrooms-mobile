@@ -23,8 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Fabric.with([Crashlytics.self, Answers.self])
         
-//        presentWalkthrough()
-//        isLoggedIn()
+        presentWalkthrough()
+        //        isLoggedIn()
         
         UIApplication.sharedApplication().statusBarStyle = .LightContent
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
@@ -70,10 +70,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func isLoggedIn() {
         // TODO: check login user
         /*if() {
-        if let window = window {
-        window.rootViewController = MainViewController()
-        }
-        }*/
+         if let window = window {
+         window.rootViewController = MainViewController()
+         }
+         }*/
     }
     
     // MARK: - Core Data stack
