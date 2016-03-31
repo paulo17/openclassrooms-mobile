@@ -32,13 +32,16 @@ class ParameterViewController: UIViewController, ParameterViewDelegate {
         dayView.identifier = "day"
         timeView.identifier = "time"
         
-        validateButton.OCborderButton(UIColor.OCDustyOrangeColor())
-
+        setUI()
         showUserParemeters()
     }
     
     func showUserParemeters() {
         objectiveView.content.text = DataContainer.sharedDataContainer.currentUser.category
+    }
+    
+    func setUI() {
+        validateButton.OCborderButton(UIColor.OCDustyOrangeColor())
     }
     
     override func viewWillAppear(animated: Bool) {

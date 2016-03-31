@@ -77,9 +77,9 @@ class WalkthroughViewController: UIViewController, BWWalkthroughViewControllerDe
     
     func walkthroughCloseButtonPressed() {
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let mainViewController = mainStoryboard.instantiateViewControllerWithIdentifier("mainViewController") as! MainViewController
+        let loginNavigationController = mainStoryboard.instantiateViewControllerWithIdentifier("loginNavigationController") as! UINavigationController
         
-        redirect(from: walkthroughMaster, to: mainViewController)
+        redirect(from: walkthroughMaster, to: loginNavigationController)
         
         // set walkthroughClosed key to true for prevent review
         let userDefaults = NSUserDefaults.standardUserDefaults()

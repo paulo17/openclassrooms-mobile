@@ -6,6 +6,8 @@
 //  Copyright © 2016 paulboiseau. All rights reserved.
 //
 
+import CoreData
+
 class User: OCManagedObject {
     
     @NSManaged var firstname: String?
@@ -15,7 +17,7 @@ class User: OCManagedObject {
     
     @NSManaged var category: String?
     @NSManaged var objective: String?
-    @NSManaged var days: String?
+    @NSManaged var days: NSData?
     @NSManaged var time: String?
     
     override static func entityName() -> String {

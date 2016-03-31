@@ -31,6 +31,11 @@ class ParameterView: UIView {
         leftBorder.frame = CGRectMake(0, 0, 10.0, CGRectGetHeight(self.frame)) // create rectangle
         
         self.layer.addSublayer(leftBorder)
+        
+        self.layer.masksToBounds = false
+        self.layer.shadowColor = UIColor.blackColor().CGColor
+        self.layer.shadowOffset = CGSizeMake(0.0, 1.0);
+        self.layer.shadowOpacity = 0.1;
     }
     
     // MARK: - Action

@@ -55,6 +55,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             return
         }
         
+        // register and setup user to datacontainer
         let user = UserManager.createUser(email, password: password)
         DataContainer.sharedDataContainer.currentUser = user
         

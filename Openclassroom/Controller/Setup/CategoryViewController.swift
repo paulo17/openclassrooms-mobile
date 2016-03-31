@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CategoryViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class CategoryViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     
@@ -59,6 +59,10 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
         selectedCategory = categories[indexPath.row]
         
         DataContainer.sharedDataContainer.currentUser.category = selectedCategory.name
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
+        return 0
     }
     
     // MARK: - Navigation
