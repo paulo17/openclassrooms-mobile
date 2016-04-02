@@ -20,7 +20,7 @@ class User: OCManagedObject {
     @NSManaged var days: NSNumber?
     @NSManaged var time: String?
     
-    var daysOfWeek: [Int: String]!
+    var daysOfWeek: [String]!
     
     override static func entityName() -> String {
         return "User"

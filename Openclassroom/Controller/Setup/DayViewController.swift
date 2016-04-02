@@ -17,10 +17,12 @@ class DayViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     @IBOutlet weak var timeTableView: UITableView!
     @IBOutlet weak var validateButton: UIButton!
     
-    let timeCellIdentifier = "timeCell"
-    let daysOfWeek = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"]
+    let timeCellIdentifier: String = "timeCell"
+    let daysOfWeek: [String] = DaysOfWeek.days
     
-    lazy var selectedDays = Dictionary<Int, String>()
+    lazy var selectedDays: [String] = [String]()
+    
+    //lazy var selectedDays = Dictionary<Int, String>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,9 +66,9 @@ class DayViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     func didChangeSwitchState(sender: DayCell, status: Bool) {
         if let day = sender.dayLabel.text {
             if status {
-                selectedDays.updateValue(day, forKey: sender.index)
+                selectedDays.append(day)
             } else {
-                selectedDays.removeValueForKey(sender.index)
+                selectedDays = selectedDays.filter { $0 != day }
             }
         }
         

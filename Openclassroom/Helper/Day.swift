@@ -17,6 +17,8 @@ enum DaysOfWeek: String {
     case Friday = "Vendredi"
     case Saturday = "Samedi"
     case Sunday = "Dimanche"
+    
+    static let days = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"]
 }
 
 struct Days {
@@ -28,10 +30,10 @@ struct Days {
     static let saturday = UInt32(1 << 5)
     static let sunday = UInt32(1 << 6)
     
-    static func transform(days: [Int: String]) -> UInt32 {
+    static func transform(days: [String]) -> UInt32 {
         var daysBinary: UInt32 = 0
         
-        days.forEach { (index, day) in
+        days.forEach { (day) in
             switch day {
             case DaysOfWeek.Monday.rawValue:
                 daysBinary += self.monday
@@ -64,10 +66,12 @@ struct Days {
     
     static func reverse(days: UInt32) -> [String] {
         
+        
+        
         return [String]()
     }
     
-    static func humanReadable(days: [Int: String]) -> String {
+    static func humanReadable(days: [String]) -> String {
         let daysBinary = transform(days)
         
         if daysBinary == 96 {
@@ -75,20 +79,14 @@ struct Days {
         }
         
         if daysBinary == 31 {
-            return "Semaine"
+            return "En Semaine"
         }
         
-        var daysString: String = ""
-        
-        days.forEach { (index, day) in
-            if daysString.isEmpty {
-                daysString += "\(day)"
-            } else {
-                daysString += ", \(day)"
-            }
+        if daysBinary == 127 {
+            return "Tous les jours"
         }
-        
-        return daysString
+    
+        return days.joinWithSeparator(", ")
     }
 }
 
