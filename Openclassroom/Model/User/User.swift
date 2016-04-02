@@ -18,7 +18,7 @@ class User: OCManagedObject {
     @NSManaged var category: String?
     @NSManaged var objective: String?
     @NSManaged var days: NSNumber?
-    @NSManaged var time: String?
+    @NSManaged var time: NSNumber?
     
     var daysOfWeek: [String]!
     

@@ -42,6 +42,10 @@ class ParameterViewController: UIViewController, ParameterViewDelegate {
         if let days = DataContainer.sharedDataContainer.currentUser.daysOfWeek {
             dayView.content.text = Days.humanReadable(days)
         }
+        
+        if let time = DataContainer.sharedDataContainer.currentUser.time {
+            timeView.content.text = "\(time) minutes"
+        }
     }
     
     func setUI() {
@@ -68,7 +72,7 @@ class ParameterViewController: UIViewController, ParameterViewDelegate {
              setupController = storyboard?.instantiateViewControllerWithIdentifier("dayViewController") as! DayViewController
             break
         case "time":
-            //setupController = storyboard?.instantiateViewControllerWithIdentifier("timeViewController") as! TimeViewController
+            setupController = storyboard?.instantiateViewControllerWithIdentifier("timeViewController") as! TimeViewController
             break
         default:
             break
