@@ -531,7 +531,7 @@ numérique</string>
         <!--Time View Controller-->
         <scene sceneID="YJM-tb-LxM">
             <objects>
-                <viewController id="jXs-iT-pl2" customClass="TimeViewController" customModule="Openclassroom" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="timeViewController" id="jXs-iT-pl2" customClass="TimeViewController" customModule="Openclassroom" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fLB-ao-Jci"/>
                         <viewControllerLayoutGuide type="bottom" id="4dY-5A-sGm"/>
