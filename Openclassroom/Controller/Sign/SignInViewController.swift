@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Cartography
 
 class SignInViewController: UIViewController {
     
@@ -14,15 +15,14 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var googleButton: UIButton!
     @IBOutlet weak var linkedinButton: UIButton!
     @IBOutlet weak var emailButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
     
     override func viewDidLoad() {
-        initializeView()
+        super.viewDidLoad()
     }
     
-    func initializeView() {
-        facebookButton.OCdefaultButton(UIColorFromRGBA("3B5998"))
-        googleButton.OCdefaultButton(UIColorFromRGBA("D13832"))
-        linkedinButton.OCdefaultButton(UIColorFromRGBA("2162A6"))
-        emailButton.OCdefaultButton(UIColorFromRGBA("B2B1B6"))
+    override func viewWillAppear(animated: Bool) {
+        loginButton.OCborderButton(UIColor.OCDustyOrangeColor())
     }
+    
 }
