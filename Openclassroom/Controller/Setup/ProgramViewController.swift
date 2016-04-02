@@ -12,11 +12,9 @@ class ProgramViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     // MARK: - Variables
     var objectives = [NSDictionary]()
-    ////
     
     // MARK: - @IBOutlets
     @IBOutlet weak var objectivesTableView: UITableView!
-    ////
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -53,7 +51,7 @@ class ProgramViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         switch self.objectives[indexPath.row]["type"] as! String {
         case "title":
-            cell.roundBackgroundView.backgroundColor = colorMain
+            cell.roundBackgroundView.backgroundColor = UIColor.OCDustyOrangeColor()
             cell.roundBackgroundView.layer.cornerRadius = 17.0
             
             cell.numberLabel.text = self.objectives[indexPath.row]["nb"] as? String
@@ -68,7 +66,7 @@ class ProgramViewController: UIViewController, UITableViewDelegate, UITableViewD
         case "subtitle":
             cell.titleLabel.text = self.objectives[indexPath.row]["text"]! as? String
             cell.titleLabel.font = cell.titleLabel.font.fontWithSize(15.0)
-            cell.titleLabel.textColor = try! UIColor(rgba_throws: "#BFBFC3")
+            cell.titleLabel.textColor = UIColor.OCSilverColor()
             
             cell.finishButton.hidden = true
             
