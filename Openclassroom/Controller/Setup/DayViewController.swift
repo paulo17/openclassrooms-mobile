@@ -20,7 +20,7 @@ class DayViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     let timeCellIdentifier: String = "timeCell"
     let daysOfWeek: [String] = DaysOfWeek.days
     
-    lazy var selectedDays: [String] = [String]()
+    lazy var selectedDays: [String] = [String](count: 7, repeatedValue: "")
     
     //lazy var selectedDays = Dictionary<Int, String>()
     
@@ -66,7 +66,7 @@ class DayViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     func didChangeSwitchState(sender: DayCell, status: Bool) {
         if let day = sender.dayLabel.text {
             if status {
-                selectedDays.append(day)
+                selectedDays.insert(day, atIndex: sender.index)
             } else {
                 selectedDays = selectedDays.filter { $0 != day }
             }
@@ -81,7 +81,8 @@ class DayViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         navigationItem.title = "" // remove navigation title
         
-        DataContainer.sharedDataContainer.currentUser.daysOfWeek = selectedDays
+        // set selected days to data container and remove empty element with filter
+        DataContainer.sharedDataContainer.currentUser.daysOfWeek = selectedDays.filter { $0 != "" }
     }
     
 }
