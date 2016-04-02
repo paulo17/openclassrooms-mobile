@@ -64,7 +64,7 @@ class ParameterViewController: UIViewController, ParameterViewDelegate {
              setupController = storyboard?.instantiateViewControllerWithIdentifier("dayViewController") as! DayViewController
             break
         case "time":
-            setupController = storyboard?.instantiateViewControllerWithIdentifier("timeViewController") as! TimeViewController
+            //setupController = storyboard?.instantiateViewControllerWithIdentifier("timeViewController") as! TimeViewController
             break
         default:
             break

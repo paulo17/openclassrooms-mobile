@@ -44,4 +44,8 @@ class ParameterView: UIView {
         self.delegate?.changeProfileParameter(self.identifier)
     }
     
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.delegate?.changeProfileParameter(self.identifier)
+    }
+    
 }
