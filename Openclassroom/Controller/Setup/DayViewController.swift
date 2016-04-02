@@ -78,6 +78,8 @@ class DayViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         navigationItem.title = "" // remove navigation title
+        
+        DataContainer.sharedDataContainer.currentUser.daysOfWeek = selectedDays
     }
     
 }

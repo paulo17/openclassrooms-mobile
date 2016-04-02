@@ -55,6 +55,7 @@
 		6BF23AA31C5FAE94001B1006 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BF23AA21C5FAE94001B1006 /* Assets.xcassets */; };
 		6BF23AA61C5FAE94001B1006 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BF23AA41C5FAE94001B1006 /* LaunchScreen.storyboard */; };
 		6BF8B39D1CA0576400051D54 /* ObjectiveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF8B39C1CA0576400051D54 /* ObjectiveCell.swift */; };
+		6BF9C27F1CAFDCC40088EE95 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF9C27E1CAFDCC40088EE95 /* Day.swift */; };
 		F7E196D74DF8967E1229C76B /* Pods_Openclassroom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4D82A87B766E1444FCE186 /* Pods_Openclassroom.framework */; };
 /* End PBXBuildFile section */
 
@@ -110,6 +111,7 @@
 		6BF23AA51C5FAE94001B1006 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6BF23AA71C5FAE94001B1006 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6BF8B39C1CA0576400051D54 /* ObjectiveCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectiveCell.swift; sourceTree = "<group>"; };
+		6BF9C27E1CAFDCC40088EE95 /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		7146E8AB1785EFBD25AE1D71 /* Pods-Openclassroom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Openclassroom.release.xcconfig"; path = "Pods/Target Support Files/Pods-Openclassroom/Pods-Openclassroom.release.xcconfig"; sourceTree = "<group>"; };
 		9D4D82A87B766E1444FCE186 /* Pods_Openclassroom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Openclassroom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FF964DDE5E34DC1072B06D9 /* Pods-Openclassroom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Openclassroom.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Openclassroom/Pods-Openclassroom.debug.xcconfig"; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				6B8829291CABDFFB003CC1EC /* Constants.swift */,
 				6B88292B1CABDFFB003CC1EC /* Font.swift */,
 				6B8829301CABDFFB003CC1EC /* Redirect.swift */,
+				6BF9C27E1CAFDCC40088EE95 /* Day.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -512,6 +515,7 @@
 				6B88294B1CABE18D003CC1EC /* Array.swift in Sources */,
 				6BA776F61CABDB0A001CDD78 /* UserManager.swift in Sources */,
 				6B8829511CABE18D003CC1EC /* UIColor.swift in Sources */,
+				6BF9C27F1CAFDCC40088EE95 /* Day.swift in Sources */,
 				6B4E30F31C99A23B00BE42CB /* CategoryViewController.swift in Sources */,
 				6B4E30FF1C9D78C600BE42CB /* CategoryCell.swift in Sources */,
 				6BA776F91CABDC11001CDD78 /* OC.xcdatamodeld in Sources */,

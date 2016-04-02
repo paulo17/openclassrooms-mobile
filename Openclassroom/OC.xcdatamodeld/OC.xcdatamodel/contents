@@ -2,7 +2,7 @@
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15E65" minimumToolsVersion="Xcode 7.0">
     <entity name="User" representedClassName=".User" syncable="YES">
         <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="days" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="days" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="email" attributeType="String" indexed="YES" syncable="YES"/>
         <attribute name="firstname" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lastname" optional="YES" attributeType="String" syncable="YES"/>

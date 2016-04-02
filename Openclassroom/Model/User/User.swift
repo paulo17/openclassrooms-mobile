@@ -17,8 +17,10 @@ class User: OCManagedObject {
     
     @NSManaged var category: String?
     @NSManaged var objective: String?
-    @NSManaged var days: NSData?
+    @NSManaged var days: NSNumber?
     @NSManaged var time: String?
+    
+    var daysOfWeek: [Int: String]!
     
     override static func entityName() -> String {
         return "User"

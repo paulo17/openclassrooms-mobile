@@ -38,6 +38,10 @@ class ParameterViewController: UIViewController, ParameterViewDelegate {
     
     func showUserParemeters() {
         objectiveView.content.text = DataContainer.sharedDataContainer.currentUser.category
+        
+        if let days = DataContainer.sharedDataContainer.currentUser.daysOfWeek {
+            dayView.content.text = Days.humanReadable(days)
+        }
     }
     
     func setUI() {
@@ -54,7 +58,7 @@ class ParameterViewController: UIViewController, ParameterViewDelegate {
     // MARK: - ParameterView Delegate
     
     func changeProfileParameter(identifier: String) {
-        var setupController: UIViewController?
+        var setupController: UIViewController!
         
         switch identifier {
         case "objective":
