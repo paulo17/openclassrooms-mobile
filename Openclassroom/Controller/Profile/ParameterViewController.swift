@@ -42,6 +42,10 @@ class ParameterViewController: UIViewController, ParameterViewDelegate {
         if let days = DataContainer.sharedDataContainer.currentUser.daysOfWeek {
             dayView.content.text = Days.humanReadable(days)
         }
+        
+        if let time = DataContainer.sharedDataContainer.currentUser.time {
+            timeView.content.text = "\(time) minutes"
+        }
     }
     
     func setUI() {
