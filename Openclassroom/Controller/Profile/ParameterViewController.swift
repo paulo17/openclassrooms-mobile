@@ -86,8 +86,16 @@ class ParameterViewController: UIViewController, ParameterViewDelegate {
     // MARK: - IB Action
     
     @IBAction func confirmParameterAction(sender: UIButton) {
-        // save user parameter to database
-        //let user = DataContainer.sharedDataContainer.currentUser
+        // persist user data
+        UserManager.saveContext()
+        
+        // instanciate cards navigation controller
+        let cardsStoryboard = UIStoryboard(name: "Cards", bundle: nil)
+        let cardsNavigationController = cardsStoryboard.instantiateViewControllerWithIdentifier("CardsNavigationController") as! OCExpandNavigationController
+        
+        // redirect to cards navigation controller
+        cardsNavigationController.modalTransitionStyle = .CrossDissolve
+        presentViewController(cardsNavigationController, animated: true, completion: nil)
     }
     
 }

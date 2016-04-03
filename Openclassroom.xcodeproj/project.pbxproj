@@ -49,6 +49,7 @@
 		6BA776F91CABDC11001CDD78 /* OC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6BA776F71CABDC11001CDD78 /* OC.xcdatamodeld */; };
 		6BBC5F901CA487C600EC7EFE /* ParameterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC5F8F1CA487C600EC7EFE /* ParameterViewController.swift */; };
 		6BD1DA0E1CA7E6370075057F /* ParameterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD1DA0D1CA7E6370075057F /* ParameterView.swift */; };
+		6BDE35111CB1469F00D6DC6B /* Cards.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BDE35101CB1469F00D6DC6B /* Cards.storyboard */; };
 		6BEAA7191C5FBCB80043BEA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEAA7181C5FBCB80043BEA2 /* ViewController.swift */; };
 		6BF23A9C1C5FAE94001B1006 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF23A9B1C5FAE94001B1006 /* AppDelegate.swift */; };
 		6BF23AA11C5FAE94001B1006 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BF23A9F1C5FAE94001B1006 /* Main.storyboard */; };
@@ -103,6 +104,7 @@
 		6BA776F81CABDC11001CDD78 /* OC.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OC.xcdatamodel; sourceTree = "<group>"; };
 		6BBC5F8F1CA487C600EC7EFE /* ParameterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterViewController.swift; sourceTree = "<group>"; };
 		6BD1DA0D1CA7E6370075057F /* ParameterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterView.swift; sourceTree = "<group>"; };
+		6BDE35101CB1469F00D6DC6B /* Cards.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Cards.storyboard; sourceTree = "<group>"; };
 		6BEAA7181C5FBCB80043BEA2 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6BF23A981C5FAE94001B1006 /* Openclassroom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Openclassroom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BF23A9B1C5FAE94001B1006 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -332,6 +334,7 @@
 				6BEAA7171C5FB9D30043BEA2 /* Model */,
 				6BF23A9B1C5FAE94001B1006 /* AppDelegate.swift */,
 				6BF23A9F1C5FAE94001B1006 /* Main.storyboard */,
+				6BDE35101CB1469F00D6DC6B /* Cards.storyboard */,
 				6BF23AA41C5FAE94001B1006 /* LaunchScreen.storyboard */,
 				6B36B32D1C60C4AE00989167 /* Walkthrough.storyboard */,
 				6BF23AA21C5FAE94001B1006 /* Assets.xcassets */,
@@ -417,6 +420,7 @@
 				6BA0F8201C9858A0001AA68E /* lecon.json in Resources */,
 				6B36B32E1C60C4AE00989167 /* Walkthrough.storyboard in Resources */,
 				6BF23AA31C5FAE94001B1006 /* Assets.xcassets in Resources */,
+				6BDE35111CB1469F00D6DC6B /* Cards.storyboard in Resources */,
 				6BF23AA11C5FAE94001B1006 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
