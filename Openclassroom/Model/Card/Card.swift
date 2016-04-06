@@ -8,11 +8,18 @@
 
 import UIKit
 
+enum CardsType {
+    case Start
+    case Active
+    case Disable
+    case Finish
+}
+
 enum LeconType {
     case Video, Text, Quizz, Reward
 }
 
-class Lecon {
+class Card {
     
     var title: String
     var time: Int

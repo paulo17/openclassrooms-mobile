@@ -12,14 +12,15 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     @IBOutlet weak var tasksCollectionView: UICollectionView!
     
-    private let cellIdentifier = "leconCell"
-    lazy var lecons: [Lecon] = [Lecon]()
+    lazy var lecons: [Card] = [Card]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tasksCollectionView.delegate = self
         tasksCollectionView.dataSource = self
+        
+        tasksCollectionView.registerClass(ActiveCell.self, forCellWithReuseIdentifier: ActiveCell.cellIdentifier())
         
         self.lecons = getStaticLecons()
     }
@@ -28,11 +29,11 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         tasksCollectionView.pagingEnabled = true
     }
     
-    func getStaticLecons() -> [Lecon] {
-        var lecons: [Lecon] = [Lecon]()
-        for leconData in Lecon.lecons {
-            let type = Lecon.parseStringTypeToEnum(leconData["type"] as! String)
-            let lecon = Lecon(
+    func getStaticLecons() -> [Card] {
+        var lecons: [Card] = [Card]()
+        for leconData in Card.lecons {
+            let type = Card.parseStringTypeToEnum(leconData["type"] as! String)
+            let lecon = Card(
                 title: leconData["title"] as! String,
                 time: leconData["time"] as! Int,
                 type: type,
@@ -57,25 +58,15 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(cellIdentifier, forIndexPath: indexPath) as! LeconCell
-        
-        /*let view = UIView(frame: CGRectMake(0.0, 30.0, tasksCollectionView.bounds.size.width, tasksCollectionView.bounds.size.height))
-        view.backgroundColor = UIColor.whiteColor()
-        
-        cell.addSubview(view)*/
-        
-        cell.backgroundColor = UIColor.redColor()
-        
-        print(cell)
-        
-        //cell.initializeCellWithContent(lecons[indexPath.row])
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(ActiveCell.cellIdentifier(), forIndexPath: indexPath) as! ActiveCell 
         
         return cell
     }
     
-    // remove spacing between page of cell
+    // MARK: - CollectionView Flow Delegate
+    
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
-        return 30.0
+        return 0
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
@@ -83,24 +74,11 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return CGSizeMake(tasksCollectionView.bounds.width - 60.0, tasksCollectionView.bounds.height)
+        return CGSizeMake(tasksCollectionView.bounds.width, tasksCollectionView.bounds.height)
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0.0, left: 30.0, bottom: 0.0, right: 30.0)
+        return UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
     }
-    
-    // MARK: - Scroll view delegate
-    
-    /*
-    func pageControlDidTouch() {
-    let pageWidth: CGFloat = tasksCollectionView.frame.size.width
-    let scrollTo: CGPoint  = CGPointMake(pageWidth * CGFloat(pageControl.currentPage), 0)
-    
-    tasksCollectionView.setContentOffset(scrollTo, animated: true)
-    }*/
-    
-    
-    
     
 }

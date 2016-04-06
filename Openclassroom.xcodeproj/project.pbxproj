@@ -36,7 +36,6 @@
 		6BA0F8201C9858A0001AA68E /* lecon.json in Resources */ = {isa = PBXBuildFile; fileRef = 6BA0F81E1C9858A0001AA68E /* lecon.json */; };
 		6BA776EF1CABDB0A001CDD78 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA776E41CABDB0A001CDD78 /* Category.swift */; };
 		6BA776F01CABDB0A001CDD78 /* DataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA776E51CABDB0A001CDD78 /* DataContainer.swift */; };
-		6BA776F11CABDB0A001CDD78 /* Lecon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA776E71CABDB0A001CDD78 /* Lecon.swift */; };
 		6BA776F21CABDB0A001CDD78 /* Objective.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA776E91CABDB0A001CDD78 /* Objective.swift */; };
 		6BA776F31CABDB0A001CDD78 /* OCAbstractManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA776EA1CABDB0A001CDD78 /* OCAbstractManager.swift */; };
 		6BA776F41CABDB0A001CDD78 /* OCManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA776EB1CABDB0A001CDD78 /* OCManagedObject.swift */; };
@@ -47,9 +46,13 @@
 		6BD1DA0E1CA7E6370075057F /* ParameterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD1DA0D1CA7E6370075057F /* ParameterView.swift */; };
 		6BDE35111CB1469F00D6DC6B /* Cards.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BDE35101CB1469F00D6DC6B /* Cards.storyboard */; };
 		6BE8D0691CB50ECD000D3243 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE8D0681CB50ECD000D3243 /* MainViewController.swift */; };
-		6BE8D06E1CB50F18000D3243 /* FinishLeconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE8D06B1CB50F18000D3243 /* FinishLeconCell.swift */; };
-		6BE8D06F1CB50F18000D3243 /* LeconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE8D06C1CB50F18000D3243 /* LeconCell.swift */; };
-		6BE8D0701CB50F18000D3243 /* TextLeconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE8D06D1CB50F18000D3243 /* TextLeconCell.swift */; };
+		6BE8D0721CB53EBF000D3243 /* StartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE8D0711CB53EBF000D3243 /* StartCell.swift */; };
+		6BE8D0741CB53EC8000D3243 /* ActiveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE8D0731CB53EC8000D3243 /* ActiveCell.swift */; };
+		6BE8D0761CB53ED1000D3243 /* DisableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE8D0751CB53ED1000D3243 /* DisableCell.swift */; };
+		6BE8D0781CB53EDB000D3243 /* FinishCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE8D0771CB53EDB000D3243 /* FinishCell.swift */; };
+		6BE8D07A1CB54021000D3243 /* CardsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE8D0791CB54021000D3243 /* CardsFactory.swift */; };
+		6BE8D07D1CB5444B000D3243 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE8D07C1CB5444B000D3243 /* Card.swift */; };
+		6BE8D07F1CB54494000D3243 /* AbstractCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE8D07E1CB54494000D3243 /* AbstractCard.swift */; };
 		6BEAA7191C5FBCB80043BEA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEAA7181C5FBCB80043BEA2 /* ViewController.swift */; };
 		6BF23A9C1C5FAE94001B1006 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF23A9B1C5FAE94001B1006 /* AppDelegate.swift */; };
 		6BF23AA11C5FAE94001B1006 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BF23A9F1C5FAE94001B1006 /* Main.storyboard */; };
@@ -91,7 +94,6 @@
 		6BA0F81E1C9858A0001AA68E /* lecon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lecon.json; sourceTree = "<group>"; };
 		6BA776E41CABDB0A001CDD78 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		6BA776E51CABDB0A001CDD78 /* DataContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataContainer.swift; sourceTree = "<group>"; };
-		6BA776E71CABDB0A001CDD78 /* Lecon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lecon.swift; sourceTree = "<group>"; };
 		6BA776E91CABDB0A001CDD78 /* Objective.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Objective.swift; sourceTree = "<group>"; };
 		6BA776EA1CABDB0A001CDD78 /* OCAbstractManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCAbstractManager.swift; sourceTree = "<group>"; };
 		6BA776EB1CABDB0A001CDD78 /* OCManagedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCManagedObject.swift; sourceTree = "<group>"; };
@@ -102,9 +104,13 @@
 		6BD1DA0D1CA7E6370075057F /* ParameterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterView.swift; sourceTree = "<group>"; };
 		6BDE35101CB1469F00D6DC6B /* Cards.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Cards.storyboard; sourceTree = "<group>"; };
 		6BE8D0681CB50ECD000D3243 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		6BE8D06B1CB50F18000D3243 /* FinishLeconCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishLeconCell.swift; sourceTree = "<group>"; };
-		6BE8D06C1CB50F18000D3243 /* LeconCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeconCell.swift; sourceTree = "<group>"; };
-		6BE8D06D1CB50F18000D3243 /* TextLeconCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextLeconCell.swift; sourceTree = "<group>"; };
+		6BE8D0711CB53EBF000D3243 /* StartCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartCell.swift; sourceTree = "<group>"; };
+		6BE8D0731CB53EC8000D3243 /* ActiveCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveCell.swift; sourceTree = "<group>"; };
+		6BE8D0751CB53ED1000D3243 /* DisableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisableCell.swift; sourceTree = "<group>"; };
+		6BE8D0771CB53EDB000D3243 /* FinishCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishCell.swift; sourceTree = "<group>"; };
+		6BE8D0791CB54021000D3243 /* CardsFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsFactory.swift; sourceTree = "<group>"; };
+		6BE8D07C1CB5444B000D3243 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		6BE8D07E1CB54494000D3243 /* AbstractCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractCard.swift; sourceTree = "<group>"; };
 		6BEAA7181C5FBCB80043BEA2 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6BF23A981C5FAE94001B1006 /* Openclassroom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Openclassroom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BF23A9B1C5FAE94001B1006 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -219,14 +225,6 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
-		6BA776E61CABDB0A001CDD78 /* Lecon */ = {
-			isa = PBXGroup;
-			children = (
-				6BA776E71CABDB0A001CDD78 /* Lecon.swift */,
-			);
-			path = Lecon;
-			sourceTree = "<group>";
-		};
 		6BA776E81CABDB0A001CDD78 /* Objective */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				6BE8D0681CB50ECD000D3243 /* MainViewController.swift */,
+				6BE8D0791CB54021000D3243 /* CardsFactory.swift */,
 			);
 			path = Card;
 			sourceTree = "<group>";
@@ -287,11 +286,21 @@
 		6BE8D06A1CB50F18000D3243 /* Cards */ = {
 			isa = PBXGroup;
 			children = (
-				6BE8D06B1CB50F18000D3243 /* FinishLeconCell.swift */,
-				6BE8D06C1CB50F18000D3243 /* LeconCell.swift */,
-				6BE8D06D1CB50F18000D3243 /* TextLeconCell.swift */,
+				6BE8D0711CB53EBF000D3243 /* StartCell.swift */,
+				6BE8D0731CB53EC8000D3243 /* ActiveCell.swift */,
+				6BE8D0751CB53ED1000D3243 /* DisableCell.swift */,
+				6BE8D0771CB53EDB000D3243 /* FinishCell.swift */,
+				6BE8D07E1CB54494000D3243 /* AbstractCard.swift */,
 			);
 			path = Cards;
+			sourceTree = "<group>";
+		};
+		6BE8D07B1CB5444B000D3243 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				6BE8D07C1CB5444B000D3243 /* Card.swift */,
+			);
+			path = Card;
 			sourceTree = "<group>";
 		};
 		6BEAA7161C5FB9D30043BEA2 /* Controller */ = {
@@ -310,9 +319,9 @@
 		6BEAA7171C5FB9D30043BEA2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6BE8D07B1CB5444B000D3243 /* Card */,
 				6BA776E31CABDB0A001CDD78 /* Category */,
 				6BA776E51CABDB0A001CDD78 /* DataContainer.swift */,
-				6BA776E61CABDB0A001CDD78 /* Lecon */,
 				6BA776E81CABDB0A001CDD78 /* Objective */,
 				6BA776EA1CABDB0A001CDD78 /* OCAbstractManager.swift */,
 				6BA776EB1CABDB0A001CDD78 /* OCManagedObject.swift */,
@@ -509,15 +518,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BE8D0701CB50F18000D3243 /* TextLeconCell.swift in Sources */,
+				6BE8D07D1CB5444B000D3243 /* Card.swift in Sources */,
 				6B4E30F91C99A47D00BE42CB /* DayViewController.swift in Sources */,
 				6B8829351CABDFFB003CC1EC /* Constants.swift in Sources */,
 				6BA776F31CABDB0A001CDD78 /* OCAbstractManager.swift in Sources */,
 				6B4E30FB1C99A48500BE42CB /* TimeViewController.swift in Sources */,
 				6B4BEE7D1C8723C2006D2862 /* LoginViewController.swift in Sources */,
+				6BE8D0721CB53EBF000D3243 /* StartCell.swift in Sources */,
 				6BEAA7191C5FBCB80043BEA2 /* ViewController.swift in Sources */,
-				6BE8D06E1CB50F18000D3243 /* FinishLeconCell.swift in Sources */,
 				6B88293C1CABDFFB003CC1EC /* Redirect.swift in Sources */,
+				6BE8D07A1CB54021000D3243 /* CardsFactory.swift in Sources */,
 				6B88294D1CABE18D003CC1EC /* Errors.swift in Sources */,
 				6B8829401CABE090003CC1EC /* ProgramCell.swift in Sources */,
 				6B2CA85E1CA1E12A002FB444 /* DayCell.swift in Sources */,
@@ -536,23 +546,25 @@
 				6BBC5F901CA487C600EC7EFE /* ParameterViewController.swift in Sources */,
 				6BE8D0691CB50ECD000D3243 /* MainViewController.swift in Sources */,
 				6B88294B1CABE18D003CC1EC /* Array.swift in Sources */,
-				6BE8D06F1CB50F18000D3243 /* LeconCell.swift in Sources */,
 				6BA776F61CABDB0A001CDD78 /* UserManager.swift in Sources */,
 				6B8829511CABE18D003CC1EC /* UIColor.swift in Sources */,
 				6BF9C27F1CAFDCC40088EE95 /* Day.swift in Sources */,
 				6B4E30F31C99A23B00BE42CB /* CategoryViewController.swift in Sources */,
+				6BE8D07F1CB54494000D3243 /* AbstractCard.swift in Sources */,
 				6B4E30FF1C9D78C600BE42CB /* CategoryCell.swift in Sources */,
 				6BA776F91CABDC11001CDD78 /* OC.xcdatamodeld in Sources */,
 				6BA776F41CABDB0A001CDD78 /* OCManagedObject.swift in Sources */,
 				6BF8B39D1CA0576400051D54 /* ObjectiveCell.swift in Sources */,
 				6B88294C1CABE18D003CC1EC /* CAGradientLayerExtension.swift in Sources */,
 				6B8829501CABE18D003CC1EC /* OCTextField.swift in Sources */,
-				6BA776F11CABDB0A001CDD78 /* Lecon.swift in Sources */,
 				6BF23A9C1C5FAE94001B1006 /* AppDelegate.swift in Sources */,
 				6BA0F81A1C984BB0001AA68E /* WalkthroughViewController.swift in Sources */,
 				6BA776F51CABDB0A001CDD78 /* User.swift in Sources */,
 				6B8829371CABDFFB003CC1EC /* Font.swift in Sources */,
 				6B4E30F71C99A41B00BE42CB /* ProgramViewController.swift in Sources */,
+				6BE8D0741CB53EC8000D3243 /* ActiveCell.swift in Sources */,
+				6BE8D0781CB53EDB000D3243 /* FinishCell.swift in Sources */,
+				6BE8D0761CB53ED1000D3243 /* DisableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
