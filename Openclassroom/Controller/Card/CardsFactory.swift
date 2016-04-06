@@ -11,15 +11,21 @@ import UIKit
 class CardsFactory {
     
     static func createCard(type: CardsType, collection: UICollectionView, indexPath: NSIndexPath) -> CardProtocol? {
+        let card: CardProtocol!
+        
         switch type {
         case .Start:
-            return collection.dequeueReusableCellWithReuseIdentifier("StartCell", forIndexPath: indexPath) as! StartCell
+            card = collection.dequeueReusableCellWithReuseIdentifier(StartCell.cellIdentifier(), forIndexPath: indexPath) as! StartCell
         case .Active:
-            return collection.dequeueReusableCellWithReuseIdentifier("ActiveCell", forIndexPath: indexPath) as! ActiveCell
+            card = collection.dequeueReusableCellWithReuseIdentifier(ActiveCell.cellIdentifier(), forIndexPath: indexPath) as! ActiveCell
         case .Disable:
-            return collection.dequeueReusableCellWithReuseIdentifier("DisableCell", forIndexPath: indexPath) as! DisableCell
+            card = collection.dequeueReusableCellWithReuseIdentifier(DisableCell.cellIdentifier(), forIndexPath: indexPath) as! DisableCell
         case .Finish:
-            return collection.dequeueReusableCellWithReuseIdentifier("FinishCell", forIndexPath: indexPath) as! FinishCell
+            card = collection.dequeueReusableCellWithReuseIdentifier(FinishCell.cellIdentifier(), forIndexPath: indexPath) as! FinishCell
         }
+        
+        card.setup()
+        
+        return card
     }
 }

@@ -57,10 +57,7 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(ActiveCell.cellIdentifier(), forIndexPath: indexPath) as! ActiveCell
-        
-        cell.setup()
+        let cell = CardsFactory.createCard(.Active, collection: collectionView, indexPath: indexPath) as! UICollectionViewCell
         
         return cell
     }

@@ -28,6 +28,9 @@ class AbstractCard: UICollectionViewCell {
         setupContainer()
     }
     
+    /**
+     Setup card container UIView with margin left and right of 30
+     */
     private func setupContainer() {
         containerView = UIView()
         containerView.backgroundColor = UIColor.whiteColor()
