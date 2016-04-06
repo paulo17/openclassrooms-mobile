@@ -8,6 +8,13 @@
 
 import UIKit
 
-class FinishCell: AbstractCard {
+class FinishCell: AbstractCard, CardProtocol {
     
+    static func cellIdentifier() -> String {
+        return "FinishCell"
+    }
+    
+    func setup() -> Void {
+        
+    }
 }

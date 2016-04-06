@@ -9,6 +9,11 @@
 import UIKit
 import Cartography
 
+protocol CardProtocol {
+    static func cellIdentifier() -> String
+    func setup() -> Void
+}
+
 class AbstractCard: UICollectionViewCell {
     
     var containerView: UIView!
@@ -16,18 +21,14 @@ class AbstractCard: UICollectionViewCell {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-    
-    class func cellIdentifier() -> String {
-        return ""
-    }
-        
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        setup()
+        setupContainer()
     }
     
-    private func setup() {
+    private func setupContainer() {
         containerView = UIView()
         containerView.backgroundColor = UIColor.whiteColor()
         

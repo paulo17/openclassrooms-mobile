@@ -60,7 +60,7 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(ActiveCell.cellIdentifier(), forIndexPath: indexPath) as! ActiveCell
         
-        cell.setUI()
+        cell.setup()
         
         return cell
     }

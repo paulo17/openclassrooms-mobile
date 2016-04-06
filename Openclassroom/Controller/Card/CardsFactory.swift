@@ -10,7 +10,7 @@ import UIKit
 
 class CardsFactory {
     
-    static func createCard(type: CardsType, collection: UICollectionView, indexPath: NSIndexPath) -> UICollectionViewCell? {
+    static func createCard(type: CardsType, collection: UICollectionView, indexPath: NSIndexPath) -> CardProtocol? {
         switch type {
         case .Start:
             return collection.dequeueReusableCellWithReuseIdentifier("StartCell", forIndexPath: indexPath) as! StartCell

@@ -8,6 +8,13 @@
 
 import UIKit
 
-class DisableCell: AbstractCard {
+class DisableCell: AbstractCard, CardProtocol {
     
+    static func cellIdentifier() -> String {
+        return "DisableCell"
+    }
+    
+    func setup() -> Void {
+        
+    }
 }

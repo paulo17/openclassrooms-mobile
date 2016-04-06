@@ -8,6 +8,14 @@
 
 import UIKit
 
-class StartCell: AbstractCard {
+class StartCell: AbstractCard, CardProtocol {
     
+    static func cellIdentifier() -> String {
+        return "StartCell"
+    }
+    
+    func setup() -> Void {
+        
+    }
+
 }
