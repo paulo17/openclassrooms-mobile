@@ -58,7 +58,9 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(ActiveCell.cellIdentifier(), forIndexPath: indexPath) as! ActiveCell 
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(ActiveCell.cellIdentifier(), forIndexPath: indexPath) as! ActiveCell
+        
+        cell.setUI()
         
         return cell
     }

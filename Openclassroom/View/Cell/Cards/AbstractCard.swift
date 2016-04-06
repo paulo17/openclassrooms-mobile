@@ -11,6 +11,8 @@ import Cartography
 
 class AbstractCard: UICollectionViewCell {
     
+    var containerView: UIView!
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
@@ -18,7 +20,7 @@ class AbstractCard: UICollectionViewCell {
     class func cellIdentifier() -> String {
         return ""
     }
-    
+        
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -26,8 +28,7 @@ class AbstractCard: UICollectionViewCell {
     }
     
     private func setup() {
-        let containerView = UIView()
-        
+        containerView = UIView()
         containerView.backgroundColor = UIColor.whiteColor()
         
         self.addSubview(containerView)
