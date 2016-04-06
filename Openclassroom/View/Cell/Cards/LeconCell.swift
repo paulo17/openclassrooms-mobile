@@ -16,13 +16,15 @@ class LeconCell: UICollectionViewCell {
     @IBOutlet weak var percentage: UILabel!
     @IBOutlet weak var percentageLabel: UILabel!
     @IBOutlet weak var downloadButton: UIButton!
+    @IBOutlet weak var startButton: UIButton!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
     override func awakeFromNib() {
-        downloadButton.OCborderButton(UIColor.OCSilverColor())
+        startButton.OCdefaultButton(UIColor.OCDustyOrangeColor())
+        downloadButton.OCborderButton(UIColor.OCTurquoiseColor())
     }
     
     func initializeCellWithContent(lecon: Lecon) {

@@ -11,8 +11,6 @@ import UIKit
 class MainViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var tasksCollectionView: UICollectionView!
-    @IBOutlet weak var startButton: UIButton!
-    @IBOutlet weak var pageControl: UIPageControl!
     
     private let cellIdentifier = "leconCell"
     lazy var lecons: [Lecon] = [Lecon]()
@@ -25,7 +23,6 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     override func viewWillAppear(animated: Bool) {
         tasksCollectionView.pagingEnabled = true
-        startButton.OCdefaultButton(UIColor.whiteColor())
     }
     
     func getStaticLecons() -> [Lecon] {
@@ -52,12 +49,10 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        pageControl.numberOfPages = lecons.count // set page control number to the number of element in collection view
         return lecons.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        pageControl.currentPage = indexPath.row // set current page control to current item index
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(cellIdentifier, forIndexPath: indexPath) as! LeconCell
         cell.initializeCellWithContent(lecons[indexPath.row])
