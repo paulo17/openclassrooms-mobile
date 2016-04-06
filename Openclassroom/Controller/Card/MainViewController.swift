@@ -18,6 +18,9 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tasksCollectionView.delegate = self
+        tasksCollectionView.dataSource = self
+        
         self.lecons = getStaticLecons()
     }
     
@@ -55,14 +58,24 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(cellIdentifier, forIndexPath: indexPath) as! LeconCell
-        cell.initializeCellWithContent(lecons[indexPath.row])
+        
+        /*let view = UIView(frame: CGRectMake(0.0, 30.0, tasksCollectionView.bounds.size.width, tasksCollectionView.bounds.size.height))
+        view.backgroundColor = UIColor.whiteColor()
+        
+        cell.addSubview(view)*/
+        
+        cell.backgroundColor = UIColor.redColor()
+        
+        print(cell)
+        
+        //cell.initializeCellWithContent(lecons[indexPath.row])
         
         return cell
     }
     
     // remove spacing between page of cell
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
-        return 0
+        return 30.0
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
@@ -70,7 +83,11 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return CGSizeMake(tasksCollectionView.bounds.width, tasksCollectionView.bounds.height)
+        return CGSizeMake(tasksCollectionView.bounds.width - 60.0, tasksCollectionView.bounds.height)
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0.0, left: 30.0, bottom: 0.0, right: 30.0)
     }
     
     // MARK: - Scroll view delegate

@@ -23,8 +23,8 @@ class LeconCell: UICollectionViewCell {
     }
     
     override func awakeFromNib() {
-        startButton.OCdefaultButton(UIColor.OCDustyOrangeColor())
-        downloadButton.OCborderButton(UIColor.OCTurquoiseColor())
+        //startButton.OCdefaultButton(UIColor.OCDustyOrangeColor())
+        //downloadButton.OCborderButton(UIColor.OCTurquoiseColor())
     }
     
     func initializeCellWithContent(lecon: Lecon) {
