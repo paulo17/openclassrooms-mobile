@@ -10,6 +10,13 @@ import UIKit
 import Cartography
 
 protocol CardProtocol {
+    var title: UILabel! { get set }
+    var subtitle: UILabel! { get set }
+    var imageView: UIImageView! { get set }
+    var percentage: UILabel! { get set }
+    var startButton: UIButton! { get set }
+    var downloadButton: UIButton! { get set }
+    
     static func cellIdentifier() -> String
     func setup() -> Void
 }
@@ -34,6 +41,12 @@ class AbstractCard: UICollectionViewCell {
     private func setupContainer() {
         containerView = UIView()
         containerView.backgroundColor = UIColor.whiteColor()
+        
+        // add border shadow
+        containerView.layer.masksToBounds = false
+        containerView.layer.shadowColor = UIColor.blackColor().CGColor
+        containerView.layer.shadowOffset = CGSizeMake(0.0, 1.0);
+        containerView.layer.shadowOpacity = 0.1;
         
         self.addSubview(containerView)
         

@@ -11,17 +11,24 @@ import Cartography
 
 class ActiveCell: AbstractCard, CardProtocol {
     
+    var title: UILabel! = UILabel()
+    var subtitle: UILabel! = UILabel()
+    var imageView: UIImageView! = UIImageView()
+    var percentage: UILabel! = UILabel()
+    var startButton: UIButton! = UIButton()
+    var downloadButton: UIButton! = UIButton()
+    
     static func cellIdentifier() -> String {
         return "ActiveCell"
     }
     
     func setup() {
-        let title = setupTitle()
-        let subtitle = setupSubtitle()
-        let imageView = setupImage()
-        let percentage = setupPercentage()
-        let startButton = setupStartButton()
-        let downloadButton = setupDownloadButton()
+        setupTitle()
+        setupSubtitle()
+        setupImage()
+        setupPercentage()
+        setupStartButton()
+        setupDownloadButton()
         
         self.addSubview(title)
         self.addSubview(subtitle)
@@ -76,62 +83,45 @@ class ActiveCell: AbstractCard, CardProtocol {
         }
     }
     
-    private func setupTitle() -> UILabel {
-        let title = UILabel()
+    private func setupTitle() {
         title.font = UIFont.boldSystemFontOfSize(24.0)
         title.textColor = UIColor.OCGreyishBrownColor()
         title.textAlignment = .Center
-        title.text = "Introduction"
-        
-        return title
+        title.numberOfLines = 0
+        title.text = ""
     }
     
-    private func setupSubtitle() -> UILabel{
-        let subtitle = UILabel()
+    private func setupSubtitle() {
         subtitle.font = UIFont.systemFontOfSize(12.0)
         subtitle.textColor = UIColor.OCSilverColor()
         subtitle.textAlignment = .Center
         subtitle.text = "10 minutes"
-        
-        return subtitle
     }
     
-    private func setupImage() -> UIImageView {
-        let imageView = UIImageView()
+    private func setupImage() {
         imageView.image = UIImage(named: "TextDisableIcon")
         imageView.contentMode = .ScaleAspectFit
-
-        return imageView
     }
     
-    private func setupPercentage() -> UILabel {
-        let percentage = UILabel()
+    private func setupPercentage() {
         percentage.text = "0%"
         percentage.textAlignment = .Center
         percentage.textColor = UIColor.OCDustyOrangeColor()
         percentage.font = UIFont.systemFontOfSize(24.0)
-        
-        return percentage
     }
     
-    private func setupStartButton() -> UIButton {
-        let startButton = UIButton()
+    private func setupStartButton() {
         startButton.setTitle("Commencer", forState: .Normal)
         startButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         startButton.titleLabel?.textAlignment = .Center
         startButton.titleLabel?.font = UIFont.systemFontOfSize(20.0)
         startButton.OCdefaultButton(UIColor.OCDustyOrangeColor())
-        
-        return startButton
     }
     
-    private func setupDownloadButton() -> UIButton {
-        let downloadButton = UIButton()
+    private func setupDownloadButton() {
         downloadButton.setTitle("TELECHARGER", forState: .Normal)
         downloadButton.setTitleColor(UIColor.OCTurquoiseColor(), forState: .Normal)
         downloadButton.titleLabel?.font = UIFont.systemFontOfSize(16.0)
         downloadButton.OCborderButton(UIColor.OCTurquoiseColor())
-        
-        return downloadButton
     }
 }

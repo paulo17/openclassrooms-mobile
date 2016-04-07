@@ -21,6 +21,9 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         tasksCollectionView.dataSource = self
         
         tasksCollectionView.registerClass(ActiveCell.self, forCellWithReuseIdentifier: ActiveCell.cellIdentifier())
+        tasksCollectionView.registerClass(StartCell.self, forCellWithReuseIdentifier: StartCell.cellIdentifier())
+        tasksCollectionView.registerClass(DisableCell.self, forCellWithReuseIdentifier: DisableCell.cellIdentifier())
+        tasksCollectionView.registerClass(FinishCell.self, forCellWithReuseIdentifier: FinishCell.cellIdentifier())
         
         self.lecons = getStaticLecons()
     }
@@ -57,9 +60,12 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = CardsFactory.createCard(.Active, collection: collectionView, indexPath: indexPath) as! UICollectionViewCell
+        let cell = CardsFactory.createCard(.Finish, collection: collectionView, indexPath: indexPath)!
         
-        return cell
+        cell.setup()
+        //cell.title.text = lecons[indexPath.row].title
+                
+        return cell as! UICollectionViewCell
     }
     
     // MARK: - CollectionView Flow Delegate
