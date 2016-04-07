@@ -60,7 +60,7 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = CardsFactory.createCard(.Finish, collection: collectionView, indexPath: indexPath)!
+        let cell = CardsFactory.createCard(.Start, collection: collectionView, indexPath: indexPath)!
         
         cell.setup()
         //cell.title.text = lecons[indexPath.row].title
