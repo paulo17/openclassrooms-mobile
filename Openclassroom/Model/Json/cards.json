@@ -1,0 +1,46 @@
+{
+  "cards": [
+    {
+      "title": "Introduction",
+      "time": 10,
+      "card": "",
+      "type": "text"
+    },
+    {
+      "title": "Qu'est-ce que le web ?",
+      "time": 15,
+      "card": "",
+      "type": "video"
+    },
+    {
+      "title": "Web, services et Cloud",
+      "time": 8,
+      "card": "",
+      "type": "text"
+    },
+    {
+      "title": "Comment est né le Web ?",
+      "time": 14,
+      "card": "",
+      "type": "video"
+    },
+    {
+      "title": "En résumé",
+      "time": 5,
+      "card": "",
+      "type": "text"
+    },
+    {
+      "title": "Les langages client",
+      "time": 20,
+      "card": "",
+      "type": "video"
+    },
+    {
+      "title": "Les langages serveur",
+      "time": 18,
+      "card": "",
+      "type": "video"
+    }
+  ]
+}

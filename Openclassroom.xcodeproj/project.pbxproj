@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B28215D1CB90E89003FFE38 /* cards.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B28215C1CB90E89003FFE38 /* cards.json */; };
 		6B2CA85E1CA1E12A002FB444 /* DayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CA85D1CA1E12A002FB444 /* DayCell.swift */; };
 		6B36B32E1C60C4AE00989167 /* Walkthrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B36B32D1C60C4AE00989167 /* Walkthrough.storyboard */; };
 		6B4BEE7B1C8723A8006D2862 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4BEE7A1C8723A8006D2862 /* RegisterViewController.swift */; };
@@ -33,7 +34,6 @@
 		6B8829521CABE18D003CC1EC /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B88294A1CABE18D003CC1EC /* UIColorExtension.swift */; };
 		6BA0F81A1C984BB0001AA68E /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA0F8191C984BB0001AA68E /* WalkthroughViewController.swift */; };
 		6BA0F81C1C984CEE001AA68E /* CustomWalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA0F81B1C984CEE001AA68E /* CustomWalkthroughPageViewController.swift */; };
-		6BA0F8201C9858A0001AA68E /* lecon.json in Resources */ = {isa = PBXBuildFile; fileRef = 6BA0F81E1C9858A0001AA68E /* lecon.json */; };
 		6BA776EF1CABDB0A001CDD78 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA776E41CABDB0A001CDD78 /* Category.swift */; };
 		6BA776F01CABDB0A001CDD78 /* DataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA776E51CABDB0A001CDD78 /* DataContainer.swift */; };
 		6BA776F21CABDB0A001CDD78 /* Objective.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA776E91CABDB0A001CDD78 /* Objective.swift */; };
@@ -64,6 +64,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B28215C1CB90E89003FFE38 /* cards.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cards.json; sourceTree = "<group>"; };
 		6B2CA85D1CA1E12A002FB444 /* DayCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayCell.swift; sourceTree = "<group>"; };
 		6B36B32D1C60C4AE00989167 /* Walkthrough.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Walkthrough.storyboard; sourceTree = "<group>"; };
 		6B4BEE7A1C8723A8006D2862 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -91,7 +92,6 @@
 		6B88294A1CABE18D003CC1EC /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		6BA0F8191C984BB0001AA68E /* WalkthroughViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
 		6BA0F81B1C984CEE001AA68E /* CustomWalkthroughPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomWalkthroughPageViewController.swift; sourceTree = "<group>"; };
-		6BA0F81E1C9858A0001AA68E /* lecon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lecon.json; sourceTree = "<group>"; };
 		6BA776E41CABDB0A001CDD78 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		6BA776E51CABDB0A001CDD78 /* DataContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataContainer.swift; sourceTree = "<group>"; };
 		6BA776E91CABDB0A001CDD78 /* Objective.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Objective.swift; sourceTree = "<group>"; };
@@ -200,7 +200,7 @@
 		6BA0F81D1C9858A0001AA68E /* Json */ = {
 			isa = PBXGroup;
 			children = (
-				6BA0F81E1C9858A0001AA68E /* lecon.json */,
+				6B28215C1CB90E89003FFE38 /* cards.json */,
 			);
 			path = Json;
 			sourceTree = "<group>";
@@ -442,10 +442,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BF23AA61C5FAE94001B1006 /* LaunchScreen.storyboard in Resources */,
-				6BA0F8201C9858A0001AA68E /* lecon.json in Resources */,
 				6B36B32E1C60C4AE00989167 /* Walkthrough.storyboard in Resources */,
 				6BF23AA31C5FAE94001B1006 /* Assets.xcassets in Resources */,
 				6BDE35111CB1469F00D6DC6B /* Cards.storyboard in Resources */,
+				6B28215D1CB90E89003FFE38 /* cards.json in Resources */,
 				6BF23AA11C5FAE94001B1006 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

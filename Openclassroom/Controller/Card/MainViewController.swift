@@ -7,12 +7,19 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class MainViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+    // MARK: - IB Outlet
+    
     @IBOutlet weak var tasksCollectionView: UICollectionView!
     
+    // MARK: - Instance variable
+    
     lazy var cards: [Card] = [Card]()
+    
+    // MARK: - UIViewController Delegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,11 +28,23 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         tasksCollectionView.dataSource = self
         registerCustomCell()
         
-        self.cards = getStaticLecons()
+        initializeCards()
     }
     
     override func viewWillAppear(animated: Bool) {
         tasksCollectionView.pagingEnabled = true
+    }
+    
+    // MARK: - Cards methods
+    
+    private func initializeCards() {
+        let todayCards = getStaticLecons()
+        let firstCard = Card(id: 0, title: "Jour 1 sur 20", time: 0, type: .None, cardType: .Start)
+        let lastCard = Card(id: todayCards.count + 1, title: "Journée non terminée", time: 0, type: .None, cardType: .Finish)
+        
+        cards.append(firstCard)
+        cards += todayCards
+        cards.append(lastCard)
     }
     
     /**
@@ -40,18 +59,20 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     func getStaticLecons() -> [Card] {
         var lecons: [Card] = [Card]()
-        for leconData in Card.lecons {
-            let type = LeconType.stringToEnum(leconData["type"] as! String)
-            let cardType = CardType.stringToEnum(leconData["card"] as! String)
+        
+        if let cards = Card.getData() {
+            for (index, json) in cards["cards"].enumerate() {
+                let type: LeconType = LeconType.stringToEnum(json.1["type"].string!)
+                let cardType: CardType = index == 0 ? .Active : .Disable
             
-            let lecon = Card(
-                title: leconData["title"] as! String,
-                time: leconData["time"] as! Int,
-                type: type,
-                cardType: cardType,
-                status: leconData["status"] as! Bool)
-            
-            lecons.append(lecon)
+                let card = Card(id: index,
+                                title: json.1["title"].string!,
+                                time: json.1["time"].int!,
+                                type: type,
+                                cardType: cardType)
+                
+                lecons.append(card)
+            }
         }
         
         return lecons
@@ -75,7 +96,7 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         cell.setup()
         //cell.title.text = lecons[indexPath.row].title
-                
+        
         return cell as! UICollectionViewCell
     }
     

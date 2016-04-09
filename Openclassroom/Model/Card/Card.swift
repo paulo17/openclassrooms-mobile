@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 enum CardType: String {
     case Start = "Start"
@@ -28,6 +29,7 @@ enum LeconType: String {
     case Text = "Text"
     case Quizz = "Quizz"
     case Reward = "Reward"
+    case None = "None"
     
     static func stringToEnum(type: String) -> LeconType {
         if let type = LeconType(rawValue: type) {
@@ -40,41 +42,27 @@ enum LeconType: String {
 
 class Card {
     
+    var id: Int
     var title: String
     var time: Int
     var type: LeconType
     var cardType: CardType
-    var status: Bool
     
-    static let lecons = [
-        ["title": "Jour 1 sur 20", "time": 0, "type": "", "status": true, "card": "Start"],
-        ["title": "Introduction", "time": 5, "type": "Video", "status": true, "card": "Active"],
-        ["title": "Qu'est ce que le web ?", "time": 15, "type": "Text", "status": false, "card": "Disable"],
-        ["title": "Web, services et Cloud", "time": 12, "type": "Quizz", "status": false, "card": "Disable"],
-        ["title": "Comment est né le web ?", "time": 10, "type": "Reward", "status": false, "card": "Disable"],
-        ["title": "Journée non terminée", "time": 0, "type": "", "status": false, "card": "Finish"]
-    ]
-    
-    static func parseStringTypeToEnum(type: String) -> LeconType {
-        let typeEnum : LeconType
-        
-        switch type {
-        case "Video": typeEnum = .Video
-        case "Text": typeEnum = .Text
-        case "Quizz": typeEnum = .Quizz
-        case "Reward": typeEnum = .Reward
-        default: typeEnum = .Video
+    static func getData() -> JSON? {
+        if let path = NSBundle.mainBundle().pathForResource("cards", ofType: "json") {
+            if let data = NSData(contentsOfFile: path) {
+                return JSON(data: data)
+            }
         }
         
-        return typeEnum
+        return nil
     }
     
-    
-    init(title: String, time: Int, type: LeconType, cardType: CardType, status: Bool = false) {
+    init(id: Int, title: String, time: Int, type: LeconType, cardType: CardType) {
+        self.id = id
         self.title = title
         self.time = time
         self.type = type
-        self.status = status
         self.cardType = cardType
     }
     
