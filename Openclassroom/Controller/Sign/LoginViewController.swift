@@ -52,7 +52,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         // redirect to setup pipe
         let setupNavigationController = storyboard?.instantiateViewControllerWithIdentifier("setupNavigationController") as! UINavigationController
         
-        setupNavigationController.modalTransitionStyle = .FlipHorizontal
+        setupNavigationController.modalTransitionStyle = .FlipHorizontal        
         return self.presentViewController(setupNavigationController, animated: true, completion: nil)
     }
     
