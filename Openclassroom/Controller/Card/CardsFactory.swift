@@ -10,7 +10,7 @@ import UIKit
 
 class CardsFactory {
     
-    static func createCard(type: CardsType, collection: UICollectionView, indexPath: NSIndexPath) -> CardProtocol? {
+    static func createCard(type: CardType, collection: UICollectionView, indexPath: NSIndexPath) -> CardProtocol? {
         let card: CardProtocol!
         
         switch type {

@@ -88,14 +88,14 @@ class ActiveCell: AbstractCard, CardProtocol {
         title.textColor = UIColor.OCGreyishBrownColor()
         title.textAlignment = .Center
         title.numberOfLines = 0
-        title.text = ""
+        title.text = "Card's title"
     }
     
     private func setupSubtitle() {
         subtitle.font = UIFont.systemFontOfSize(12.0)
         subtitle.textColor = UIColor.OCSilverColor()
         subtitle.textAlignment = .Center
-        subtitle.text = "10 minutes"
+        subtitle.text = "Card's time"
     }
     
     private func setupImage() {

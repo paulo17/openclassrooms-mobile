@@ -64,6 +64,7 @@ class DisableCell: AbstractCard, CardProtocol {
             lock.height == 23
             
             lockTitle.top == lock.bottom + 5
+            lockTitle.height == 35
             lockTitle.leading == container.leading + 20
             lockTitle.trailing == container.trailing - 20
             
@@ -102,7 +103,8 @@ class DisableCell: AbstractCard, CardProtocol {
     private func setupLockTitle() {
         lockTitle.font = UIFont.systemFontOfSize(14.0)
         lockTitle.textColor = UIColor.OCSilverColor()
-        lockTitle.numberOfLines = 0
+        lockTitle.numberOfLines = 2
+        lockTitle.lineBreakMode = .ByWordWrapping
         lockTitle.textAlignment = .Center
         lockTitle.text = "Vous devez finir le(s) cours précédent(s) pour débloquer cette partie"
     }
