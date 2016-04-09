@@ -29,11 +29,24 @@ class AbstractCard: UICollectionViewCell {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         setupContainer()
+    }
+    
+    /**
+     Get card icon image path
+     
+     - parameter card: instance of card
+     
+     - returns: name of the image
+     */
+    func cardImagePath(card: Card) -> String {
+        return card.cardType == .Disable ?
+            "\(card.type.rawValue)DisableIcon" :
+            "\(card.type.rawValue)Icon"
     }
     
     /**

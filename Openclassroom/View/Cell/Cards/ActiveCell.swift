@@ -86,6 +86,7 @@ class ActiveCell: AbstractCard, CardProtocol {
     func content(card: Card) -> Void {
         title.text = card.title
         subtitle.text = "\(card.time) minutes"
+        imageView.image = UIImage(named: cardImagePath(card))
     }
     
     private func setupTitle() {

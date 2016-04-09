@@ -32,7 +32,7 @@ enum LeconType: String {
     case None = "None"
     
     static func stringToEnum(type: String) -> LeconType {
-        if let type = LeconType(rawValue: type) {
+        if let type = LeconType(rawValue: type.capitalizedString) {
             return type
         }
         
