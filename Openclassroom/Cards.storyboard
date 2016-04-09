@@ -60,7 +60,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="leconCell" id="cJN-E7-aTb" customClass="LeconCell" customModule="Openclassroom" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="-7" width="376" height="445"/>
+                                        <rect key="frame" x="0.0" y="-8" width="376" height="445"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="376" height="445"/>
@@ -158,8 +158,8 @@
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="6Gb-Ad-ef1"/>
-                                                <exclude reference="dHA-f6-FHW"/>
                                                 <exclude reference="9Cq-hO-c6o"/>
+                                                <exclude reference="dHA-f6-FHW"/>
                                             </mask>
                                         </variation>
                                         <connections>
@@ -172,7 +172,7 @@
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="textCell" id="R6y-ST-LSZ" customClass="TextLeconCell" customModule="Openclassroom" customModuleProvider="target">
-                                        <rect key="frame" x="386" y="-7" width="376" height="445"/>
+                                        <rect key="frame" x="386" y="-8" width="376" height="445"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="376" height="445"/>
@@ -269,9 +269,9 @@
                                         <size key="customSize" width="376" height="444.5"/>
                                         <variation key="default">
                                             <mask key="constraints">
+                                                <exclude reference="3XE-4J-dKt"/>
                                                 <exclude reference="BOb-Rl-vYJ"/>
                                                 <exclude reference="JLg-9J-kX7"/>
-                                                <exclude reference="3XE-4J-dKt"/>
                                             </mask>
                                         </variation>
                                         <connections>
@@ -284,7 +284,7 @@
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="finishCell" id="hiD-xT-Cd7" customClass="FinishLeconCell" customModule="Openclassroom" customModuleProvider="target">
-                                        <rect key="frame" x="772" y="-7" width="376" height="445"/>
+                                        <rect key="frame" x="772" y="-8" width="376" height="445"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="376" height="445"/>
@@ -382,8 +382,8 @@
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="Dit-ow-dJm"/>
-                                                <exclude reference="huV-5Z-A1M"/>
                                                 <exclude reference="EPe-UM-bZV"/>
+                                                <exclude reference="huV-5Z-A1M"/>
                                             </mask>
                                         </variation>
                                         <connections>
