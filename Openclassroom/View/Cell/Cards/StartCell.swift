@@ -53,6 +53,12 @@ class StartCell: AbstractCard, CardProtocol {
         }
     }
     
+    func content(card: Card) -> Void {
+        if let sub = card.subtitle {
+            subtitle.text = sub
+        }
+    }
+    
     private func setupTitle() {
         title.font = UIFont.boldSystemFontOfSize(24.0)
         title.textColor = UIColor.whiteColor()
@@ -65,7 +71,7 @@ class StartCell: AbstractCard, CardProtocol {
         subtitle.font = UIFont.systemFontOfSize(18.0)
         subtitle.textColor = UIColor.whiteColor()
         subtitle.textAlignment = .Center
-        subtitle.text = "Vous avez 2 cours aujourd’hui"
+        subtitle.text = "Vous avez des cours à réaliser aujourd'hui"
 
     }
     
@@ -79,7 +85,7 @@ class StartCell: AbstractCard, CardProtocol {
         startButton.setTitle("Suivant", forState: .Normal)
         startButton.setTitleColor(UIColor.OCDustyOrangeColor(), forState: .Normal)
         startButton.titleLabel?.textAlignment = .Center
-        startButton.titleLabel?.font = UIFont.systemFontOfSize(18.0)
+        startButton.titleLabel?.font = UIFont.systemFontOfSize(14.0)
         startButton.OCdefaultButton(UIColor.whiteColor())
     }
 

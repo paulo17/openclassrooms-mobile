@@ -45,6 +45,10 @@ class FinishCell: AbstractCard, CardProtocol {
         }
     }
     
+    func content(card: Card) -> Void {
+        
+    }
+    
     func setupTitle() {
         title.font = UIFont.boldSystemFontOfSize(24.0)
         title.textColor = UIColor.OCGreyishBrownColor()

@@ -75,6 +75,11 @@ class DisableCell: AbstractCard, CardProtocol {
         }
     }
     
+    func content(card: Card) -> Void {
+        title.text = card.title
+        subtitle.text = "\(card.time) minutes"
+    }
+    
     private func setupTitle() {
         title.font = UIFont.boldSystemFontOfSize(24.0)
         title.textColor = UIColor.OCGreyishBrownColor()

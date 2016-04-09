@@ -83,6 +83,11 @@ class ActiveCell: AbstractCard, CardProtocol {
         }
     }
     
+    func content(card: Card) -> Void {
+        title.text = card.title
+        subtitle.text = "\(card.time) minutes"
+    }
+    
     private func setupTitle() {
         title.font = UIFont.boldSystemFontOfSize(24.0)
         title.textColor = UIColor.OCGreyishBrownColor()
@@ -114,14 +119,15 @@ class ActiveCell: AbstractCard, CardProtocol {
         startButton.setTitle("Commencer", forState: .Normal)
         startButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         startButton.titleLabel?.textAlignment = .Center
-        startButton.titleLabel?.font = UIFont.systemFontOfSize(20.0)
+        startButton.titleLabel?.font = UIFont.systemFontOfSize(16.0, weight: 0.2)
         startButton.OCdefaultButton(UIColor.OCDustyOrangeColor())
     }
     
     private func setupDownloadButton() {
         downloadButton.setTitle("TELECHARGER", forState: .Normal)
         downloadButton.setTitleColor(UIColor.OCTurquoiseColor(), forState: .Normal)
-        downloadButton.titleLabel?.font = UIFont.systemFontOfSize(16.0)
+        downloadButton.titleLabel?.font = UIFont.systemFontOfSize(14.0, weight: 0.2)
+        downloadButton.titleLabel?.textAlignment = .Center
         downloadButton.OCborderButton(UIColor.OCTurquoiseColor())
     }
 }

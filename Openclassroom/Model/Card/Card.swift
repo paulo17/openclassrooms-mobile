@@ -44,6 +44,7 @@ class Card {
     
     var id: Int
     var title: String
+    var subtitle: String?
     var time: Int
     var type: LeconType
     var cardType: CardType

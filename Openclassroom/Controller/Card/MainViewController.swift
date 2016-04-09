@@ -39,7 +39,10 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     private func initializeCards() {
         let todayCards = getStaticLecons()
+        
         let firstCard = Card(id: 0, title: "Jour 1 sur 20", time: 0, type: .None, cardType: .Start)
+        firstCard.subtitle = "Vous avez \(todayCards.count) cours aujourd'hui"
+        
         let lastCard = Card(id: todayCards.count + 1, title: "Journée non terminée", time: 0, type: .None, cardType: .Finish)
         
         cards.append(firstCard)
@@ -95,7 +98,7 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let cell = CardsFactory.createCard(currentCard.cardType, collection: collectionView, indexPath: indexPath)!
         
         cell.setup()
-        //cell.title.text = lecons[indexPath.row].title
+        cell.content(currentCard)
         
         return cell as! UICollectionViewCell
     }

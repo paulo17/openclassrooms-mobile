@@ -19,6 +19,7 @@ protocol CardProtocol {
     
     static func cellIdentifier() -> String
     func setup() -> Void
+    func content(card: Card) -> Void
 }
 
 class AbstractCard: UICollectionViewCell {
