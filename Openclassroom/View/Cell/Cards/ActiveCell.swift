@@ -115,7 +115,7 @@ class ActiveCell: AbstractCard, CardProtocol {
     
     private func setupImage() {
         imageView.image = UIImage(named: "TextDisableIcon")
-        imageView.contentMode = .ScaleAspectFit
+        imageView.contentMode = .ScaleAspectFill
     }
     
     private func setupPercentage() {

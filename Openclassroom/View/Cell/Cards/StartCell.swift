@@ -83,7 +83,7 @@ class StartCell: AbstractCard, CardProtocol {
     private func setupImage() {
         let image = UIImage(named: "wallpaperlesson")
         imageView.image = image
-        imageView.contentMode = .ScaleAspectFit
+        imageView.contentMode = .ScaleAspectFill
     }
     
     private func setupNextButton() {

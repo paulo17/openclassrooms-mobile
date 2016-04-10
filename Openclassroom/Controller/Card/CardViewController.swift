@@ -130,9 +130,12 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     func start(sender sender: CardProtocol) {
         let cardsStoryboard = UIStoryboard(name: "Cards", bundle: nil)
-        let cardDetail = cardsStoryboard.instantiateViewControllerWithIdentifier("CardDetailViewController") as! CardDetailViewController
+        let cardDetailController = cardsStoryboard.instantiateViewControllerWithIdentifier("CardDetailViewController") as! CardDetailViewController
         
-        self.navigationController?.pushViewController(cardDetail, animated: true)
+        cardDetailController.card = cards[sender.indexPath.row]
+
+        self.navigationItem.title = ""
+        self.navigationController?.pushViewController(cardDetailController, animated: true)
     }
     
     func download(sender sender: CardProtocol) {

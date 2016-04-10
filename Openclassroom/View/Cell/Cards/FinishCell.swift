@@ -63,6 +63,6 @@ class FinishCell: AbstractCard, CardProtocol {
     func setupImage() {
         let image = UIImage(named: "shapematchgrey")
         imageView.image = image
-        imageView.contentMode = .ScaleAspectFit
+        imageView.contentMode = .ScaleAspectFill
     }
 }

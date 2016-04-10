@@ -103,12 +103,12 @@ class DisableCell: AbstractCard, CardProtocol {
     
     private func setupImage() {
         imageView.image = UIImage(named: "shapetexte")
-        imageView.contentMode = .ScaleAspectFit
+        imageView.contentMode = .ScaleAspectFill
     }
     
     private func setupLock() {
         lockImage.image = UIImage(named: "lock")
-        lockImage.contentMode = .ScaleAspectFit
+        lockImage.contentMode = .ScaleAspectFill
     }
     
     private func setupLockTitle() {

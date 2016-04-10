@@ -10,11 +10,35 @@ import UIKit
 
 class CardDetailViewController: UIViewController {
     
+    var card: Card!
+    
+    var cardDetailView: AbstractCardDetail {
+        return instianciateCardDetailView()
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.view = cardDetailView
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+    }
+    
+    func instianciateCardDetailView() -> AbstractCardDetail {
+        if let currentCard = card {
+            switch currentCard.type {
+            case .Text:
+                return TextCardDetail()
+            case .Video:
+                return VideoCardDetail()
+            default:
+                break
+            }
+        }
+        
+        return AbstractCardDetail()
     }
 }
