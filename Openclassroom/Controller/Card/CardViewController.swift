@@ -9,7 +9,12 @@
 import UIKit
 import SwiftyJSON
 
-class MainViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+protocol CardControllerDelegate {
+    func start(from cell: AbstractCard, content card: Card)
+    func download(from cell: AbstractCard, content card: Card)
+}
+
+class CardViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, CardControllerDelegate {
     
     // MARK: - IB Outlet
     
@@ -95,9 +100,9 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let currentCard = cards[indexPath.row]
-        let cell = CardsFactory.createCard(currentCard.cardType, collection: collectionView, indexPath: indexPath)!
+        var cell = CardsFactory.createCard(currentCard.cardType, collection: collectionView, indexPath: indexPath)!
         
-        cell.setup()
+        cell.delegate = self
         cell.content(currentCard)
         
         return cell as! UICollectionViewCell
@@ -121,4 +126,14 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         return UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
     }
     
+    // MARK: - CardController Delegate
+    
+    func start(from cell: AbstractCard, content card: Card) {
+        
+    }
+    
+    func download(from cell: AbstractCard, content card: Card) {
+        
+    }
+
 }

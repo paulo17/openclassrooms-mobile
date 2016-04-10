@@ -10,12 +10,21 @@ import UIKit
 import Cartography
 
 protocol CardProtocol {
+    
+    // MARK: - IBOutlet
+    
     var title: UILabel! { get set }
     var subtitle: UILabel! { get set }
     var imageView: UIImageView! { get set }
     var percentage: UILabel! { get set }
     var startButton: UIButton! { get set }
     var downloadButton: UIButton! { get set }
+    
+    // MARK: - CardController Delegate
+    
+    var delegate: CardControllerDelegate! { get set }
+    
+    // MARK: - Func
     
     static func cellIdentifier() -> String
     func setup() -> Void

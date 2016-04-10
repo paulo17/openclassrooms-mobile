@@ -18,6 +18,8 @@ class StartCell: AbstractCard, CardProtocol {
     lazy var startButton: UIButton! = UIButton()
     lazy var downloadButton: UIButton! = UIButton()
     
+    var delegate: CardControllerDelegate!
+    
     static func cellIdentifier() -> String {
         return "StartCell"
     }
@@ -58,6 +60,8 @@ class StartCell: AbstractCard, CardProtocol {
             subtitle.text = sub
         }
     }
+    
+    // MARK: - Setup UI elements
     
     private func setupTitle() {
         title.font = UIFont.boldSystemFontOfSize(24.0)

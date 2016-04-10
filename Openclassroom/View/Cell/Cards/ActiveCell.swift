@@ -18,6 +18,8 @@ class ActiveCell: AbstractCard, CardProtocol {
     var startButton: UIButton! = UIButton()
     var downloadButton: UIButton! = UIButton()
     
+    var delegate: CardControllerDelegate!
+    
     static func cellIdentifier() -> String {
         return "ActiveCell"
     }
@@ -37,34 +39,26 @@ class ActiveCell: AbstractCard, CardProtocol {
         self.addSubview(startButton)
         self.addSubview(downloadButton)
         
-        constrain(title, containerView) {
-            title, container in
+        constrain(title, subtitle, imageView, percentage, containerView) {
+            title, subtitle, image, percentage, container in
             title.top == container.top + 20
             title.leading == container.leading + 20
             title.trailing == container.trailing - 20
-        }
-        
-        constrain(subtitle, title, containerView) {
-            subtitle, title, container in
+            
             subtitle.top == title.bottom + 2
             subtitle.leading == container.leading + 20
             subtitle.trailing == container.trailing - 20
-        }
-        
-        constrain(imageView, subtitle, containerView) {
-            image, subtitle, container in
+            
             image.top == subtitle.bottom + 90
             image.height == 65
             image.width == 65
             image.centerX == container.centerX
-        }
-        
-        constrain(percentage, imageView, containerView) {
-            percentage, image, container in
+            
             percentage.top == image.bottom + 70
             percentage.leading == container.leading + 140
             percentage.trailing == container.trailing - 140
         }
+        
         
         constrain(downloadButton, startButton, containerView) {
             download, start, container in
@@ -72,22 +66,29 @@ class ActiveCell: AbstractCard, CardProtocol {
             download.leading == container.leading + 95
             download.trailing == container.trailing - 95
             download.height == 26
+            
+            start.bottom == download.top - 10
+            start.leading == container.leading + 20
+            start.trailing == container.trailing - 20
+            start.height == 40
         }
         
-        constrain(startButton, downloadButton, containerView) {
-            button, download, container in
-            button.bottom == download.top - 10
-            button.leading == container.leading + 20
-            button.trailing == container.trailing - 20
-            button.height == 40
-        }
+        startButton.addTarget(self, action: #selector(ActiveCell.test), forControlEvents: .TouchUpInside)
     }
+    
+    func test() {
+        
+    }
+    
+    // MARK: - Setup content
     
     func content(card: Card) -> Void {
         title.text = card.title
         subtitle.text = "\(card.time) minutes"
         imageView.image = UIImage(named: cardImagePath(card))
     }
+    
+    // MARK: - Setup UI elements
     
     private func setupTitle() {
         title.font = UIFont.boldSystemFontOfSize(24.0)

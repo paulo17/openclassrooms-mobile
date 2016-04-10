@@ -18,6 +18,8 @@ class DisableCell: AbstractCard, CardProtocol {
     lazy var startButton: UIButton! = UIButton()
     lazy var downloadButton: UIButton! = UIButton()
     
+    var delegate: CardControllerDelegate!
+    
     private lazy var lockImage: UIImageView! = UIImageView()
     private lazy var lockTitle: UILabel! = UILabel()
     
@@ -80,6 +82,8 @@ class DisableCell: AbstractCard, CardProtocol {
         subtitle.text = "\(card.time) minutes"
         imageView.image = UIImage(named: cardImagePath(card))
     }
+    
+    // MARK: - Setup UI
     
     private func setupTitle() {
         title.font = UIFont.boldSystemFontOfSize(24.0)

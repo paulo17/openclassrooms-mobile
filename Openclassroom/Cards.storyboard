@@ -7,7 +7,7 @@
         <!--Jour 1 sur 20-->
         <scene sceneID="msr-lU-2hV">
             <objects>
-                <viewController storyboardIdentifier="mainViewController" id="E2p-08-BE1" customClass="MainViewController" customModule="Openclassroom" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainViewController" id="E2p-08-BE1" customClass="CardViewController" customModule="Openclassroom" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0qZ-5g-Mqz"/>
                         <viewControllerLayoutGuide type="bottom" id="lgH-bT-d3p"/>
@@ -26,14 +26,17 @@
                                     <inset key="sectionInset" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="xd6-Nt-muq">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="abstractCell" id="I2w-MT-BQf" customClass="AbstractCard" customModule="Openclassroom" customModuleProvider="target">
                                         <rect key="frame" x="30" y="64" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <connections>
+                                            <segue destination="5ic-60-mlc" kind="show" id="w4b-jY-4SN"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -62,6 +65,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Upx-wi-osX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-306.5" y="267.5"/>
+        </scene>
+        <!--Card Detail View Controller-->
+        <scene sceneID="8QJ-6J-7CG">
+            <objects>
+                <viewController storyboardIdentifier="cardDetailViewController" id="5ic-60-mlc" customClass="CardDetailViewController" customModule="Openclassroom" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zgk-JL-VxY"/>
+                        <viewControllerLayoutGuide type="bottom" id="Umm-4G-pww"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Pcb-UZ-eMg" customClass="Le">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="idH-RT-wJ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="152.5" y="267.5"/>
         </scene>
         <!--Expand Navigation Controller-->
         <scene sceneID="6I3-kl-pFb">
