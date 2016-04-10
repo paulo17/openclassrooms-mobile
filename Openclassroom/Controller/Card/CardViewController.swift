@@ -10,8 +10,8 @@ import UIKit
 import SwiftyJSON
 
 protocol CardControllerDelegate {
-    func start(from cell: AbstractCard, content card: Card)
-    func download(from cell: AbstractCard, content card: Card)
+    func start(sender sender: CardProtocol)
+    func download(sender sender: CardProtocol)
 }
 
 class CardViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, CardControllerDelegate {
@@ -128,11 +128,14 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     // MARK: - CardController Delegate
     
-    func start(from cell: AbstractCard, content card: Card) {
+    func start(sender sender: CardProtocol) {
+        let cardsStoryboard = UIStoryboard(name: "Cards", bundle: nil)
+        let cardDetail = cardsStoryboard.instantiateViewControllerWithIdentifier("CardDetailViewController") as! CardDetailViewController
         
+        self.navigationController?.pushViewController(cardDetail, animated: true)
     }
     
-    func download(from cell: AbstractCard, content card: Card) {
+    func download(sender sender: CardProtocol) {
         
     }
 

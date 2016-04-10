@@ -22,6 +22,7 @@ protocol CardProtocol {
     
     // MARK: - CardController Delegate
     
+    var indexPath: NSIndexPath! { get set }
     var delegate: CardControllerDelegate! { get set }
     
     // MARK: - Func

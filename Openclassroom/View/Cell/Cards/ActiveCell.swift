@@ -18,6 +18,7 @@ class ActiveCell: AbstractCard, CardProtocol {
     var startButton: UIButton! = UIButton()
     var downloadButton: UIButton! = UIButton()
     
+    var indexPath: NSIndexPath!
     var delegate: CardControllerDelegate!
     
     static func cellIdentifier() -> String {
@@ -73,11 +74,18 @@ class ActiveCell: AbstractCard, CardProtocol {
             start.height == 40
         }
         
-        startButton.addTarget(self, action: #selector(ActiveCell.test), forControlEvents: .TouchUpInside)
+        startButton.addTarget(self, action: #selector(ActiveCell.start), forControlEvents: .TouchUpInside)
+        downloadButton.addTarget(self, action: #selector(ActiveCell.download), forControlEvents: .TouchUpInside)
     }
     
-    func test() {
-        
+    // MARK: - IB Action
+    
+    func start() {
+        delegate.start(sender: self)
+    }
+    
+    func download() {
+        delegate.download(sender: self)
     }
     
     // MARK: - Setup content

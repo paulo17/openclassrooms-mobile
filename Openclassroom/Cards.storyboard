@@ -69,12 +69,12 @@
         <!--Card Detail View Controller-->
         <scene sceneID="8QJ-6J-7CG">
             <objects>
-                <viewController storyboardIdentifier="cardDetailViewController" id="5ic-60-mlc" customClass="CardDetailViewController" customModule="Openclassroom" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CardDetailViewController" id="5ic-60-mlc" customClass="CardDetailViewController" customModule="Openclassroom" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zgk-JL-VxY"/>
                         <viewControllerLayoutGuide type="bottom" id="Umm-4G-pww"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Pcb-UZ-eMg" customClass="Le">
+                    <view key="view" contentMode="scaleToFill" id="Pcb-UZ-eMg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

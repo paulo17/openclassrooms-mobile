@@ -33,6 +33,8 @@ class CardsFactory {
             card = collection.dequeueReusableCellWithReuseIdentifier(FinishCell.cellIdentifier(), forIndexPath: indexPath) as! FinishCell
         }
         
+        // card setup
+        card.indexPath = indexPath
         card.setup()
         
         return card
