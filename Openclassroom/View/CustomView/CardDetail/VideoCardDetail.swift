@@ -7,11 +7,31 @@
 //
 
 import UIKit
+import Cartography
 
 class VideoCardDetail: AbstractCardDetail {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        setupTitle()
+        setupContent()
+        setupImage()
+        
+        self.addSubview(title)
+        self.addSubview(imageView)
+                
+        constrain(title, imageView, self) {
+            title, image, container in
+            title.top == container.top + 30
+            title.leading == container.leading + 20
+            title.trailing == container.trailing - 20
+            
+            image.top == title.bottom + 30
+            image.leading == container.leading
+            image.trailing == container.trailing
+            image.height == 210
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -25,6 +25,8 @@ class CardDetailViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
+        self.title = "Jour 1 sur 20"
     }
     
     func instianciateCardDetailView() -> AbstractCardDetail {

@@ -60,7 +60,7 @@ class TextCardDetail: AbstractCardDetail {
     
     private func setupContainer() {
         scrollView.backgroundColor = UIColor.OCWhiteColor()
-        scrollView.showsVerticalScrollIndicator = true
+        scrollView.showsVerticalScrollIndicator = false
         scrollView.showsHorizontalScrollIndicator = false
     }
     
