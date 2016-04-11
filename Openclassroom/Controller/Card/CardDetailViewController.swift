@@ -12,13 +12,13 @@ class CardDetailViewController: UIViewController {
     
     var card: Card!
     
-    var cardDetailView: AbstractCardDetail {
-        return instianciateCardDetailView()
-    }
-    
-    
+    var cardDetailView: AbstractCardDetail!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        cardDetailView = instianciateCardDetailView()
+        cardDetailView.setupContent(card)
         
         self.view = cardDetailView
     }

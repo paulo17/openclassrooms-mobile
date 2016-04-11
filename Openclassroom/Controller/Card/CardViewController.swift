@@ -77,7 +77,8 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
                                 title: json.1["title"].string!,
                                 time: json.1["time"].int!,
                                 type: type,
-                                cardType: cardType)
+                                cardType: cardType,
+                                content: json.1["content"].string!)
                 
                 lecons.append(card)
             }

@@ -10,6 +10,8 @@ import UIKit
 import Cartography
 
 class TextCardDetail: AbstractCardDetail {
+
+    lazy var scrollView: UIScrollView = UIScrollView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -17,25 +19,37 @@ class TextCardDetail: AbstractCardDetail {
         setupTitle()
         setupImage()
         setupContent()
+        setupContainer()
         
-        self.addSubview(title)
-        self.addSubview(content)
-        self.addSubview(imageView)
+        self.addSubview(scrollView)
         
-        constrain(title, imageView, content, self) {
+        scrollView.addSubview(title)
+        scrollView.addSubview(content)
+        scrollView.addSubview(imageView)
+        
+        let width = UIScreen.mainScreen().bounds.width
+        
+        constrain(scrollView, self) {
+            scroll, container in
+            scroll.edges == container.edges
+            scroll.width == width
+        }
+        
+        constrain(title, imageView, content, scrollView) {
             title, image, content, container in
             image.top == container.top
             image.trailing == container.trailing
             image.leading == container.leading
             image.height == 135
+            image.width == width
             
             title.top == image.bottom + 20
             title.leading == container.leading + 20
             title.trailing == container.trailing - 20
             
             content.top == title.bottom + 40
-            content.leading == container.leading + 15
-            content.trailing == container.trailing - 15
+            content.leading == container.leading + 20
+            content.trailing == container.trailing - 20
             content.bottom == container.bottom - 15
         }
     }
@@ -44,11 +58,13 @@ class TextCardDetail: AbstractCardDetail {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setupContent(card: Card) {
-        title.text = card.title
+    private func setupContainer() {
+        scrollView.backgroundColor = UIColor.OCWhiteColor()
+        scrollView.showsVerticalScrollIndicator = true
+        scrollView.showsHorizontalScrollIndicator = false
     }
     
-    func setupTitle() {
+    private func setupTitle() {
         title.font = UIFont.boldSystemFontOfSize(24.0)
         title.textColor = UIColor.OCGreyishBrownColor()
         title.textAlignment = .Center
@@ -56,11 +72,13 @@ class TextCardDetail: AbstractCardDetail {
         title.text = "Card's title"
     }
     
-    func setupContent() {
-        
+    private func setupContent() {
+        content.scrollEnabled = false
+        content.backgroundColor = .None
+        content.textAlignment = .Justified
     }
     
-    func setupImage() {
+    private func setupImage() {
         imageView.image = UIImage(named: "Card Content Image")
         imageView.contentMode = .ScaleAspectFill
     }

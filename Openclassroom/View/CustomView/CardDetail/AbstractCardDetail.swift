@@ -8,7 +8,11 @@
 
 import UIKit
 
-class AbstractCardDetail: UIView {
+protocol CardDetail {
+    func setupContent(card: Card)
+}
+
+class AbstractCardDetail: UIView, CardDetail {
 
     lazy var title: UILabel = UILabel()
     lazy var content: UITextView = UITextView()
@@ -22,5 +26,19 @@ class AbstractCardDetail: UIView {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setupContent(card: Card) {
+        title.text = card.title
+        
+        let style = NSMutableParagraphStyle()
+        style.lineSpacing = 15
+        
+        let cardContent = NSMutableAttributedString(string: card.content)
+        cardContent.addAttribute(NSParagraphStyleAttributeName, value: style, range: NSMakeRange(0, cardContent.length))
+        
+        content.attributedText = cardContent
+        content.font = UIFont.systemFontOfSize(16.0)
+        content.textAlignment = .Justified
     }
 }
