@@ -17,10 +17,14 @@ class AbstractCardDetail: UIView, CardDetail {
     lazy var title: UILabel = UILabel()
     lazy var content: UITextView = UITextView()
     lazy var imageView: UIImageView = UIImageView()
+    lazy var finishButton: UIButton = UIButton()
+    
+    var delegate: CardDetailControllerDelegate!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+        setupButton()
         backgroundColor = UIColor.OCWhiteColor()
     }
     
@@ -40,5 +44,19 @@ class AbstractCardDetail: UIView, CardDetail {
         content.attributedText = cardContent
         content.font = UIFont.systemFontOfSize(16.0)
         content.textAlignment = .Justified
+    }
+    
+    private func setupButton() {
+        finishButton.setTitle("Terminer", forState: .Normal)
+        finishButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        finishButton.titleLabel?.textAlignment = .Center
+        finishButton.titleLabel?.font = UIFont.systemFontOfSize(16.0, weight: 0.2)
+        finishButton.OCdefaultButton(UIColor.OCDustyOrangeColor())
+        
+        finishButton.addTarget(self, action: #selector(self.triggerFinish), forControlEvents: .TouchUpInside)
+    }
+    
+    func triggerFinish() {
+        delegate.finish()
     }
 }

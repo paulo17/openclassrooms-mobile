@@ -20,12 +20,13 @@ class TextCardDetail: AbstractCardDetail {
         setupImage()
         setupContent()
         setupContainer()
-        
+    
         self.addSubview(scrollView)
         
         scrollView.addSubview(title)
         scrollView.addSubview(content)
         scrollView.addSubview(imageView)
+        scrollView.addSubview(finishButton)
         
         let width = UIScreen.mainScreen().bounds.width
         
@@ -35,8 +36,8 @@ class TextCardDetail: AbstractCardDetail {
             scroll.width == width
         }
         
-        constrain(title, imageView, content, scrollView) {
-            title, image, content, container in
+        constrain(title, imageView, content, scrollView, finishButton) {
+            title, image, content, container, button in
             image.top == container.top
             image.trailing == container.trailing
             image.leading == container.leading
@@ -47,10 +48,15 @@ class TextCardDetail: AbstractCardDetail {
             title.leading == container.leading + 20
             title.trailing == container.trailing - 20
             
+            button.bottom == container.bottom - 30
+            button.leading == container.leading + 30
+            button.trailing == container.trailing - 30
+            button.height == 44
+            
             content.top == title.bottom + 40
             content.leading == container.leading + 20
             content.trailing == container.trailing - 20
-            content.bottom == container.bottom - 15
+            content.bottom == button.top - 100
         }
     }
     
@@ -82,4 +88,5 @@ class TextCardDetail: AbstractCardDetail {
         imageView.image = UIImage(named: "Card Content Image")
         imageView.contentMode = .ScaleAspectFill
     }
+    
 }

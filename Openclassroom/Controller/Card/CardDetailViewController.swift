@@ -8,7 +8,11 @@
 
 import UIKit
 
-class CardDetailViewController: UIViewController {
+protocol CardDetailControllerDelegate {
+    func finish()
+}
+
+class CardDetailViewController: UIViewController, CardDetailControllerDelegate {
     
     var card: Card!
     
@@ -18,6 +22,7 @@ class CardDetailViewController: UIViewController {
         super.viewDidLoad()
         
         cardDetailView = instianciateCardDetailView()
+        cardDetailView.delegate = self
         cardDetailView.setupContent(card)
         
         self.view = cardDetailView
@@ -29,6 +34,11 @@ class CardDetailViewController: UIViewController {
         self.title = "Jour 1 sur 20"
     }
     
+    /**
+     Instanciate the correct custom view for card type
+     
+     - returns: AbstractCardDetail
+     */
     func instianciateCardDetailView() -> AbstractCardDetail {
         if let currentCard = card {
             switch currentCard.type {
@@ -42,5 +52,11 @@ class CardDetailViewController: UIViewController {
         }
         
         return AbstractCardDetail()
+    }
+    
+    // MARK: - CardDetailController Delegate
+    
+    func finish() {
+        self.navigationController?.popViewControllerAnimated(true)
     }
 }
