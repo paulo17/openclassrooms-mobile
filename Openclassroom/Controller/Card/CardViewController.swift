@@ -156,10 +156,13 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func finishCallback(sender sender: CardDetailViewController) {
         let indexPath = tasksCollectionView.indexPathForCell(sender.cell as! UICollectionViewCell)!
         
+        let nextIndexPath = NSIndexPath(forItem: indexPath.row + 1, inSection: indexPath.section)
+        
         let nextCard = cards[indexPath.row + 1]
         nextCard.cardType = .Active
         
         tasksCollectionView.reloadItemsAtIndexPaths([indexPath])
+        tasksCollectionView.scrollToItemAtIndexPath(nextIndexPath, atScrollPosition: .CenteredHorizontally, animated: true)
     }
 
 }
