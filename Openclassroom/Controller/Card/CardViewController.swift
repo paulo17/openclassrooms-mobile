@@ -31,13 +31,14 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         tasksCollectionView.delegate = self
         tasksCollectionView.dataSource = self
+        tasksCollectionView.pagingEnabled = true
+
         registerCustomCell()
-        
         initializeCards()
     }
     
     override func viewWillAppear(animated: Bool) {
-        tasksCollectionView.pagingEnabled = true
+        
     }
     
     // MARK: - Cards methods
@@ -129,18 +130,29 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     // MARK: - CardController Delegate
     
-    func start(sender sender: CardProtocol) {
+    func start(sender cell: CardProtocol) {
         let cardsStoryboard = UIStoryboard(name: "Cards", bundle: nil)
         let cardDetailController = cardsStoryboard.instantiateViewControllerWithIdentifier("CardDetailViewController") as! CardDetailViewController
         
-        cardDetailController.card = cards[sender.indexPath.row]
+        let currentCard = cards[cell.indexPath.row]
+        currentCard.cardStatus = .InProgress // set card status to in progress
+        
+        cardDetailController.delegate = self // set detail view controller as delegate
+        cardDetailController.card = currentCard // set current viewed card
+        cardDetailController.cell = cell
 
         self.navigationItem.title = ""
         self.navigationController?.pushViewController(cardDetailController, animated: true)
     }
     
-    func download(sender sender: CardProtocol) {
+    func download(sender cell: CardProtocol) {
         
+    }
+    
+    // MARK: - CardDetail Delegate
+    
+    func finishCallback(sender sender: CardDetailViewController) {
+        tasksCollectionView.reloadItemsAtIndexPaths([sender.cell.indexPath])
     }
 
 }

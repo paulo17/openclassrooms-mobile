@@ -91,9 +91,12 @@ class ActiveCell: AbstractCard, CardProtocol {
     // MARK: - Setup content
     
     func content(card: Card) -> Void {
+        let status = card.cardStatus
+        
         title.text = card.title
         subtitle.text = "\(card.time) minutes"
         imageView.image = UIImage(named: cardImagePath(card))
+        startButton.setTitle(status == .Done ? "Recommencer" : "Commencer", forState: .Normal)
     }
     
     // MARK: - Setup UI elements

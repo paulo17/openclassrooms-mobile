@@ -54,11 +54,9 @@ class AbstractCard: UICollectionViewCell {
      - returns: name of the image
      */
     func cardImagePath(card: Card) -> String {
-        return card.cardType == .Disable ?
-            "\(card.type.rawValue)DisableIcon" :
-            "\(card.type.rawValue)Icon"
+        return "\(card.type.rawValue)\(card.cardStatus.rawValue)Icon"
     }
-    
+
     /**
      Setup card container UIView with margin left and right of 30
      */

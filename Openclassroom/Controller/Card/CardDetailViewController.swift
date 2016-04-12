@@ -14,8 +14,14 @@ protocol CardDetailControllerDelegate {
 
 class CardDetailViewController: UIViewController, CardDetailControllerDelegate {
     
-    var card: Card!
+    // MARK: - Variables from CardViewController
     
+    var card: Card!
+    var cell: CardProtocol!
+    
+    // MARK : - Other instance variables
+    
+    var delegate: CardViewController!
     var cardDetailView: AbstractCardDetail!
 
     override func viewDidLoad() {
@@ -57,6 +63,9 @@ class CardDetailViewController: UIViewController, CardDetailControllerDelegate {
     // MARK: - CardDetailController Delegate
     
     func finish() {
+        card.cardStatus = .Done
+        delegate.finishCallback(sender: self) // launch callback
+        
         self.navigationController?.popViewControllerAnimated(true)
     }
 }

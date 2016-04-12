@@ -9,6 +9,13 @@
 import UIKit
 import SwiftyJSON
 
+enum CardStatus: String {
+    case Waiting = "Waiting"
+    case InProgress = "InProgress"
+    case Done = "Done"
+    case Fail = "Fail"
+}
+
 enum CardType: String {
     case Start = "Start"
     case Active = "Active"
@@ -48,6 +55,7 @@ class Card {
     var time: Int
     var type: LeconType
     var cardType: CardType
+    var cardStatus: CardStatus
     var content: String
     
     static func getData() -> JSON? {
@@ -60,13 +68,15 @@ class Card {
         return nil
     }
     
-    init(id: Int, title: String, time: Int, type: LeconType, cardType: CardType, content: String = "") {
+    init(id: Int, title: String, time: Int, type: LeconType, cardType: CardType,
+         content: String = "", cardStatus: CardStatus = .Waiting) {
         self.id = id
         self.title = title
         self.time = time
         self.type = type
         self.cardType = cardType
         self.content = content
+        self.cardStatus = cardStatus
     }
     
 }
