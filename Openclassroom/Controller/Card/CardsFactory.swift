@@ -34,7 +34,6 @@ class CardsFactory {
         }
         
         // card setup
-        card.indexPath = indexPath
         card.setup()
         
         return card

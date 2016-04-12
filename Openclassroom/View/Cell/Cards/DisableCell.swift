@@ -18,7 +18,6 @@ class DisableCell: AbstractCard, CardProtocol {
     lazy var startButton: UIButton! = UIButton()
     lazy var downloadButton: UIButton! = UIButton()
     
-    var indexPath: NSIndexPath!
     var delegate: CardControllerDelegate!
     
     private lazy var lockImage: UIImageView! = UIImageView()

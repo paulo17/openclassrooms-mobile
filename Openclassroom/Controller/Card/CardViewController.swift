@@ -134,7 +134,9 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let cardsStoryboard = UIStoryboard(name: "Cards", bundle: nil)
         let cardDetailController = cardsStoryboard.instantiateViewControllerWithIdentifier("CardDetailViewController") as! CardDetailViewController
         
-        let currentCard = cards[cell.indexPath.row]
+        let indexPath = tasksCollectionView.indexPathForCell(cell as! UICollectionViewCell)!
+    
+        let currentCard = cards[indexPath.row]
         currentCard.cardStatus = .InProgress // set card status to in progress
         
         cardDetailController.delegate = self // set detail view controller as delegate
@@ -152,7 +154,12 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
     // MARK: - CardDetail Delegate
     
     func finishCallback(sender sender: CardDetailViewController) {
-        tasksCollectionView.reloadItemsAtIndexPaths([sender.cell.indexPath])
+        let indexPath = tasksCollectionView.indexPathForCell(sender.cell as! UICollectionViewCell)!
+        
+        let nextCard = cards[indexPath.row + 1]
+        nextCard.cardType = .Active
+        
+        tasksCollectionView.reloadItemsAtIndexPaths([indexPath])
     }
 
 }

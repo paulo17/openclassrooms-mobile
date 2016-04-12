@@ -18,7 +18,6 @@ class StartCell: AbstractCard, CardProtocol {
     lazy var startButton: UIButton! = UIButton()
     lazy var downloadButton: UIButton! = UIButton()
     
-    var indexPath: NSIndexPath!
     var delegate: CardControllerDelegate!
     
     static func cellIdentifier() -> String {
