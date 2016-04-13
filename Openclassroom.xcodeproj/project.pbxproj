@@ -17,6 +17,7 @@
 		6B4BEE7B1C8723A8006D2862 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4BEE7A1C8723A8006D2862 /* RegisterViewController.swift */; };
 		6B4BEE7D1C8723C2006D2862 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4BEE7C1C8723C2006D2862 /* LoginViewController.swift */; };
 		6B4BEE7F1C8723E7006D2862 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4BEE7E1C8723E7006D2862 /* SignInViewController.swift */; };
+		6B4CB9C91CBE4A0600426D0D /* SocialContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4CB9C81CBE4A0600426D0D /* SocialContentView.swift */; };
 		6B4E30F31C99A23B00BE42CB /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4E30F21C99A23B00BE42CB /* CategoryViewController.swift */; };
 		6B4E30F51C99A3A000BE42CB /* ObjectiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4E30F41C99A3A000BE42CB /* ObjectiveViewController.swift */; };
 		6B4E30F71C99A41B00BE42CB /* ProgramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4E30F61C99A41B00BE42CB /* ProgramViewController.swift */; };
@@ -78,6 +79,7 @@
 		6B4BEE7A1C8723A8006D2862 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		6B4BEE7C1C8723C2006D2862 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6B4BEE7E1C8723E7006D2862 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		6B4CB9C81CBE4A0600426D0D /* SocialContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialContentView.swift; sourceTree = "<group>"; };
 		6B4E30EF1C98B14C00BE42CB /* Cartography.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cartography.framework; path = "Pods/../build/Debug-iphoneos/Cartography.framework"; sourceTree = "<group>"; };
 		6B4E30F21C99A23B00BE42CB /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		6B4E30F41C99A3A000BE42CB /* ObjectiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectiveViewController.swift; sourceTree = "<group>"; };
@@ -289,6 +291,7 @@
 				6B0549191CBA89580077684D /* CardDetail */,
 				6B8829411CABE12E003CC1EC /* OCExpandNavigationController.swift */,
 				6BD1DA0D1CA7E6370075057F /* ParameterView.swift */,
+				6B4CB9C81CBE4A0600426D0D /* SocialContentView.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -577,6 +580,7 @@
 				6BA776F91CABDC11001CDD78 /* OC.xcdatamodeld in Sources */,
 				6BA776F41CABDB0A001CDD78 /* OCManagedObject.swift in Sources */,
 				6BF8B39D1CA0576400051D54 /* ObjectiveCell.swift in Sources */,
+				6B4CB9C91CBE4A0600426D0D /* SocialContentView.swift in Sources */,
 				6B0549181CBA57BE0077684D /* CardDetailViewController.swift in Sources */,
 				6B88294C1CABE18D003CC1EC /* CAGradientLayerExtension.swift in Sources */,
 				6B8829501CABE18D003CC1EC /* OCTextField.swift in Sources */,

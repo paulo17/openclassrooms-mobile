@@ -21,9 +21,10 @@ class VideoCardDetail: AbstractCardDetail {
         self.addSubview(title)
         self.addSubview(imageView)
         self.addSubview(finishButton)
+        self.addSubview(socialContent)
                 
-        constrain(title, imageView, self, finishButton) {
-            title, image, container, button in
+        constrain(title, imageView, self, finishButton, socialContent) {
+            title, image, container, button, social in
             title.top == container.top + 30
             title.leading == container.leading + 20
             title.trailing == container.trailing - 20
@@ -37,6 +38,11 @@ class VideoCardDetail: AbstractCardDetail {
             button.leading == container.leading + 30
             button.trailing == container.trailing - 30
             button.height == 44
+            
+            social.top == image.bottom
+            social.height == 111
+            social.leading == container.leading
+            social.trailing == container.trailing
         }
     }
     

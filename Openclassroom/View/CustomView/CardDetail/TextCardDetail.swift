@@ -27,9 +27,13 @@ class TextCardDetail: AbstractCardDetail {
         scrollView.addSubview(content)
         scrollView.addSubview(imageView)
         scrollView.addSubview(finishButton)
+        scrollView.addSubview(socialContent)
         
         let width = UIScreen.mainScreen().bounds.width
         
+        /**
+         *  Add scrollview constraints
+         */
         constrain(scrollView, self) {
             scroll, container in
             scroll.edges == container.edges
@@ -58,6 +62,18 @@ class TextCardDetail: AbstractCardDetail {
             content.trailing == container.trailing - 20
             content.bottom == button.top - 100
         }
+        
+        /**
+         *  Add social block constraints
+         */
+        constrain(finishButton, socialContent, content, scrollView) {
+            finish, social, content, container in
+        
+            social.bottom == finish.top
+            social.height == 111
+            social.leading == container.leading
+            social.trailing == container.trailing
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -65,7 +81,7 @@ class TextCardDetail: AbstractCardDetail {
     }
     
     private func setupContainer() {
-        scrollView.backgroundColor = UIColor.OCWhiteColor()
+        scrollView.backgroundColor = UIColor.whiteColor()
         scrollView.showsVerticalScrollIndicator = false
         scrollView.showsHorizontalScrollIndicator = false
     }
@@ -82,6 +98,8 @@ class TextCardDetail: AbstractCardDetail {
         content.scrollEnabled = false
         content.backgroundColor = .None
         content.textAlignment = .Justified
+        content.editable = false
+        content.selectable = false
     }
     
     private func setupImage() {
