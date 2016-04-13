@@ -12,11 +12,11 @@ import Cartography
 @IBDesignable
 class SocialContentView: UIView {
 
-    var title: UILabel = UILabel()
-    var facebook: UIImageView = UIImageView()
-    var twitter: UIImageView = UIImageView()
-    var linkedin: UIImageView = UIImageView()
-    var google: UIImageView = UIImageView()
+    lazy var title: UILabel = UILabel()
+    lazy var facebook: UIImageView = UIImageView()
+    lazy var twitter: UIImageView = UIImageView()
+    lazy var linkedin: UIImageView = UIImageView()
+    lazy var google: UIImageView = UIImageView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -35,6 +35,9 @@ class SocialContentView: UIView {
         imageContainerView.addSubview(linkedin)
         imageContainerView.addSubview(google)
         
+        /**
+         *  Title constraints
+         */
         constrain(title, self) {
             title, container in
             title.top == container.top + 30
@@ -42,14 +45,20 @@ class SocialContentView: UIView {
             title.trailing == container.trailing - 120
         }
         
+        /**
+         *  Social image container constraints
+         */
         constrain(imageContainerView, title, self) {
             imageContainerView, title, container in
             imageContainerView.top == title.bottom + 10
-            imageContainerView.leading == container.leading + 98
-            imageContainerView.trailing == container.trailing - 98
+            imageContainerView.centerX == container.centerX
+            imageContainerView.width == 180
             imageContainerView.bottom == container.bottom - 30
         }
         
+        /**
+         *  Social image contraints
+         */
         constrain(facebook, twitter, linkedin, google, imageContainerView) {
             facebook, twitter, linkedin, google, container in
             
@@ -81,6 +90,8 @@ class SocialContentView: UIView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
+    
+    // MARK: - UI Setup
     
     private func setupTitle() {
         title.font = UIFont.boldSystemFontOfSize(14.0)
