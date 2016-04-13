@@ -18,6 +18,7 @@ class AbstractCardDetail: UIView, CardDetail {
     lazy var content: UITextView = UITextView()
     lazy var imageView: UIImageView = UIImageView()
     lazy var finishButton: UIButton = UIButton()
+    lazy var socialContent: UIView = SocialContentView()
     
     var delegate: CardDetailControllerDelegate!
     
