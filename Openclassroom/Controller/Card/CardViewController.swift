@@ -11,6 +11,7 @@ import SwiftyJSON
 
 protocol CardControllerDelegate {
     func start(sender sender: CardProtocol)
+    func next(sender sender: CardProtocol)
     func download(sender sender: CardProtocol)
 }
 
@@ -151,18 +152,27 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
     }
     
+    func next(sender cell: CardProtocol) {
+        let indexPath = tasksCollectionView.indexPathForCell(cell as! UICollectionViewCell)!
+        let nextIndexPath = NSIndexPath(forItem: indexPath.row + 1, inSection: indexPath.section)
+        
+        tasksCollectionView.scrollToItemAtIndexPath(nextIndexPath, atScrollPosition: .CenteredHorizontally, animated: true)
+    }
+    
     // MARK: - CardDetail Delegate
     
     func finishCallback(sender sender: CardDetailViewController) {
         let indexPath = tasksCollectionView.indexPathForCell(sender.cell as! UICollectionViewCell)!
         
-        let nextIndexPath = NSIndexPath(forItem: indexPath.row + 1, inSection: indexPath.section)
-        
         let nextCard = cards[indexPath.row + 1]
-        nextCard.cardType = .Active
         
+        // enable next card
+        if nextCard.cardType == .Disable {
+            nextCard.cardType = .Active
+        }
+        
+        self.next(sender: sender.cell) // next card
         tasksCollectionView.reloadItemsAtIndexPaths([indexPath])
-        tasksCollectionView.scrollToItemAtIndexPath(nextIndexPath, atScrollPosition: .CenteredHorizontally, animated: true)
     }
 
 }
