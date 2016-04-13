@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "TextIconDisable.png",
+      "filename" : "TextDoneIcon.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "TextIconDisable@2x.png",
+      "filename" : "TextDoneIcon@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "TextIconDisable@3x.png",
+      "filename" : "TextDoneIcon@3x.png",
       "scale" : "3x"
     }
   ],

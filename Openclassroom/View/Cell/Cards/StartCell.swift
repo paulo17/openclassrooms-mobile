@@ -18,6 +18,8 @@ class StartCell: AbstractCard, CardProtocol {
     lazy var startButton: UIButton! = UIButton()
     lazy var downloadButton: UIButton! = UIButton()
     
+    var delegate: CardControllerDelegate!
+    
     static func cellIdentifier() -> String {
         return "StartCell"
     }
@@ -29,9 +31,9 @@ class StartCell: AbstractCard, CardProtocol {
         setupImage()
         
         self.addSubview(imageView)
-        imageView.addSubview(title)
-        imageView.addSubview(subtitle)
-        imageView.addSubview(startButton)
+        self.addSubview(title)
+        self.addSubview(subtitle)
+        self.addSubview(startButton)
         
         constrain(imageView, containerView) {
             image, container in
@@ -51,6 +53,13 @@ class StartCell: AbstractCard, CardProtocol {
             button.leading == container.leading + 20
             button.trailing == container.trailing - 20
         }
+        
+    }
+    
+    // MARK: - CardControllerDelegate
+    
+    func start() {
+        delegate.next(sender: self)
     }
     
     func content(card: Card) -> Void {
@@ -58,6 +67,8 @@ class StartCell: AbstractCard, CardProtocol {
             subtitle.text = sub
         }
     }
+    
+    // MARK: - Setup UI elements
     
     private func setupTitle() {
         title.font = UIFont.boldSystemFontOfSize(24.0)
@@ -78,7 +89,7 @@ class StartCell: AbstractCard, CardProtocol {
     private func setupImage() {
         let image = UIImage(named: "wallpaperlesson")
         imageView.image = image
-        imageView.contentMode = .ScaleAspectFit
+        imageView.contentMode = .ScaleAspectFill
     }
     
     private func setupNextButton() {
@@ -87,6 +98,7 @@ class StartCell: AbstractCard, CardProtocol {
         startButton.titleLabel?.textAlignment = .Center
         startButton.titleLabel?.font = UIFont.systemFontOfSize(14.0)
         startButton.OCdefaultButton(UIColor.whiteColor())
+        startButton.addTarget(self, action: #selector(StartCell.start), forControlEvents: .TouchUpInside)
     }
 
 }

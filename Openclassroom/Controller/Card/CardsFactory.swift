@@ -10,6 +10,15 @@ import UIKit
 
 class CardsFactory {
     
+    /**
+     Instanciate a card by type
+     
+     - parameter type
+     - parameter collection
+     - parameter indexPath
+     
+     - returns: CardProtocol
+     */
     static func createCard(type: CardType, collection: UICollectionView, indexPath: NSIndexPath) -> CardProtocol? {
         let card: CardProtocol!
         
@@ -24,6 +33,7 @@ class CardsFactory {
             card = collection.dequeueReusableCellWithReuseIdentifier(FinishCell.cellIdentifier(), forIndexPath: indexPath) as! FinishCell
         }
         
+        // card setup
         card.setup()
         
         return card

@@ -10,12 +10,21 @@ import UIKit
 import Cartography
 
 protocol CardProtocol {
+    
+    // MARK: - IBOutlet
+    
     var title: UILabel! { get set }
     var subtitle: UILabel! { get set }
     var imageView: UIImageView! { get set }
     var percentage: UILabel! { get set }
     var startButton: UIButton! { get set }
     var downloadButton: UIButton! { get set }
+    
+    // MARK: - CardController Delegate
+    
+    var delegate: CardControllerDelegate! { get set }
+    
+    // MARK: - Func
     
     static func cellIdentifier() -> String
     func setup() -> Void
@@ -44,11 +53,9 @@ class AbstractCard: UICollectionViewCell {
      - returns: name of the image
      */
     func cardImagePath(card: Card) -> String {
-        return card.cardType == .Disable ?
-            "\(card.type.rawValue)DisableIcon" :
-            "\(card.type.rawValue)Icon"
+        return "\(card.type.rawValue)\(card.cardStatus.rawValue)Icon"
     }
-    
+
     /**
      Setup card container UIView with margin left and right of 30
      */

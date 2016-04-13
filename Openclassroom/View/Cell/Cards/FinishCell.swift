@@ -18,6 +18,8 @@ class FinishCell: AbstractCard, CardProtocol {
     lazy var startButton: UIButton! = UIButton()
     lazy var downloadButton: UIButton! = UIButton()
     
+    var delegate: CardControllerDelegate!
+    
     static func cellIdentifier() -> String {
         return "FinishCell"
     }
@@ -60,6 +62,6 @@ class FinishCell: AbstractCard, CardProtocol {
     func setupImage() {
         let image = UIImage(named: "shapematchgrey")
         imageView.image = image
-        imageView.contentMode = .ScaleAspectFit
+        imageView.contentMode = .ScaleAspectFill
     }
 }

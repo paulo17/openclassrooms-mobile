@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B0549181CBA57BE0077684D /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0549171CBA57BE0077684D /* CardDetailViewController.swift */; };
+		6B05491B1CBA89990077684D /* AbstractCardDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B05491A1CBA89990077684D /* AbstractCardDetail.swift */; };
+		6B05491D1CBA89C90077684D /* TextCardDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B05491C1CBA89C90077684D /* TextCardDetail.swift */; };
+		6B05491F1CBA89ED0077684D /* VideoCardDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B05491E1CBA89ED0077684D /* VideoCardDetail.swift */; };
 		6B28215D1CB90E89003FFE38 /* cards.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B28215C1CB90E89003FFE38 /* cards.json */; };
 		6B2CA85E1CA1E12A002FB444 /* DayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CA85D1CA1E12A002FB444 /* DayCell.swift */; };
 		6B36B32E1C60C4AE00989167 /* Walkthrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B36B32D1C60C4AE00989167 /* Walkthrough.storyboard */; };
@@ -45,7 +49,7 @@
 		6BBC5F901CA487C600EC7EFE /* ParameterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC5F8F1CA487C600EC7EFE /* ParameterViewController.swift */; };
 		6BD1DA0E1CA7E6370075057F /* ParameterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD1DA0D1CA7E6370075057F /* ParameterView.swift */; };
 		6BDE35111CB1469F00D6DC6B /* Cards.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BDE35101CB1469F00D6DC6B /* Cards.storyboard */; };
-		6BE8D0691CB50ECD000D3243 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE8D0681CB50ECD000D3243 /* MainViewController.swift */; };
+		6BE8D0691CB50ECD000D3243 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE8D0681CB50ECD000D3243 /* CardViewController.swift */; };
 		6BE8D0721CB53EBF000D3243 /* StartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE8D0711CB53EBF000D3243 /* StartCell.swift */; };
 		6BE8D0741CB53EC8000D3243 /* ActiveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE8D0731CB53EC8000D3243 /* ActiveCell.swift */; };
 		6BE8D0761CB53ED1000D3243 /* DisableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE8D0751CB53ED1000D3243 /* DisableCell.swift */; };
@@ -64,6 +68,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B0549171CBA57BE0077684D /* CardDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDetailViewController.swift; sourceTree = "<group>"; };
+		6B05491A1CBA89990077684D /* AbstractCardDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractCardDetail.swift; sourceTree = "<group>"; };
+		6B05491C1CBA89C90077684D /* TextCardDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextCardDetail.swift; sourceTree = "<group>"; };
+		6B05491E1CBA89ED0077684D /* VideoCardDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCardDetail.swift; sourceTree = "<group>"; };
 		6B28215C1CB90E89003FFE38 /* cards.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cards.json; sourceTree = "<group>"; };
 		6B2CA85D1CA1E12A002FB444 /* DayCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayCell.swift; sourceTree = "<group>"; };
 		6B36B32D1C60C4AE00989167 /* Walkthrough.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Walkthrough.storyboard; sourceTree = "<group>"; };
@@ -103,7 +111,7 @@
 		6BBC5F8F1CA487C600EC7EFE /* ParameterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterViewController.swift; sourceTree = "<group>"; };
 		6BD1DA0D1CA7E6370075057F /* ParameterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterView.swift; sourceTree = "<group>"; };
 		6BDE35101CB1469F00D6DC6B /* Cards.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Cards.storyboard; sourceTree = "<group>"; };
-		6BE8D0681CB50ECD000D3243 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		6BE8D0681CB50ECD000D3243 /* CardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		6BE8D0711CB53EBF000D3243 /* StartCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartCell.swift; sourceTree = "<group>"; };
 		6BE8D0731CB53EC8000D3243 /* ActiveCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveCell.swift; sourceTree = "<group>"; };
 		6BE8D0751CB53ED1000D3243 /* DisableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisableCell.swift; sourceTree = "<group>"; };
@@ -144,6 +152,16 @@
 				9D4D82A87B766E1444FCE186 /* Pods_Openclassroom.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6B0549191CBA89580077684D /* CardDetail */ = {
+			isa = PBXGroup;
+			children = (
+				6B05491A1CBA89990077684D /* AbstractCardDetail.swift */,
+				6B05491C1CBA89C90077684D /* TextCardDetail.swift */,
+				6B05491E1CBA89ED0077684D /* VideoCardDetail.swift */,
+			);
+			path = CardDetail;
 			sourceTree = "<group>";
 		};
 		6B36B3251C60B6DA00989167 /* Helper */ = {
@@ -268,6 +286,7 @@
 		6BD1DA0C1CA7E6210075057F /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				6B0549191CBA89580077684D /* CardDetail */,
 				6B8829411CABE12E003CC1EC /* OCExpandNavigationController.swift */,
 				6BD1DA0D1CA7E6370075057F /* ParameterView.swift */,
 			);
@@ -277,8 +296,9 @@
 		6BE8D0671CB50EB4000D3243 /* Card */ = {
 			isa = PBXGroup;
 			children = (
-				6BE8D0681CB50ECD000D3243 /* MainViewController.swift */,
+				6BE8D0681CB50ECD000D3243 /* CardViewController.swift */,
 				6BE8D0791CB54021000D3243 /* CardsFactory.swift */,
+				6B0549171CBA57BE0077684D /* CardDetailViewController.swift */,
 			);
 			path = Card;
 			sourceTree = "<group>";
@@ -521,6 +541,7 @@
 				6BE8D07D1CB5444B000D3243 /* Card.swift in Sources */,
 				6B4E30F91C99A47D00BE42CB /* DayViewController.swift in Sources */,
 				6B8829351CABDFFB003CC1EC /* Constants.swift in Sources */,
+				6B05491D1CBA89C90077684D /* TextCardDetail.swift in Sources */,
 				6BA776F31CABDB0A001CDD78 /* OCAbstractManager.swift in Sources */,
 				6B4E30FB1C99A48500BE42CB /* TimeViewController.swift in Sources */,
 				6B4BEE7D1C8723C2006D2862 /* LoginViewController.swift in Sources */,
@@ -536,6 +557,7 @@
 				6B4BEE7B1C8723A8006D2862 /* RegisterViewController.swift in Sources */,
 				6B4E30F51C99A3A000BE42CB /* ObjectiveViewController.swift in Sources */,
 				6BD1DA0E1CA7E6370075057F /* ParameterView.swift in Sources */,
+				6B05491F1CBA89ED0077684D /* VideoCardDetail.swift in Sources */,
 				6BA776EF1CABDB0A001CDD78 /* Category.swift in Sources */,
 				6B88294E1CABE18D003CC1EC /* OCButton.swift in Sources */,
 				6BA776F21CABDB0A001CDD78 /* Objective.swift in Sources */,
@@ -544,7 +566,7 @@
 				6BA776F01CABDB0A001CDD78 /* DataContainer.swift in Sources */,
 				6B8829421CABE12E003CC1EC /* OCExpandNavigationController.swift in Sources */,
 				6BBC5F901CA487C600EC7EFE /* ParameterViewController.swift in Sources */,
-				6BE8D0691CB50ECD000D3243 /* MainViewController.swift in Sources */,
+				6BE8D0691CB50ECD000D3243 /* CardViewController.swift in Sources */,
 				6B88294B1CABE18D003CC1EC /* Array.swift in Sources */,
 				6BA776F61CABDB0A001CDD78 /* UserManager.swift in Sources */,
 				6B8829511CABE18D003CC1EC /* UIColor.swift in Sources */,
@@ -555,6 +577,7 @@
 				6BA776F91CABDC11001CDD78 /* OC.xcdatamodeld in Sources */,
 				6BA776F41CABDB0A001CDD78 /* OCManagedObject.swift in Sources */,
 				6BF8B39D1CA0576400051D54 /* ObjectiveCell.swift in Sources */,
+				6B0549181CBA57BE0077684D /* CardDetailViewController.swift in Sources */,
 				6B88294C1CABE18D003CC1EC /* CAGradientLayerExtension.swift in Sources */,
 				6B8829501CABE18D003CC1EC /* OCTextField.swift in Sources */,
 				6BF23A9C1C5FAE94001B1006 /* AppDelegate.swift in Sources */,
@@ -564,6 +587,7 @@
 				6B4E30F71C99A41B00BE42CB /* ProgramViewController.swift in Sources */,
 				6BE8D0741CB53EC8000D3243 /* ActiveCell.swift in Sources */,
 				6BE8D0781CB53EDB000D3243 /* FinishCell.swift in Sources */,
+				6B05491B1CBA89990077684D /* AbstractCardDetail.swift in Sources */,
 				6BE8D0761CB53ED1000D3243 /* DisableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

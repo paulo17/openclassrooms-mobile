@@ -18,6 +18,8 @@ class DisableCell: AbstractCard, CardProtocol {
     lazy var startButton: UIButton! = UIButton()
     lazy var downloadButton: UIButton! = UIButton()
     
+    var delegate: CardControllerDelegate!
+    
     private lazy var lockImage: UIImageView! = UIImageView()
     private lazy var lockTitle: UILabel! = UILabel()
     
@@ -81,6 +83,8 @@ class DisableCell: AbstractCard, CardProtocol {
         imageView.image = UIImage(named: cardImagePath(card))
     }
     
+    // MARK: - Setup UI
+    
     private func setupTitle() {
         title.font = UIFont.boldSystemFontOfSize(24.0)
         title.textColor = UIColor.OCGreyishBrownColor()
@@ -98,12 +102,12 @@ class DisableCell: AbstractCard, CardProtocol {
     
     private func setupImage() {
         imageView.image = UIImage(named: "shapetexte")
-        imageView.contentMode = .ScaleAspectFit
+        imageView.contentMode = .ScaleAspectFill
     }
     
     private func setupLock() {
         lockImage.image = UIImage(named: "lock")
-        lockImage.contentMode = .ScaleAspectFit
+        lockImage.contentMode = .ScaleAspectFill
     }
     
     private func setupLockTitle() {

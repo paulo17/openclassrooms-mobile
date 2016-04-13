@@ -9,7 +9,13 @@
 import UIKit
 import SwiftyJSON
 
-class MainViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+protocol CardControllerDelegate {
+    func start(sender sender: CardProtocol)
+    func next(sender sender: CardProtocol)
+    func download(sender sender: CardProtocol)
+}
+
+class CardViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, CardControllerDelegate {
     
     // MARK: - IB Outlet
     
@@ -26,13 +32,14 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         tasksCollectionView.delegate = self
         tasksCollectionView.dataSource = self
+        tasksCollectionView.pagingEnabled = true
+
         registerCustomCell()
-        
         initializeCards()
     }
     
     override func viewWillAppear(animated: Bool) {
-        tasksCollectionView.pagingEnabled = true
+        
     }
     
     // MARK: - Cards methods
@@ -72,7 +79,8 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
                                 title: json.1["title"].string!,
                                 time: json.1["time"].int!,
                                 type: type,
-                                cardType: cardType)
+                                cardType: cardType,
+                                content: json.1["content"].string!)
                 
                 lecons.append(card)
             }
@@ -95,9 +103,9 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let currentCard = cards[indexPath.row]
-        let cell = CardsFactory.createCard(currentCard.cardType, collection: collectionView, indexPath: indexPath)!
+        var cell = CardsFactory.createCard(currentCard.cardType, collection: collectionView, indexPath: indexPath)!
         
-        cell.setup()
+        cell.delegate = self
         cell.content(currentCard)
         
         return cell as! UICollectionViewCell
@@ -121,4 +129,50 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         return UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
     }
     
+    // MARK: - CardController Delegate
+    
+    func start(sender cell: CardProtocol) {
+        let cardsStoryboard = UIStoryboard(name: "Cards", bundle: nil)
+        let cardDetailController = cardsStoryboard.instantiateViewControllerWithIdentifier("CardDetailViewController") as! CardDetailViewController
+        
+        let indexPath = tasksCollectionView.indexPathForCell(cell as! UICollectionViewCell)!
+    
+        let currentCard = cards[indexPath.row]
+        currentCard.cardStatus = .InProgress // set card status to in progress
+        
+        cardDetailController.delegate = self // set detail view controller as delegate
+        cardDetailController.card = currentCard // set current viewed card
+        cardDetailController.cell = cell
+
+        self.navigationItem.title = ""
+        self.navigationController?.pushViewController(cardDetailController, animated: true)
+    }
+    
+    func download(sender cell: CardProtocol) {
+        
+    }
+    
+    func next(sender cell: CardProtocol) {
+        let indexPath = tasksCollectionView.indexPathForCell(cell as! UICollectionViewCell)!
+        let nextIndexPath = NSIndexPath(forItem: indexPath.row + 1, inSection: indexPath.section)
+        
+        tasksCollectionView.scrollToItemAtIndexPath(nextIndexPath, atScrollPosition: .CenteredHorizontally, animated: true)
+    }
+    
+    // MARK: - CardDetail Delegate
+    
+    func finishCallback(sender sender: CardDetailViewController) {
+        let indexPath = tasksCollectionView.indexPathForCell(sender.cell as! UICollectionViewCell)!
+        
+        let nextCard = cards[indexPath.row + 1]
+        
+        // enable next card
+        if nextCard.cardType == .Disable {
+            nextCard.cardType = .Active
+        }
+        
+        self.next(sender: sender.cell) // next card
+        tasksCollectionView.reloadItemsAtIndexPaths([indexPath])
+    }
+
 }
