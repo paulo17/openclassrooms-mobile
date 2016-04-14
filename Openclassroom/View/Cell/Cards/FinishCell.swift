@@ -48,10 +48,15 @@ class FinishCell: AbstractCard, CardProtocol {
     }
     
     func content(card: Card) -> Void {
-        
+        title.text = card.title
+        imageView.image = card.cardStatus == .Done ?
+            UIImage(named: "shapematch") :
+            UIImage(named: "shapematchgrey")
     }
     
-    func setupTitle() {
+    // MARK: - UI Setup
+    
+    private func setupTitle() {
         title.font = UIFont.boldSystemFontOfSize(24.0)
         title.textColor = UIColor.OCGreyishBrownColor()
         title.textAlignment = .Center
@@ -59,7 +64,7 @@ class FinishCell: AbstractCard, CardProtocol {
         title.text = "Journée non terminée"
     }
     
-    func setupImage() {
+    private func setupImage() {
         let image = UIImage(named: "shapematchgrey")
         imageView.image = image
         imageView.contentMode = .ScaleAspectFill
