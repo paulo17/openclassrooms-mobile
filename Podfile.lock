@@ -1,20 +1,32 @@
 PODS:
-  - BWWalkthrough (1.0.1)
+  - BWWalkthrough (1.1.0)
   - Cartography (0.6.0)
   - Crashlytics (3.7.0):
     - Fabric (~> 1.6.3)
-  - Fabric (1.6.4)
+  - Fabric (1.6.7)
+  - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - BWWalkthrough
   - Cartography (~> 0.6)
   - Crashlytics
   - Fabric
+  - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
+
+EXTERNAL SOURCES:
+  SwiftyJSON:
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
+
+CHECKOUT OPTIONS:
+  SwiftyJSON:
+    :commit: 2a5b70f06001316d4fb54501edc70b4084705da0
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 SPEC CHECKSUMS:
-  BWWalkthrough: 760b70d2a1b3f970a520806b771aa3f787fdc4cf
+  BWWalkthrough: 0c27ad2773a25c8f4fb9004bc7d6685deb35fecc
   Cartography: 70af183a248547694a8cfaa6b989cb7e04589985
   Crashlytics: c3a2333dea9e2733d2777f730910321fc9e25c0d
-  Fabric: ed41fd62173c6bdea24ab02c9d7707161eabb750
+  Fabric: caf7580c725e64db144f610ac65cd60956911dc7
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
 COCOAPODS: 0.39.0

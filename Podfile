@@ -8,5 +8,6 @@ pod 'Fabric'
 pod 'Crashlytics'
 pod 'BWWalkthrough'
 pod 'Cartography', '~> 0.6'
+pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
 end
 
