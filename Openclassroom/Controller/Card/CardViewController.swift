@@ -39,7 +39,7 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     override func viewWillAppear(animated: Bool) {
-        
+        super.viewWillAppear(animated)
     }
     
     // MARK: - Cards methods
@@ -90,7 +90,7 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     
-    // MARK: - Collection view
+    // MARK: - Collection View Delegate
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
@@ -101,7 +101,6 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        
         let currentCard = cards[indexPath.row]
         var cell = CardsFactory.createCard(currentCard.cardType, collection: collectionView, indexPath: indexPath)!
         
@@ -161,14 +160,24 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     // MARK: - CardDetail Delegate
     
+    /**
+     Callback call when a card is marked as done by the user
+     
+     - parameter sender: CardDetailViewController
+     */
     func finishCallback(sender sender: CardDetailViewController) {
         let indexPath = tasksCollectionView.indexPathForCell(sender.cell as! UICollectionViewCell)!
-        
         let nextCard = cards[indexPath.row + 1]
         
         // enable next card
         if nextCard.cardType == .Disable {
             nextCard.cardType = .Active
+        }
+        
+        // set last finish card to done
+        if nextCard.cardType == .Finish {
+            nextCard.title = "Journée terminée"
+            nextCard.cardStatus = .Done
         }
         
         self.next(sender: sender.cell) // next card

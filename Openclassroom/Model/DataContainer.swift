@@ -13,6 +13,7 @@ class DataContainer {
     static let sharedDataContainer = DataContainer()
     
     var currentUser: User!
+    var cards: [Card]?
     
     var goToBackgroundObserver: AnyObject?
     
