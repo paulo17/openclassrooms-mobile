@@ -17,28 +17,27 @@ class ObjectiveViewController: UIViewController, UITableViewDelegate, UITableVie
     
     let objectiveCellIdentifier = "objectiveCell"
     
-    var category: Category?
+    var category: Category!
     lazy var objectives = [Objective]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        objectiveTableView.delegate = self
+        objectiveTableView.dataSource = self
         objectiveTableView.rowHeight = UITableViewAutomaticDimension
         objectiveTableView.estimatedRowHeight = 60.0
         
         objectives = getStaticObjective()
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        objectiveTableView.delegate = self
-        objectiveTableView.dataSource = self
         
         if let category = self.category {
             categoryName.text = category.name
             categoryImage.image = UIImage(named: category.image)
             categoryObjectiveNumber.text = "\(objectives.count) cours"
         }
-        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
         self.title = "Etape 1 sur 3"
     }
     

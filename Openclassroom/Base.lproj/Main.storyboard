@@ -170,7 +170,6 @@ numérique</string>
                                         <connections>
                                             <outlet property="categoryImage" destination="Ygs-wb-Q18" id="YbA-X7-79c"/>
                                             <outlet property="categoryName" destination="fMs-OH-eGx" id="0qs-2W-KeD"/>
-                                            <segue destination="WrT-HP-psT" kind="show" identifier="categoryToObjective" id="f8u-RF-RVx"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -200,6 +199,7 @@ numérique</string>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="categoryCollectionView" destination="ceP-4d-5zN" id="bts-CG-KdO"/>
+                        <segue destination="WrT-HP-psT" kind="show" identifier="categoryToObjective" id="o99-ZU-Bfj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zvo-bF-5Hh" userLabel="First Responder" sceneMemberID="firstResponder"/>

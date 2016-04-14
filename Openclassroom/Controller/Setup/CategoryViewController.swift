@@ -39,7 +39,7 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
         return categories
     }
     
-    // MARK: - UICollectionView
+    // MARK: - UICollectionView Delegate
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return categories.count
@@ -56,9 +56,11 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let selectedCell = collectionView.cellForItemAtIndexPath(indexPath) as! CategoryCell
         selectedCell.categoryImage.alpha = 1.0
-        selectedCategory = categories[indexPath.row]
         
+        // save selected category
+        selectedCategory = categories[indexPath.row]
         DataContainer.sharedDataContainer.currentUser.category = selectedCategory.name
+        performSegueWithIdentifier("categoryToObjective", sender: self)
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
