@@ -13,10 +13,14 @@ class ActiveCell: AbstractCard, CardProtocol {
     
     var title: UILabel! = UILabel()
     var subtitle: UILabel! = UILabel()
-    var imageView: UIImageView! = UIImageView()
+    
+    var imageView: UIImageView! = UIImageView() // TODO remove from protocol
+    
     var percentage: UILabel! = UILabel()
     var startButton: UIButton! = UIButton()
     var downloadButton: UIButton! = UIButton()
+    
+    var circleContainer: CircleCardContentView = CircleCardContentView()
     
     var delegate: CardControllerDelegate!
     
@@ -27,20 +31,22 @@ class ActiveCell: AbstractCard, CardProtocol {
     func setup() {
         setupTitle()
         setupSubtitle()
-        setupImage()
+        //setupImage()
         setupPercentage()
         setupStartButton()
         setupDownloadButton()
         
         self.addSubview(title)
         self.addSubview(subtitle)
-        self.addSubview(imageView)
+        
+        self.addSubview(circleContainer)
+        
         self.addSubview(percentage)
         self.addSubview(startButton)
         self.addSubview(downloadButton)
         
-        constrain(title, subtitle, imageView, percentage, containerView) {
-            title, subtitle, image, percentage, container in
+        constrain(title, subtitle, circleContainer, percentage, containerView) {
+            title, subtitle, circle, percentage, container in
             title.top == container.top + 20
             title.leading == container.leading + 20
             title.trailing == container.trailing - 20
@@ -49,16 +55,13 @@ class ActiveCell: AbstractCard, CardProtocol {
             subtitle.leading == container.leading + 20
             subtitle.trailing == container.trailing - 20
             
-            image.top == subtitle.bottom + 90
-            image.height == 65
-            image.width == 65
-            image.centerX == container.centerX
+            circle.top == subtitle.bottom + 25
+            circle.centerX == container.centerX
             
-            percentage.top == image.bottom + 70
+            percentage.top == circle.bottom + 7
             percentage.leading == container.leading + 140
             percentage.trailing == container.trailing - 140
         }
-        
         
         constrain(downloadButton, startButton, containerView) {
             download, start, container in
@@ -94,7 +97,7 @@ class ActiveCell: AbstractCard, CardProtocol {
         
         title.text = card.title
         subtitle.text = "\(card.time) minutes"
-        imageView.image = UIImage(named: cardImagePath(card))
+        circleContainer.cardIcon.image = UIImage(named: cardImagePath(card))
         startButton.setTitle(status == .Done ? "Recommencer" : "Commencer", forState: .Normal)
     }
     
@@ -113,11 +116,6 @@ class ActiveCell: AbstractCard, CardProtocol {
         subtitle.textColor = UIColor.OCSilverColor()
         subtitle.textAlignment = .Center
         subtitle.text = "Card's time"
-    }
-    
-    private func setupImage() {
-        imageView.image = UIImage(named: "TextDisableIcon")
-        imageView.contentMode = .ScaleAspectFill
     }
     
     private func setupPercentage() {
