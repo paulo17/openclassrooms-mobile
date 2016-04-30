@@ -11,16 +11,13 @@ import Cartography
 
 class ActiveCell: AbstractCard, CardProtocol {
     
-    var title: UILabel! = UILabel()
-    var subtitle: UILabel! = UILabel()
+    lazy var title: UILabel! = UILabel()
+    lazy var subtitle: UILabel! = UILabel()
+    lazy var percentage: UILabel! = UILabel()
+    lazy var startButton: UIButton! = UIButton()
+    lazy var downloadButton: UIButton! = UIButton()
     
-    var imageView: UIImageView! = UIImageView() // TODO remove from protocol
-    
-    var percentage: UILabel! = UILabel()
-    var startButton: UIButton! = UIButton()
-    var downloadButton: UIButton! = UIButton()
-    
-    var circleContainer: CircleCardContentView = CircleCardContentView()
+    var circleContainer: CircleCardContentView! = CircleCardContentView()
     
     var delegate: CardControllerDelegate!
     
@@ -31,7 +28,6 @@ class ActiveCell: AbstractCard, CardProtocol {
     func setup() {
         setupTitle()
         setupSubtitle()
-        //setupImage()
         setupPercentage()
         setupStartButton()
         setupDownloadButton()
@@ -99,6 +95,11 @@ class ActiveCell: AbstractCard, CardProtocol {
         subtitle.text = "\(card.time) minutes"
         circleContainer.cardIcon.image = UIImage(named: cardImagePath(card))
         startButton.setTitle(status == .Done ? "Recommencer" : "Commencer", forState: .Normal)
+        
+        if(status == .Done) {
+            circleContainer.circleProgressColor = UIColor.OCTurquoiseColor()
+            circleContainer.circularProgressBar.progress = 1.0
+        }
     }
     
     // MARK: - Setup UI elements

@@ -11,12 +11,20 @@ import Cartography
 
 class StartCell: AbstractCard, CardProtocol {
     
+    /**
+    * Card Protocol fields
+    **/
     lazy var title: UILabel! = UILabel()
     lazy var subtitle: UILabel! = UILabel()
-    lazy var imageView: UIImageView! = UIImageView()
     lazy var percentage: UILabel! = UILabel()
     lazy var startButton: UIButton! = UIButton()
     lazy var downloadButton: UIButton! = UIButton()
+    lazy var circleContainer: CircleCardContentView! = CircleCardContentView()
+    
+    /**
+    * Custom card fields
+    **/
+    lazy var imageView: UIImageView! = UIImageView()
     
     var delegate: CardControllerDelegate!
     

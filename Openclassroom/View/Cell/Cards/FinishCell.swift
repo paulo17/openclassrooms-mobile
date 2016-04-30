@@ -17,6 +17,7 @@ class FinishCell: AbstractCard, CardProtocol {
     lazy var percentage: UILabel! = UILabel()
     lazy var startButton: UIButton! = UIButton()
     lazy var downloadButton: UIButton! = UIButton()
+    lazy var circleContainer: CircleCardContentView! = CircleCardContentView()
     
     var delegate: CardControllerDelegate!
     
