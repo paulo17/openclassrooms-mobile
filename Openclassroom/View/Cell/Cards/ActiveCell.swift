@@ -79,6 +79,14 @@ class ActiveCell: AbstractCard, CardProtocol {
     // MARK: - IB Action
     
     func start() {
+        // reset card ui
+        circleContainer.circularProgressBar.progress = 0
+        circleContainer.circleProgressColor = UIColor.OCDustyOrangeColor()
+        
+        percentage.textColor = UIColor.OCDustyOrangeColor()
+        percentage.text = "0%"
+        
+        // execute card view controller start delegate method
         delegate.start(sender: self)
     }
     
@@ -99,6 +107,8 @@ class ActiveCell: AbstractCard, CardProtocol {
         if(status == .Done) {
             circleContainer.circleProgressColor = UIColor.OCTurquoiseColor()
             circleContainer.circularProgressBar.progress = 1.0
+            percentage.textColor = UIColor.OCTurquoiseColor()
+            percentage.text = "100%"
         }
     }
     
