@@ -103,7 +103,7 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let currentCard = cards[indexPath.row]
         var cell = CardsFactory.createCard(currentCard.cardType, collection: collectionView, indexPath: indexPath)!
-        
+                
         cell.delegate = self
         cell.content(currentCard)
         
@@ -182,6 +182,12 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         self.next(sender: sender.cell) // next card
         tasksCollectionView.reloadItemsAtIndexPaths([indexPath])
+        
+        /** reloadItem change cell pointer address and the next cell get the 
+        current pointer cell address 
+        So I reset the progress bar to 0
+         */
+        sender.cell.circleContainer.circularProgressBar.progress = 0.0
     }
 
 }
