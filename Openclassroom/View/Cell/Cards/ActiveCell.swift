@@ -25,7 +25,9 @@ class ActiveCell: AbstractCard, CardProtocol {
         return "ActiveCell"
     }
     
-    func setup() {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
         circleContainer.cardDelegate = self
         
         setupTitle()
@@ -76,6 +78,10 @@ class ActiveCell: AbstractCard, CardProtocol {
         
         startButton.addTarget(self, action: #selector(ActiveCell.start), forControlEvents: .TouchUpInside)
         downloadButton.addTarget(self, action: #selector(ActiveCell.download), forControlEvents: .TouchUpInside)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     // MARK: - IB Action

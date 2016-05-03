@@ -32,7 +32,9 @@ class StartCell: AbstractCard, CardProtocol {
         return "StartCell"
     }
     
-    func setup() -> Void {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
         setupTitle()
         setupSubtitle()
         setupNextButton()
@@ -62,6 +64,10 @@ class StartCell: AbstractCard, CardProtocol {
             button.trailing == container.trailing - 20
         }
         
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     // MARK: - CardControllerDelegate

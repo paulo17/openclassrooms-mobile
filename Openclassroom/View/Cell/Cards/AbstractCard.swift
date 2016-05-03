@@ -27,7 +27,6 @@ protocol CardProtocol {
     // MARK: - Func
     
     static func cellIdentifier() -> String
-    func setup() -> Void
     func content(card: Card) -> Void
 }
 

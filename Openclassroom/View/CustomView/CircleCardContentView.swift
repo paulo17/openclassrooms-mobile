@@ -68,6 +68,10 @@ class CircleCardContentView: UIView {
     
     func progressChangeDelegate() {
         circularProgressBar.progressChangedClosure { (progress, circularView) in
+            guard self.cardDelegate.percentage != nil else {
+                return
+            }
+            
             let progressPercentage = Int(progress*100)
             
             if progressPercentage == 100 {

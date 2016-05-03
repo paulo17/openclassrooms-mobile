@@ -28,7 +28,11 @@ class DisableCell: AbstractCard, CardProtocol {
         return "DisableCell"
     }
     
-    func setup() -> Void {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        circleContainer.cardDelegate = self
+        
         setupTitle()
         setupSubtitle()
         setupLock()
@@ -73,6 +77,10 @@ class DisableCell: AbstractCard, CardProtocol {
             start.trailing == container.trailing - 20
             start.height == 38
         }
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     // MARK: - Setup content

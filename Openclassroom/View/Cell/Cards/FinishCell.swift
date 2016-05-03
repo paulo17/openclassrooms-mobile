@@ -25,7 +25,11 @@ class FinishCell: AbstractCard, CardProtocol {
         return "FinishCell"
     }
     
-    func setup() -> Void {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        circleContainer.cardDelegate = self
+        
         setupTitle()
         
         self.addSubview(title)
@@ -43,6 +47,10 @@ class FinishCell: AbstractCard, CardProtocol {
             title.leading == container.leading + 20
             title.trailing == container.trailing - 20
         }
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     func content(card: Card) -> Void {
