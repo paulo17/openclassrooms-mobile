@@ -70,9 +70,17 @@ class CardDetailViewController: UIViewController, CardDetailControllerDelegate {
         self.navigationController?.popViewControllerAnimated(true)
     }
     
+    // MARK: - Navigation
+    
+    /**
+     Change progress bar state when user back to the card's list
+     
+     - parameter parent: UIViewController parent
+     */
     override func willMoveToParentViewController(parent: UIViewController?) {
         if(parent == nil && card.cardStatus == .InProgress) {
             cell.circleContainer.circularProgressBar.progress = 0.35
+            cell.percentage.text = "35%"
         }
     }
 }

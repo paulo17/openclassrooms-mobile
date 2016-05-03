@@ -75,6 +75,8 @@ class DisableCell: AbstractCard, CardProtocol {
         }
     }
     
+    // MARK: - Setup content
+    
     func content(card: Card) -> Void {
         title.text = card.title
         subtitle.text = "\(card.time) minutes"

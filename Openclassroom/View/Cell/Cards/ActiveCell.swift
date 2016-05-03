@@ -55,8 +55,8 @@ class ActiveCell: AbstractCard, CardProtocol {
             circle.centerX == container.centerX
             
             percentage.top == circle.bottom + 7
-            percentage.leading == container.leading + 140
-            percentage.trailing == container.trailing - 140
+            percentage.leading == container.leading + 120
+            percentage.trailing == container.trailing - 120
         }
         
         constrain(downloadButton, startButton, containerView) {
@@ -133,6 +133,7 @@ class ActiveCell: AbstractCard, CardProtocol {
         percentage.text = "0%"
         percentage.textAlignment = .Center
         percentage.textColor = UIColor.OCDustyOrangeColor()
+        percentage.numberOfLines = 0
         percentage.font = UIFont.systemFontOfSize(24.0)
     }
     
