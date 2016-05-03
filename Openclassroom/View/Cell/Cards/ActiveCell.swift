@@ -11,12 +11,13 @@ import Cartography
 
 class ActiveCell: AbstractCard, CardProtocol {
     
-    var title: UILabel! = UILabel()
-    var subtitle: UILabel! = UILabel()
-    var imageView: UIImageView! = UIImageView()
-    var percentage: UILabel! = UILabel()
-    var startButton: UIButton! = UIButton()
-    var downloadButton: UIButton! = UIButton()
+    lazy var title: UILabel! = UILabel()
+    lazy var subtitle: UILabel! = UILabel()
+    lazy var percentage: UILabel! = UILabel()
+    lazy var startButton: UIButton! = UIButton()
+    lazy var downloadButton: UIButton! = UIButton()
+    
+    var circleContainer: CircleCardContentView! = CircleCardContentView()
     
     var delegate: CardControllerDelegate!
     
@@ -24,23 +25,28 @@ class ActiveCell: AbstractCard, CardProtocol {
         return "ActiveCell"
     }
     
-    func setup() {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        circleContainer.cardDelegate = self
+        
         setupTitle()
         setupSubtitle()
-        setupImage()
         setupPercentage()
         setupStartButton()
         setupDownloadButton()
         
         self.addSubview(title)
         self.addSubview(subtitle)
-        self.addSubview(imageView)
+        
+        self.addSubview(circleContainer)
+        
         self.addSubview(percentage)
         self.addSubview(startButton)
         self.addSubview(downloadButton)
         
-        constrain(title, subtitle, imageView, percentage, containerView) {
-            title, subtitle, image, percentage, container in
+        constrain(title, subtitle, circleContainer, percentage, containerView) {
+            title, subtitle, circle, percentage, container in
             title.top == container.top + 20
             title.leading == container.leading + 20
             title.trailing == container.trailing - 20
@@ -49,16 +55,13 @@ class ActiveCell: AbstractCard, CardProtocol {
             subtitle.leading == container.leading + 20
             subtitle.trailing == container.trailing - 20
             
-            image.top == subtitle.bottom + 90
-            image.height == 65
-            image.width == 65
-            image.centerX == container.centerX
+            circle.top == subtitle.bottom + 25
+            circle.centerX == container.centerX
             
-            percentage.top == image.bottom + 70
-            percentage.leading == container.leading + 140
-            percentage.trailing == container.trailing - 140
+            percentage.top == circle.bottom + 7
+            percentage.leading == container.leading + 120
+            percentage.trailing == container.trailing - 120
         }
-        
         
         constrain(downloadButton, startButton, containerView) {
             download, start, container in
@@ -77,9 +80,21 @@ class ActiveCell: AbstractCard, CardProtocol {
         downloadButton.addTarget(self, action: #selector(ActiveCell.download), forControlEvents: .TouchUpInside)
     }
     
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     // MARK: - IB Action
     
     func start() {
+        // reset card ui
+        circleContainer.circularProgressBar.progress = 0
+        circleContainer.circleProgressColor = UIColor.OCDustyOrangeColor()
+        
+        percentage.textColor = UIColor.OCDustyOrangeColor()
+        percentage.text = "0%"
+        
+        // execute card view controller start delegate method
         delegate.start(sender: self)
     }
     
@@ -94,8 +109,13 @@ class ActiveCell: AbstractCard, CardProtocol {
         
         title.text = card.title
         subtitle.text = "\(card.time) minutes"
-        imageView.image = UIImage(named: cardImagePath(card))
+        circleContainer.cardIcon.image = UIImage(named: cardImagePath(card))
         startButton.setTitle(status == .Done ? "Recommencer" : "Commencer", forState: .Normal)
+        
+        if(status == .Done) {
+            circleContainer.circleProgressColor = UIColor.OCTurquoiseColor()
+            circleContainer.circularProgressBar.progress = 1.0
+        }
     }
     
     // MARK: - Setup UI elements
@@ -115,15 +135,11 @@ class ActiveCell: AbstractCard, CardProtocol {
         subtitle.text = "Card's time"
     }
     
-    private func setupImage() {
-        imageView.image = UIImage(named: "TextDisableIcon")
-        imageView.contentMode = .ScaleAspectFill
-    }
-    
     private func setupPercentage() {
         percentage.text = "0%"
         percentage.textAlignment = .Center
         percentage.textColor = UIColor.OCDustyOrangeColor()
+        percentage.numberOfLines = 0
         percentage.font = UIFont.systemFontOfSize(24.0)
     }
     

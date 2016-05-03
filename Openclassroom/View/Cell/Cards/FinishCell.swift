@@ -13,10 +13,11 @@ class FinishCell: AbstractCard, CardProtocol {
     
     lazy var title: UILabel! = UILabel()
     lazy var subtitle: UILabel! = UILabel()
-    lazy var imageView: UIImageView! = UIImageView()
+    //lazy var imageView: UIImageView! = UIImageView()
     lazy var percentage: UILabel! = UILabel()
     lazy var startButton: UIButton! = UIButton()
     lazy var downloadButton: UIButton! = UIButton()
+    lazy var circleContainer: CircleCardContentView! = CircleCardContentView()
     
     var delegate: CardControllerDelegate!
     
@@ -24,34 +25,46 @@ class FinishCell: AbstractCard, CardProtocol {
         return "FinishCell"
     }
     
-    func setup() -> Void {
-        setupImage()
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        circleContainer.cardDelegate = self
+        
         setupTitle()
         
         self.addSubview(title)
-        self.addSubview(imageView)
+        self.addSubview(circleContainer)
         
-        constrain(imageView, containerView) {
-            image, container in
-            image.top == container.top + 175
-            image.centerX == container.centerX
-            image.width == 90
-            image.height == 66
+        constrain(circleContainer, containerView) {
+            circle, container in
+            circle.top == container.top + 110
+            circle.centerX == container.centerX
         }
         
-        constrain(title, imageView, containerView) {
-            title, image, container in
-            title.top == image.bottom + 120
+        constrain(title, circleContainer, containerView) {
+            title, circle, container in
+            title.top == circle.bottom + 30
             title.leading == container.leading + 20
             title.trailing == container.trailing - 20
         }
     }
     
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     func content(card: Card) -> Void {
+        let status = card.cardStatus
+        
         title.text = card.title
-        imageView.image = card.cardStatus == .Done ?
+        circleContainer.cardIcon.image = status == .Done ?
             UIImage(named: "shapematch") :
             UIImage(named: "shapematchgrey")
+        
+        if(status == .Done) {
+            circleContainer.circleProgressColor = UIColor.OCTurquoiseColor()
+            circleContainer.circularProgressBar.progress = 1.0
+        }
     }
     
     // MARK: - UI Setup
@@ -64,9 +77,9 @@ class FinishCell: AbstractCard, CardProtocol {
         title.text = "Journée non terminée"
     }
     
-    private func setupImage() {
+    /*private func setupImage() {
         let image = UIImage(named: "shapematchgrey")
         imageView.image = image
         imageView.contentMode = .ScaleAspectFill
-    }
+    }*/
 }

@@ -11,12 +11,20 @@ import Cartography
 
 class StartCell: AbstractCard, CardProtocol {
     
+    /**
+    * Card Protocol fields
+    **/
     lazy var title: UILabel! = UILabel()
     lazy var subtitle: UILabel! = UILabel()
-    lazy var imageView: UIImageView! = UIImageView()
     lazy var percentage: UILabel! = UILabel()
     lazy var startButton: UIButton! = UIButton()
     lazy var downloadButton: UIButton! = UIButton()
+    lazy var circleContainer: CircleCardContentView! = CircleCardContentView()
+    
+    /**
+    * Custom card fields
+    **/
+    lazy var imageView: UIImageView! = UIImageView()
     
     var delegate: CardControllerDelegate!
     
@@ -24,7 +32,9 @@ class StartCell: AbstractCard, CardProtocol {
         return "StartCell"
     }
     
-    func setup() -> Void {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
         setupTitle()
         setupSubtitle()
         setupNextButton()
@@ -54,6 +64,10 @@ class StartCell: AbstractCard, CardProtocol {
             button.trailing == container.trailing - 20
         }
         
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     // MARK: - CardControllerDelegate

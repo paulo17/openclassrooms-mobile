@@ -13,11 +13,12 @@ class DisableCell: AbstractCard, CardProtocol {
     
     lazy var title: UILabel! = UILabel()
     lazy var subtitle: UILabel! = UILabel()
-    lazy var imageView: UIImageView! = UIImageView()
     lazy var percentage: UILabel! = UILabel()
     lazy var startButton: UIButton! = UIButton()
     lazy var downloadButton: UIButton! = UIButton()
     
+    lazy var circleContainer: CircleCardContentView! = CircleCardContentView()
+
     var delegate: CardControllerDelegate!
     
     private lazy var lockImage: UIImageView! = UIImageView()
@@ -27,40 +28,41 @@ class DisableCell: AbstractCard, CardProtocol {
         return "DisableCell"
     }
     
-    func setup() -> Void {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        circleContainer.cardDelegate = self
+        
         setupTitle()
         setupSubtitle()
-        setupImage()
         setupLock()
         setupLockTitle()
         setupStartButton()
         
         self.addSubview(title)
         self.addSubview(subtitle)
-        self.addSubview(imageView)
+        self.addSubview(circleContainer)
         self.addSubview(lockImage)
         self.addSubview(lockTitle)
         self.addSubview(startButton)
         
-        constrain(title, subtitle, imageView, containerView) {
-            title, subtitle, image, container in
+        constrain(title, subtitle, circleContainer, containerView) {
+            title, subtitle, circle, container in
             title.top == container.top + 20
             title.leading == container.leading
             title.trailing == container.trailing
             
+            circle.top == subtitle.bottom + 25
+            circle.centerX == container.centerX
+            
             subtitle.top == title.bottom + 2
             subtitle.leading == container.leading
             subtitle.trailing == container.trailing
-            
-            image.top == subtitle.bottom + 110
-            image.centerX == container.centerX
-            image.height == 65
-            image.width == 65
         }
         
-        constrain(imageView, lockImage, lockTitle, startButton, containerView) {
-            image, lock, lockTitle, start, container in
-            lock.top == image.bottom + 100
+        constrain(circleContainer, lockImage, lockTitle, startButton, containerView) {
+            circle, lock, lockTitle, start, container in
+            lock.top == circle.bottom + 30
             lock.centerX == container.centerX
             lock.width == 18
             lock.height == 23
@@ -77,10 +79,16 @@ class DisableCell: AbstractCard, CardProtocol {
         }
     }
     
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Setup content
+    
     func content(card: Card) -> Void {
         title.text = card.title
         subtitle.text = "\(card.time) minutes"
-        imageView.image = UIImage(named: cardImagePath(card))
+        circleContainer.cardIcon.image = UIImage(named: cardImagePath(card))
     }
     
     // MARK: - Setup UI
@@ -98,11 +106,6 @@ class DisableCell: AbstractCard, CardProtocol {
         subtitle.textColor = UIColor.OCSilverColor()
         subtitle.textAlignment = .Center
         subtitle.text = "Card's subtitle"
-    }
-    
-    private func setupImage() {
-        imageView.image = UIImage(named: "shapetexte")
-        imageView.contentMode = .ScaleAspectFill
     }
     
     private func setupLock() {

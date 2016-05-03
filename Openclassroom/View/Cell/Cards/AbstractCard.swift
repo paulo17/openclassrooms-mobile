@@ -15,10 +15,10 @@ protocol CardProtocol {
     
     var title: UILabel! { get set }
     var subtitle: UILabel! { get set }
-    var imageView: UIImageView! { get set }
     var percentage: UILabel! { get set }
     var startButton: UIButton! { get set }
     var downloadButton: UIButton! { get set }
+    var circleContainer: CircleCardContentView! { get set }
     
     // MARK: - CardController Delegate
     
@@ -27,7 +27,6 @@ protocol CardProtocol {
     // MARK: - Func
     
     static func cellIdentifier() -> String
-    func setup() -> Void
     func content(card: Card) -> Void
 }
 
