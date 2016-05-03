@@ -26,6 +26,8 @@ class ActiveCell: AbstractCard, CardProtocol {
     }
     
     func setup() {
+        circleContainer.cardDelegate = self
+        
         setupTitle()
         setupSubtitle()
         setupPercentage()
@@ -107,8 +109,6 @@ class ActiveCell: AbstractCard, CardProtocol {
         if(status == .Done) {
             circleContainer.circleProgressColor = UIColor.OCTurquoiseColor()
             circleContainer.circularProgressBar.progress = 1.0
-            percentage.textColor = UIColor.OCTurquoiseColor()
-            percentage.text = "100%"
         }
     }
     

@@ -80,7 +80,6 @@ class CardDetailViewController: UIViewController, CardDetailControllerDelegate {
     override func willMoveToParentViewController(parent: UIViewController?) {
         if(parent == nil && card.cardStatus == .InProgress) {
             cell.circleContainer.circularProgressBar.progress = 0.35
-            cell.percentage.text = "35%"
         }
     }
 }

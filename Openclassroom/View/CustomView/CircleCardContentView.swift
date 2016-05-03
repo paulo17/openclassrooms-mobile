@@ -15,6 +15,7 @@ class CircleCardContentView: UIView {
     lazy var cardIcon: UIImageView = UIImageView()
     
     var circularProgressBar: KYCircularProgress!
+    var cardDelegate: CardProtocol!
     
     var circleColor: UIColor = UIColor.OCWhiteColor() {
         didSet {
@@ -35,6 +36,7 @@ class CircleCardContentView: UIView {
         
         setupCircle()
         setupImage()
+        progressChangeDelegate() // start progress change delegate
         
         // subviews
         self.addSubview(circularProgressBar)
@@ -61,6 +63,24 @@ class CircleCardContentView: UIView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
+    
+    // MARK: - Progress Change Delegate
+    
+    func progressChangeDelegate() {
+        circularProgressBar.progressChangedClosure { (progress, circularView) in
+            let progressPercentage = Int(progress*100)
+            
+            if progressPercentage == 100 {
+                self.cardDelegate.percentage.textColor = UIColor.OCTurquoiseColor()
+            } else {
+                self.cardDelegate.percentage.textColor = UIColor.OCDustyOrangeColor()
+            }
+            
+            self.cardDelegate.percentage.text = "\(progressPercentage)%"
+        }
+    }
+    
+    // MARK: - Setup UI
     
     private func setupCircle() {
         circularProgressBar = KYCircularProgress(frame: self.frame, showProgressGuide: true)
