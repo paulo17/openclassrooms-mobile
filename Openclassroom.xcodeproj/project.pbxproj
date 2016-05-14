@@ -418,6 +418,7 @@
 				BB4DEE2FDF7B0EA467BF738B /* Embed Pods Frameworks */,
 				070C5F5FB7F19DFF7C58D535 /* Copy Pods Resources */,
 				6BEAA7151C5FB66F0043BEA2 /* ShellScript */,
+				6BC9174E1CE729A6008D3442 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -493,6 +494,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Openclassroom/Pods-Openclassroom-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		6BC9174E1CE729A6008D3442 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 		6BEAA7151C5FB66F0043BEA2 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;

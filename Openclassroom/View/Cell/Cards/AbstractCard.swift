@@ -54,7 +54,7 @@ class AbstractCard: UICollectionViewCell {
     func cardImagePath(card: Card) -> String {
         return "\(card.type.rawValue)\(card.cardStatus.rawValue)Icon"
     }
-
+    
     /**
      Setup card container UIView with margin left and right of 30
      */
@@ -65,8 +65,8 @@ class AbstractCard: UICollectionViewCell {
         // add border shadow
         containerView.layer.masksToBounds = false
         containerView.layer.shadowColor = UIColor.blackColor().CGColor
-        containerView.layer.shadowOffset = CGSizeMake(0.0, 1.0);
-        containerView.layer.shadowOpacity = 0.1;
+        containerView.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
+        containerView.layer.shadowOpacity = 0.1
         
         self.addSubview(containerView)
         

@@ -49,7 +49,7 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(categoryCellIdentifier, forIndexPath: indexPath) as! CategoryCell
         
         cell.initializeCellWithContent(categories[indexPath.row])
-    
+        
         return cell
     }
     

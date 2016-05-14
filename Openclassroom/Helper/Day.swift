@@ -85,9 +85,7 @@ struct Days {
         if daysBinary == 127 {
             return "Tous les jours"
         }
-    
+        
         return days.joinWithSeparator(", ")
     }
 }
-
-

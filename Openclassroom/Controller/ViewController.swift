@@ -33,17 +33,14 @@ class ViewController: UIViewController {
             circleContainer.centerX == circleContainer.superview!.centerX
             circleContainer.centerY == circleContainer.superview!.centerY
         }
-
         
-        print(circleContainer.frame)
-
         circularProgressBar = KYCircularProgress(frame: circleContainer.frame, showProgressGuide: true)
         
         circularProgressBar.colors = [UIColor.OCDustyOrangeColor()]
         circularProgressBar.lineWidth = 5.0
         circularProgressBar.guideLineWidth = 5.0
         circularProgressBar.progressGuideColor = UIColor.OCSilverColor()
-
+        
         circularProgressBar.progress = 0.8
         
         circleContainer.addSubview(circularProgressBar)
@@ -52,8 +49,7 @@ class ViewController: UIViewController {
             container, bar in
             bar.edges == container.edges
         }
-    
+        
     }
     
 }
-

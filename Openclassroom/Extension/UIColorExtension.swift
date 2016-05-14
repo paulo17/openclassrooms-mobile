@@ -54,7 +54,7 @@ extension UIColor {
         }
         
         guard let hexString: String = rgba.substringFromIndex(rgba.startIndex.advancedBy(1)),
-            var   hexValue:  UInt32 = 0
+            var hexValue: UInt32 = 0
             where NSScanner(string: hexString).scanHexInt(&hexValue) else {
                 throw Error.UnableToScanHexValue
         }
@@ -66,7 +66,7 @@ extension UIColor {
                 throw Error.MismatchedHexStringLength
         }
         
-        switch (hexString.characters.count) {
+        switch hexString.characters.count {
         case 3: self.init(hex3: UInt16(hexValue))
         case 4: self.init(hex4: UInt16(hexValue))
         case 6: self.init(hex6: hexValue)

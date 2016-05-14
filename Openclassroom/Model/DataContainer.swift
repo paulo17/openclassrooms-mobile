@@ -17,8 +17,7 @@ class DataContainer {
     
     var goToBackgroundObserver: AnyObject?
     
-    private init()
-    {
+    private init() {
         let defaults = NSUserDefaults.standardUserDefaults()
         
         currentUser = defaults.objectForKey("User") as! User?
@@ -28,16 +27,15 @@ class DataContainer {
         goToBackgroundObserver = NSNotificationCenter.defaultCenter().addObserverForName(
             UIApplicationDidEnterBackgroundNotification,
             object: nil,
-            queue: nil)
-        {
-            (note: NSNotification!) -> Void in
-            
-            let defaults = NSUserDefaults.standardUserDefaults()
-            
-            defaults.setObject(self.currentUser, forKey: "User")
-        
-            //Tell NSUserDefaults to save to disk now.
-            defaults.synchronize()
+            queue: nil) {
+                (note: NSNotification!) -> Void in
+                
+                let defaults = NSUserDefaults.standardUserDefaults()
+                
+                defaults.setObject(self.currentUser, forKey: "User")
+                
+                //Tell NSUserDefaults to save to disk now.
+                defaults.synchronize()
         }
     }
 }

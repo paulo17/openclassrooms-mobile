@@ -13,7 +13,7 @@ import BWWalkthrough
 class WalkthroughViewController: UIViewController, BWWalkthroughViewControllerDelegate {
     
     lazy var walkthroughMaster: BWWalkthroughViewController = BWWalkthroughViewController()
-    let app_mode = NSBundle.mainBundle().objectForInfoDictionaryKey("App Mode") as! String
+    let appMode = NSBundle.mainBundle().objectForInfoDictionaryKey("App Mode") as! String
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,14 +29,14 @@ class WalkthroughViewController: UIViewController, BWWalkthroughViewControllerDe
         
         let userDefaults = NSUserDefaults.standardUserDefaults()
         
-        if(!userDefaults.boolForKey("walkthroughClosed") || app_mode == "DEV") {
+        if !userDefaults.boolForKey("walkthroughClosed") || appMode == "DEV" {
             showWalkthrough()
         }
         
     }
     
     func setStatusBarBackground(controller: UIViewController) {
-        let statusBarView: UIView = UIView(frame: CGRectMake(0, 0, self.view.frame.size.width, 22))
+        let statusBarView: UIView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 22))
         statusBarView.backgroundColor = UIColor.OCDustyOrangeColor()
         controller.view.addSubview(statusBarView)
     }
@@ -86,6 +86,4 @@ class WalkthroughViewController: UIViewController, BWWalkthroughViewControllerDe
         userDefaults.setBool(true, forKey: "walkthroughClosed")
         userDefaults.synchronize()
     }
-    
 }
-

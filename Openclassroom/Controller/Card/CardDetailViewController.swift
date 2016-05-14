@@ -23,7 +23,7 @@ class CardDetailViewController: UIViewController, CardDetailControllerDelegate {
     
     var delegate: CardViewController!
     var cardDetailView: AbstractCardDetail!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -64,7 +64,7 @@ class CardDetailViewController: UIViewController, CardDetailControllerDelegate {
     
     func finish() {
         card.cardStatus = .Done
-       
+        
         delegate.finishCallback(sender: self) // launch callback
         
         self.navigationController?.popViewControllerAnimated(true)
@@ -78,7 +78,7 @@ class CardDetailViewController: UIViewController, CardDetailControllerDelegate {
      - parameter parent: UIViewController parent
      */
     override func willMoveToParentViewController(parent: UIViewController?) {
-        if(parent == nil && card.cardStatus == .InProgress) {
+        if parent == nil && card.cardStatus == .InProgress {
             cell.circleContainer.circularProgressBar.progress = 0.35
         }
     }

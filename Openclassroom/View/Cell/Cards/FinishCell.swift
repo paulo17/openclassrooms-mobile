@@ -61,7 +61,7 @@ class FinishCell: AbstractCard, CardProtocol {
             UIImage(named: "shapematch") :
             UIImage(named: "shapematchgrey")
         
-        if(status == .Done) {
+        if status == .Done {
             circleContainer.circleProgressColor = UIColor.OCTurquoiseColor()
             circleContainer.circularProgressBar.progress = 1.0
         }
@@ -78,8 +78,8 @@ class FinishCell: AbstractCard, CardProtocol {
     }
     
     /*private func setupImage() {
-        let image = UIImage(named: "shapematchgrey")
-        imageView.image = image
-        imageView.contentMode = .ScaleAspectFill
-    }*/
+     let image = UIImage(named: "shapematchgrey")
+     imageView.image = image
+     imageView.contentMode = .ScaleAspectFill
+     }*/
 }

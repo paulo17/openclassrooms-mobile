@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
-    let app_mode = NSBundle.mainBundle().objectForInfoDictionaryKey("App Mode") as! String
+    let appMode = NSBundle.mainBundle().objectForInfoDictionaryKey("App Mode") as! String
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
@@ -59,20 +59,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func presentWalkthrough() {
         let userDefaults = NSUserDefaults.standardUserDefaults()
         
-        if(!userDefaults.boolForKey("walkthroughClosed") || app_mode == "DEV") {
+        if !userDefaults.boolForKey("walkthroughClosed") || appMode == "DEV" {
             if let window = window {
                 window.rootViewController = WalkthroughViewController()
             }
         }
-    }
-    
-    func isLoggedIn() {
-        // TODO: check login user
-        /*if() {
-         if let window = window {
-         window.rootViewController = MainViewController()
-         }
-         }*/
     }
     
     // MARK: - Core Data stack
@@ -138,4 +129,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 }
-
