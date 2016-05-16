@@ -1,14 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Walkthrough View Controller-->
+        <!--Expand Navigation Controller-->
+        <scene sceneID="qRD-0Q-xtb">
+            <objects>
+                <navigationController storyboardIdentifier="WalkthroughNavigationController" id="hEh-Cm-bGe" customClass="OCExpandNavigationController" customModule="Openclassroom" customModuleProvider="target" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rKb-qu-EJD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="R6f-J0-OkJ" kind="relationship" relationship="rootViewController" id="GR6-Eg-1Bv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gJU-0C-yAL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-719.5" y="458.5"/>
+        </scene>
+        <!--Onboarding View Controller-->
         <scene sceneID="VTW-Yj-0ga">
             <objects>
-                <viewController storyboardIdentifier="walkthrough_master" id="R6f-J0-OkJ" customClass="BWWalkthroughViewController" customModule="BWWalkthrough" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="walkthrough_master" id="R6f-J0-OkJ" customClass="OCOnboardingViewController" customModule="Openclassroom" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="T0W-h7-M5S"/>
                         <viewControllerLayoutGuide type="bottom" id="8cg-TR-BpX"/>
@@ -38,20 +55,9 @@
                                 <color key="pageIndicatorTintColor" red="0.74901962280273438" green="0.74901962280273438" blue="0.76470589637756348" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <color key="currentPageIndicatorTintColor" red="0.9529411792755127" green="0.58431375026702881" blue="0.22352941334247589" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             </pageControl>
-                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IN4-5k-1Fm">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <color key="barTintColor" red="0.9529411792755127" green="0.58431375026702881" blue="0.22352941334247589" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Openclassroom" id="5n9-9V-Yfr"/>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="9Dj-C0-yji" firstAttribute="top" secondItem="IN4-5k-1Fm" secondAttribute="bottom" constant="546" id="266-6t-4GI"/>
                             <constraint firstItem="9Dj-C0-yji" firstAttribute="centerX" secondItem="iZ6-fS-hUH" secondAttribute="centerX" id="3Wk-rU-qiy"/>
                             <constraint firstItem="9Dj-C0-yji" firstAttribute="leading" secondItem="iZ6-fS-hUH" secondAttribute="leadingMargin" constant="140" id="A6K-xG-jNQ"/>
                             <constraint firstItem="8cg-TR-BpX" firstAttribute="top" secondItem="9Dj-C0-yji" secondAttribute="bottom" constant="30" id="A8l-Ni-uEg"/>
@@ -60,18 +66,14 @@
                             <constraint firstAttribute="trailingMargin" secondItem="9Dj-C0-yji" secondAttribute="trailing" constant="140" id="TLI-1O-Twh"/>
                             <constraint firstItem="8cg-TR-BpX" firstAttribute="top" secondItem="mRP-gq-ETD" secondAttribute="bottom" id="TLN-5W-lmL"/>
                             <constraint firstItem="8cg-TR-BpX" firstAttribute="top" secondItem="9Dj-C0-yji" secondAttribute="bottom" constant="20" id="b5N-kC-GU5"/>
-                            <constraint firstAttribute="trailing" secondItem="IN4-5k-1Fm" secondAttribute="trailing" id="bcY-4K-hTy"/>
-                            <constraint firstItem="IN4-5k-1Fm" firstAttribute="leading" secondItem="iZ6-fS-hUH" secondAttribute="leading" id="eba-2V-t3k"/>
                             <constraint firstItem="9Dj-C0-yji" firstAttribute="top" secondItem="mRP-gq-ETD" secondAttribute="bottom" constant="35" id="lqF-Y5-5m4"/>
                             <constraint firstItem="mRP-gq-ETD" firstAttribute="top" secondItem="T0W-h7-M5S" secondAttribute="bottom" constant="530" id="mVA-wo-cLf"/>
                             <constraint firstItem="9Dj-C0-yji" firstAttribute="top" secondItem="mRP-gq-ETD" secondAttribute="bottom" constant="60" id="nCz-hW-ghh"/>
                             <constraint firstItem="mRP-gq-ETD" firstAttribute="centerX" secondItem="iZ6-fS-hUH" secondAttribute="centerX" id="oiG-jg-qms"/>
-                            <constraint firstItem="IN4-5k-1Fm" firstAttribute="top" secondItem="T0W-h7-M5S" secondAttribute="bottom" id="orT-qe-Xc4"/>
                             <constraint firstItem="mRP-gq-ETD" firstAttribute="top" secondItem="9Dj-C0-yji" secondAttribute="bottom" constant="5" id="q72-DV-iNu"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="266-6t-4GI"/>
                                 <exclude reference="A6K-xG-jNQ"/>
                                 <exclude reference="TLI-1O-Twh"/>
                                 <exclude reference="lqF-Y5-5m4"/>
@@ -84,15 +86,16 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="357-EN-jqA"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="closeButton" destination="9Dj-C0-yji" id="ZbN-IG-wAn"/>
+                        <outlet property="closeButton" destination="9Dj-C0-yji" id="Hbk-OH-wxg"/>
                         <outlet property="pageControl" destination="mRP-gq-ETD" id="uvP-du-xdq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tEh-m8-PA2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-180.5" y="458.5"/>
+            <point key="canvasLocation" x="-237.5" y="458.5"/>
         </scene>
         <!--Walkthrough Page View Controller-->
         <scene sceneID="wgY-uP-MNV">
@@ -107,7 +110,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p1S-mV-Cb1">
-                                <rect key="frame" x="30" y="116" width="315" height="485"/>
+                                <rect key="frame" x="30" y="101" width="315" height="485"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notification-iphone" translatesAutoresizingMaskIntoConstraints="NO" id="5at-G9-eBH">
                                         <rect key="frame" x="0.0" y="211" width="315" height="274"/>
@@ -156,9 +159,9 @@ virtuel. Défnissez votre ojbectif, vos jours de travail, et votre temps de trav
                         </subviews>
                         <constraints>
                             <constraint firstItem="p1S-mV-Cb1" firstAttribute="leading" secondItem="gtJ-JR-max" secondAttribute="leading" constant="30" id="0HU-wk-bMi"/>
-                            <constraint firstItem="p1S-mV-Cb1" firstAttribute="top" secondItem="bY4-mI-QfU" secondAttribute="bottom" constant="96" id="806-fm-WSp"/>
+                            <constraint firstItem="p1S-mV-Cb1" firstAttribute="top" secondItem="bY4-mI-QfU" secondAttribute="bottom" constant="81" id="806-fm-WSp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="p1S-mV-Cb1" secondAttribute="trailing" constant="30" id="HmM-sJ-O6y"/>
-                            <constraint firstItem="eNN-SA-cep" firstAttribute="top" secondItem="p1S-mV-Cb1" secondAttribute="bottom" constant="66" id="Ucf-9V-wbo"/>
+                            <constraint firstItem="eNN-SA-cep" firstAttribute="top" secondItem="p1S-mV-Cb1" secondAttribute="bottom" constant="81" id="Ucf-9V-wbo"/>
                             <constraint firstAttribute="trailing" secondItem="p1S-mV-Cb1" secondAttribute="trailing" constant="30" id="hdO-mq-I5E"/>
                             <constraint firstItem="p1S-mV-Cb1" firstAttribute="leading" secondItem="gtJ-JR-max" secondAttribute="leadingMargin" constant="30" id="zDp-F1-cui"/>
                         </constraints>
@@ -170,10 +173,13 @@ virtuel. Défnissez votre ojbectif, vos jours de travail, et votre temps de trav
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="animateAlpha" value="NO"/>
+                    </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OpX-so-7pF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="256.5" y="458.5"/>
+            <point key="canvasLocation" x="224.5" y="453.5"/>
         </scene>
         <!--Walkthrough Page View Controller-->
         <scene sceneID="FYB-uY-m3k">
@@ -188,7 +194,7 @@ virtuel. Défnissez votre ojbectif, vos jours de travail, et votre temps de trav
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6qe-ml-dhN">
-                                <rect key="frame" x="30" y="116" width="315" height="485"/>
+                                <rect key="frame" x="30" y="101" width="315" height="485"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Votre coach vous motivera et vous accompagnera pour atteindre votre objectif." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jLR-Hx-x13">
                                         <rect key="frame" x="17" y="89" width="281" height="92"/>
@@ -249,10 +255,10 @@ virtuel. Défnissez votre ojbectif, vos jours de travail, et votre temps de trav
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="6qe-ml-dhN" secondAttribute="trailing" constant="30" id="MMa-SH-ujg"/>
                             <constraint firstItem="6qe-ml-dhN" firstAttribute="leading" secondItem="Lfr-UM-8Kd" secondAttribute="leadingMargin" constant="30" id="MUC-cv-PK0"/>
-                            <constraint firstItem="bNB-1k-bcf" firstAttribute="top" secondItem="6qe-ml-dhN" secondAttribute="bottom" constant="66" id="aG5-Ft-JiT"/>
+                            <constraint firstItem="bNB-1k-bcf" firstAttribute="top" secondItem="6qe-ml-dhN" secondAttribute="bottom" constant="81" id="aG5-Ft-JiT"/>
                             <constraint firstItem="6qe-ml-dhN" firstAttribute="leading" secondItem="Lfr-UM-8Kd" secondAttribute="leading" constant="30" id="fPG-Gc-BLP"/>
                             <constraint firstAttribute="trailing" secondItem="6qe-ml-dhN" secondAttribute="trailing" constant="30" id="jRs-hn-F5Q"/>
-                            <constraint firstItem="6qe-ml-dhN" firstAttribute="top" secondItem="B6I-Ad-xcd" secondAttribute="bottom" constant="96" id="vM5-YS-TEK"/>
+                            <constraint firstItem="6qe-ml-dhN" firstAttribute="top" secondItem="B6I-Ad-xcd" secondAttribute="bottom" constant="81" id="vM5-YS-TEK"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -262,6 +268,9 @@ virtuel. Défnissez votre ojbectif, vos jours de travail, et votre temps de trav
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="animateAlpha" value="NO"/>
+                    </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rku-xP-mhn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -279,8 +288,22 @@ virtuel. Défnissez votre ojbectif, vos jours de travail, et votre temps de trav
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q53-mz-ppY">
+                                <rect key="frame" x="30" y="614" width="315" height="41"/>
+                                <color key="backgroundColor" red="0.9529411792755127" green="0.58431375026702881" blue="0.22352941334247589" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="W3J-Hh-hLp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                <state key="normal" title="Suivant">
+                                    <color key="titleColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="launchApp:" destination="2So-ui-fvv" eventType="touchUpInside" id="d07-E4-fVK"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mav-hu-QhH">
-                                <rect key="frame" x="30" y="116" width="315" height="485"/>
+                                <rect key="frame" x="30" y="101" width="315" height="485"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Un coaching personnalisé pour suivre les cours OpenClassrooms à votre rythme." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2vi-Aw-7cd">
                                         <rect key="frame" x="19" y="89" width="277" height="92"/>
@@ -331,26 +354,12 @@ virtuel. Défnissez votre ojbectif, vos jours de travail, et votre temps de trav
                                     </mask>
                                 </variation>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q53-mz-ppY">
-                                <rect key="frame" x="30" y="614" width="315" height="41"/>
-                                <color key="backgroundColor" red="0.9529411792755127" green="0.58431375026702881" blue="0.22352941334247589" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="41" id="W3J-Hh-hLp"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
-                                <state key="normal" title="Suivant">
-                                    <color key="titleColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="launchApp:" destination="2So-ui-fvv" eventType="touchUpInside" id="d07-E4-fVK"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="mav-hu-QhH" secondAttribute="trailing" constant="30" id="2sH-we-YLx"/>
-                            <constraint firstItem="0mN-ed-Pzh" firstAttribute="top" secondItem="mav-hu-QhH" secondAttribute="bottom" constant="66" id="5hi-Z2-rtg"/>
+                            <constraint firstItem="0mN-ed-Pzh" firstAttribute="top" secondItem="mav-hu-QhH" secondAttribute="bottom" constant="81" id="5hi-Z2-rtg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="q53-mz-ppY" secondAttribute="trailing" constant="60" id="DRV-1H-qUh"/>
-                            <constraint firstItem="mav-hu-QhH" firstAttribute="top" secondItem="aGz-iw-5nu" secondAttribute="bottom" constant="96" id="EoR-BV-On4"/>
+                            <constraint firstItem="mav-hu-QhH" firstAttribute="top" secondItem="aGz-iw-5nu" secondAttribute="bottom" constant="81" id="EoR-BV-On4"/>
                             <constraint firstItem="0mN-ed-Pzh" firstAttribute="top" secondItem="q53-mz-ppY" secondAttribute="bottom" constant="12" id="Etl-fR-pmB"/>
                             <constraint firstItem="q53-mz-ppY" firstAttribute="leading" secondItem="yy4-ee-iS5" secondAttribute="leadingMargin" constant="60" id="QFR-eX-vzx"/>
                             <constraint firstItem="q53-mz-ppY" firstAttribute="top" secondItem="mav-hu-QhH" secondAttribute="bottom" constant="66" id="TZK-fO-xaV"/>

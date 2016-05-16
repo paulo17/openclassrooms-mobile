@@ -61,7 +61,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if !userDefaults.boolForKey("walkthroughClosed") || appMode == "DEV" {
             if let window = window {
-                window.rootViewController = WalkthroughViewController()
+                let walkthroughtStoryboard = UIStoryboard(name: "Walkthrough", bundle: nil)
+                
+                let walkthroughNavigationController = walkthroughtStoryboard.instantiateViewControllerWithIdentifier("WalkthroughNavigationController") as! UINavigationController
+                
+                window.rootViewController = walkthroughNavigationController
+                //walkthroughNavigationController.pushViewController(WalkthroughViewController(), animated: false)
             }
         }
     }
