@@ -21,7 +21,7 @@ class CardDetailViewController: UIViewController, CardDetailControllerDelegate {
     
     // MARK : - Other instance variables
     
-    var delegate: CardViewController!
+    weak var delegate: CardViewController!
     var cardDetailView: AbstractCardDetail!
     
     override func viewDidLoad() {

@@ -15,7 +15,8 @@ class ParameterView: UIView {
     @IBOutlet weak var button: UIButton!
     
     var identifier: String!
-    var delegate: ParameterViewDelegate?
+    
+    weak var delegate: ParameterViewDelegate?
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
