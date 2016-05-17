@@ -37,7 +37,7 @@ class CardDetailViewController: UIViewController, CardDetailControllerDelegate {
         
         let account = UIImage(named: "account")
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: account, style: .Plain, target: nil, action: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: account, style: .Plain, target: MainCardViewController.self, action: #selector(MainCardViewController.showProfile))
     }
     
     override func viewWillAppear(animated: Bool) {

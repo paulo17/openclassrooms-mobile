@@ -10,6 +10,9 @@ import UIKit
 
 class OCExpandNavigationController: UINavigationController {
     
+    let colorMain = try! UIColor(rgba_throws: "#F39539")
+    let colorSecondary = try! UIColor(rgba_throws: "#C21945")
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +34,10 @@ class OCExpandNavigationController: UINavigationController {
         
         var bounds = self.navigationBar.bounds
         bounds.size.height += 100
+        
+        let colorGradientLeft = colorMain
+        let colorGradientRight = colorSecondary
+        
         self.navigationBar.setBackgroundImage(CAGradientLayer.createGradient([colorGradientLeft.CGColor, colorGradientRight.CGColor], bounds: bounds), forBarMetrics: UIBarMetrics.Default)
     }
 }

@@ -25,7 +25,6 @@
 		6B4E30FB1C99A48500BE42CB /* TimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4E30FA1C99A48500BE42CB /* TimeViewController.swift */; };
 		6B4E30FF1C9D78C600BE42CB /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4E30FE1C9D78C600BE42CB /* CategoryCell.swift */; };
 		6B7D3C1A1CEB98E800A0675D /* MainCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7D3C191CEB98E800A0675D /* MainCardViewController.swift */; };
-		6B8829351CABDFFB003CC1EC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8829291CABDFFB003CC1EC /* Constants.swift */; };
 		6B8829371CABDFFB003CC1EC /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B88292B1CABDFFB003CC1EC /* Font.swift */; };
 		6B88293C1CABDFFB003CC1EC /* Redirect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8829301CABDFFB003CC1EC /* Redirect.swift */; };
 		6B8829401CABE090003CC1EC /* ProgramCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B88293F1CABE090003CC1EC /* ProgramCell.swift */; };
@@ -37,7 +36,6 @@
 		6B88294F1CABE18D003CC1EC /* OCNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8829471CABE18D003CC1EC /* OCNavigationBar.swift */; };
 		6B8829501CABE18D003CC1EC /* OCTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8829481CABE18D003CC1EC /* OCTextField.swift */; };
 		6B8829511CABE18D003CC1EC /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8829491CABE18D003CC1EC /* UIColor.swift */; };
-		6B8829521CABE18D003CC1EC /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B88294A1CABE18D003CC1EC /* UIColorExtension.swift */; };
 		6B8D98C61CD4C69900EA7DDE /* CircleCardContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8D98C51CD4C69900EA7DDE /* CircleCardContentView.swift */; };
 		6BA0F81C1C984CEE001AA68E /* CustomWalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA0F81B1C984CEE001AA68E /* CustomWalkthroughPageViewController.swift */; };
 		6BA776EF1CABDB0A001CDD78 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA776E41CABDB0A001CDD78 /* Category.swift */; };
@@ -91,7 +89,6 @@
 		6B4E30FA1C99A48500BE42CB /* TimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeViewController.swift; sourceTree = "<group>"; };
 		6B4E30FE1C9D78C600BE42CB /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		6B7D3C191CEB98E800A0675D /* MainCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCardViewController.swift; sourceTree = "<group>"; };
-		6B8829291CABDFFB003CC1EC /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6B88292B1CABDFFB003CC1EC /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		6B8829301CABDFFB003CC1EC /* Redirect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Redirect.swift; sourceTree = "<group>"; };
 		6B88293F1CABE090003CC1EC /* ProgramCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramCell.swift; sourceTree = "<group>"; };
@@ -103,7 +100,6 @@
 		6B8829471CABE18D003CC1EC /* OCNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCNavigationBar.swift; sourceTree = "<group>"; };
 		6B8829481CABE18D003CC1EC /* OCTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCTextField.swift; sourceTree = "<group>"; };
 		6B8829491CABE18D003CC1EC /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
-		6B88294A1CABE18D003CC1EC /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		6B8D98C51CD4C69900EA7DDE /* CircleCardContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleCardContentView.swift; sourceTree = "<group>"; };
 		6BA0F81B1C984CEE001AA68E /* CustomWalkthroughPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomWalkthroughPageViewController.swift; sourceTree = "<group>"; };
 		6BA776E41CABDB0A001CDD78 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
@@ -175,7 +171,6 @@
 		6B36B3251C60B6DA00989167 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				6B8829291CABDFFB003CC1EC /* Constants.swift */,
 				6B88292B1CABDFFB003CC1EC /* Font.swift */,
 				6B8829301CABDFFB003CC1EC /* Redirect.swift */,
 				6BF9C27E1CAFDCC40088EE95 /* Day.swift */,
@@ -296,7 +291,6 @@
 				6B8829471CABE18D003CC1EC /* OCNavigationBar.swift */,
 				6B8829481CABE18D003CC1EC /* OCTextField.swift */,
 				6B8829491CABE18D003CC1EC /* UIColor.swift */,
-				6B88294A1CABE18D003CC1EC /* UIColorExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -574,7 +568,6 @@
 			files = (
 				6BE8D07D1CB5444B000D3243 /* Card.swift in Sources */,
 				6B4E30F91C99A47D00BE42CB /* DayViewController.swift in Sources */,
-				6B8829351CABDFFB003CC1EC /* Constants.swift in Sources */,
 				6B05491D1CBA89C90077684D /* TextCardDetail.swift in Sources */,
 				6BA776F31CABDB0A001CDD78 /* OCAbstractManager.swift in Sources */,
 				6B7D3C1A1CEB98E800A0675D /* MainCardViewController.swift in Sources */,
@@ -598,7 +591,6 @@
 				6B88294E1CABE18D003CC1EC /* OCButton.swift in Sources */,
 				6BA776F21CABDB0A001CDD78 /* Objective.swift in Sources */,
 				6B4BEE7F1C8723E7006D2862 /* SignInViewController.swift in Sources */,
-				6B8829521CABE18D003CC1EC /* UIColorExtension.swift in Sources */,
 				6BA776F01CABDB0A001CDD78 /* DataContainer.swift in Sources */,
 				6B8829421CABE12E003CC1EC /* OCExpandNavigationController.swift in Sources */,
 				6BBC5F901CA487C600EC7EFE /* ParameterViewController.swift in Sources */,
