@@ -47,8 +47,7 @@ class OCOnboardingViewController: BWWalkthroughViewController, BWWalkthroughView
         constrain(page_one.view, page_two.view, page_three.view, view) {
             page_one, page_two, page_three, container in
             page_one.top == container.top
-            page_two.top == container.top
-            page_three.top == container.top
+            page_one.bottom == container.bottom
         }
         
         constrain(scrollview, view) {
