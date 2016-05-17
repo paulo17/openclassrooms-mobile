@@ -35,12 +35,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Dj-C0-yji">
-                                <rect key="frame" x="137" y="610" width="101" height="15"/>
+                                <rect key="frame" x="169" y="610" width="37" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="QVP-ZD-cQj"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
-                                <state key="normal" title="Passer cette étape">
+                                <state key="normal" title="Passer">
                                     <color key="titleColor" red="0.9529411792755127" green="0.58431375026702881" blue="0.22352941334247589" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -89,8 +89,8 @@
                     <navigationItem key="navigationItem" id="357-EN-jqA"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="closeButton" destination="9Dj-C0-yji" id="Hbk-OH-wxg"/>
-                        <outlet property="pageControl" destination="mRP-gq-ETD" id="uvP-du-xdq"/>
+                        <outlet property="closeButton" destination="9Dj-C0-yji" id="2vn-ls-GyR"/>
+                        <outlet property="pageControl" destination="mRP-gq-ETD" id="nka-WF-gUE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tEh-m8-PA2" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -24,15 +24,12 @@ class OCOnboardingViewController: BWWalkthroughViewController, BWWalkthroughView
         super.viewWillAppear(animated)
         
         scrollview.bounces = false
-        
         automaticallyAdjustsScrollViewInsets = false
-        
-        scrollview.showsHorizontalScrollIndicator = true
-        scrollview.showsVerticalScrollIndicator = true
     }
     
     func showWalkthrough() {
         let walkthroughStoryboard = UIStoryboard(name: "Walkthrough", bundle: nil)
+        delegate = self // set current controller as walkthrough delegate
         
         let page_one = walkthroughStoryboard.instantiateViewControllerWithIdentifier("walkthrough1")
         let page_two = walkthroughStoryboard.instantiateViewControllerWithIdentifier("walkthrough2")
@@ -50,12 +47,6 @@ class OCOnboardingViewController: BWWalkthroughViewController, BWWalkthroughView
             page_one.bottom == container.bottom
         }
         
-        constrain(scrollview, view) {
-            scrollview, container in
-            
-            //scrollview.top == container.top
-            //scrollview.bottom == container.bottom
-        }
     }
     
     // MARK: - Walkthrough delegate
