@@ -38,7 +38,6 @@
 		6B8829511CABE18D003CC1EC /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8829491CABE18D003CC1EC /* UIColor.swift */; };
 		6B8829521CABE18D003CC1EC /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B88294A1CABE18D003CC1EC /* UIColorExtension.swift */; };
 		6B8D98C61CD4C69900EA7DDE /* CircleCardContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8D98C51CD4C69900EA7DDE /* CircleCardContentView.swift */; };
-		6BA0F81A1C984BB0001AA68E /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA0F8191C984BB0001AA68E /* WalkthroughViewController.swift */; };
 		6BA0F81C1C984CEE001AA68E /* CustomWalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA0F81B1C984CEE001AA68E /* CustomWalkthroughPageViewController.swift */; };
 		6BA776EF1CABDB0A001CDD78 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA776E41CABDB0A001CDD78 /* Category.swift */; };
 		6BA776F01CABDB0A001CDD78 /* DataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA776E51CABDB0A001CDD78 /* DataContainer.swift */; };
@@ -49,6 +48,7 @@
 		6BA776F61CABDB0A001CDD78 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA776EE1CABDB0A001CDD78 /* UserManager.swift */; };
 		6BA776F91CABDC11001CDD78 /* OC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6BA776F71CABDC11001CDD78 /* OC.xcdatamodeld */; };
 		6BBC5F901CA487C600EC7EFE /* ParameterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC5F8F1CA487C600EC7EFE /* ParameterViewController.swift */; };
+		6BC917501CEA5A22008D3442 /* OCOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC9174F1CEA5A22008D3442 /* OCOnboardingViewController.swift */; };
 		6BD1DA0E1CA7E6370075057F /* ParameterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD1DA0D1CA7E6370075057F /* ParameterView.swift */; };
 		6BDE35111CB1469F00D6DC6B /* Cards.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BDE35101CB1469F00D6DC6B /* Cards.storyboard */; };
 		6BE8D0691CB50ECD000D3243 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE8D0681CB50ECD000D3243 /* CardViewController.swift */; };
@@ -102,7 +102,6 @@
 		6B8829491CABE18D003CC1EC /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		6B88294A1CABE18D003CC1EC /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		6B8D98C51CD4C69900EA7DDE /* CircleCardContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleCardContentView.swift; sourceTree = "<group>"; };
-		6BA0F8191C984BB0001AA68E /* WalkthroughViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
 		6BA0F81B1C984CEE001AA68E /* CustomWalkthroughPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomWalkthroughPageViewController.swift; sourceTree = "<group>"; };
 		6BA776E41CABDB0A001CDD78 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		6BA776E51CABDB0A001CDD78 /* DataContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataContainer.swift; sourceTree = "<group>"; };
@@ -113,6 +112,7 @@
 		6BA776EE1CABDB0A001CDD78 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		6BA776F81CABDC11001CDD78 /* OC.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OC.xcdatamodel; sourceTree = "<group>"; };
 		6BBC5F8F1CA487C600EC7EFE /* ParameterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterViewController.swift; sourceTree = "<group>"; };
+		6BC9174F1CEA5A22008D3442 /* OCOnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCOnboardingViewController.swift; sourceTree = "<group>"; };
 		6BD1DA0D1CA7E6370075057F /* ParameterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterView.swift; sourceTree = "<group>"; };
 		6BDE35101CB1469F00D6DC6B /* Cards.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Cards.storyboard; sourceTree = "<group>"; };
 		6BE8D0681CB50ECD000D3243 /* CardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
@@ -214,7 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				6BA0F81B1C984CEE001AA68E /* CustomWalkthroughPageViewController.swift */,
-				6BA0F8191C984BB0001AA68E /* WalkthroughViewController.swift */,
+				6BC9174F1CEA5A22008D3442 /* OCOnboardingViewController.swift */,
 			);
 			path = Walkthrough;
 			sourceTree = "<group>";
@@ -576,6 +576,7 @@
 				6B88294F1CABE18D003CC1EC /* OCNavigationBar.swift in Sources */,
 				6B4BEE7B1C8723A8006D2862 /* RegisterViewController.swift in Sources */,
 				6B4E30F51C99A3A000BE42CB /* ObjectiveViewController.swift in Sources */,
+				6BC917501CEA5A22008D3442 /* OCOnboardingViewController.swift in Sources */,
 				6BD1DA0E1CA7E6370075057F /* ParameterView.swift in Sources */,
 				6B05491F1CBA89ED0077684D /* VideoCardDetail.swift in Sources */,
 				6BA776EF1CABDB0A001CDD78 /* Category.swift in Sources */,
@@ -602,7 +603,6 @@
 				6B88294C1CABE18D003CC1EC /* CAGradientLayerExtension.swift in Sources */,
 				6B8829501CABE18D003CC1EC /* OCTextField.swift in Sources */,
 				6BF23A9C1C5FAE94001B1006 /* AppDelegate.swift in Sources */,
-				6BA0F81A1C984BB0001AA68E /* WalkthroughViewController.swift in Sources */,
 				6BA776F51CABDB0A001CDD78 /* User.swift in Sources */,
 				6B8829371CABDFFB003CC1EC /* Font.swift in Sources */,
 				6B4E30F71C99A41B00BE42CB /* ProgramViewController.swift in Sources */,
