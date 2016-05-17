@@ -19,10 +19,12 @@ class CardDetailViewController: UIViewController, CardDetailControllerDelegate {
     var card: Card!
     var cell: CardProtocol!
     
-    // MARK : - Other instance variables
+    // MARK: - Other instance variables
     
     weak var delegate: CardViewController!
     var cardDetailView: AbstractCardDetail!
+    
+    // MARK: - UI Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +34,10 @@ class CardDetailViewController: UIViewController, CardDetailControllerDelegate {
         cardDetailView.setupContent(card)
         
         self.view = cardDetailView
+        
+        let account = UIImage(named: "account")
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: account, style: .Plain, target: nil, action: nil)
     }
     
     override func viewWillAppear(animated: Bool) {

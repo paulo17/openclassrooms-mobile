@@ -20,7 +20,7 @@ protocol CardControllerDelegate {
 
 // MARK: - CardViewController
 
-class CardViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, CardControllerDelegate {
+class CardViewController: MainCardViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, CardControllerDelegate {
     
     // MARK: - IB Outlet
     

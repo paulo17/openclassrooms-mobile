@@ -9,7 +9,7 @@
 import UIKit
 import Cartography
 
-class CardEndViewController: UIViewController {
+class CardEndViewController: MainCardViewController {
     
     // MARK: - IBOutlet
     
@@ -25,6 +25,20 @@ class CardEndViewController: UIViewController {
         newObjectiveButton.OCdefaultButton()
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationItem.setHidesBackButton(true, animated: true)
+    }
+    
+    // MARK: - IB Actions
+    
+    @IBAction func chooseNewObjectiveAction(sender: AnyObject) {
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let setupNavigationController = mainStoryboard.instantiateViewControllerWithIdentifier("setupNavigationController") as! UINavigationController
+        
+        presentViewController(setupNavigationController, animated: true, completion: nil)
+    }
     
     
     

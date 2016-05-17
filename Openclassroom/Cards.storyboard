@@ -51,9 +51,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Jour 1 sur 20" id="mxF-q5-Zqh">
-                        <barButtonItem key="leftBarButtonItem" image="calendar" id="u8n-uk-h8S">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="account" id="vGM-5q-GCM">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
@@ -122,6 +119,9 @@
                                 <state key="normal" title="Choisir un nouvel objectif">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="chooseNewObjectiveAction:" destination="vwi-dr-nfo" eventType="touchUpInside" id="OZ1-QG-166"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Partager vos connaissances" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ki3-bK-EJ2">
                                 <rect key="frame" x="74" y="442" width="227" height="22"/>
@@ -133,13 +133,13 @@
                                 <rect key="frame" x="54" y="474" width="267" height="44"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Facebook" translatesAutoresizingMaskIntoConstraints="NO" id="zRq-qc-BrR">
-                                        <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="45" height="44"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Twitter" translatesAutoresizingMaskIntoConstraints="NO" id="oR5-sg-niX">
-                                        <rect key="frame" x="74" y="0.0" width="45" height="44"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Twitter" translatesAutoresizingMaskIntoConstraints="NO" id="oR5-sg-niX">
+                                        <rect key="frame" x="75" y="0.0" width="44" height="44"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Linkedin" translatesAutoresizingMaskIntoConstraints="NO" id="4HJ-Zc-3uZ">
-                                        <rect key="frame" x="149" y="0.0" width="44" height="44"/>
+                                        <rect key="frame" x="149" y="0.0" width="45" height="44"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Google" translatesAutoresizingMaskIntoConstraints="NO" id="NdE-1D-Fod">
                                         <rect key="frame" x="223" y="0.0" width="44" height="44"/>
@@ -226,7 +226,6 @@
         <image name="Linkedin" width="44" height="44"/>
         <image name="Twitter" width="44" height="44"/>
         <image name="account" width="22" height="22"/>
-        <image name="calendar" width="22" height="22"/>
         <image name="greenCircle" width="400" height="400"/>
     </resources>
 </document>
