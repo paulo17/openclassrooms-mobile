@@ -37,7 +37,7 @@ class CardDetailViewController: UIViewController, CardDetailControllerDelegate {
         
         let account = UIImage(named: "account")
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: account, style: .Plain, target: MainCardViewController.self, action: #selector(MainCardViewController.showProfile))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: account, style: .Plain, target: self, action: #selector(CardDetailViewController.showProfile))
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -74,6 +74,10 @@ class CardDetailViewController: UIViewController, CardDetailControllerDelegate {
         delegate.finishCallback(sender: self) // launch callback
         
         self.navigationController?.popViewControllerAnimated(true)
+    }
+    
+    func showProfile() {
+        print("show profile")
     }
     
     // MARK: - Navigation
