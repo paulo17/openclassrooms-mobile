@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIButton {
-    func OCdefaultButton(color: UIColor) {
+    func OCdefaultButton(color: UIColor = UIColor.OCDustyOrangeColor()) {
         self.backgroundColor = color
         self.layer.cornerRadius = 5
         self.layer.borderWidth = 1
