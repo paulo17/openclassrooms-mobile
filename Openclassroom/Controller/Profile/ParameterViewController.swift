@@ -20,7 +20,7 @@ class ParameterViewController: UIViewController, ParameterViewDelegate {
     @IBOutlet weak var validateButton: UIButton!
     
     var objective: Objective?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -66,10 +66,10 @@ class ParameterViewController: UIViewController, ParameterViewDelegate {
         
         switch identifier {
         case "objective":
-             setupController = storyboard?.instantiateViewControllerWithIdentifier("categoryViewController") as! CategoryViewController
+            setupController = storyboard?.instantiateViewControllerWithIdentifier("categoryViewController") as! CategoryViewController
             break
         case "day":
-             setupController = storyboard?.instantiateViewControllerWithIdentifier("dayViewController") as! DayViewController
+            setupController = storyboard?.instantiateViewControllerWithIdentifier("dayViewController") as! DayViewController
             break
         case "time":
             setupController = storyboard?.instantiateViewControllerWithIdentifier("timeViewController") as! TimeViewController
@@ -83,7 +83,7 @@ class ParameterViewController: UIViewController, ParameterViewDelegate {
         }
     }
     
-    // MARK: - IB Action
+    // MARK: - IB Actions
     
     @IBAction func confirmParameterAction(sender: UIButton) {
         // persist user data

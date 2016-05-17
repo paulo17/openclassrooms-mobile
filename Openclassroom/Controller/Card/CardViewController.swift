@@ -9,13 +9,18 @@
 import UIKit
 import SwiftyJSON
 
+// MARK: - Card Controller Delegate Protocol
+
 protocol CardControllerDelegate {
     func start(sender sender: CardProtocol)
     func next(sender sender: CardProtocol)
     func download(sender sender: CardProtocol)
+    func finish(sender sender: CardProtocol)
 }
 
-class CardViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, CardControllerDelegate {
+// MARK: - CardViewController
+
+class CardViewController: MainCardViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, CardControllerDelegate {
     
     // MARK: - IB Outlet
     
@@ -162,6 +167,10 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let nextIndexPath = NSIndexPath(forItem: indexPath.row + 1, inSection: indexPath.section)
         
         tasksCollectionView.scrollToItemAtIndexPath(nextIndexPath, atScrollPosition: .CenteredHorizontally, animated: true)
+    }
+    
+    func finish(sender cell: CardProtocol) {
+        performSegueWithIdentifier("objective_done", sender: self)
     }
     
     // MARK: - CardDetail Delegate
