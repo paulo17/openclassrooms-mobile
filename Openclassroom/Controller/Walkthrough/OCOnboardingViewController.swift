@@ -12,6 +12,8 @@ import Cartography
 
 class OCOnboardingViewController: BWWalkthroughViewController, BWWalkthroughViewControllerDelegate {
     
+    // MARK: - UI Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,6 +29,8 @@ class OCOnboardingViewController: BWWalkthroughViewController, BWWalkthroughView
         automaticallyAdjustsScrollViewInsets = false
     }
     
+    // MARK: - UI Setup
+    
     func showWalkthrough() {
         let walkthroughStoryboard = UIStoryboard(name: "Walkthrough", bundle: nil)
         delegate = self // set current controller as walkthrough delegate
@@ -41,12 +45,24 @@ class OCOnboardingViewController: BWWalkthroughViewController, BWWalkthroughView
         addViewController(page_two)
         addViewController(page_three)
         
+        setBoxShadow(page_one.view)
+        setBoxShadow(page_two.view)
+        setBoxShadow(page_three.view)
+        
         constrain(page_one.view, page_two.view, page_three.view, view) {
             page_one, page_two, page_three, container in
             page_one.top == container.top
             page_one.bottom == container.bottom
         }
         
+    }
+    
+    private func setBoxShadow(view: UIView) {
+        // add border shadow
+        view.layer.masksToBounds = false
+        view.layer.shadowColor = UIColor.blackColor().CGColor
+        view.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
+        view.layer.shadowOpacity = 0.1
     }
     
     // MARK: - Walkthrough delegate
@@ -74,6 +90,5 @@ class OCOnboardingViewController: BWWalkthroughViewController, BWWalkthroughView
         userDefaults.setBool(true, forKey: "walkthroughClosed")
         userDefaults.synchronize()
     }
-    
     
 }
