@@ -18,8 +18,8 @@ class MainCardViewController: UIViewController {
         let account = UIImage(named: "account")
         let resume = UIImage(named: "resume")
         
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: resume, style: .Plain, target: MainCardViewController.self, action: #selector(MainCardViewController.showResume))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: account, style: .Plain, target: MainCardViewController.self, action: #selector(MainCardViewController.showProfile))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: resume, style: .Plain, target: self, action: #selector(MainCardViewController.showResume))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: account, style: .Plain, target: self, action: #selector(MainCardViewController.showProfile))
         
     }
     
@@ -30,12 +30,13 @@ class MainCardViewController: UIViewController {
     
     // MARK: - Navigation bar actions
     
-    static func showResume() {
+    func showResume() {
         print("show resume")
     }
     
-    static func showProfile() {
-        print("show profile")
+    func showProfile() {
+        self.navigationItem.title = "" // remove back button title for profile view
+        self.performSegueWithIdentifier("show_user_profile", sender: nil)
     }
     
 }

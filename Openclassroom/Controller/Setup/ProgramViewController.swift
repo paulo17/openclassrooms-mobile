@@ -16,7 +16,8 @@ class ProgramViewController: UIViewController, UITableViewDelegate, UITableViewD
     // MARK: - @IBOutlets
     @IBOutlet weak var objectivesTableView: UITableView!
     
-    // MARK: - Lifecycle
+    // MARK: - UI Lifecycle
+    
     override func viewDidLoad() {
         objectives = [
             ["type": "title", "text": "Qu'est ce que le Web ?", "nb": "1"],
