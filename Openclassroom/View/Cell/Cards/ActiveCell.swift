@@ -112,7 +112,7 @@ class ActiveCell: AbstractCard, CardProtocol {
         circleContainer.cardIcon.image = UIImage(named: cardImagePath(card))
         startButton.setTitle(status == .Done ? "Recommencer" : "Commencer", forState: .Normal)
         
-        if(status == .Done) {
+        if status == .Done {
             circleContainer.circleProgressColor = UIColor.OCTurquoiseColor()
             circleContainer.circularProgressBar.progress = 1.0
         }

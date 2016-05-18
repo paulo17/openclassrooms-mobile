@@ -13,7 +13,7 @@ protocol CardDetail {
 }
 
 class AbstractCardDetail: UIView, CardDetail {
-
+    
     lazy var title: UILabel = UILabel()
     lazy var content: UITextView = UITextView()
     lazy var imageView: UIImageView = UIImageView()
@@ -40,7 +40,7 @@ class AbstractCardDetail: UIView, CardDetail {
         style.lineSpacing = 15
         
         let cardContent = NSMutableAttributedString(string: card.content)
-        cardContent.addAttribute(NSParagraphStyleAttributeName, value: style, range: NSMakeRange(0, cardContent.length))
+        cardContent.addAttribute(NSParagraphStyleAttributeName, value: style, range: NSRange(location: 0, length: cardContent.length))
         
         content.attributedText = cardContent
         content.font = UIFont.systemFontOfSize(16.0)

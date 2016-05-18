@@ -27,4 +27,14 @@ class Objective {
         self.name = name
         self.duration = duration
     }
+    
+    static func getStaticObjective() -> [Objective] {
+        var objectives = [Objective]()
+        
+        for (index, objective) in Objective.objectives.enumerate() {
+            objectives.append(Objective(id: index, name: objective["name"]!, duration: Int(objective["duration"]!)!))
+        }
+        
+        return objectives
+    }
 }

@@ -9,13 +9,14 @@
 import UIKit
 
 class ParameterView: UIView {
-
+    
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var content: UILabel!
     @IBOutlet weak var button: UIButton!
     
     var identifier: String!
-    var delegate: ParameterViewDelegate?
+    
+    weak var delegate: ParameterViewDelegate?
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -23,19 +24,19 @@ class ParameterView: UIView {
         setUI()
     }
     
-     // MARK: - UI
+    // MARK: - UI
     
     func setUI() {
         let leftBorder = CALayer()
         leftBorder.backgroundColor = UIColor.OCTurquoiseColor().CGColor
-        leftBorder.frame = CGRectMake(0, 0, 10.0, CGRectGetHeight(self.frame)) // create rectangle
+        leftBorder.frame = CGRect(x: 0, y: 0, width: 10.0, height: CGRectGetHeight(self.frame)) // create rectangle
         
         self.layer.addSublayer(leftBorder)
         
         self.layer.masksToBounds = false
         self.layer.shadowColor = UIColor.blackColor().CGColor
-        self.layer.shadowOffset = CGSizeMake(0.0, 1.0);
-        self.layer.shadowOpacity = 0.1;
+        self.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
+        self.layer.shadowOpacity = 0.1
     }
     
     // MARK: - Action

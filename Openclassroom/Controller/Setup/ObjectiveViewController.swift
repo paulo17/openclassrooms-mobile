@@ -20,6 +20,8 @@ class ObjectiveViewController: UIViewController, UITableViewDelegate, UITableVie
     var category: Category!
     lazy var objectives = [Objective]()
     
+    // MARK: - UI Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,7 +30,7 @@ class ObjectiveViewController: UIViewController, UITableViewDelegate, UITableVie
         objectiveTableView.rowHeight = UITableViewAutomaticDimension
         objectiveTableView.estimatedRowHeight = 60.0
         
-        objectives = getStaticObjective()
+        objectives.appendContentsOf(Objective.getStaticObjective())
         
         if let category = self.category {
             categoryName.text = category.name
@@ -39,16 +41,6 @@ class ObjectiveViewController: UIViewController, UITableViewDelegate, UITableVie
     
     override func viewWillAppear(animated: Bool) {
         self.title = "Etape 1 sur 3"
-    }
-    
-    func getStaticObjective() -> [Objective] {
-        var objectives = [Objective]()
-
-        for (index, objective) in Objective.objectives.enumerate() {
-            objectives.append(Objective(id: index, name: objective["name"]!, duration: Int(objective["duration"]!)!))
-        }
-        
-        return objectives
     }
     
     // MARK: - TableView

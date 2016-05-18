@@ -32,5 +32,4 @@ class CustomWalkthroughPageViewController: UIViewController {
         userDefaults.setBool(true, forKey: "walkthroughClosed")
         userDefaults.synchronize()
     }
-    
 }

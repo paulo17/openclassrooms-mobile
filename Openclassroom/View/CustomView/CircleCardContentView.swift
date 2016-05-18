@@ -11,10 +11,11 @@ import Cartography
 import KYCircularProgress
 
 class CircleCardContentView: UIView {
-
+    
     lazy var cardIcon: UIImageView = UIImageView()
     
     var circularProgressBar: KYCircularProgress!
+    
     var cardDelegate: CardProtocol!
     
     var circleColor: UIColor = UIColor.OCWhiteColor() {

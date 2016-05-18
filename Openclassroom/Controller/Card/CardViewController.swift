@@ -9,13 +9,18 @@
 import UIKit
 import SwiftyJSON
 
+// MARK: - Card Controller Delegate Protocol
+
 protocol CardControllerDelegate {
     func start(sender sender: CardProtocol)
     func next(sender sender: CardProtocol)
     func download(sender sender: CardProtocol)
+    func finish(sender sender: CardProtocol)
 }
 
-class CardViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, CardControllerDelegate {
+// MARK: - CardViewController
+
+class CardViewController: MainCardViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, CardControllerDelegate {
     
     // MARK: - IB Outlet
     
@@ -33,7 +38,7 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
         tasksCollectionView.delegate = self
         tasksCollectionView.dataSource = self
         tasksCollectionView.pagingEnabled = true
-
+        
         registerCustomCell()
         initializeCards()
     }
@@ -74,7 +79,7 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
             for (index, json) in cards["cards"].enumerate() {
                 let type: LeconType = LeconType.stringToEnum(json.1["type"].string!)
                 let cardType: CardType = index == 0 ? .Active : .Disable
-            
+                
                 let card = Card(id: index,
                                 title: json.1["title"].string!,
                                 time: json.1["time"].int!,
@@ -103,7 +108,7 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let currentCard = cards[indexPath.row]
         var cell = CardsFactory.createCard(currentCard.cardType, collection: collectionView, indexPath: indexPath)!
-                
+        
         cell.delegate = self
         cell.content(currentCard)
         
@@ -121,7 +126,7 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return CGSizeMake(tasksCollectionView.bounds.width, tasksCollectionView.bounds.height)
+        return CGSize(width: tasksCollectionView.bounds.width, height: tasksCollectionView.bounds.height)
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
@@ -135,7 +140,7 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let cardDetailController = cardsStoryboard.instantiateViewControllerWithIdentifier("CardDetailViewController") as! CardDetailViewController
         
         let indexPath = tasksCollectionView.indexPathForCell(cell as! UICollectionViewCell)!
-    
+        
         let currentCard = cards[indexPath.row]
         currentCard.cardStatus = .InProgress // set card status to in progress
         cell.circleContainer.circularProgressBar.progress = 0.0 // reset progress to 0
@@ -143,7 +148,7 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
         cardDetailController.delegate = self // set detail view controller as delegate
         cardDetailController.card = currentCard // set current viewed card
         cardDetailController.cell = cell
-
+        
         self.navigationItem.title = ""
         self.navigationController?.pushViewController(cardDetailController, animated: true)
     }
@@ -162,6 +167,10 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let nextIndexPath = NSIndexPath(forItem: indexPath.row + 1, inSection: indexPath.section)
         
         tasksCollectionView.scrollToItemAtIndexPath(nextIndexPath, atScrollPosition: .CenteredHorizontally, animated: true)
+    }
+    
+    func finish(sender cell: CardProtocol) {
+        performSegueWithIdentifier("objective_done", sender: self)
     }
     
     // MARK: - CardDetail Delegate
@@ -190,10 +199,10 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
         tasksCollectionView.reloadItemsAtIndexPaths([indexPath])
         
         /** reloadItem change cell pointer address and the next cell get the 
-        current pointer cell address 
-        So I reset the progress bar to 0
+         current pointer cell address 
+         So I reset the progress bar to 0
          */
         sender.cell.circleContainer.circularProgressBar.progress = 0.0
     }
-
+    
 }

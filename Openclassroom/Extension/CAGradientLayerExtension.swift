@@ -14,8 +14,8 @@ extension CAGradientLayer {
         let g = CAGradientLayer()
         g.frame = bounds
         g.colors = gradient
-        g.startPoint = CGPointMake(0.0, 0.0);
-        g.endPoint = CGPointMake(0.0, 0.0);
+        g.startPoint = CGPoint(x: 0.0, y: 0.0)
+        g.endPoint = CGPoint(x: 0.0, y: 0.0)
         
         UIGraphicsBeginImageContext(g.bounds.size)
         g.renderInContext(UIGraphicsGetCurrentContext()!)

@@ -13,4 +13,3 @@ func generateStyleLabel(label: UILabel, font: String, color: UIColor, size: CGFl
     label.textColor = color
     label.text = "\(text)"
 }
-

@@ -17,7 +17,7 @@ class CardsFactory {
      - parameter collection
      - parameter indexPath
      
-     - returns: CardProtocol
+     - returns: CardProtocol?
      */
     static func createCard(type: CardType, collection: UICollectionView, indexPath: NSIndexPath) -> CardProtocol? {
         let card: CardProtocol!

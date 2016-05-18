@@ -16,7 +16,8 @@ class ProgramViewController: UIViewController, UITableViewDelegate, UITableViewD
     // MARK: - @IBOutlets
     @IBOutlet weak var objectivesTableView: UITableView!
     
-    // MARK: - Lifecycle
+    // MARK: - UI Lifecycle
+    
     override func viewDidLoad() {
         objectives = [
             ["type": "title", "text": "Qu'est ce que le Web ?", "nb": "1"],
@@ -76,7 +77,7 @@ class ProgramViewController: UIViewController, UITableViewDelegate, UITableViewD
             cell.finishButton.setTitle(self.objectives[indexPath.row]["text"]! as? String, forState: .Normal)
             cell.finishButton.titleLabel?.font = UIFont.boldSystemFontOfSize(16.0)
             cell.finishButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-            cell.finishButton.backgroundColor = colorMain
+            cell.finishButton.backgroundColor = UIColor.OCDustyOrangeColor()
             cell.finishButton.layer.cornerRadius = 4.0
             cell.finishButton.frame.size.width = self.view.frame.width / 100 * 90
             
@@ -114,5 +115,5 @@ class ProgramViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         navigationItem.title = "" // remove navigation title
     }
-
+    
 }

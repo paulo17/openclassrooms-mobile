@@ -12,8 +12,8 @@ import Cartography
 class StartCell: AbstractCard, CardProtocol {
     
     /**
-    * Card Protocol fields
-    **/
+     * Card Protocol fields
+     **/
     lazy var title: UILabel! = UILabel()
     lazy var subtitle: UILabel! = UILabel()
     lazy var percentage: UILabel! = UILabel()
@@ -22,8 +22,8 @@ class StartCell: AbstractCard, CardProtocol {
     lazy var circleContainer: CircleCardContentView! = CircleCardContentView()
     
     /**
-    * Custom card fields
-    **/
+     * Custom card fields
+     **/
     lazy var imageView: UIImageView! = UIImageView()
     
     var delegate: CardControllerDelegate!
@@ -97,7 +97,7 @@ class StartCell: AbstractCard, CardProtocol {
         subtitle.textColor = UIColor.whiteColor()
         subtitle.textAlignment = .Center
         subtitle.text = "Vous avez des cours à réaliser aujourd'hui"
-
+        
     }
     
     private func setupImage() {
@@ -114,5 +114,5 @@ class StartCell: AbstractCard, CardProtocol {
         startButton.OCdefaultButton(UIColor.whiteColor())
         startButton.addTarget(self, action: #selector(StartCell.start), forControlEvents: .TouchUpInside)
     }
-
+    
 }

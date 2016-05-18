@@ -19,11 +19,13 @@ class CardDetailViewController: UIViewController, CardDetailControllerDelegate {
     var card: Card!
     var cell: CardProtocol!
     
-    // MARK : - Other instance variables
+    // MARK: - Other instance variables
     
-    var delegate: CardViewController!
+    weak var delegate: CardViewController!
     var cardDetailView: AbstractCardDetail!
-
+    
+    // MARK: - UI Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,6 +34,9 @@ class CardDetailViewController: UIViewController, CardDetailControllerDelegate {
         cardDetailView.setupContent(card)
         
         self.view = cardDetailView
+        
+        let account = UIImage(named: "account")
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: account, style: .Plain, target: self, action: #selector(CardDetailViewController.showProfile))
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -64,10 +69,19 @@ class CardDetailViewController: UIViewController, CardDetailControllerDelegate {
     
     func finish() {
         card.cardStatus = .Done
-       
+        
         delegate.finishCallback(sender: self) // launch callback
         
         self.navigationController?.popViewControllerAnimated(true)
+    }
+    
+    // MARK: - Navigation bar actions
+    
+    func showProfile() {
+        self.navigationItem.title = "" // remove back button title for profile view
+        let cardStoryboard = UIStoryboard(name: "Cards", bundle: nil)
+        let profileViewController = cardStoryboard.instantiateViewControllerWithIdentifier("ProfileViewController")
+        presentViewController(profileViewController, animated: true, completion: nil)
     }
     
     // MARK: - Navigation
@@ -78,7 +92,7 @@ class CardDetailViewController: UIViewController, CardDetailControllerDelegate {
      - parameter parent: UIViewController parent
      */
     override func willMoveToParentViewController(parent: UIViewController?) {
-        if(parent == nil && card.cardStatus == .InProgress) {
+        if parent == nil && card.cardStatus == .InProgress {
             cell.circleContainer.circularProgressBar.progress = 0.35
         }
     }
