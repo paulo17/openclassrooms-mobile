@@ -14,6 +14,8 @@ protocol DaySwitchDelegate: class {
 
 class DayViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DaySwitchDelegate {
     
+    // MARK: - IB Outlets
+    
     @IBOutlet weak var timeTableView: UITableView!
     @IBOutlet weak var validateButton: UIButton!
     
@@ -22,7 +24,7 @@ class DayViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     
     lazy var selectedDays: [String] = [String](count: 7, repeatedValue: "")
     
-    //lazy var selectedDays = Dictionary<Int, String>()
+    // MARK: - UI Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()

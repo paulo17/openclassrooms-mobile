@@ -8,27 +8,33 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     // MARK: - IB Outlets
     
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var backgroundHeaderView: UIImageView!
-    
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var objectiveLabel: UILabel!
     @IBOutlet weak var totalDaysLabel: UILabel!
     @IBOutlet weak var totalCardsLabel: UILabel!
     @IBOutlet weak var totalDaysLeftLabel: UILabel!
     @IBOutlet weak var changeObjectiveButton: UIButton!
+    @IBOutlet weak var objectiveTableView: UITableView!
+    
+    lazy var objectives: [Objective] = [Objective]()
     
     // MARK: - UI Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        objectives.appendContentsOf(Objective.getStaticObjective())
+        
         usernameLabel.textColor = UIColor.whiteColor()
         changeObjectiveButton.OCborderButton()
+        objectiveTableView.rowHeight = UITableViewAutomaticDimension
+        objectiveTableView.estimatedRowHeight = 60.0
         
         let colorMain = try! UIColor(rgba_throws: "#F39539")
         let colorSecondary = try! UIColor(rgba_throws: "#C21945")
@@ -59,12 +65,31 @@ class ProfileViewController: UIViewController {
         super.viewWillDisappear(animated)
         
         if let navigationController = self.navigationController as? OCExpandNavigationController {
-            navigationController.setNavigationBarUI()
+            navigationController.setNavigationBarUI() // reset navigation bar to default
         }
     }
     
     func showSettings() {
         
+    }
+    
+    // MARK: - UITableView Datasource
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return objectives.count
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = objectiveTableView.dequeueReusableCellWithIdentifier(ProfileObjectiveCell.identifier, forIndexPath: indexPath) as! ProfileObjectiveCell
+        
+        let objective: Objective = objectives[indexPath.row]
+        cell.objective = objective
+        
+        return cell
     }
     
 }

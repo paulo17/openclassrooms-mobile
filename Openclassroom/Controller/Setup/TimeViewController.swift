@@ -10,10 +10,14 @@ import UIKit
 
 class TimeViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
+    // MARK: - IB Outlets
+    
     @IBOutlet weak var timePicker: UIPickerView!
     @IBOutlet weak var validateButton: UIButton!
     
     lazy var times: [Int] = [10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60]
+    
+    // MARK: - UI Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
