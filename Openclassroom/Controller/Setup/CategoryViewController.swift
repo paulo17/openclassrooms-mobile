@@ -59,8 +59,11 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
         
         // save selected category
         selectedCategory = categories[indexPath.row]
-        DataContainer.sharedDataContainer.currentUser.category = selectedCategory.name
-        performSegueWithIdentifier("categoryToObjective", sender: self)
+        
+        if DataContainer.sharedDataContainer.currentUser != nil {
+            DataContainer.sharedDataContainer.currentUser.category = selectedCategory.name
+            performSegueWithIdentifier("categoryToObjective", sender: self)
+        }
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {

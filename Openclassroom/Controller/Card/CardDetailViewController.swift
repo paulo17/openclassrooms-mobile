@@ -35,8 +35,8 @@ class CardDetailViewController: UIViewController, CardDetailControllerDelegate {
         
         self.view = cardDetailView
         
-        /*let account = UIImage(named: "account")
-         navigationItem.rightBarButtonItem = UIBarButtonItem(image: account, style: .Plain, target: self, action: #selector(CardDetailViewController.showProfile))*/
+        let account = UIImage(named: "account")
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: account, style: .Plain, target: self, action: #selector(CardDetailViewController.showProfile))
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -77,9 +77,12 @@ class CardDetailViewController: UIViewController, CardDetailControllerDelegate {
     
     // MARK: - Navigation bar actions
     
-    /*func showProfile() {
-     
-     }*/
+    func showProfile() {
+        self.navigationItem.title = "" // remove back button title for profile view
+        let cardStoryboard = UIStoryboard(name: "Cards", bundle: nil)
+        let profileViewController = cardStoryboard.instantiateViewControllerWithIdentifier("ProfileViewController")
+        presentViewController(profileViewController, animated: true, completion: nil)
+    }
     
     // MARK: - Navigation
     

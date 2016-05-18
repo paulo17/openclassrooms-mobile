@@ -11,6 +11,7 @@ import UIKit
 class ProfileViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     // MARK: - IB Outlets
+    @IBOutlet weak var navigationBar: UINavigationBar!
     
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var backgroundHeaderView: UIImageView!
@@ -51,26 +52,37 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         super.viewWillAppear(animated)
         
         self.navigationItem.title = ""
-        self.navigationController?.navigationBar.translucent = true
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
-        self.navigationController?.navigationBar.backgroundColor = UIColor.clearColor()
+        navigationBar.translucent = true
+        navigationBar.shadowImage = UIImage()
+        navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
+        navigationBar.backgroundColor = UIColor.clearColor()
         
+        let backImage = UIImage(named: "Back")
         let settingsImage = UIImage(named: "Settings")
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: settingsImage, style: .Plain, target: self, action: #selector(ProfileViewController.showSettings))
+        let profileNavigationItem = UINavigationItem()
+        
+        profileNavigationItem.leftBarButtonItem = UIBarButtonItem(image: backImage, style: .Plain, target: self, action: #selector(ProfileViewController.back))
+        
+        profileNavigationItem.rightBarButtonItem = UIBarButtonItem(image: settingsImage, style: .Plain, target: self, action: #selector(ProfileViewController.showSettings))
+        
+        navigationBar.setItems([profileNavigationItem], animated: true)
     }
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         
-        if let navigationController = self.navigationController as? OCExpandNavigationController {
-            navigationController.setNavigationBarUI() // reset navigation bar to default
-        }
+        /*if let navigationController = self.navigationController as? OCExpandNavigationController {
+         navigationController.setNavigationBarUI() // reset navigation bar to default
+         }*/
     }
     
     func showSettings() {
         
+    }
+    
+    func back() {
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     // MARK: - UITableView Datasource
