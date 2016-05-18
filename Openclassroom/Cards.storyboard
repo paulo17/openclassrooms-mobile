@@ -206,6 +206,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uce-Jk-jgS" customClass="UIImageView">
+                                <rect key="frame" x="1" y="0.0" width="375" height="275"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ckX-Kf-jHd">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="275"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile" translatesAutoresizingMaskIntoConstraints="NO" id="CrT-cz-kga">
+                                        <rect key="frame" x="136" y="96" width="103" height="102"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="102" id="ZKd-HZ-hFT"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Benjamin Carrot" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIi-Qq-mEf">
+                                        <rect key="frame" x="102" y="203" width="172" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="CrT-cz-kga" secondAttribute="trailing" constant="136" id="5Xn-XJ-17U"/>
+                                    <constraint firstItem="PIi-Qq-mEf" firstAttribute="centerX" secondItem="uce-Jk-jgS" secondAttribute="centerX" id="M4x-K2-Mrh"/>
+                                    <constraint firstItem="ckX-Kf-jHd" firstAttribute="leading" secondItem="uce-Jk-jgS" secondAttribute="leading" id="QKS-PL-tSe"/>
+                                    <constraint firstItem="PIi-Qq-mEf" firstAttribute="top" secondItem="CrT-cz-kga" secondAttribute="bottom" constant="5" id="Rln-5N-OJi"/>
+                                    <constraint firstAttribute="trailing" secondItem="ckX-Kf-jHd" secondAttribute="trailing" id="SFa-3r-UJw"/>
+                                    <constraint firstItem="CrT-cz-kga" firstAttribute="top" secondItem="uce-Jk-jgS" secondAttribute="top" constant="96" id="bjB-mu-6nz"/>
+                                    <constraint firstAttribute="height" constant="275" id="ckA-pt-Fy2"/>
+                                    <constraint firstItem="CrT-cz-kga" firstAttribute="leading" secondItem="uce-Jk-jgS" secondAttribute="leading" constant="136" id="ckL-ec-S3p"/>
+                                    <constraint firstAttribute="bottom" secondItem="ckX-Kf-jHd" secondAttribute="bottom" id="eX9-rN-aAN"/>
+                                    <constraint firstItem="ckX-Kf-jHd" firstAttribute="top" secondItem="uce-Jk-jgS" secondAttribute="top" id="lKb-96-4UQ"/>
+                                </constraints>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Objectif en cours : " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PHg-gx-mD6">
                                 <rect key="frame" x="132" y="305" width="112" height="15"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
@@ -268,39 +301,6 @@
                                 <rect key="frame" x="0.0" y="492" width="375" height="175"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uce-Jk-jgS" customClass="UIImageView">
-                                <rect key="frame" x="1" y="0.0" width="375" height="275"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile" translatesAutoresizingMaskIntoConstraints="NO" id="CrT-cz-kga">
-                                        <rect key="frame" x="136" y="96" width="103" height="102"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="102" id="ZKd-HZ-hFT"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Benjamin Carrot" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIi-Qq-mEf">
-                                        <rect key="frame" x="102" y="203" width="172" height="29"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ckX-Kf-jHd">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="275"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="CrT-cz-kga" secondAttribute="trailing" constant="136" id="5Xn-XJ-17U"/>
-                                    <constraint firstItem="PIi-Qq-mEf" firstAttribute="centerX" secondItem="uce-Jk-jgS" secondAttribute="centerX" id="M4x-K2-Mrh"/>
-                                    <constraint firstItem="ckX-Kf-jHd" firstAttribute="leading" secondItem="uce-Jk-jgS" secondAttribute="leading" id="QKS-PL-tSe"/>
-                                    <constraint firstItem="PIi-Qq-mEf" firstAttribute="top" secondItem="CrT-cz-kga" secondAttribute="bottom" constant="5" id="Rln-5N-OJi"/>
-                                    <constraint firstAttribute="trailing" secondItem="ckX-Kf-jHd" secondAttribute="trailing" id="SFa-3r-UJw"/>
-                                    <constraint firstItem="CrT-cz-kga" firstAttribute="top" secondItem="uce-Jk-jgS" secondAttribute="top" constant="96" id="bjB-mu-6nz"/>
-                                    <constraint firstAttribute="height" constant="275" id="ckA-pt-Fy2"/>
-                                    <constraint firstItem="CrT-cz-kga" firstAttribute="leading" secondItem="uce-Jk-jgS" secondAttribute="leading" constant="136" id="ckL-ec-S3p"/>
-                                    <constraint firstAttribute="bottom" secondItem="ckX-Kf-jHd" secondAttribute="bottom" id="eX9-rN-aAN"/>
-                                    <constraint firstItem="ckX-Kf-jHd" firstAttribute="top" secondItem="uce-Jk-jgS" secondAttribute="top" id="lKb-96-4UQ"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>

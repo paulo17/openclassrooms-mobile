@@ -44,6 +44,18 @@ class ProfileViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
+        self.navigationController?.navigationBar.translucent = true
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
+        self.navigationController?.navigationBar.backgroundColor = UIColor.clearColor()
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        if let navigationController = self.navigationController as? OCExpandNavigationController {
+            navigationController.setNavigationBarUI()
+        }
     }
     
 }
