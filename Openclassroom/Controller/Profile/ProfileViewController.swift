@@ -28,13 +28,13 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         
         usernameLabel.textColor = UIColor.whiteColor()
+        changeObjectiveButton.OCborderButton()
         
         let colorMain = try! UIColor(rgba_throws: "#F39539")
         let colorSecondary = try! UIColor(rgba_throws: "#C21945")
         
         backgroundHeaderView.image = CAGradientLayer.createGradient([colorMain.CGColor, colorSecondary.CGColor], bounds: headerView.bounds)
         
-        changeObjectiveButton.OCborderButton()
         
         /*if let currentObjective = DataContainer.sharedDataContainer.currentUser.objective {
          objectiveLabel.text = currentObjective
@@ -44,10 +44,15 @@ class ProfileViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
+        self.navigationItem.title = ""
         self.navigationController?.navigationBar.translucent = true
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
         self.navigationController?.navigationBar.backgroundColor = UIColor.clearColor()
+        
+        let settingsImage = UIImage(named: "Settings")
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: settingsImage, style: .Plain, target: self, action: #selector(ProfileViewController.showSettings))
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -56,6 +61,10 @@ class ProfileViewController: UIViewController {
         if let navigationController = self.navigationController as? OCExpandNavigationController {
             navigationController.setNavigationBarUI()
         }
+    }
+    
+    func showSettings() {
+        
     }
     
 }

@@ -35,6 +35,7 @@ class MainCardViewController: UIViewController {
     }
     
     func showProfile() {
+        self.navigationItem.title = "" // remove back button title for profile view
         self.performSegueWithIdentifier("show_user_profile", sender: nil)
     }
     
