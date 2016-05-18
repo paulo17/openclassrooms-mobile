@@ -417,7 +417,7 @@ numérique</string>
                                             <outlet property="numberLabel" destination="ose-je-K8I" id="poA-zM-d5P"/>
                                             <outlet property="roundBackgroundView" destination="Hdz-kE-cgi" id="XnC-ms-gVt"/>
                                             <outlet property="titleLabel" destination="de0-Hw-nKi" id="gjL-Cd-B5Z"/>
-                                            <segue destination="XkL-aL-3n7" kind="show" id="JZT-vW-7Zg"/>
+                                            <segue destination="XkL-aL-3n7" kind="show" identifier="programToDay" id="JZT-vW-7Zg"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

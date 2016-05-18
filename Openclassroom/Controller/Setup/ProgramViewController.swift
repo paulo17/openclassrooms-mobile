@@ -39,7 +39,7 @@ class ProgramViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.title = "Comprendre le web"
     }
     
-    // MARK: - Delegate functions
+    // MARK: - TableView Delegate
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return objectives.count
@@ -49,6 +49,7 @@ class ProgramViewController: UIViewController, UITableViewDelegate, UITableViewD
         let cell = objectivesTableView.dequeueReusableCellWithIdentifier("program_cell", forIndexPath: indexPath) as! ProgramCell
         
         cell.selectionStyle = .None
+        cell.delegate = self
         
         switch self.objectives[indexPath.row]["type"] as! String {
         case "title":
@@ -111,6 +112,10 @@ class ProgramViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     // MARK: - Navigation
+    
+    func chooseProgram() {
+        performSegueWithIdentifier("programToDay", sender: self)
+    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         navigationItem.title = "" // remove navigation title
