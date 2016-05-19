@@ -10,6 +10,8 @@ import UIKit
 
 class ProgramCell: UITableViewCell {
     
+    static let identifier = "program_cell"
+    
     // MARK: - IB Outlets
     
     @IBOutlet weak var roundBackgroundView: UIView!

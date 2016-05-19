@@ -28,6 +28,7 @@
 		6B7D3C1E1CEBA53000A0675D /* MainCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7D3C1D1CEBA53000A0675D /* MainCardViewController.swift */; };
 		6B7D3C201CEBA54400A0675D /* OCExpandNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7D3C1F1CEBA54400A0675D /* OCExpandNavigationController.swift */; };
 		6B7D3C221CEC704800A0675D /* ProfileObjectiveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7D3C211CEC704800A0675D /* ProfileObjectiveCell.swift */; };
+		6B7D3C261CEDCF9900A0675D /* CardSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7D3C251CEDCF9900A0675D /* CardSummaryViewController.swift */; };
 		6B8829371CABDFFB003CC1EC /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B88292B1CABDFFB003CC1EC /* Font.swift */; };
 		6B88293C1CABDFFB003CC1EC /* Redirect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8829301CABDFFB003CC1EC /* Redirect.swift */; };
 		6B8829401CABE090003CC1EC /* ProgramCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B88293F1CABE090003CC1EC /* ProgramCell.swift */; };
@@ -94,6 +95,7 @@
 		6B7D3C1D1CEBA53000A0675D /* MainCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCardViewController.swift; sourceTree = "<group>"; };
 		6B7D3C1F1CEBA54400A0675D /* OCExpandNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCExpandNavigationController.swift; sourceTree = "<group>"; };
 		6B7D3C211CEC704800A0675D /* ProfileObjectiveCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileObjectiveCell.swift; sourceTree = "<group>"; };
+		6B7D3C251CEDCF9900A0675D /* CardSummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardSummaryViewController.swift; sourceTree = "<group>"; };
 		6B88292B1CABDFFB003CC1EC /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		6B8829301CABDFFB003CC1EC /* Redirect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Redirect.swift; sourceTree = "<group>"; };
 		6B88293F1CABE090003CC1EC /* ProgramCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramCell.swift; sourceTree = "<group>"; };
@@ -319,6 +321,7 @@
 				6BE8D0791CB54021000D3243 /* CardsFactory.swift */,
 				6B0549171CBA57BE0077684D /* CardDetailViewController.swift */,
 				6BC917511CEB4336008D3442 /* CardEndViewController.swift */,
+				6B7D3C251CEDCF9900A0675D /* CardSummaryViewController.swift */,
 			);
 			path = Card;
 			sourceTree = "<group>";
@@ -589,6 +592,7 @@
 				6BA0F81C1C984CEE001AA68E /* CustomWalkthroughPageViewController.swift in Sources */,
 				6B88294F1CABE18D003CC1EC /* OCNavigationBar.swift in Sources */,
 				6B4BEE7B1C8723A8006D2862 /* RegisterViewController.swift in Sources */,
+				6B7D3C261CEDCF9900A0675D /* CardSummaryViewController.swift in Sources */,
 				6B4E30F51C99A3A000BE42CB /* ObjectiveViewController.swift in Sources */,
 				6BC917501CEA5A22008D3442 /* OCOnboardingViewController.swift in Sources */,
 				6BD1DA0E1CA7E6370075057F /* ParameterView.swift in Sources */,

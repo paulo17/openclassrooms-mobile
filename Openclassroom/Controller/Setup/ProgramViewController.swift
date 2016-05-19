@@ -46,7 +46,7 @@ class ProgramViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = objectivesTableView.dequeueReusableCellWithIdentifier("program_cell", forIndexPath: indexPath) as! ProgramCell
+        let cell = objectivesTableView.dequeueReusableCellWithIdentifier(ProgramCell.identifier, forIndexPath: indexPath) as! ProgramCell
         
         cell.selectionStyle = .None
         cell.delegate = self

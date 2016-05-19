@@ -419,6 +419,50 @@
             </objects>
             <point key="canvasLocation" x="-77.5" y="1115.5"/>
         </scene>
+        <!--Card Summary View Controller-->
+        <scene sceneID="PT2-Hi-VtM">
+            <objects>
+                <viewController storyboardIdentifier="CardSummaryViewController" id="Lqc-HV-mLN" customClass="CardSummaryViewController" customModule="Openclassroom" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AgK-N0-lQd"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qfi-jd-xm5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3zl-vV-xNv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="adr-xy-Eai">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="program_cell" id="UNa-rY-Q81" customClass="ProgramCell" customModule="Openclassroom" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UNa-rY-Q81" id="1FO-ff-qRd">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Qfi-jd-xm5" firstAttribute="top" secondItem="adr-xy-Eai" secondAttribute="bottom" id="CNF-OJ-kIy"/>
+                            <constraint firstItem="adr-xy-Eai" firstAttribute="top" secondItem="3zl-vV-xNv" secondAttribute="top" id="KNJ-oW-J6X"/>
+                            <constraint firstAttribute="trailing" secondItem="adr-xy-Eai" secondAttribute="trailing" id="Pm1-oM-sMx"/>
+                            <constraint firstItem="adr-xy-Eai" firstAttribute="leading" secondItem="3zl-vV-xNv" secondAttribute="leading" id="Yic-iC-dGC"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="objectiveSummaryTableView" destination="adr-xy-Eai" id="W9O-LM-xr4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SvP-8m-36p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="366.5" y="1115.5"/>
+        </scene>
         <!--Expand Navigation Controller-->
         <scene sceneID="6I3-kl-pFb">
             <objects>
