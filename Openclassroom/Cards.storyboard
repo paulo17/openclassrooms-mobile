@@ -441,7 +441,46 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UNa-rY-Q81" id="1FO-ff-qRd">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dMi-h3-6Hj">
+                                                    <rect key="frame" x="20" y="6" width="32" height="32"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLU-tB-ETz">
+                                                            <rect key="frame" x="5" y="5" width="22" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="32" id="6eV-iT-9OT"/>
+                                                        <constraint firstAttribute="trailing" secondItem="eLU-tB-ETz" secondAttribute="trailing" constant="5" id="72J-JJ-FX0"/>
+                                                        <constraint firstItem="eLU-tB-ETz" firstAttribute="leading" secondItem="dMi-h3-6Hj" secondAttribute="leading" constant="5" id="Axp-R2-W8k"/>
+                                                        <constraint firstItem="eLU-tB-ETz" firstAttribute="top" secondItem="dMi-h3-6Hj" secondAttribute="top" constant="6" id="L08-0N-gM8"/>
+                                                        <constraint firstAttribute="height" constant="32" id="TDj-4f-ZMX"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SsK-0I-YQS">
+                                                    <rect key="frame" x="67" y="11" width="288" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="dMi-h3-6Hj" firstAttribute="centerY" secondItem="1FO-ff-qRd" secondAttribute="centerY" id="2Dx-5P-0Gi"/>
+                                                <constraint firstItem="SsK-0I-YQS" firstAttribute="leading" secondItem="dMi-h3-6Hj" secondAttribute="trailing" constant="15" id="TQT-bx-Kxn"/>
+                                                <constraint firstAttribute="trailing" secondItem="SsK-0I-YQS" secondAttribute="trailing" constant="20" id="Xeb-yh-xhF"/>
+                                                <constraint firstItem="dMi-h3-6Hj" firstAttribute="leading" secondItem="1FO-ff-qRd" secondAttribute="leading" constant="20" id="dV2-5T-j75"/>
+                                                <constraint firstItem="SsK-0I-YQS" firstAttribute="centerY" secondItem="1FO-ff-qRd" secondAttribute="centerY" id="i0g-t1-alS"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="numberLabel" destination="eLU-tB-ETz" id="9LD-tm-58e"/>
+                                            <outlet property="roundBackgroundView" destination="dMi-h3-6Hj" id="lJf-So-Pom"/>
+                                            <outlet property="titleLabel" destination="SsK-0I-YQS" id="avT-wM-Mc4"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -461,7 +500,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SvP-8m-36p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="366.5" y="1115.5"/>
+            <point key="canvasLocation" x="352.5" y="1126.5"/>
         </scene>
         <!--Expand Navigation Controller-->
         <scene sceneID="6I3-kl-pFb">

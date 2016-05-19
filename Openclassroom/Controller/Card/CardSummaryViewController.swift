@@ -15,11 +15,26 @@ class CardSummaryViewController: UIViewController, UITableViewDataSource, UITabl
     
     @IBOutlet weak var objectiveSummaryTableView: UITableView!
     
+    // MARK: - Instance variable
+    
+    var objectives = [
+        ["type": "title", "text": "Qu'est ce que le Web ?", "nb": "1"],
+        ["type": "subtitle", "text": "Introduction"],
+        ["type": "subtitle", "text": "Qu'est ce que le Web ?"],
+        ["type": "subtitle", "text": "Web, Services & Cloud"],
+        ["type": "subtitle", "text": "Comment est né le Web ?"],
+        ["type": "subtitle", "text": "En résumé"],
+        ["type": "title", "text": "Les langages du Web", "nb": "2"],
+        ["type": "subtitle", "text": "Les langages client"],
+        ["type": "subtitle", "text": "Les langages serveur"],
+        ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         objectiveSummaryTableView.dataSource = self
         objectiveSummaryTableView.delegate = self
+        objectiveSummaryTableView.tableFooterView?.hidden = true
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -33,19 +48,61 @@ class CardSummaryViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return objectives.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = objectiveSummaryTableView.dequeueReusableCellWithIdentifier(ProgramCell.identifier, forIndexPath: indexPath) as! ProgramCell
+        
+        cell.selectionStyle = .None
+        
+        switch self.objectives[indexPath.row]["type"]! {
+        case "title":
+            cell.roundBackgroundView.backgroundColor = UIColor.OCDustyOrangeColor()
+            cell.roundBackgroundView.layer.cornerRadius = 17.0
+            
+            cell.numberLabel.text = self.objectives[indexPath.row]["nb"]
+            cell.numberLabel.textColor = UIColor.whiteColor()
+            cell.numberLabel.font = UIFont.boldSystemFontOfSize(18.0)
+            
+            cell.titleLabel.text = self.objectives[indexPath.row]["text"]!
+            cell.titleLabel.font = UIFont.boldSystemFontOfSize(18.0)
+            
+            break
+        case "subtitle":
+            cell.titleLabel.text = self.objectives[indexPath.row]["text"]!
+            cell.titleLabel.font = cell.titleLabel.font.fontWithSize(15.0)
+            cell.titleLabel.textColor = UIColor.OCSilverColor()
+            
+            break
+        default:
+            break
+        }
         
         return cell
     }
     
     // MARK: - UITableView Delegate
     
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        var height: CGFloat!
+        
+        switch self.objectives[indexPath.row]["type"]! {
+        case "title":
+            height = 88.0
+            break
+        case "subtitle":
+            height = 44.0
+            break
+        default:
+            break
+        }
+        
+        return height
+    }
+    
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let containerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 200))
+        
         let image = UIImage(named: "table_header_bg")
         
         let backgroundImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 200))
@@ -69,6 +126,8 @@ class CardSummaryViewController: UIViewController, UITableViewDataSource, UITabl
         backgroundImageView.addSubview(titleLabel)
         backgroundImageView.addSubview(subtitleLabel)
         
+        let container = UITableViewHeaderFooterView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 200))
+        
         constrain(titleLabel, subtitleLabel, backgroundImageView) {
             title, subtitle, image in
             title.top == image.top + 90
@@ -80,8 +139,17 @@ class CardSummaryViewController: UIViewController, UITableViewDataSource, UITabl
             subtitle.trailing == image.trailing - 40
         }
         
-        containerView.addSubview(backgroundImageView)
+        container.backgroundView = backgroundImageView
         
-        return containerView
+        return container
     }
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 200
+    }
+    
+    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 0
+    }
+    
 }

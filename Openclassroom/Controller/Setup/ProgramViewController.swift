@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Cartography
 
 class ProgramViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -110,6 +111,58 @@ class ProgramViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         return height
     }
+    
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let image = UIImage(named: "table_header_bg")
+        
+        let backgroundImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 200))
+        backgroundImageView.image = image
+        backgroundImageView.contentMode = .ScaleAspectFill
+        
+        let titleLabel = UILabel()
+        titleLabel.text = "COMPRENDRE LE WEB"
+        titleLabel.textColor = UIColor.whiteColor()
+        titleLabel.font = UIFont.boldSystemFontOfSize(24.0)
+        titleLabel.textAlignment = .Center
+        titleLabel.numberOfLines = 0
+        
+        let subtitleLabel = UILabel()
+        subtitleLabel.text = "Auteur : Mathieu Nebra"
+        subtitleLabel.textColor = UIColor.whiteColor()
+        subtitleLabel.font = UIFont.systemFontOfSize(14.0)
+        subtitleLabel.textAlignment = .Center
+        subtitleLabel.numberOfLines = 0
+        
+        backgroundImageView.addSubview(titleLabel)
+        backgroundImageView.addSubview(subtitleLabel)
+        
+        let container = UITableViewHeaderFooterView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 200))
+        
+        constrain(titleLabel, subtitleLabel, backgroundImageView) {
+            title, subtitle, image in
+            title.top == image.top + 90
+            title.leading == image.leading + 40
+            title.trailing == image.trailing - 40
+            
+            subtitle.top == title.bottom + 5
+            subtitle.leading == image.leading + 40
+            subtitle.trailing == image.trailing - 40
+        }
+        
+        container.backgroundView = backgroundImageView
+        
+        return container
+    }
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 200
+    }
+    
+    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 0
+    }
+    
     
     // MARK: - Navigation
     
