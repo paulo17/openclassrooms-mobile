@@ -163,7 +163,6 @@ class ProgramViewController: UIViewController, UITableViewDelegate, UITableViewD
         return 0
     }
     
-    
     // MARK: - Navigation
     
     func chooseProgram() {

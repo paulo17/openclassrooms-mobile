@@ -439,14 +439,14 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UNa-rY-Q81" id="1FO-ff-qRd">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dMi-h3-6Hj">
                                                     <rect key="frame" x="20" y="6" width="32" height="32"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLU-tB-ETz">
-                                                            <rect key="frame" x="5" y="5" width="22" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLU-tB-ETz">
+                                                            <rect key="frame" x="5" y="6" width="22" height="0.0"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
@@ -484,6 +484,12 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uaG-Xh-3gN">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="etn-ck-j16"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -491,10 +497,14 @@
                             <constraint firstItem="adr-xy-Eai" firstAttribute="top" secondItem="3zl-vV-xNv" secondAttribute="top" id="KNJ-oW-J6X"/>
                             <constraint firstAttribute="trailing" secondItem="adr-xy-Eai" secondAttribute="trailing" id="Pm1-oM-sMx"/>
                             <constraint firstItem="adr-xy-Eai" firstAttribute="leading" secondItem="3zl-vV-xNv" secondAttribute="leading" id="Yic-iC-dGC"/>
+                            <constraint firstItem="uaG-Xh-3gN" firstAttribute="top" secondItem="3zl-vV-xNv" secondAttribute="top" constant="20" id="hMW-yf-RAV"/>
+                            <constraint firstItem="uaG-Xh-3gN" firstAttribute="leading" secondItem="3zl-vV-xNv" secondAttribute="leading" id="mIz-Ka-jxc"/>
+                            <constraint firstAttribute="trailing" secondItem="uaG-Xh-3gN" secondAttribute="trailing" id="tag-UL-dqr"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="navigationBar" destination="uaG-Xh-3gN" id="fTX-fn-qik"/>
                         <outlet property="objectiveSummaryTableView" destination="adr-xy-Eai" id="W9O-LM-xr4"/>
                     </connections>
                 </viewController>

@@ -13,6 +13,7 @@ class CardSummaryViewController: UIViewController, UITableViewDataSource, UITabl
     
     // MARK: - IB Outlets
     
+    @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var objectiveSummaryTableView: UITableView!
     
     // MARK: - Instance variable
@@ -35,10 +36,42 @@ class CardSummaryViewController: UIViewController, UITableViewDataSource, UITabl
         objectiveSummaryTableView.dataSource = self
         objectiveSummaryTableView.delegate = self
         objectiveSummaryTableView.tableFooterView?.hidden = true
+        
+        self.addNavigationBar()
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+    }
+    
+    func addNavigationBar() {
+        navigationBar.translucent = true
+        navigationBar.shadowImage = UIImage()
+        navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
+        navigationBar.backgroundColor = UIColor.clearColor()
+        navigationBar.tintColor = UIColor.whiteColor()
+        
+        let navigationItem = UINavigationItem()
+        
+        let accountImage = UIImage(named: "account")
+        let backImage = UIImage(named: "Back")
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: backImage, style: .Plain, target: self, action: #selector(CardSummaryViewController.back))
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: accountImage, style: .Plain, target: self, action: #selector(CardSummaryViewController.showProfile))
+        
+        navigationBar.setItems([navigationItem], animated: true)
+    }
+    
+    func back() {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func showProfile() {
+        self.navigationItem.title = "" // remove back button title for profile view
+        let cardStoryboard = UIStoryboard(name: "Cards", bundle: nil)
+        let profileViewController = cardStoryboard.instantiateViewControllerWithIdentifier("ProfileViewController")
+        presentViewController(profileViewController, animated: true, completion: nil)
     }
     
     // MARK: - UITableView Datasource
