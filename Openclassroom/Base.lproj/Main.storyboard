@@ -305,7 +305,7 @@ numérique</string>
                                         <connections>
                                             <outlet property="objectiveDuration" destination="Iwm-AT-URM" id="FEa-uG-CGt"/>
                                             <outlet property="objectiveName" destination="fdg-tD-Qvo" id="qCP-0u-sn5"/>
-                                            <segue destination="DnJ-tf-YS0" kind="show" id="6O5-V9-UNX"/>
+                                            <segue destination="DnJ-tf-YS0" kind="show" id="88y-Bh-teQ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -353,14 +353,14 @@ numérique</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="P4K-vX-VFr">
-                                <rect key="frame" x="-4" y="64" width="383" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="program_cell" id="oww-8y-lj8" customClass="ProgramCell" customModule="Openclassroom" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="383" height="44"/>
+                                        <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oww-8y-lj8" id="rGz-0h-zC6">
-                                            <rect key="frame" x="0.0" y="0.0" width="383" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hdz-kE-cgi">
@@ -386,7 +386,7 @@ numérique</string>
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="de0-Hw-nKi">
-                                                    <rect key="frame" x="76" y="11" width="287" height="21"/>
+                                                    <rect key="frame" x="76" y="11" width="279" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="EUs-vG-MZx"/>
                                                     </constraints>
@@ -395,7 +395,7 @@ numérique</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajV-uc-pgR">
-                                                    <rect key="frame" x="18" y="2" width="345" height="40"/>
+                                                    <rect key="frame" x="18" y="2" width="337" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="iWK-bh-vuo"/>
                                                     </constraints>
@@ -417,7 +417,6 @@ numérique</string>
                                             <outlet property="numberLabel" destination="ose-je-K8I" id="poA-zM-d5P"/>
                                             <outlet property="roundBackgroundView" destination="Hdz-kE-cgi" id="XnC-ms-gVt"/>
                                             <outlet property="titleLabel" destination="de0-Hw-nKi" id="gjL-Cd-B5Z"/>
-                                            <segue destination="XkL-aL-3n7" kind="show" identifier="programToDay" id="JZT-vW-7Zg"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -430,15 +429,46 @@ numérique</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="oIf-Gl-FIe" firstAttribute="top" secondItem="P4K-vX-VFr" secondAttribute="bottom" id="6x3-ct-9fR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="P4K-vX-VFr" secondAttribute="trailing" id="9ID-XO-nJG"/>
+                            <constraint firstItem="P4K-vX-VFr" firstAttribute="top" secondItem="Lzx-nS-c5W" secondAttribute="top" id="BTK-fg-KLw"/>
+                            <constraint firstItem="oIf-Gl-FIe" firstAttribute="top" secondItem="P4K-vX-VFr" secondAttribute="bottom" id="CUx-GP-hjc"/>
+                            <constraint firstItem="P4K-vX-VFr" firstAttribute="top" secondItem="Lzx-nS-c5W" secondAttribute="top" id="NTo-AP-3bk"/>
+                            <constraint firstItem="oIf-Gl-FIe" firstAttribute="top" secondItem="P4K-vX-VFr" secondAttribute="bottom" id="PMS-jB-LTo"/>
                             <constraint firstAttribute="trailingMargin" secondItem="P4K-vX-VFr" secondAttribute="trailing" constant="-20" id="Qyc-W9-EbM"/>
+                            <constraint firstItem="P4K-vX-VFr" firstAttribute="leading" secondItem="Lzx-nS-c5W" secondAttribute="leadingMargin" id="Sb0-2c-zcO"/>
+                            <constraint firstAttribute="trailing" secondItem="P4K-vX-VFr" secondAttribute="trailing" id="bvG-vp-S8N"/>
+                            <constraint firstItem="P4K-vX-VFr" firstAttribute="leading" secondItem="Lzx-nS-c5W" secondAttribute="leading" id="csS-DZ-10D"/>
+                            <constraint firstAttribute="trailing" secondItem="P4K-vX-VFr" secondAttribute="trailing" id="e3g-1n-vCs"/>
+                            <constraint firstItem="P4K-vX-VFr" firstAttribute="leading" secondItem="Lzx-nS-c5W" secondAttribute="leading" id="hGt-lP-tHi"/>
                             <constraint firstItem="P4K-vX-VFr" firstAttribute="top" secondItem="Ngw-ao-Y8V" secondAttribute="bottom" id="i6i-sj-7Dd"/>
+                            <constraint firstItem="P4K-vX-VFr" firstAttribute="leading" secondItem="Lzx-nS-c5W" secondAttribute="leading" id="m5P-Ct-BOt"/>
+                            <constraint firstItem="oIf-Gl-FIe" firstAttribute="top" secondItem="P4K-vX-VFr" secondAttribute="bottom" id="obR-0D-FCd"/>
                             <constraint firstItem="P4K-vX-VFr" firstAttribute="leading" secondItem="Lzx-nS-c5W" secondAttribute="leadingMargin" constant="-20" id="wcm-dH-63m"/>
+                            <constraint firstAttribute="trailing" secondItem="P4K-vX-VFr" secondAttribute="trailing" id="x1J-Jg-ZTQ"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="9ID-XO-nJG"/>
+                                <exclude reference="NTo-AP-3bk"/>
+                                <exclude reference="Qyc-W9-EbM"/>
+                                <exclude reference="Sb0-2c-zcO"/>
+                                <exclude reference="csS-DZ-10D"/>
+                                <exclude reference="e3g-1n-vCs"/>
+                                <exclude reference="hGt-lP-tHi"/>
+                                <exclude reference="i6i-sj-7Dd"/>
+                                <exclude reference="wcm-dH-63m"/>
+                                <exclude reference="x1J-Jg-ZTQ"/>
+                                <exclude reference="6x3-ct-9fR"/>
+                                <exclude reference="PMS-jB-LTo"/>
+                                <exclude reference="obR-0D-FCd"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="GWB-Fq-EZ2"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="objectivesTableView" destination="P4K-vX-VFr" id="CUM-WC-U0I"/>
+                        <segue destination="XkL-aL-3n7" kind="show" identifier="programToDay" id="6Vs-Bb-OWa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a9F-sU-TmM" userLabel="First Responder" sceneMemberID="firstResponder"/>

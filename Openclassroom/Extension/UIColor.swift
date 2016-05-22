@@ -106,15 +106,15 @@ extension UIColor {
         return UIColor(white: 86.0 / 255.0, alpha: 1.0)
     }
     
-    class func OCSilverTwoColor() -> UIColor {
-        return UIColor(red: 206.0 / 255.0, green: 206.0 / 255.0, blue: 210.0 / 255.0, alpha: 1.0)
-    }
-    
     class func OCTurquoiseColor() -> UIColor {
         return UIColor(red: 0.0, green: 198.0 / 255.0, blue: 174.0 / 255.0, alpha: 1.0)
     }
     
     class func OCWarmGreyColor() -> UIColor {
         return UIColor(white: 155.0 / 255.0, alpha: 1.0)
+    }
+    
+    class func OCLipstickColor() -> UIColor {
+        return UIColor(red: 194.0 / 255.0, green: 25.0 / 255.0, blue: 69.0 / 255.0, alpha: 1.0)
     }
 }
