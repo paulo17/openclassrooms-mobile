@@ -22,6 +22,13 @@ extension UINavigationBar {
             ]
             self.titleTextAttributes = navBarAttributesDictionary
         }
-        
+    }
+    
+    func OCInvisibleNavigationBar() {
+        self.translucent = true
+        self.shadowImage = UIImage()
+        self.setBackgroundImage(UIImage(), forBarMetrics: .Default)
+        self.backgroundColor = UIColor.clearColor()
+        self.tintColor = UIColor.whiteColor()
     }
 }

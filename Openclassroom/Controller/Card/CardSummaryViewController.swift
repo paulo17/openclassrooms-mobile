@@ -30,6 +30,8 @@ class CardSummaryViewController: UIViewController, UITableViewDataSource, UITabl
         ["type": "subtitle", "text": "Les langages serveur"],
         ]
     
+    // MARK: - UI Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,12 +46,10 @@ class CardSummaryViewController: UIViewController, UITableViewDataSource, UITabl
         super.viewWillAppear(animated)
     }
     
+    // MARK: - UI NavigationBar
+    
     func addNavigationBar() {
-        navigationBar.translucent = true
-        navigationBar.shadowImage = UIImage()
-        navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
-        navigationBar.backgroundColor = UIColor.clearColor()
-        navigationBar.tintColor = UIColor.whiteColor()
+        navigationBar.OCInvisibleNavigationBar()
         
         let navigationItem = UINavigationItem()
         
@@ -62,6 +62,8 @@ class CardSummaryViewController: UIViewController, UITableViewDataSource, UITabl
         
         navigationBar.setItems([navigationItem], animated: true)
     }
+    
+    // MARK: - Navigation Item actions
     
     func back() {
         dismissViewControllerAnimated(true, completion: nil)
