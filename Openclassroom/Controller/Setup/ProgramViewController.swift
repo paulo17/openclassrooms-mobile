@@ -33,11 +33,19 @@ class ProgramViewController: UIViewController, UITableViewDelegate, UITableViewD
             ["type": "btn", "text": "Choisir"]
         ]
         
-        objectivesTableView.tableFooterView = UIView()
     }
     
     override func viewWillAppear(animated: Bool) {
-        self.title = "Comprendre le web"
+        self.title = ""
+        navigationController?.navigationBar.OCInvisibleNavigationBar()
+        
+        self.automaticallyAdjustsScrollViewInsets = false // remove space between tableview header and navigation bar
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.navigationBar.OCDefaultNavigationBar()
+        automaticallyAdjustsScrollViewInsets = true
     }
     
     // MARK: - TableView Delegate

@@ -10,10 +10,15 @@ import UIKit
 
 extension UINavigationBar {
     func OCDefaultNavigationBar() {
-        self.setBackgroundImage(UIImage(), forBarMetrics:UIBarMetrics.Default)
-        self.translucent = true
+        self.translucent = false
         self.shadowImage = UIImage()
         self.tintColor = UIColor.whiteColor()
+        self.barStyle = .Default
+        
+        var bounds = self.bounds
+        bounds.size.height += 100
+        
+        self.setBackgroundImage(CAGradientLayer.createGradient([UIColor.OCDustyOrangeColor().CGColor, UIColor.OCLipstickColor().CGColor], bounds: bounds), forBarMetrics: UIBarMetrics.Default)
         
         if let navBarFont = UIFont(name: "SourceSansPro-Light", size: 16) {
             let navBarAttributesDictionary: [String: AnyObject]?  = [
