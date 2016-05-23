@@ -1007,14 +1007,6 @@ numérique</string>
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mot de passe" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Of6-WL-fD4">
-                                <rect key="frame" x="30" y="303" width="315" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="FjM-3I-Am8"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="go" secureTextEntry="YES"/>
-                            </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="HPh-oH-2tT">
                                 <rect key="frame" x="94" y="53" width="186" height="131"/>
                                 <constraints>
@@ -1048,44 +1040,48 @@ numérique</string>
                                     <action selector="loginAction:" destination="sfH-8S-NlX" eventType="touchUpInside" id="p1O-Wh-xsl"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0HU-dc-mVG">
-                                <rect key="frame" x="30" y="262" width="315" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="k0D-oo-4NF"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next"/>
-                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="BPn-dH-SOO">
+                                <rect key="frame" x="30" y="273" width="315" height="90"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0HU-dc-mVG">
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="k0D-oo-4NF"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="next"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mot de passe" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Of6-WL-fD4">
+                                        <rect key="frame" x="0.0" y="60" width="315" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="FjM-3I-Am8"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="go" secureTextEntry="YES"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Of6-WL-fD4" firstAttribute="leading" secondItem="4wK-aS-NYJ" secondAttribute="leading" constant="30" id="0hI-Fa-OOd"/>
-                            <constraint firstItem="Of6-WL-fD4" firstAttribute="top" secondItem="0HU-dc-mVG" secondAttribute="bottom" constant="11" id="23Y-7C-0Wn"/>
                             <constraint firstItem="0oq-qU-4gt" firstAttribute="leading" secondItem="4wK-aS-NYJ" secondAttribute="leading" constant="30" id="4oB-ME-II4"/>
                             <constraint firstItem="LVu-Wo-oX5" firstAttribute="centerX" secondItem="4wK-aS-NYJ" secondAttribute="centerX" id="6qw-G1-S0r"/>
-                            <constraint firstAttribute="trailing" secondItem="0HU-dc-mVG" secondAttribute="trailing" constant="30" id="7Z6-eM-2dG"/>
-                            <constraint firstItem="Of6-WL-fD4" firstAttribute="top" secondItem="0HU-dc-mVG" secondAttribute="bottom" constant="30" id="9Nc-cY-doV"/>
                             <constraint firstAttribute="trailing" secondItem="0oq-qU-4gt" secondAttribute="trailing" constant="30" id="FZv-w3-keA"/>
-                            <constraint firstItem="0oq-qU-4gt" firstAttribute="top" secondItem="Of6-WL-fD4" secondAttribute="bottom" constant="100" id="RMN-C7-iE1"/>
-                            <constraint firstItem="0HU-dc-mVG" firstAttribute="top" secondItem="LVu-Wo-oX5" secondAttribute="bottom" constant="30" id="Y57-MK-evr"/>
+                            <constraint firstItem="BPn-dH-SOO" firstAttribute="leading" secondItem="4wK-aS-NYJ" secondAttribute="leading" constant="30" id="azg-yM-oRG"/>
                             <constraint firstItem="HPh-oH-2tT" firstAttribute="top" secondItem="Qj0-3U-UXx" secondAttribute="bottom" constant="53" id="cX9-4b-8O0"/>
-                            <constraint firstAttribute="trailing" secondItem="Of6-WL-fD4" secondAttribute="trailing" constant="30" id="lVk-DG-vOe"/>
+                            <constraint firstItem="ju1-v2-0Dn" firstAttribute="top" secondItem="BPn-dH-SOO" secondAttribute="bottom" constant="240" id="jyc-5p-mRo"/>
                             <constraint firstItem="LVu-Wo-oX5" firstAttribute="top" secondItem="HPh-oH-2tT" secondAttribute="bottom" constant="28" id="nrk-uE-5PL"/>
                             <constraint firstItem="ju1-v2-0Dn" firstAttribute="top" secondItem="0oq-qU-4gt" secondAttribute="bottom" constant="60" id="qio-d3-I7g"/>
-                            <constraint firstItem="0HU-dc-mVG" firstAttribute="leading" secondItem="4wK-aS-NYJ" secondAttribute="leading" constant="30" id="qw6-3h-prH"/>
+                            <constraint firstAttribute="trailing" secondItem="BPn-dH-SOO" secondAttribute="trailing" constant="30" id="sHm-nn-QQ8"/>
                             <constraint firstItem="HPh-oH-2tT" firstAttribute="centerX" secondItem="4wK-aS-NYJ" secondAttribute="centerX" id="vIY-MD-7Ph"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="9Nc-cY-doV"/>
-                                <exclude reference="RMN-C7-iE1"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Connexion" id="oeq-BN-bg5"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="bottomStackConstraint" destination="jyc-5p-mRo" id="Uzg-c4-i9c"/>
                         <outlet property="emailTextField" destination="0HU-dc-mVG" id="KkA-Gi-tIc"/>
+                        <outlet property="inputStackView" destination="BPn-dH-SOO" id="Vmv-JP-Jeg"/>
                         <outlet property="loginButton" destination="0oq-qU-4gt" id="xvm-hy-StO"/>
                         <outlet property="passwordTextField" destination="Of6-WL-fD4" id="0L5-BP-rLQ"/>
                     </connections>

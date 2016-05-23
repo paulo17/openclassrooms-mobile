@@ -26,6 +26,10 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         passwordTextField.delegate = self
         repeatTextField.delegate = self
         
+        emailTextField.OCDefaultTextField(inputStackView)
+        passwordTextField.OCDefaultTextField(inputStackView)
+        repeatTextField.OCDefaultTextField(inputStackView)
+        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(RegisterViewController.keyboardWillShow), name: UIKeyboardWillShowNotification, object: nil)
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(RegisterViewController.keyboardWillHide), name: UIKeyboardWillHideNotification, object: nil)
@@ -33,6 +37,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
         registerButton.OCdefaultButton(UIColor.OCDustyOrangeColor())
         loginButton.OCborderButton(UIColor.OCDustyOrangeColor())
     }
