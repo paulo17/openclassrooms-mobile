@@ -29,7 +29,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         /*NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LoginViewController.keyboardWillShow), name: UIKeyboardWillShowNotification, object: nil)
          
          NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LoginViewController.keyboardWillHide), name: UIKeyboardWillHideNotification, object: nil)*/
-        
+        self.navigationController?.navigationBar.topItem?.title = ""
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -112,6 +112,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
         
         return false
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        self.navigationItem.title = ""
     }
     
 }

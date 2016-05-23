@@ -26,10 +26,11 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         passwordTextField.delegate = self
         repeatTextField.delegate = self
         
-        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(RegisterViewController.keyboardWillShow), name: UIKeyboardWillShowNotification, object: nil)
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(RegisterViewController.keyboardWillHide), name: UIKeyboardWillHideNotification, object: nil)
+        
+        self.navigationController?.navigationBar.topItem?.title = ""
     }
     
     override func viewWillAppear(animated: Bool) {

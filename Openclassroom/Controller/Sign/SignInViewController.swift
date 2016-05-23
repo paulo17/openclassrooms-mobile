@@ -19,6 +19,8 @@ class SignInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.navigationBar.topItem?.title = "Connexion / Inscription"
     }
     
     override func viewWillAppear(animated: Bool) {
