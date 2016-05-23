@@ -37,8 +37,8 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         objectiveTableView.rowHeight = UITableViewAutomaticDimension
         objectiveTableView.estimatedRowHeight = 60.0
         
-        let colorMain = try! UIColor(rgba_throws: "#F39539")
-        let colorSecondary = try! UIColor(rgba_throws: "#C21945")
+        let colorMain = UIColor.OCDustyOrangeColor()
+        let colorSecondary = UIColor.OCLipstickColor()
         
         backgroundHeaderView.image = CAGradientLayer.createGradient([colorMain.CGColor, colorSecondary.CGColor], bounds: headerView.bounds)
         
@@ -52,10 +52,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         super.viewWillAppear(animated)
         
         self.navigationItem.title = ""
-        navigationBar.translucent = true
-        navigationBar.shadowImage = UIImage()
-        navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
-        navigationBar.backgroundColor = UIColor.clearColor()
+        navigationBar.OCInvisibleNavigationBar()
         
         let backImage = UIImage(named: "Back")
         let settingsImage = UIImage(named: "Settings")

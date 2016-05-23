@@ -10,7 +10,7 @@ import UIKit
 
 class MainCardViewController: UIViewController {
     
-    // MARK: - Lifecycle
+    // MARK: - UI Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +31,10 @@ class MainCardViewController: UIViewController {
     // MARK: - Navigation bar actions
     
     func showResume() {
-        print("show resume")
+        self.navigationItem.title = ""
+        let cardStoryboard = UIStoryboard(name: "Cards", bundle: nil)
+        let cardSummaryViewController = cardStoryboard.instantiateViewControllerWithIdentifier("CardSummaryViewController")
+        presentViewController(cardSummaryViewController, animated: true, completion: nil)
     }
     
     func showProfile() {

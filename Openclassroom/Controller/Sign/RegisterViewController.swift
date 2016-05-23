@@ -10,11 +10,14 @@ import UIKit
 
 class RegisterViewController: UIViewController, UITextFieldDelegate {
     
+    @IBOutlet weak var inputStackView: UIStackView!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var repeatTextField: UITextField!
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
+    
+    @IBOutlet weak var bottomStackConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,11 +25,60 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         emailTextField.delegate = self
         passwordTextField.delegate = self
         repeatTextField.delegate = self
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(RegisterViewController.keyboardWillShow), name: UIKeyboardWillShowNotification, object: nil)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(RegisterViewController.keyboardWillHide), name: UIKeyboardWillHideNotification, object: nil)
+        
+        self.navigationController?.navigationBar.topItem?.title = ""
     }
     
     override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
         registerButton.OCdefaultButton(UIColor.OCDustyOrangeColor())
         loginButton.OCborderButton(UIColor.OCDustyOrangeColor())
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillHideNotification, object: nil)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        emailTextField.OCDefaultTextField(inputStackView)
+        passwordTextField.OCDefaultTextField(inputStackView)
+        repeatTextField.OCDefaultTextField(inputStackView)
+    }
+    
+    // MARK: - Keyboard notifications
+    
+    func keyboardWillShow(notification: NSNotification) {
+        adjustingHeight(true, notification: notification)
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        adjustingHeight(false, notification: notification)
+    }
+    
+    func adjustingHeight(show: Bool, notification: NSNotification) {
+        
+        var userInfo = notification.userInfo!
+        
+        let keyboardFrame: CGRect = (userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue).CGRectValue()
+        
+        let animationDurarion = userInfo[UIKeyboardAnimationDurationUserInfoKey] as! NSTimeInterval
+        
+        let changeInHeight = (show) ? CGRectGetHeight(keyboardFrame) + 20 : 191
+        
+        UIView.animateWithDuration(animationDurarion, animations: { () -> Void in
+            self.bottomStackConstraint.constant = changeInHeight
+        })
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
     // MARK: - IBAction
@@ -48,7 +100,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             let alert = UIAlertController(title: "Données invalides", message: "Les mots de passes ne correspondent pas", preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "Annuler", style: UIAlertActionStyle.Cancel, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
-
+            
             passwordTextField.text = ""
             repeatTextField.text = ""
             
@@ -82,5 +134,5 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         
         return false
     }
-
+    
 }

@@ -7,16 +7,22 @@
 //
 
 import UIKit
+import Cartography
 
 extension UITextField {
-    func OCDefaultTextField() {
-        /*let border = CALayer()
-        let linesWidth = CGFloat(1.0)
-        let line = CGRectMake(0.0, self.frame.size.height - linesWidth, frame.size.width, linesWidth)
+    
+    func OCDefaultTextField(stackView: UIStackView?) {
+        let border = CALayer()
+        let width = CGFloat(1.0)
         
-        border.frame = line
-        border.backgroundColor = UIColorFromRGBA("FFFFFF").CGColor
-        self.layer.addSublayer(border)*/
+        let frameWidth = (stackView != nil) ? stackView!.frame.size.width : self.frame.size.width
+        
+        border.frame = CGRect(x: 0, y: self.frame.size.height - width, width: frameWidth, height: self.frame.size.height)
+        border.borderWidth = width
+        border.borderColor = UIColor.OCSilverColor().CGColor
+        
+        self.layer.addSublayer(border)
+        self.layer.masksToBounds = true
     }
     
 }
