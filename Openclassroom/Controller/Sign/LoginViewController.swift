@@ -26,9 +26,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         emailTextField.delegate = self
         passwordTextField.delegate = self
         
-        emailTextField.OCDefaultTextField(nil)
-        passwordTextField.OCDefaultTextField(nil)
-        
         /*NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LoginViewController.keyboardWillShow), name: UIKeyboardWillShowNotification, object: nil)
          
          NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LoginViewController.keyboardWillHide), name: UIKeyboardWillHideNotification, object: nil)*/
@@ -37,6 +34,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewWillAppear(animated: Bool) {
         loginButton.OCdefaultButton(UIColor.OCDustyOrangeColor())
+    }
+    
+    override func viewDidLayoutSubviews() {
+        emailTextField.OCDefaultTextField(nil)
+        passwordTextField.OCDefaultTextField(nil)
     }
     
     // MARK: - Keyboard notifications methods

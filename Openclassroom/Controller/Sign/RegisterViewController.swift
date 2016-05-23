@@ -26,9 +26,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         passwordTextField.delegate = self
         repeatTextField.delegate = self
         
-        emailTextField.OCDefaultTextField(inputStackView)
-        passwordTextField.OCDefaultTextField(inputStackView)
-        repeatTextField.OCDefaultTextField(inputStackView)
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(RegisterViewController.keyboardWillShow), name: UIKeyboardWillShowNotification, object: nil)
         
@@ -46,6 +43,12 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         super.viewWillDisappear(animated)
         NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillHideNotification, object: nil)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        emailTextField.OCDefaultTextField(inputStackView)
+        passwordTextField.OCDefaultTextField(inputStackView)
+        repeatTextField.OCDefaultTextField(inputStackView)
     }
     
     // MARK: - Keyboard notifications
@@ -66,7 +69,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         
         let animationDurarion = userInfo[UIKeyboardAnimationDurationUserInfoKey] as! NSTimeInterval
         
-        let changeInHeight = (show) ? CGRectGetHeight(keyboardFrame) : 191
+        let changeInHeight = (show) ? CGRectGetHeight(keyboardFrame) + 20 : 191
         
         UIView.animateWithDuration(animationDurarion, animations: { () -> Void in
             self.bottomStackConstraint.constant = changeInHeight
