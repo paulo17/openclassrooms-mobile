@@ -19,12 +19,18 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="L1T-ZZ-IvU">
                                 <rect key="frame" x="72" y="274" width="231" height="119"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="231" id="2FV-EE-3c1"/>
+                                    <constraint firstAttribute="height" constant="119" id="qbe-i9-eq7"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="L1T-ZZ-IvU" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="4oI-OQ-F7c"/>
                             <constraint firstItem="L1T-ZZ-IvU" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="6E8-Fh-Jgl"/>
                             <constraint firstItem="L1T-ZZ-IvU" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="254" id="R3g-d4-t7Y"/>
+                            <constraint firstItem="L1T-ZZ-IvU" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Wro-mP-LtZ"/>
                             <constraint firstItem="L1T-ZZ-IvU" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ZOd-Nd-Ciz"/>
                             <constraint firstItem="L1T-ZZ-IvU" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="56" id="g6K-2h-GTO"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="L1T-ZZ-IvU" secondAttribute="bottom" constant="274" id="kU9-0e-G9F"/>
@@ -33,7 +39,11 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="6E8-Fh-Jgl"/>
+                                <exclude reference="R3g-d4-t7Y"/>
                                 <exclude reference="ZOd-Nd-Ciz"/>
+                                <exclude reference="g6K-2h-GTO"/>
+                                <exclude reference="yRE-JK-Y3I"/>
+                                <exclude reference="kU9-0e-G9F"/>
                             </mask>
                         </variation>
                     </view>
