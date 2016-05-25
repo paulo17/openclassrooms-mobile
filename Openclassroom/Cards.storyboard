@@ -119,26 +119,26 @@
                                     <action selector="chooseNewObjectiveAction:" destination="vwi-dr-nfo" eventType="touchUpInside" id="OZ1-QG-166"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Partager vos connaissances" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ki3-bK-EJ2">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Partager vos connaissances" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ki3-bK-EJ2">
                                 <rect key="frame" x="74" y="442" width="227" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="0.33725491166114807" green="0.33725491166114807" blue="0.33725491166114807" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WOt-NM-xWg">
-                                <rect key="frame" x="54" y="474" width="267" height="44"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" spacing="30" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WOt-NM-xWg">
+                                <rect key="frame" x="54" y="474" width="267" height="190"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Facebook" translatesAutoresizingMaskIntoConstraints="NO" id="zRq-qc-BrR">
-                                        <rect key="frame" x="0.0" y="0.0" width="45" height="44"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Facebook" translatesAutoresizingMaskIntoConstraints="NO" id="zRq-qc-BrR">
+                                        <rect key="frame" x="0.0" y="0.0" width="44" height="190"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Twitter" translatesAutoresizingMaskIntoConstraints="NO" id="oR5-sg-niX">
-                                        <rect key="frame" x="75" y="0.0" width="44" height="44"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Twitter" translatesAutoresizingMaskIntoConstraints="NO" id="oR5-sg-niX">
+                                        <rect key="frame" x="74" y="0.0" width="45" height="190"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Linkedin" translatesAutoresizingMaskIntoConstraints="NO" id="4HJ-Zc-3uZ">
-                                        <rect key="frame" x="149" y="0.0" width="44" height="44"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Linkedin" translatesAutoresizingMaskIntoConstraints="NO" id="4HJ-Zc-3uZ">
+                                        <rect key="frame" x="149" y="0.0" width="44" height="190"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Google" translatesAutoresizingMaskIntoConstraints="NO" id="NdE-1D-Fod">
-                                        <rect key="frame" x="223" y="0.0" width="44" height="44"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Google" translatesAutoresizingMaskIntoConstraints="NO" id="NdE-1D-Fod">
+                                        <rect key="frame" x="223" y="0.0" width="44" height="190"/>
                                     </imageView>
                                 </subviews>
                             </stackView>
@@ -211,7 +211,7 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ckX-Kf-jHd">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="275"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile" translatesAutoresizingMaskIntoConstraints="NO" id="CrT-cz-kga">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Profile" translatesAutoresizingMaskIntoConstraints="NO" id="CrT-cz-kga">
                                         <rect key="frame" x="136" y="96" width="103" height="102"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="102" id="ZKd-HZ-hFT"/>
@@ -246,11 +246,16 @@
                                     <constraint firstItem="CrT-cz-kga" firstAttribute="leading" secondItem="uce-Jk-jgS" secondAttribute="leading" constant="136" id="ckL-ec-S3p"/>
                                     <constraint firstAttribute="bottom" secondItem="ckX-Kf-jHd" secondAttribute="bottom" id="eX9-rN-aAN"/>
                                     <constraint firstItem="ckX-Kf-jHd" firstAttribute="top" secondItem="uce-Jk-jgS" secondAttribute="top" id="lKb-96-4UQ"/>
+                                    <constraint firstItem="CrT-cz-kga" firstAttribute="centerX" secondItem="uce-Jk-jgS" secondAttribute="centerX" id="lhd-tk-W0u"/>
                                     <constraint firstAttribute="trailing" secondItem="PUe-IA-Ws0" secondAttribute="trailing" id="rBr-Rm-ad9"/>
+                                    <constraint firstItem="CrT-cz-kga" firstAttribute="centerY" secondItem="uce-Jk-jgS" secondAttribute="centerY" id="uUq-aS-GSl"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="3Fg-eg-wkb"/>
+                                        <exclude reference="5Xn-XJ-17U"/>
+                                        <exclude reference="ckL-ec-S3p"/>
+                                        <exclude reference="uUq-aS-GSl"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -321,16 +326,16 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="faY-cJ-CUq" id="Yol-qo-YpX">
-                                            <rect key="frame" x="0.0" y="0.0" width="336" height="60"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="336" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="72 heures" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FaH-LQ-0Za">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="72 heures" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FaH-LQ-0Za">
                                                     <rect key="frame" x="21" y="33" width="64" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.33725491169999999" green="0.33725491169999999" blue="0.33725491169999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Découvrez les solutions CMS." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YcS-MH-GnW">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Découvrez les solutions CMS." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YcS-MH-GnW">
                                                     <rect key="frame" x="21" y="14" width="294" height="19"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.33725491166114807" green="0.33725491166114807" blue="0.33725491166114807" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -439,7 +444,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UNa-rY-Q81" id="1FO-ff-qRd">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dMi-h3-6Hj">
