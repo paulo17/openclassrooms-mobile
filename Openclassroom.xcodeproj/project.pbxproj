@@ -62,7 +62,6 @@
 		6BE8D07A1CB54021000D3243 /* CardsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE8D0791CB54021000D3243 /* CardsFactory.swift */; };
 		6BE8D07D1CB5444B000D3243 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE8D07C1CB5444B000D3243 /* Card.swift */; };
 		6BE8D07F1CB54494000D3243 /* AbstractCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE8D07E1CB54494000D3243 /* AbstractCard.swift */; };
-		6BEAA7191C5FBCB80043BEA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEAA7181C5FBCB80043BEA2 /* ViewController.swift */; };
 		6BF23A9C1C5FAE94001B1006 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF23A9B1C5FAE94001B1006 /* AppDelegate.swift */; };
 		6BF23AA11C5FAE94001B1006 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BF23A9F1C5FAE94001B1006 /* Main.storyboard */; };
 		6BF23AA31C5FAE94001B1006 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BF23AA21C5FAE94001B1006 /* Assets.xcassets */; };
@@ -129,7 +128,6 @@
 		6BE8D0791CB54021000D3243 /* CardsFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsFactory.swift; sourceTree = "<group>"; };
 		6BE8D07C1CB5444B000D3243 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		6BE8D07E1CB54494000D3243 /* AbstractCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractCard.swift; sourceTree = "<group>"; };
-		6BEAA7181C5FBCB80043BEA2 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6BF23A981C5FAE94001B1006 /* Openclassroom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Openclassroom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BF23A9B1C5FAE94001B1006 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BF23AA01C5FAE94001B1006 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -354,7 +352,6 @@
 				6B4E30F11C99A20100BE42CB /* Setup */,
 				6BA0F8181C984BB0001AA68E /* Walkthrough */,
 				6B4BEE791C8723A8006D2862 /* Sign */,
-				6BEAA7181C5FBCB80043BEA2 /* ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -583,7 +580,6 @@
 				6B7D3C1C1CEBA4DC00A0675D /* ProfileViewController.swift in Sources */,
 				6B4BEE7D1C8723C2006D2862 /* LoginViewController.swift in Sources */,
 				6BE8D0721CB53EBF000D3243 /* StartCell.swift in Sources */,
-				6BEAA7191C5FBCB80043BEA2 /* ViewController.swift in Sources */,
 				6B88293C1CABDFFB003CC1EC /* Redirect.swift in Sources */,
 				6BE8D07A1CB54021000D3243 /* CardsFactory.swift in Sources */,
 				6B88294D1CABE18D003CC1EC /* Errors.swift in Sources */,
