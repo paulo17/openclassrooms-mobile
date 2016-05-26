@@ -43,9 +43,9 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         backgroundHeaderView.image = CAGradientLayer.createGradient([colorMain.CGColor, colorSecondary.CGColor], bounds: headerView.bounds)
         
         
-        /*if let currentObjective = DataContainer.sharedDataContainer.currentUser.objective {
-         objectiveLabel.text = currentObjective
-         }*/
+        if let currentObjective = DataContainer.sharedDataContainer.currentUser.objective {
+            objectiveLabel.text = currentObjective
+        }
     }
     
     override func viewWillAppear(animated: Bool) {

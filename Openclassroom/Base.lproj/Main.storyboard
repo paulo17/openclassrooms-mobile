@@ -1135,7 +1135,7 @@ numérique</string>
                                 <rect key="frame" x="15" y="310" width="345" height="110"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lundi, Mardi, Mercredi, Jeudi" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xa1-kd-sZ7">
-                                        <rect key="frame" x="30" y="59" width="235" height="22"/>
+                                        <rect key="frame" x="30" y="59" width="273" height="22"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <color key="textColor" red="0.74901962280000001" green="0.74901962280000001" blue="0.76470589639999997" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1160,6 +1160,7 @@ numérique</string>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="PWh-TZ-NP7" firstAttribute="leading" secondItem="xa1-kd-sZ7" secondAttribute="trailing" constant="10" id="0Sk-7a-Srj"/>
                                     <constraint firstItem="PWh-TZ-NP7" firstAttribute="centerY" secondItem="lGN-fO-5Lh" secondAttribute="centerY" id="3ii-F9-pGf"/>
                                     <constraint firstItem="xa1-kd-sZ7" firstAttribute="leading" secondItem="lGN-fO-5Lh" secondAttribute="leading" constant="30" id="5PW-HN-a1F"/>
                                     <constraint firstAttribute="trailing" secondItem="PWh-TZ-NP7" secondAttribute="trailing" constant="20" id="665-bh-ANy"/>
@@ -1183,8 +1184,8 @@ numérique</string>
                                         <color key="textColor" red="0.33725491169999999" green="0.33725491169999999" blue="0.33725491169999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25 minutes" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucd-jy-mZS">
-                                        <rect key="frame" x="30" y="59" width="90" height="22"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25 minutes" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ucd-jy-mZS">
+                                        <rect key="frame" x="30" y="59" width="273" height="22"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <color key="textColor" red="0.74901962280000001" green="0.74901962280000001" blue="0.76470589639999997" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1210,6 +1211,7 @@ numérique</string>
                                     <constraint firstItem="ucd-jy-mZS" firstAttribute="leading" secondItem="KcN-23-QVj" secondAttribute="leading" constant="30" id="h8k-7J-ahU"/>
                                     <constraint firstAttribute="height" constant="110" id="njS-CG-9N2"/>
                                     <constraint firstAttribute="trailing" secondItem="Bfd-WO-oHU" secondAttribute="trailing" constant="20" id="uI0-cG-WVd"/>
+                                    <constraint firstItem="Bfd-WO-oHU" firstAttribute="leading" secondItem="ucd-jy-mZS" secondAttribute="trailing" constant="10" id="uIx-Pa-lJu"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="button" destination="Bfd-WO-oHU" id="kpr-gX-A9S"/>
@@ -1220,8 +1222,8 @@ numérique</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bTh-Wn-NzU" customClass="ParameterView" customModule="Openclassrooms" customModuleProvider="target">
                                 <rect key="frame" x="15" y="180" width="345" height="110"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Initiation numérique" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kaP-ai-N1X">
-                                        <rect key="frame" x="30" y="59" width="160" height="22"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Initiation numérique" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kaP-ai-N1X">
+                                        <rect key="frame" x="30" y="59" width="274" height="22"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <color key="textColor" red="0.74901962280273438" green="0.74901962280273438" blue="0.76470589637756348" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1252,6 +1254,7 @@ numérique</string>
                                     <constraint firstItem="kaP-ai-N1X" firstAttribute="leading" secondItem="bTh-Wn-NzU" secondAttribute="leading" constant="30" id="IKM-e8-zOq"/>
                                     <constraint firstAttribute="trailing" secondItem="iwN-cI-90u" secondAttribute="trailing" constant="19" id="Ike-Tl-BtP"/>
                                     <constraint firstItem="iwN-cI-90u" firstAttribute="centerY" secondItem="bTh-Wn-NzU" secondAttribute="centerY" id="K4G-iQ-9HY"/>
+                                    <constraint firstItem="iwN-cI-90u" firstAttribute="leading" secondItem="kaP-ai-N1X" secondAttribute="trailing" constant="10" id="k15-xg-XpI"/>
                                     <constraint firstItem="kaP-ai-N1X" firstAttribute="top" secondItem="YAx-1P-8fb" secondAttribute="bottom" constant="8" id="wiz-62-Cal"/>
                                 </constraints>
                                 <connections>
