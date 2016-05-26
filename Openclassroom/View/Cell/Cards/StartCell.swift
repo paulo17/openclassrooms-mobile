@@ -107,7 +107,7 @@ class StartCell: AbstractCard, CardProtocol {
     }
     
     private func setupNextButton() {
-        startButton.setTitle("Suivant", forState: .Normal)
+        startButton.setTitle("Commencer", forState: .Normal)
         startButton.setTitleColor(UIColor.OCDustyOrangeColor(), forState: .Normal)
         startButton.titleLabel?.textAlignment = .Center
         startButton.titleLabel?.font = UIFont.systemFontOfSize(14.0)
