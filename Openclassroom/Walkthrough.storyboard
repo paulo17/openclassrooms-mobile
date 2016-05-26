@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -8,7 +8,7 @@
         <!--Expand Navigation Controller-->
         <scene sceneID="qRD-0Q-xtb">
             <objects>
-                <navigationController storyboardIdentifier="WalkthroughNavigationController" id="hEh-Cm-bGe" customClass="OCExpandNavigationController" customModule="Openclassroom" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="WalkthroughNavigationController" id="hEh-Cm-bGe" customClass="OCExpandNavigationController" customModule="Openclassrooms" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rKb-qu-EJD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -25,7 +25,7 @@
         <!--Onboarding View Controller-->
         <scene sceneID="VTW-Yj-0ga">
             <objects>
-                <viewController storyboardIdentifier="walkthrough_master" id="R6f-J0-OkJ" customClass="OCOnboardingViewController" customModule="Openclassroom" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="walkthrough_master" id="R6f-J0-OkJ" customClass="OCOnboardingViewController" customModule="Openclassrooms" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="T0W-h7-M5S"/>
                         <viewControllerLayoutGuide type="bottom" id="8cg-TR-BpX"/>
@@ -119,7 +119,7 @@
                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="260" id="XhF-Re-tnc"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paramétrez votre coach : définissez votre ojbectif, vos jours de disponibilité, et votre temps de travail quotidien." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="oVf-3k-T0H">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paramétrez votre coach : définissez votre objectif, vos jours de disponibilité, et votre temps de travail quotidien." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="oVf-3k-T0H">
                                         <rect key="frame" x="17" y="67" width="281" height="143"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                         <color key="textColor" red="0.74901962280273438" green="0.74901962280273438" blue="0.76470589637756348" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -292,7 +292,7 @@
         <!--Custom Walkthrough Page View Controller-->
         <scene sceneID="ykS-So-GfJ">
             <objects>
-                <viewController storyboardIdentifier="walkthrough3" id="2So-ui-fvv" customClass="CustomWalkthroughPageViewController" customModule="Openclassroom" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="walkthrough3" id="2So-ui-fvv" customClass="CustomWalkthroughPageViewController" customModule="Openclassrooms" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aGz-iw-5nu"/>
                         <viewControllerLayoutGuide type="bottom" id="0mN-ed-Pzh"/>
@@ -308,7 +308,7 @@
                                     <constraint firstAttribute="height" constant="41" id="W3J-Hh-hLp"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
-                                <state key="normal" title="Inscription">
+                                <state key="normal" title="Suivant">
                                     <color key="titleColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
