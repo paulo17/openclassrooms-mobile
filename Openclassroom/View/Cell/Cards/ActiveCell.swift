@@ -50,6 +50,7 @@ class ActiveCell: AbstractCard, CardProtocol {
             title.top == container.top + 20
             title.leading == container.leading + 20
             title.trailing == container.trailing - 20
+            title.height == 30
             
             subtitle.top == title.bottom + 2
             subtitle.leading == container.leading + 20
@@ -124,8 +125,9 @@ class ActiveCell: AbstractCard, CardProtocol {
         title.font = UIFont.boldSystemFontOfSize(24.0)
         title.textColor = UIColor.OCGreyishBrownColor()
         title.textAlignment = .Center
-        title.numberOfLines = 0
-        title.text = "Card's title"
+        title.numberOfLines = 1
+        title.adjustsFontSizeToFitWidth = true
+        title.minimumScaleFactor = 0.5
     }
     
     private func setupSubtitle() {
@@ -149,6 +151,8 @@ class ActiveCell: AbstractCard, CardProtocol {
         startButton.titleLabel?.textAlignment = .Center
         startButton.titleLabel?.font = UIFont.systemFontOfSize(16.0, weight: 0.2)
         startButton.OCdefaultButton(UIColor.OCDustyOrangeColor())
+        startButton.userInteractionEnabled = true
+        startButton.setTitleColor(UIColor.OCSilverColor(), forState: .Highlighted)
     }
     
     private func setupDownloadButton() {
