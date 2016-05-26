@@ -281,8 +281,8 @@
                                     <color key="titleColor" red="0.9529411793" green="0.58431375029999999" blue="0.22352941330000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comprendre le web" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rzS-po-HYv">
-                                <rect key="frame" x="114" y="322" width="148" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comprendre le web" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rzS-po-HYv">
+                                <rect key="frame" x="36" y="322" width="303" height="20"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <color key="textColor" red="0.33725491169999999" green="0.33725491169999999" blue="0.33725491169999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -382,6 +382,7 @@
                             <constraint firstItem="uce-Jk-jgS" firstAttribute="top" secondItem="IJB-oh-esb" secondAttribute="top" id="Bxs-qW-Tfm"/>
                             <constraint firstItem="YJY-Oq-UQT" firstAttribute="top" secondItem="4Dp-af-yGK" secondAttribute="bottom" constant="30" id="Ecj-3N-6Hr"/>
                             <constraint firstItem="cex-Ct-en8" firstAttribute="top" secondItem="CrS-CH-8lx" secondAttribute="bottom" constant="2" id="Fir-HD-jNq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rzS-po-HYv" secondAttribute="trailing" constant="20" id="Geg-Vh-fGR"/>
                             <constraint firstItem="gyc-3v-jIu" firstAttribute="top" secondItem="rzS-po-HYv" secondAttribute="bottom" constant="15" id="Mzm-vn-WXC"/>
                             <constraint firstItem="uce-Jk-jgS" firstAttribute="leading" secondItem="IJB-oh-esb" secondAttribute="leading" id="NVL-vZ-jNA"/>
                             <constraint firstItem="BqS-pW-DKp" firstAttribute="top" secondItem="ucH-5m-iv8" secondAttribute="bottom" constant="2" id="Pkq-z2-dYw"/>
@@ -390,6 +391,7 @@
                             <constraint firstItem="Wbu-C4-xJ7" firstAttribute="top" secondItem="gyc-3v-jIu" secondAttribute="bottom" constant="2" id="X5n-Dk-BKZ"/>
                             <constraint firstItem="rzS-po-HYv" firstAttribute="centerX" secondItem="IJB-oh-esb" secondAttribute="centerX" id="YSt-qH-ot4"/>
                             <constraint firstAttribute="trailing" secondItem="gyc-3v-jIu" secondAttribute="trailing" constant="30" id="ZM4-dV-doN"/>
+                            <constraint firstItem="rzS-po-HYv" firstAttribute="leading" secondItem="IJB-oh-esb" secondAttribute="leadingMargin" constant="20" id="cnO-RG-OPa"/>
                             <constraint firstItem="4Dp-af-yGK" firstAttribute="top" secondItem="BqS-pW-DKp" secondAttribute="bottom" constant="35" id="d5g-ma-wLC"/>
                             <constraint firstItem="PHg-gx-mD6" firstAttribute="top" secondItem="m6v-gG-KD1" secondAttribute="bottom" constant="25" id="dJi-NX-tw3"/>
                             <constraint firstItem="PHg-gx-mD6" firstAttribute="centerX" secondItem="IJB-oh-esb" secondAttribute="centerX" id="eHZ-7r-fvf"/>
@@ -403,6 +405,7 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="dJi-NX-tw3"/>
+                                <exclude reference="YSt-qH-ot4"/>
                             </mask>
                         </variation>
                     </view>
@@ -515,7 +518,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SvP-8m-36p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="352.5" y="1126.5"/>
+            <point key="canvasLocation" x="354.5" y="1115.5"/>
         </scene>
         <!--Expand Navigation Controller-->
         <scene sceneID="6I3-kl-pFb">
