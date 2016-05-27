@@ -906,7 +906,7 @@ numérique</string>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="9Gf-dN-vbm">
-                                <rect key="frame" x="30" y="262" width="315" height="150"/>
+                                <rect key="frame" x="30" y="259" width="315" height="150"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qLw-cA-j0K">
                                         <rect key="frame" x="0.0" y="0.0" width="315" height="30"/>
@@ -958,12 +958,6 @@ numérique</string>
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inscription avec email" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0DH-SB-OIM">
-                                <rect key="frame" x="109" y="212" width="157" height="20"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="textColor" red="0.33725491169999999" green="0.33725491169999999" blue="0.33725491169999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -978,15 +972,13 @@ numérique</string>
                             <constraint firstAttribute="trailing" secondItem="9Gf-dN-vbm" secondAttribute="trailing" constant="30" id="Vhp-2k-J1j"/>
                             <constraint firstItem="HX7-DG-33i" firstAttribute="top" secondItem="zlI-jb-7bB" secondAttribute="bottom" constant="23" id="XZu-vz-4cP"/>
                             <constraint firstAttribute="trailing" secondItem="i2J-04-dlq" secondAttribute="trailing" constant="30" id="aHZ-w6-YPT"/>
+                            <constraint firstItem="9Gf-dN-vbm" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jgt-d7-PVq" secondAttribute="bottom" constant="5" id="bRG-Go-TXg"/>
                             <constraint firstItem="zlI-jb-7bB" firstAttribute="top" secondItem="i2J-04-dlq" secondAttribute="bottom" constant="17" id="bmK-0b-KlF"/>
-                            <constraint firstItem="HX7-DG-33i" firstAttribute="top" relation="lessThanOrEqual" secondItem="9Gf-dN-vbm" secondAttribute="bottom" priority="250" constant="191" id="cVo-H6-Vgm"/>
+                            <constraint firstItem="HX7-DG-33i" firstAttribute="top" secondItem="9Gf-dN-vbm" secondAttribute="bottom" priority="250" constant="191" id="cVo-H6-Vgm"/>
                             <constraint firstItem="fu1-uP-G6t" firstAttribute="top" secondItem="i2J-04-dlq" secondAttribute="bottom" constant="12" id="ihG-TL-DGr"/>
-                            <constraint firstItem="9Gf-dN-vbm" firstAttribute="top" relation="greaterThanOrEqual" secondItem="0DH-SB-OIM" secondAttribute="bottom" priority="250" constant="10" id="kfr-lw-Xdc"/>
                             <constraint firstItem="jgt-d7-PVq" firstAttribute="top" secondItem="mG9-29-Ywo" secondAttribute="bottom" constant="53" id="l7U-Rj-KRA"/>
-                            <constraint firstItem="0DH-SB-OIM" firstAttribute="top" secondItem="jgt-d7-PVq" secondAttribute="bottom" constant="28" id="lAh-Z7-O2Y"/>
                             <constraint firstItem="zlI-jb-7bB" firstAttribute="leading" secondItem="1gi-ho-5O2" secondAttribute="leading" constant="30" id="nh8-8m-LeU"/>
-                            <constraint firstItem="0DH-SB-OIM" firstAttribute="centerX" secondItem="1gi-ho-5O2" secondAttribute="centerX" id="s8z-Qx-Uyn"/>
-                            <constraint firstItem="9Gf-dN-vbm" firstAttribute="top" relation="lessThanOrEqual" secondItem="0DH-SB-OIM" secondAttribute="bottom" constant="30" id="vyY-R8-chr"/>
+                            <constraint firstItem="9Gf-dN-vbm" firstAttribute="top" relation="lessThanOrEqual" secondItem="jgt-d7-PVq" secondAttribute="bottom" constant="75" id="vx4-Uz-Vcd"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -1030,12 +1022,6 @@ numérique</string>
                                     <constraint firstAttribute="width" constant="186" id="zcr-gP-UXj"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connexion" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVu-Wo-oX5">
-                                <rect key="frame" x="149" y="212" width="77" height="20"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="textColor" red="0.33725491169999999" green="0.33725491169999999" blue="0.33725491169999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0oq-qU-4gt">
                                 <rect key="frame" x="30" y="499" width="315" height="44"/>
                                 <color key="backgroundColor" red="0.9529411793" green="0.58431375029999999" blue="0.22352941330000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -1057,7 +1043,7 @@ numérique</string>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="BPn-dH-SOO">
-                                <rect key="frame" x="30" y="273" width="315" height="90"/>
+                                <rect key="frame" x="30" y="269" width="315" height="90"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0HU-dc-mVG">
                                         <rect key="frame" x="0.0" y="0.0" width="315" height="30"/>
@@ -1081,13 +1067,12 @@ numérique</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="0oq-qU-4gt" firstAttribute="leading" secondItem="4wK-aS-NYJ" secondAttribute="leading" constant="30" id="4oB-ME-II4"/>
-                            <constraint firstItem="LVu-Wo-oX5" firstAttribute="centerX" secondItem="4wK-aS-NYJ" secondAttribute="centerX" id="6qw-G1-S0r"/>
+                            <constraint firstItem="BPn-dH-SOO" firstAttribute="top" relation="lessThanOrEqual" secondItem="HPh-oH-2tT" secondAttribute="bottom" constant="85" id="8cP-Tg-y6S"/>
                             <constraint firstAttribute="trailing" secondItem="0oq-qU-4gt" secondAttribute="trailing" constant="30" id="FZv-w3-keA"/>
+                            <constraint firstItem="BPn-dH-SOO" firstAttribute="top" relation="greaterThanOrEqual" secondItem="HPh-oH-2tT" secondAttribute="bottom" constant="10" id="Ldv-rD-Nj0"/>
                             <constraint firstItem="BPn-dH-SOO" firstAttribute="leading" secondItem="4wK-aS-NYJ" secondAttribute="leading" constant="30" id="azg-yM-oRG"/>
                             <constraint firstItem="HPh-oH-2tT" firstAttribute="top" secondItem="Qj0-3U-UXx" secondAttribute="bottom" constant="53" id="cX9-4b-8O0"/>
-                            <constraint firstItem="BPn-dH-SOO" firstAttribute="top" relation="greaterThanOrEqual" secondItem="LVu-Wo-oX5" secondAttribute="bottom" constant="40" id="hg7-Mv-5Fr"/>
                             <constraint firstItem="ju1-v2-0Dn" firstAttribute="top" secondItem="BPn-dH-SOO" secondAttribute="bottom" priority="250" constant="240" id="jyc-5p-mRo"/>
-                            <constraint firstItem="LVu-Wo-oX5" firstAttribute="top" secondItem="HPh-oH-2tT" secondAttribute="bottom" constant="28" id="nrk-uE-5PL"/>
                             <constraint firstItem="ju1-v2-0Dn" firstAttribute="top" secondItem="0oq-qU-4gt" secondAttribute="bottom" constant="60" id="qio-d3-I7g"/>
                             <constraint firstAttribute="trailing" secondItem="BPn-dH-SOO" secondAttribute="trailing" constant="30" id="sHm-nn-QQ8"/>
                             <constraint firstItem="HPh-oH-2tT" firstAttribute="centerX" secondItem="4wK-aS-NYJ" secondAttribute="centerX" id="vIY-MD-7Ph"/>

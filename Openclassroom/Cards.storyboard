@@ -404,8 +404,8 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="dJi-NX-tw3"/>
                                 <exclude reference="YSt-qH-ot4"/>
+                                <exclude reference="dJi-NX-tw3"/>
                             </mask>
                         </variation>
                     </view>
