@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mMn-ya-Y2m">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mMn-ya-Y2m">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -8,7 +8,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Openclassroom" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Openclassrooms" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -51,7 +51,7 @@
         <!--Expand Navigation Controller-->
         <scene sceneID="to6-Zo-J8M">
             <objects>
-                <navigationController storyboardIdentifier="loginNavigationController" id="qIh-i3-oft" customClass="OCExpandNavigationController" customModule="Openclassroom" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="loginNavigationController" id="qIh-i3-oft" customClass="OCExpandNavigationController" customModule="Openclassrooms" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="VZE-42-v3s">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -74,7 +74,7 @@
         <!--Expand Navigation Controller-->
         <scene sceneID="xkD-Ub-1T1">
             <objects>
-                <navigationController storyboardIdentifier="setupNavigationController" id="mMn-ya-Y2m" customClass="OCExpandNavigationController" customModule="Openclassroom" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="setupNavigationController" id="mMn-ya-Y2m" customClass="OCExpandNavigationController" customModule="Openclassrooms" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SAP-cH-K21">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -96,7 +96,7 @@
         <!--Category View Controller-->
         <scene sceneID="2q4-Vj-yYt">
             <objects>
-                <viewController storyboardIdentifier="categoryViewController" id="9R2-YA-rL9" userLabel="Category View Controller" customClass="CategoryViewController" customModule="Openclassroom" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="categoryViewController" id="9R2-YA-rL9" userLabel="Category View Controller" customClass="CategoryViewController" customModule="Openclassrooms" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SMV-eS-V6Y"/>
                         <viewControllerLayoutGuide type="bottom" id="yaN-oD-S0q"/>
@@ -112,7 +112,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ceP-4d-5zN">
-                                <rect key="frame" x="10" y="149" width="355" height="518"/>
+                                <rect key="frame" x="20" y="149" width="335" height="518"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="35" minimumInteritemSpacing="0.0" id="qWR-vW-HW9">
@@ -122,7 +122,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="categoryCell" id="ZCM-VE-DGU" customClass="CategoryCell" customModule="Openclassroom" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="categoryCell" id="ZCM-VE-DGU" customClass="CategoryCell" customModule="Openclassrooms" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="140"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -199,8 +199,8 @@ numérique</string>
                             <constraint firstAttribute="trailing" secondItem="Kmg-6z-4eJ" secondAttribute="trailing" constant="135" id="bEk-IB-wyz"/>
                             <constraint firstItem="Kmg-6z-4eJ" firstAttribute="top" secondItem="SMV-eS-V6Y" secondAttribute="bottom" constant="30" id="e4e-l6-JAv"/>
                             <constraint firstItem="Kmg-6z-4eJ" firstAttribute="leading" secondItem="tuM-C4-Ypu" secondAttribute="leading" constant="13" id="eDe-ju-6DG"/>
-                            <constraint firstAttribute="trailing" secondItem="ceP-4d-5zN" secondAttribute="trailing" constant="10" id="ees-0c-pnh"/>
-                            <constraint firstItem="ceP-4d-5zN" firstAttribute="leading" secondItem="tuM-C4-Ypu" secondAttribute="leading" constant="10" id="sNp-Lf-WgJ"/>
+                            <constraint firstAttribute="trailing" secondItem="ceP-4d-5zN" secondAttribute="trailing" constant="20" id="ees-0c-pnh"/>
+                            <constraint firstItem="ceP-4d-5zN" firstAttribute="leading" secondItem="tuM-C4-Ypu" secondAttribute="leading" constant="20" id="sNp-Lf-WgJ"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -224,7 +224,7 @@ numérique</string>
         <!--Objective View Controller-->
         <scene sceneID="2Ew-I6-S3X">
             <objects>
-                <viewController id="WrT-HP-psT" customClass="ObjectiveViewController" customModule="Openclassroom" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="WrT-HP-psT" customClass="ObjectiveViewController" customModule="Openclassrooms" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KwS-re-xPX"/>
                         <viewControllerLayoutGuide type="bottom" id="41C-ys-gks"/>
@@ -240,8 +240,8 @@ numérique</string>
                                     <constraint firstAttribute="height" constant="130" id="Yos-Zi-eX6"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Initiation numérique" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgD-Pz-Pwi">
-                                <rect key="frame" x="100" y="99" width="230" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Initiation numérique" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="hgD-Pz-Pwi">
+                                <rect key="frame" x="100" y="99" width="260" height="29"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <color key="textColor" red="0.33725491166114807" green="0.33725491166114807" blue="0.33725491166114807" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -263,11 +263,11 @@ numérique</string>
                                 <rect key="frame" x="0.0" y="194" width="375" height="473"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="objectiveCell" rowHeight="60" id="aEf-AV-Hl2" customClass="ObjectiveCell" customModule="Openclassroom" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="objectiveCell" rowHeight="60" id="aEf-AV-Hl2" customClass="ObjectiveCell" customModule="Openclassrooms" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aEf-AV-Hl2" id="B9F-Nf-ypg">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="72 heures" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iwm-AT-URM">
@@ -315,6 +315,7 @@ numérique</string>
                         <constraints>
                             <constraint firstItem="w2H-AK-ZMo" firstAttribute="leading" secondItem="ZfA-Hd-lX2" secondAttribute="leading" constant="16" id="2Za-JI-SR1"/>
                             <constraint firstItem="ReM-9a-ggA" firstAttribute="top" secondItem="KwS-re-xPX" secondAttribute="bottom" id="2dd-xy-9l7"/>
+                            <constraint firstAttribute="trailing" secondItem="hgD-Pz-Pwi" secondAttribute="trailing" constant="15" id="3Fb-sM-8jz"/>
                             <constraint firstItem="ryy-qT-ZTU" firstAttribute="top" secondItem="ReM-9a-ggA" secondAttribute="bottom" id="3Lv-kb-lSU"/>
                             <constraint firstItem="fvx-Q0-vTZ" firstAttribute="top" secondItem="hgD-Pz-Pwi" secondAttribute="bottom" constant="4" id="3o1-Fv-kFB"/>
                             <constraint firstItem="41C-ys-gks" firstAttribute="top" secondItem="ryy-qT-ZTU" secondAttribute="bottom" id="5oI-pc-fIp"/>
@@ -343,7 +344,7 @@ numérique</string>
         <!--Program View Controller-->
         <scene sceneID="bjY-iw-awd">
             <objects>
-                <viewController id="DnJ-tf-YS0" customClass="ProgramViewController" customModule="Openclassroom" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="DnJ-tf-YS0" customClass="ProgramViewController" customModule="Openclassrooms" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ngw-ao-Y8V"/>
                         <viewControllerLayoutGuide type="bottom" id="oIf-Gl-FIe"/>
@@ -352,15 +353,15 @@ numérique</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="P4K-vX-VFr">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="P4K-vX-VFr">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="program_cell" id="oww-8y-lj8" customClass="ProgramCell" customModule="Openclassroom" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="program_cell" id="oww-8y-lj8" customClass="ProgramCell" customModule="Openclassrooms" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oww-8y-lj8" id="rGz-0h-zC6">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hdz-kE-cgi">
@@ -478,7 +479,7 @@ numérique</string>
         <!--Day View Controller-->
         <scene sceneID="JpL-AF-EIO">
             <objects>
-                <viewController storyboardIdentifier="dayViewController" id="XkL-aL-3n7" customClass="DayViewController" customModule="Openclassroom" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="dayViewController" id="XkL-aL-3n7" customClass="DayViewController" customModule="Openclassrooms" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EZn-wU-GEk"/>
                         <viewControllerLayoutGuide type="bottom" id="lKo-ou-BbW"/>
@@ -487,15 +488,15 @@ numérique</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="x8V-Dd-TRC">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="x8V-Dd-TRC">
                                 <rect key="frame" x="0.0" y="153" width="375" height="410"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="timeCell" id="gXr-Rf-GvJ" customClass="DayCell" customModule="Openclassroom" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="timeCell" id="gXr-Rf-GvJ" customClass="DayCell" customModule="Openclassrooms" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gXr-Rf-GvJ" id="hDL-Nr-6yP">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lundi" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BbS-AI-OVY">
@@ -578,7 +579,7 @@ numérique</string>
         <!--Time View Controller-->
         <scene sceneID="YJM-tb-LxM">
             <objects>
-                <viewController storyboardIdentifier="timeViewController" id="jXs-iT-pl2" customClass="TimeViewController" customModule="Openclassroom" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="timeViewController" id="jXs-iT-pl2" customClass="TimeViewController" customModule="Openclassrooms" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fLB-ao-Jci"/>
                         <viewControllerLayoutGuide type="bottom" id="4dY-5A-sGm"/>
@@ -655,7 +656,7 @@ numérique</string>
         <!--Connexion / Inscription-->
         <scene sceneID="cZD-W0-s4y">
             <objects>
-                <viewController storyboardIdentifier="signIn" id="vSn-kB-Rad" customClass="SignInViewController" customModule="Openclassroom" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="signIn" id="vSn-kB-Rad" customClass="SignInViewController" customModule="Openclassrooms" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XYd-uS-lSN"/>
                         <viewControllerLayoutGuide type="bottom" id="MPl-q1-fiE"/>
@@ -665,7 +666,7 @@ numérique</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oUF-qs-868">
-                                <rect key="frame" x="30" y="325" width="315" height="44"/>
+                                <rect key="frame" x="30" y="320" width="315" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="3db-9y-xUZ"/>
                                     <constraint firstAttribute="width" constant="300" id="bFR-re-gFJ"/>
@@ -681,7 +682,7 @@ numérique</string>
                                 </variation>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sMc-hp-imh">
-                                <rect key="frame" x="30" y="379" width="315" height="44"/>
+                                <rect key="frame" x="30" y="374" width="315" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="N5M-mq-ehU"/>
                                     <constraint firstAttribute="width" constant="300" id="xxA-Ok-iIg"/>
@@ -696,23 +697,8 @@ numérique</string>
                                     </mask>
                                 </variation>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inscrivez-vous avec :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1g-Pz-Fi0">
-                                <rect key="frame" x="112" y="236" width="152" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="JlV-Nm-4nV"/>
-                                    <constraint firstAttribute="height" constant="28" id="Sp9-Z6-LWo"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="textColor" red="0.33725491166114807" green="0.33725491166114807" blue="0.33725491166114807" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Sp9-Z6-LWo"/>
-                                    </mask>
-                                </variation>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="wvC-sr-ZKv">
-                                <rect key="frame" x="95" y="53" width="186" height="131"/>
+                                <rect key="frame" x="95" y="50" width="186" height="131"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="131" id="0xl-pG-6oL"/>
                                     <constraint firstAttribute="width" constant="186" id="fKN-3Q-GOi"/>
@@ -729,7 +715,7 @@ numérique</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AiE-qW-gIP">
-                                <rect key="frame" x="30" y="271" width="315" height="44"/>
+                                <rect key="frame" x="30" y="266" width="315" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="rot-hL-aiu"/>
                                     <constraint firstAttribute="width" constant="300" id="vV8-mn-Wqr"/>
@@ -744,7 +730,7 @@ numérique</string>
                                 </variation>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Pa-Kw-xha">
-                                <rect key="frame" x="30" y="433" width="315" height="44"/>
+                                <rect key="frame" x="30" y="428" width="315" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="CIa-ar-3XO"/>
                                     <constraint firstAttribute="height" constant="44" id="Xhd-cl-epA"/>
@@ -770,9 +756,25 @@ numérique</string>
                                 <color key="textColor" red="0.33725491169999999" green="0.33725491169999999" blue="0.33725491169999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inscrivez-vous avec :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1g-Pz-Fi0">
+                                <rect key="frame" x="112" y="231" width="152" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="JlV-Nm-4nV"/>
+                                    <constraint firstAttribute="height" constant="28" id="Sp9-Z6-LWo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.33725491166114807" green="0.33725491166114807" blue="0.33725491166114807" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Sp9-Z6-LWo"/>
+                                    </mask>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="wvC-sr-ZKv" firstAttribute="top" secondItem="XYd-uS-lSN" secondAttribute="bottom" priority="250" constant="50" id="0mp-6x-hKs"/>
                             <constraint firstItem="MPl-q1-fiE" firstAttribute="top" secondItem="NX3-rq-m9f" secondAttribute="bottom" constant="23" id="1yt-Pa-Ebi"/>
                             <constraint firstItem="X1g-Pz-Fi0" firstAttribute="centerX" secondItem="QMm-Hh-Ow4" secondAttribute="centerX" id="22Q-RN-iEn"/>
                             <constraint firstItem="oUF-qs-868" firstAttribute="centerX" secondItem="QMm-Hh-Ow4" secondAttribute="centerX" id="8DC-Ag-AZM"/>
@@ -786,22 +788,27 @@ numérique</string>
                             <constraint firstItem="X1g-Pz-Fi0" firstAttribute="centerX" secondItem="QMm-Hh-Ow4" secondAttribute="centerX" id="Ef2-KT-Bbz"/>
                             <constraint firstItem="sMc-hp-imh" firstAttribute="leading" secondItem="QMm-Hh-Ow4" secondAttribute="leading" constant="30" id="HIL-pf-cxk"/>
                             <constraint firstItem="X1g-Pz-Fi0" firstAttribute="top" secondItem="wvC-sr-ZKv" secondAttribute="bottom" constant="52" id="Hkp-Uw-tGF"/>
-                            <constraint firstItem="X1g-Pz-Fi0" firstAttribute="top" secondItem="wvC-sr-ZKv" secondAttribute="bottom" constant="52" id="Mts-bI-Hho"/>
+                            <constraint firstItem="X1g-Pz-Fi0" firstAttribute="top" relation="lessThanOrEqual" secondItem="wvC-sr-ZKv" secondAttribute="bottom" constant="50" id="Mts-bI-Hho"/>
                             <constraint firstAttribute="trailing" secondItem="oUF-qs-868" secondAttribute="trailing" constant="30" id="Pzi-pP-HPw"/>
-                            <constraint firstItem="wvC-sr-ZKv" firstAttribute="top" secondItem="XYd-uS-lSN" secondAttribute="bottom" constant="53" id="RKr-Wr-ER6"/>
+                            <constraint firstItem="wvC-sr-ZKv" firstAttribute="top" relation="lessThanOrEqual" secondItem="XYd-uS-lSN" secondAttribute="bottom" constant="53" id="RKr-Wr-ER6"/>
                             <constraint firstAttribute="trailing" secondItem="X1g-Pz-Fi0" secondAttribute="trailing" constant="104" id="Rza-Iv-24k"/>
                             <constraint firstItem="X1g-Pz-Fi0" firstAttribute="leading" secondItem="QMm-Hh-Ow4" secondAttribute="leading" constant="30" id="T34-Wn-fXT"/>
+                            <constraint firstItem="X1g-Pz-Fi0" firstAttribute="top" relation="greaterThanOrEqual" secondItem="wvC-sr-ZKv" secondAttribute="bottom" constant="10" id="UQx-3a-cD6"/>
                             <constraint firstItem="oUF-qs-868" firstAttribute="top" secondItem="AiE-qW-gIP" secondAttribute="bottom" constant="10" id="Ukb-zl-gHS"/>
+                            <constraint firstItem="wvC-sr-ZKv" firstAttribute="top" relation="greaterThanOrEqual" secondItem="XYd-uS-lSN" secondAttribute="bottom" constant="15" id="V1e-qu-3yV"/>
+                            <constraint firstItem="X1g-Pz-Fi0" firstAttribute="top" secondItem="wvC-sr-ZKv" secondAttribute="bottom" priority="250" constant="50" id="WZW-wy-kMV"/>
                             <constraint firstItem="ClR-Zh-DbL" firstAttribute="top" secondItem="sMc-hp-imh" secondAttribute="bottom" constant="25" id="YQj-KH-cEJ"/>
                             <constraint firstAttribute="trailing" secondItem="AiE-qW-gIP" secondAttribute="trailing" constant="30" id="Zc9-vI-poA"/>
                             <constraint firstItem="oUF-qs-868" firstAttribute="leading" secondItem="QMm-Hh-Ow4" secondAttribute="leading" constant="30" id="Zrq-hB-4ec"/>
                             <constraint firstItem="1Pa-Kw-xha" firstAttribute="top" secondItem="sMc-hp-imh" secondAttribute="bottom" constant="10" id="ak2-QB-amq"/>
+                            <constraint firstItem="X1g-Pz-Fi0" firstAttribute="top" relation="lessThanOrEqual" secondItem="wvC-sr-ZKv" secondAttribute="bottom" constant="52" id="eY3-7c-YHW"/>
                             <constraint firstItem="MPl-q1-fiE" firstAttribute="top" secondItem="ClR-Zh-DbL" secondAttribute="bottom" constant="18" id="h7v-tS-B0h"/>
                             <constraint firstItem="oUF-qs-868" firstAttribute="top" secondItem="X1g-Pz-Fi0" secondAttribute="bottom" constant="10" id="ha2-aR-Nwi"/>
                             <constraint firstItem="ClR-Zh-DbL" firstAttribute="leading" secondItem="NX3-rq-m9f" secondAttribute="trailing" id="iIR-Bx-7pU"/>
                             <constraint firstItem="AiE-qW-gIP" firstAttribute="leading" secondItem="QMm-Hh-Ow4" secondAttribute="leading" constant="30" id="iU4-vl-RIV"/>
                             <constraint firstItem="NX3-rq-m9f" firstAttribute="leading" secondItem="QMm-Hh-Ow4" secondAttribute="leading" constant="30" id="mvn-m3-TMK"/>
                             <constraint firstItem="wvC-sr-ZKv" firstAttribute="centerX" secondItem="QMm-Hh-Ow4" secondAttribute="centerX" id="opt-HP-VND"/>
+                            <constraint firstItem="X1g-Pz-Fi0" firstAttribute="top" secondItem="wvC-sr-ZKv" secondAttribute="bottom" priority="250" constant="50" id="pvk-b7-Wpq"/>
                             <constraint firstAttribute="trailing" secondItem="X1g-Pz-Fi0" secondAttribute="trailing" constant="30" id="qaU-N1-Zvl"/>
                             <constraint firstItem="1Pa-Kw-xha" firstAttribute="leading" secondItem="QMm-Hh-Ow4" secondAttribute="leading" constant="30" id="uIO-jS-jyz"/>
                             <constraint firstItem="AiE-qW-gIP" firstAttribute="top" secondItem="X1g-Pz-Fi0" secondAttribute="bottom" constant="10" id="vOw-A4-YZW"/>
@@ -817,8 +824,11 @@ numérique</string>
                                 <exclude reference="D0d-Fs-5ki"/>
                                 <exclude reference="Ef2-KT-Bbz"/>
                                 <exclude reference="Hkp-Uw-tGF"/>
+                                <exclude reference="Mts-bI-Hho"/>
                                 <exclude reference="Rza-Iv-24k"/>
                                 <exclude reference="T34-Wn-fXT"/>
+                                <exclude reference="eY3-7c-YHW"/>
+                                <exclude reference="pvk-b7-Wpq"/>
                                 <exclude reference="qaU-N1-Zvl"/>
                                 <exclude reference="8W7-D1-Ibk"/>
                                 <exclude reference="vOw-A4-YZW"/>
@@ -849,7 +859,7 @@ numérique</string>
         <!--Inscription par email-->
         <scene sceneID="mkG-ES-VXa">
             <objects>
-                <viewController id="NCy-Xn-o2D" customClass="RegisterViewController" customModule="Openclassroom" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="NCy-Xn-o2D" customClass="RegisterViewController" customModule="Openclassrooms" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mG9-29-Ywo"/>
                         <viewControllerLayoutGuide type="bottom" id="HX7-DG-33i"/>
@@ -865,13 +875,7 @@ numérique</string>
                                     <constraint firstAttribute="width" constant="186" id="ggm-TV-idq"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inscription avec email" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0DH-SB-OIM">
-                                <rect key="frame" x="109" y="212" width="157" height="20"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="textColor" red="0.33725491169999999" green="0.33725491169999999" blue="0.33725491169999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vous avez déjà un compte ? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zlI-jb-7bB">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vous avez déjà un compte ? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" translatesAutoresizingMaskIntoConstraints="NO" id="zlI-jb-7bB">
                                 <rect key="frame" x="30" y="560" width="206" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="0.33725491169999999" green="0.33725491169999999" blue="0.33725491169999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -883,6 +887,9 @@ numérique</string>
                                 <state key="normal" title="CONNEXION">
                                     <color key="titleColor" red="0.9529411792755127" green="0.58431375026702881" blue="0.22352941334247589" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="sfH-8S-NlX" kind="show" id="itN-qK-nmd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2J-04-dlq">
                                 <rect key="frame" x="30" y="500" width="315" height="44"/>
@@ -891,7 +898,7 @@ numérique</string>
                                     <constraint firstAttribute="height" constant="44" id="v0i-ax-LvX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
-                                <state key="normal" title="Valider">
+                                <state key="normal" title="S'inscrire">
                                     <color key="titleColor" red="0.97647058959999999" green="0.97647058959999999" blue="0.97647058959999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -899,7 +906,7 @@ numérique</string>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="9Gf-dN-vbm">
-                                <rect key="frame" x="30" y="262" width="315" height="150"/>
+                                <rect key="frame" x="30" y="259" width="315" height="150"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qLw-cA-j0K">
                                         <rect key="frame" x="0.0" y="0.0" width="315" height="30"/>
@@ -955,6 +962,7 @@ numérique</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="9Gf-dN-vbm" firstAttribute="leading" secondItem="1gi-ho-5O2" secondAttribute="leading" constant="30" id="5IC-RN-NE3"/>
+                            <constraint firstItem="fu1-uP-G6t" firstAttribute="leading" secondItem="zlI-jb-7bB" secondAttribute="trailing" id="5d1-x8-oGT"/>
                             <constraint firstItem="fu1-uP-G6t" firstAttribute="top" secondItem="i2J-04-dlq" secondAttribute="bottom" constant="11.5" id="ELE-JF-fZX"/>
                             <constraint firstItem="i2J-04-dlq" firstAttribute="leading" secondItem="1gi-ho-5O2" secondAttribute="leading" constant="30" id="IhD-Tu-Klk"/>
                             <constraint firstItem="jgt-d7-PVq" firstAttribute="centerX" secondItem="1gi-ho-5O2" secondAttribute="centerX" id="N2d-ih-K3G"/>
@@ -964,13 +972,13 @@ numérique</string>
                             <constraint firstAttribute="trailing" secondItem="9Gf-dN-vbm" secondAttribute="trailing" constant="30" id="Vhp-2k-J1j"/>
                             <constraint firstItem="HX7-DG-33i" firstAttribute="top" secondItem="zlI-jb-7bB" secondAttribute="bottom" constant="23" id="XZu-vz-4cP"/>
                             <constraint firstAttribute="trailing" secondItem="i2J-04-dlq" secondAttribute="trailing" constant="30" id="aHZ-w6-YPT"/>
+                            <constraint firstItem="9Gf-dN-vbm" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jgt-d7-PVq" secondAttribute="bottom" constant="5" id="bRG-Go-TXg"/>
                             <constraint firstItem="zlI-jb-7bB" firstAttribute="top" secondItem="i2J-04-dlq" secondAttribute="bottom" constant="17" id="bmK-0b-KlF"/>
-                            <constraint firstItem="HX7-DG-33i" firstAttribute="top" secondItem="9Gf-dN-vbm" secondAttribute="bottom" constant="191" id="cVo-H6-Vgm"/>
+                            <constraint firstItem="HX7-DG-33i" firstAttribute="top" secondItem="9Gf-dN-vbm" secondAttribute="bottom" priority="250" constant="191" id="cVo-H6-Vgm"/>
                             <constraint firstItem="fu1-uP-G6t" firstAttribute="top" secondItem="i2J-04-dlq" secondAttribute="bottom" constant="12" id="ihG-TL-DGr"/>
                             <constraint firstItem="jgt-d7-PVq" firstAttribute="top" secondItem="mG9-29-Ywo" secondAttribute="bottom" constant="53" id="l7U-Rj-KRA"/>
-                            <constraint firstItem="0DH-SB-OIM" firstAttribute="top" secondItem="jgt-d7-PVq" secondAttribute="bottom" constant="28" id="lAh-Z7-O2Y"/>
                             <constraint firstItem="zlI-jb-7bB" firstAttribute="leading" secondItem="1gi-ho-5O2" secondAttribute="leading" constant="30" id="nh8-8m-LeU"/>
-                            <constraint firstItem="0DH-SB-OIM" firstAttribute="centerX" secondItem="1gi-ho-5O2" secondAttribute="centerX" id="s8z-Qx-Uyn"/>
+                            <constraint firstItem="9Gf-dN-vbm" firstAttribute="top" relation="lessThanOrEqual" secondItem="jgt-d7-PVq" secondAttribute="bottom" constant="75" id="vx4-Uz-Vcd"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -998,7 +1006,7 @@ numérique</string>
         <!--Connexion-->
         <scene sceneID="cDs-9m-XGH">
             <objects>
-                <viewController id="sfH-8S-NlX" customClass="LoginViewController" customModule="Openclassroom" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="sfH-8S-NlX" customClass="LoginViewController" customModule="Openclassrooms" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Qj0-3U-UXx"/>
                         <viewControllerLayoutGuide type="bottom" id="ju1-v2-0Dn"/>
@@ -1014,12 +1022,6 @@ numérique</string>
                                     <constraint firstAttribute="width" constant="186" id="zcr-gP-UXj"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connexion" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVu-Wo-oX5">
-                                <rect key="frame" x="149" y="212" width="77" height="20"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="textColor" red="0.33725491169999999" green="0.33725491169999999" blue="0.33725491169999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0oq-qU-4gt">
                                 <rect key="frame" x="30" y="499" width="315" height="44"/>
                                 <color key="backgroundColor" red="0.9529411793" green="0.58431375029999999" blue="0.22352941330000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -1028,7 +1030,7 @@ numérique</string>
                                     <constraint firstAttribute="height" constant="44" id="fsa-sD-gM6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
-                                <state key="normal" title="Connexion">
+                                <state key="normal" title="Se connecter">
                                     <color key="titleColor" red="0.97647058959999999" green="0.97647058959999999" blue="0.97647058959999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 </state>
                                 <variation key="default">
@@ -1041,7 +1043,7 @@ numérique</string>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="BPn-dH-SOO">
-                                <rect key="frame" x="30" y="273" width="315" height="90"/>
+                                <rect key="frame" x="30" y="269" width="315" height="90"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0HU-dc-mVG">
                                         <rect key="frame" x="0.0" y="0.0" width="315" height="30"/>
@@ -1065,12 +1067,12 @@ numérique</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="0oq-qU-4gt" firstAttribute="leading" secondItem="4wK-aS-NYJ" secondAttribute="leading" constant="30" id="4oB-ME-II4"/>
-                            <constraint firstItem="LVu-Wo-oX5" firstAttribute="centerX" secondItem="4wK-aS-NYJ" secondAttribute="centerX" id="6qw-G1-S0r"/>
+                            <constraint firstItem="BPn-dH-SOO" firstAttribute="top" relation="lessThanOrEqual" secondItem="HPh-oH-2tT" secondAttribute="bottom" constant="85" id="8cP-Tg-y6S"/>
                             <constraint firstAttribute="trailing" secondItem="0oq-qU-4gt" secondAttribute="trailing" constant="30" id="FZv-w3-keA"/>
+                            <constraint firstItem="BPn-dH-SOO" firstAttribute="top" relation="greaterThanOrEqual" secondItem="HPh-oH-2tT" secondAttribute="bottom" constant="10" id="Ldv-rD-Nj0"/>
                             <constraint firstItem="BPn-dH-SOO" firstAttribute="leading" secondItem="4wK-aS-NYJ" secondAttribute="leading" constant="30" id="azg-yM-oRG"/>
                             <constraint firstItem="HPh-oH-2tT" firstAttribute="top" secondItem="Qj0-3U-UXx" secondAttribute="bottom" constant="53" id="cX9-4b-8O0"/>
-                            <constraint firstItem="ju1-v2-0Dn" firstAttribute="top" secondItem="BPn-dH-SOO" secondAttribute="bottom" constant="240" id="jyc-5p-mRo"/>
-                            <constraint firstItem="LVu-Wo-oX5" firstAttribute="top" secondItem="HPh-oH-2tT" secondAttribute="bottom" constant="28" id="nrk-uE-5PL"/>
+                            <constraint firstItem="ju1-v2-0Dn" firstAttribute="top" secondItem="BPn-dH-SOO" secondAttribute="bottom" priority="250" constant="240" id="jyc-5p-mRo"/>
                             <constraint firstItem="ju1-v2-0Dn" firstAttribute="top" secondItem="0oq-qU-4gt" secondAttribute="bottom" constant="60" id="qio-d3-I7g"/>
                             <constraint firstAttribute="trailing" secondItem="BPn-dH-SOO" secondAttribute="trailing" constant="30" id="sHm-nn-QQ8"/>
                             <constraint firstItem="HPh-oH-2tT" firstAttribute="centerX" secondItem="4wK-aS-NYJ" secondAttribute="centerX" id="vIY-MD-7Ph"/>
@@ -1093,7 +1095,7 @@ numérique</string>
         <!--Parameter View Controller-->
         <scene sceneID="dRj-do-gaT">
             <objects>
-                <viewController id="8Rx-PJ-lia" customClass="ParameterViewController" customModule="Openclassroom" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ParameterViewController" id="8Rx-PJ-lia" customClass="ParameterViewController" customModule="Openclassrooms" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jNb-oG-Sj2"/>
                         <viewControllerLayoutGuide type="bottom" id="ZBA-sL-RAl"/>
@@ -1108,22 +1110,22 @@ numérique</string>
                                 <color key="textColor" red="0.33725491166114807" green="0.33725491166114807" blue="0.33725491166114807" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vous pouvez encore modifier vos choix" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJy-GG-Rdx">
-                                <rect key="frame" x="15" y="128" width="316" height="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vous pouvez encore modifier vos choix" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJy-GG-Rdx">
+                                <rect key="frame" x="15" y="128" width="329" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="0.74901962280273438" green="0.74901962280273438" blue="0.76470589637756348" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lGN-fO-5Lh" customClass="ParameterView" customModule="Openclassroom" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lGN-fO-5Lh" customClass="ParameterView" customModule="Openclassrooms" customModuleProvider="target">
                                 <rect key="frame" x="15" y="310" width="345" height="110"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lundi, Mardi, Mercredi, Jeudi" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xa1-kd-sZ7">
-                                        <rect key="frame" x="30" y="59" width="235" height="22"/>
+                                        <rect key="frame" x="30" y="59" width="273" height="22"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <color key="textColor" red="0.74901962280000001" green="0.74901962280000001" blue="0.76470589639999997" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vos jours disponibles" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMT-2r-MsU">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vos jours disponibles" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="UMT-2r-MsU">
                                         <rect key="frame" x="30" y="22" width="227" height="29"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <color key="textColor" red="0.33725491169999999" green="0.33725491169999999" blue="0.33725491169999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -1143,6 +1145,7 @@ numérique</string>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="PWh-TZ-NP7" firstAttribute="leading" secondItem="xa1-kd-sZ7" secondAttribute="trailing" constant="10" id="0Sk-7a-Srj"/>
                                     <constraint firstItem="PWh-TZ-NP7" firstAttribute="centerY" secondItem="lGN-fO-5Lh" secondAttribute="centerY" id="3ii-F9-pGf"/>
                                     <constraint firstItem="xa1-kd-sZ7" firstAttribute="leading" secondItem="lGN-fO-5Lh" secondAttribute="leading" constant="30" id="5PW-HN-a1F"/>
                                     <constraint firstAttribute="trailing" secondItem="PWh-TZ-NP7" secondAttribute="trailing" constant="20" id="665-bh-ANy"/>
@@ -1157,17 +1160,17 @@ numérique</string>
                                     <outlet property="title" destination="UMT-2r-MsU" id="HCR-vL-rAe"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KcN-23-QVj" customClass="ParameterView" customModule="Openclassroom" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KcN-23-QVj" customClass="ParameterView" customModule="Openclassrooms" customModuleProvider="target">
                                 <rect key="frame" x="15" y="440" width="345" height="110"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Votre temps disponible" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ib-Bl-I4Z">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Votre temps disponible" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="0Ib-Bl-I4Z">
                                         <rect key="frame" x="30" y="22" width="246" height="29"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <color key="textColor" red="0.33725491169999999" green="0.33725491169999999" blue="0.33725491169999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25 minutes" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucd-jy-mZS">
-                                        <rect key="frame" x="30" y="59" width="90" height="22"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25 minutes" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ucd-jy-mZS">
+                                        <rect key="frame" x="30" y="59" width="273" height="22"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <color key="textColor" red="0.74901962280000001" green="0.74901962280000001" blue="0.76470589639999997" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1193,6 +1196,7 @@ numérique</string>
                                     <constraint firstItem="ucd-jy-mZS" firstAttribute="leading" secondItem="KcN-23-QVj" secondAttribute="leading" constant="30" id="h8k-7J-ahU"/>
                                     <constraint firstAttribute="height" constant="110" id="njS-CG-9N2"/>
                                     <constraint firstAttribute="trailing" secondItem="Bfd-WO-oHU" secondAttribute="trailing" constant="20" id="uI0-cG-WVd"/>
+                                    <constraint firstItem="Bfd-WO-oHU" firstAttribute="leading" secondItem="ucd-jy-mZS" secondAttribute="trailing" constant="10" id="uIx-Pa-lJu"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="button" destination="Bfd-WO-oHU" id="kpr-gX-A9S"/>
@@ -1200,16 +1204,16 @@ numérique</string>
                                     <outlet property="title" destination="0Ib-Bl-I4Z" id="fcE-VV-719"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bTh-Wn-NzU" customClass="ParameterView" customModule="Openclassroom" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bTh-Wn-NzU" customClass="ParameterView" customModule="Openclassrooms" customModuleProvider="target">
                                 <rect key="frame" x="15" y="180" width="345" height="110"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Initiation numérique" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kaP-ai-N1X">
-                                        <rect key="frame" x="30" y="59" width="160" height="22"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Initiation numérique" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kaP-ai-N1X">
+                                        <rect key="frame" x="30" y="59" width="274" height="22"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <color key="textColor" red="0.74901962280273438" green="0.74901962280273438" blue="0.76470589637756348" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Votre cours" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAx-1P-8fb">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Votre cours" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="YAx-1P-8fb">
                                         <rect key="frame" x="30" y="22" width="122" height="29"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <color key="textColor" red="0.33725491166114807" green="0.33725491166114807" blue="0.33725491166114807" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -1235,6 +1239,7 @@ numérique</string>
                                     <constraint firstItem="kaP-ai-N1X" firstAttribute="leading" secondItem="bTh-Wn-NzU" secondAttribute="leading" constant="30" id="IKM-e8-zOq"/>
                                     <constraint firstAttribute="trailing" secondItem="iwN-cI-90u" secondAttribute="trailing" constant="19" id="Ike-Tl-BtP"/>
                                     <constraint firstItem="iwN-cI-90u" firstAttribute="centerY" secondItem="bTh-Wn-NzU" secondAttribute="centerY" id="K4G-iQ-9HY"/>
+                                    <constraint firstItem="iwN-cI-90u" firstAttribute="leading" secondItem="kaP-ai-N1X" secondAttribute="trailing" constant="10" id="k15-xg-XpI"/>
                                     <constraint firstItem="kaP-ai-N1X" firstAttribute="top" secondItem="YAx-1P-8fb" secondAttribute="bottom" constant="8" id="wiz-62-Cal"/>
                                 </constraints>
                                 <connections>
@@ -1271,6 +1276,7 @@ numérique</string>
                             <constraint firstItem="KcN-23-QVj" firstAttribute="leading" secondItem="nBx-GN-pha" secondAttribute="leading" constant="15" id="P2j-A9-3eZ"/>
                             <constraint firstItem="lGN-fO-5Lh" firstAttribute="leading" secondItem="nBx-GN-pha" secondAttribute="leading" constant="15" id="P9u-Q0-jgu"/>
                             <constraint firstItem="ZBA-sL-RAl" firstAttribute="top" secondItem="unh-eA-7tE" secondAttribute="bottom" constant="35" id="VGN-W3-BrC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oJy-GG-Rdx" secondAttribute="trailing" constant="15" id="aIA-hl-8Kh"/>
                             <constraint firstItem="lGN-fO-5Lh" firstAttribute="top" secondItem="bTh-Wn-NzU" secondAttribute="bottom" constant="20" id="bbF-90-cmx"/>
                             <constraint firstAttribute="trailing" secondItem="bTh-Wn-NzU" secondAttribute="trailing" constant="15" id="oIa-Py-EGK"/>
                             <constraint firstItem="unh-eA-7tE" firstAttribute="top" secondItem="KcN-23-QVj" secondAttribute="bottom" constant="35" id="qCJ-oc-1vr"/>
@@ -1306,4 +1312,7 @@ numérique</string>
         <image name="initiation-numerique" width="190" height="190"/>
         <image name="linkedin button" width="630" height="88"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="itN-qK-nmd"/>
+    </inferredMetricsTieBreakers>
 </document>

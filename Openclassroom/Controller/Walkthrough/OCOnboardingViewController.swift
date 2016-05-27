@@ -17,7 +17,7 @@ class OCOnboardingViewController: BWWalkthroughViewController, BWWalkthroughView
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Openclassroom"
+        self.title = NSBundle.mainBundle().infoDictionary!["CFBundleName"] as? String
         
         showWalkthrough()
     }

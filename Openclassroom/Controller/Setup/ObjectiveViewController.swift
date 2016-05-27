@@ -59,7 +59,9 @@ class ObjectiveViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        DataContainer.sharedDataContainer.currentUser.objective = objectives[indexPath.row].name
+        if DataContainer.sharedDataContainer.currentUser != nil {
+            DataContainer.sharedDataContainer.currentUser.objective = objectives[indexPath.row].name
+        }
     }
     
     // MARK: - Navigation

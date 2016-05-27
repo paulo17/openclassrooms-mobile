@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -8,7 +8,7 @@
         <!--Expand Navigation Controller-->
         <scene sceneID="qRD-0Q-xtb">
             <objects>
-                <navigationController storyboardIdentifier="WalkthroughNavigationController" id="hEh-Cm-bGe" customClass="OCExpandNavigationController" customModule="Openclassroom" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="WalkthroughNavigationController" id="hEh-Cm-bGe" customClass="OCExpandNavigationController" customModule="Openclassrooms" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rKb-qu-EJD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -25,7 +25,7 @@
         <!--Onboarding View Controller-->
         <scene sceneID="VTW-Yj-0ga">
             <objects>
-                <viewController storyboardIdentifier="walkthrough_master" id="R6f-J0-OkJ" customClass="OCOnboardingViewController" customModule="Openclassroom" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="walkthrough_master" id="R6f-J0-OkJ" customClass="OCOnboardingViewController" customModule="Openclassrooms" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="T0W-h7-M5S"/>
                         <viewControllerLayoutGuide type="bottom" id="8cg-TR-BpX"/>
@@ -115,11 +115,18 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboarding1" translatesAutoresizingMaskIntoConstraints="NO" id="5at-G9-eBH">
                                         <rect key="frame" x="0.0" y="225" width="315" height="260"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="260" id="XhF-Re-tnc"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="2ul-Xq-PRl"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="260" id="XhF-Re-tnc"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Un coaching sur-mesure" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQq-fa-zTS">
-                                        <rect key="frame" x="17" y="20" width="281" height="39"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paramétrez votre coach : définissez votre objectif, vos jours de disponibilité, et votre temps de travail quotidien." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="oVf-3k-T0H">
+                                        <rect key="frame" x="17" y="67" width="281" height="143"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                        <color key="textColor" red="0.74901962280273438" green="0.74901962280273438" blue="0.76470589637756348" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Un coaching sur-mesure" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="tQq-fa-zTS">
+                                        <rect key="frame" x="15" y="20" width="285" height="39"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="39" id="Ypd-R8-2rK"/>
                                             <constraint firstAttribute="width" constant="129" id="iCN-Xk-lXq"/>
@@ -133,12 +140,6 @@
                                             </mask>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paramétrez votre coach : définissez votre ojbectif, vos jours de disponibilité, et votre temps de travail quotidien." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVf-3k-T0H">
-                                        <rect key="frame" x="17" y="67" width="281" height="143"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
-                                        <color key="textColor" red="0.74901962280273438" green="0.74901962280273438" blue="0.76470589637756348" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -146,13 +147,20 @@
                                     <constraint firstItem="5at-G9-eBH" firstAttribute="leading" secondItem="p1S-mV-Cb1" secondAttribute="leading" id="8I5-gR-a55"/>
                                     <constraint firstItem="oVf-3k-T0H" firstAttribute="centerX" secondItem="p1S-mV-Cb1" secondAttribute="centerX" id="8J9-pc-Syo"/>
                                     <constraint firstItem="tQq-fa-zTS" firstAttribute="centerX" secondItem="p1S-mV-Cb1" secondAttribute="centerX" id="BEh-Tf-OnB"/>
+                                    <constraint firstAttribute="trailing" secondItem="tQq-fa-zTS" secondAttribute="trailing" constant="15" id="HBq-zA-XF1"/>
                                     <constraint firstItem="oVf-3k-T0H" firstAttribute="top" secondItem="tQq-fa-zTS" secondAttribute="bottom" constant="8" id="L6o-h3-Ep7"/>
+                                    <constraint firstItem="tQq-fa-zTS" firstAttribute="leading" secondItem="p1S-mV-Cb1" secondAttribute="leading" constant="15" id="Myb-jA-ccu"/>
                                     <constraint firstItem="oVf-3k-T0H" firstAttribute="leading" secondItem="p1S-mV-Cb1" secondAttribute="leading" constant="17" id="dZf-jj-aSs"/>
                                     <constraint firstItem="tQq-fa-zTS" firstAttribute="top" secondItem="p1S-mV-Cb1" secondAttribute="top" constant="20" id="fV9-qo-xrG"/>
                                     <constraint firstAttribute="bottom" secondItem="5at-G9-eBH" secondAttribute="bottom" id="moZ-M0-oFU"/>
                                     <constraint firstAttribute="trailing" secondItem="oVf-3k-T0H" secondAttribute="trailing" constant="17" id="oH2-lW-Nj9"/>
                                     <constraint firstItem="5at-G9-eBH" firstAttribute="top" secondItem="oVf-3k-T0H" secondAttribute="bottom" constant="15" id="y8Z-sL-Uy5"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="BEh-Tf-OnB"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <constraints>
@@ -198,7 +206,8 @@
                                         <rect key="frame" x="0.0" y="225" width="315" height="260"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="250" id="aWU-pp-WjB"/>
-                                            <constraint firstAttribute="height" constant="260" id="e4v-zu-q7J"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="260" id="e4v-zu-q7J"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="pH6-cj-0O6"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -206,8 +215,8 @@
                                             </mask>
                                         </variation>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N’importe où, n’importe quand." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PgX-qO-U6N">
-                                        <rect key="frame" x="9" y="30" width="298" height="39"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N’importe où, n’importe quand." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="PgX-qO-U6N">
+                                        <rect key="frame" x="15" y="30" width="285" height="39"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="135" id="2rW-YX-mQa"/>
                                             <constraint firstAttribute="height" constant="39" id="cmv-9l-bs8"/>
@@ -221,7 +230,7 @@
                                             </mask>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vos cours sont accessibles hors connexion et votre état d’avancement est synchronisé sur tous vos devices. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jLR-Hx-x13">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vos cours sont accessibles hors connexion et votre état d’avancement est synchronisé sur tous vos devices. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="jLR-Hx-x13">
                                         <rect key="frame" x="17" y="89" width="281" height="121"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                         <color key="textColor" red="0.74901962280273438" green="0.74901962280273438" blue="0.76470589637756348" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -232,6 +241,7 @@
                                 <constraints>
                                     <constraint firstItem="jLR-Hx-x13" firstAttribute="top" secondItem="PgX-qO-U6N" secondAttribute="bottom" constant="20" id="1yL-Y3-3KZ"/>
                                     <constraint firstAttribute="trailing" secondItem="PgX-qO-U6N" secondAttribute="trailing" constant="90" id="Etk-zt-NFS"/>
+                                    <constraint firstItem="dcC-Dy-jgY" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jLR-Hx-x13" secondAttribute="bottom" constant="2" id="KUb-Mv-6cM"/>
                                     <constraint firstAttribute="trailing" secondItem="jLR-Hx-x13" secondAttribute="trailing" constant="17" id="NUO-za-VKE"/>
                                     <constraint firstItem="PgX-qO-U6N" firstAttribute="leading" secondItem="6qe-ml-dhN" secondAttribute="leading" constant="90" id="RnT-iT-XHq"/>
                                     <constraint firstItem="dcC-Dy-jgY" firstAttribute="top" secondItem="jLR-Hx-x13" secondAttribute="bottom" constant="30" id="WXV-oV-pSh"/>
@@ -239,14 +249,17 @@
                                     <constraint firstItem="PgX-qO-U6N" firstAttribute="top" secondItem="6qe-ml-dhN" secondAttribute="top" constant="30" id="dAA-aG-3ec"/>
                                     <constraint firstItem="PgX-qO-U6N" firstAttribute="centerX" secondItem="6qe-ml-dhN" secondAttribute="centerX" id="kEK-au-gja"/>
                                     <constraint firstAttribute="trailing" secondItem="dcC-Dy-jgY" secondAttribute="trailing" id="ncw-n8-fsx"/>
-                                    <constraint firstItem="dcC-Dy-jgY" firstAttribute="top" secondItem="jLR-Hx-x13" secondAttribute="bottom" constant="15" id="oCv-aM-bh1"/>
+                                    <constraint firstItem="dcC-Dy-jgY" firstAttribute="top" relation="lessThanOrEqual" secondItem="jLR-Hx-x13" secondAttribute="bottom" constant="15" id="oCv-aM-bh1"/>
                                     <constraint firstAttribute="bottom" secondItem="dcC-Dy-jgY" secondAttribute="bottom" id="seu-1c-c77"/>
+                                    <constraint firstItem="PgX-qO-U6N" firstAttribute="leading" secondItem="6qe-ml-dhN" secondAttribute="leading" constant="15" id="uA2-9v-0MR"/>
                                     <constraint firstItem="dcC-Dy-jgY" firstAttribute="leading" secondItem="6qe-ml-dhN" secondAttribute="leading" id="uPE-yO-FHD"/>
+                                    <constraint firstAttribute="trailing" secondItem="PgX-qO-U6N" secondAttribute="trailing" constant="15" id="znG-40-WiR"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="Etk-zt-NFS"/>
                                         <exclude reference="RnT-iT-XHq"/>
+                                        <exclude reference="kEK-au-gja"/>
                                         <exclude reference="WXV-oV-pSh"/>
                                     </mask>
                                 </variation>
@@ -279,7 +292,7 @@
         <!--Custom Walkthrough Page View Controller-->
         <scene sceneID="ykS-So-GfJ">
             <objects>
-                <viewController storyboardIdentifier="walkthrough3" id="2So-ui-fvv" customClass="CustomWalkthroughPageViewController" customModule="Openclassroom" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="walkthrough3" id="2So-ui-fvv" customClass="CustomWalkthroughPageViewController" customModule="Openclassrooms" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aGz-iw-5nu"/>
                         <viewControllerLayoutGuide type="bottom" id="0mN-ed-Pzh"/>
@@ -295,7 +308,7 @@
                                     <constraint firstAttribute="height" constant="41" id="W3J-Hh-hLp"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
-                                <state key="normal" title="Inscription">
+                                <state key="normal" title="Suivant">
                                     <color key="titleColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -305,8 +318,21 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mav-hu-QhH">
                                 <rect key="frame" x="30" y="101" width="315" height="485"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Les meilleurs cours du Web." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KgF-qi-eFN">
-                                        <rect key="frame" x="23" y="30" width="269" height="39"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboarding3" translatesAutoresizingMaskIntoConstraints="NO" id="pur-e0-Et3">
+                                        <rect key="frame" x="0.0" y="225" width="315" height="260"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="XYq-lZ-AHS"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="260" id="sj4-1t-CHu"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Des centaines de cours OpenClassrooms n’atttendent plus que vous !" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="2vi-Aw-7cd">
+                                        <rect key="frame" x="19" y="89" width="277" height="126"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                        <color key="textColor" red="0.74901962280273438" green="0.74901962280273438" blue="0.76470589637756348" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Les meilleurs cours du Web." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="KgF-qi-eFN">
+                                        <rect key="frame" x="15" y="30" width="285" height="39"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="39" id="tdr-N5-yep"/>
                                             <constraint firstAttribute="width" constant="131" id="tyO-om-U93"/>
@@ -320,37 +346,34 @@
                                             </mask>
                                         </variation>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboarding3" translatesAutoresizingMaskIntoConstraints="NO" id="pur-e0-Et3">
-                                        <rect key="frame" x="0.0" y="225" width="315" height="260"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="260" id="sj4-1t-CHu"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Des centaines de cours OpenClassrooms n’atttendent plus que vous !" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2vi-Aw-7cd">
-                                        <rect key="frame" x="19" y="89" width="277" height="121"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
-                                        <color key="textColor" red="0.74901962280273438" green="0.74901962280273438" blue="0.76470589637756348" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="pur-e0-Et3" firstAttribute="top" secondItem="2vi-Aw-7cd" secondAttribute="bottom" constant="15" id="7fY-W7-XK1"/>
+                                    <constraint firstItem="2vi-Aw-7cd" firstAttribute="top" relation="greaterThanOrEqual" secondItem="KgF-qi-eFN" secondAttribute="bottom" constant="2" id="0kq-B8-qPP"/>
+                                    <constraint firstItem="pur-e0-Et3" firstAttribute="top" relation="greaterThanOrEqual" secondItem="2vi-Aw-7cd" secondAttribute="bottom" constant="15" id="7fY-W7-XK1"/>
                                     <constraint firstItem="pur-e0-Et3" firstAttribute="leading" secondItem="mav-hu-QhH" secondAttribute="leading" id="7yn-pD-tZx"/>
+                                    <constraint firstItem="pur-e0-Et3" firstAttribute="top" secondItem="2vi-Aw-7cd" secondAttribute="bottom" constant="10" id="IZA-vS-Bga"/>
                                     <constraint firstItem="2vi-Aw-7cd" firstAttribute="leading" secondItem="mav-hu-QhH" secondAttribute="leading" constant="19" id="NqI-XH-HhU"/>
                                     <constraint firstAttribute="bottom" secondItem="pur-e0-Et3" secondAttribute="bottom" id="P9a-oc-1UO"/>
+                                    <constraint firstItem="pur-e0-Et3" firstAttribute="top" relation="greaterThanOrEqual" secondItem="2vi-Aw-7cd" secondAttribute="bottom" constant="2" id="U1O-Lq-WSe"/>
+                                    <constraint firstAttribute="trailing" secondItem="KgF-qi-eFN" secondAttribute="trailing" constant="15" id="WNW-Wb-1a6"/>
                                     <constraint firstItem="KgF-qi-eFN" firstAttribute="centerX" secondItem="mav-hu-QhH" secondAttribute="centerX" id="Xb3-Wh-FUF"/>
-                                    <constraint firstItem="2vi-Aw-7cd" firstAttribute="top" secondItem="KgF-qi-eFN" secondAttribute="bottom" constant="20" id="ZKW-VR-2cS"/>
+                                    <constraint firstItem="2vi-Aw-7cd" firstAttribute="top" relation="lessThanOrEqual" secondItem="KgF-qi-eFN" secondAttribute="bottom" constant="20" id="ZKW-VR-2cS"/>
+                                    <constraint firstItem="KgF-qi-eFN" firstAttribute="leading" secondItem="mav-hu-QhH" secondAttribute="leading" constant="15" id="l4d-4r-vvd"/>
                                     <constraint firstAttribute="trailing" secondItem="KgF-qi-eFN" secondAttribute="trailing" constant="92" id="oWN-A6-5xu"/>
                                     <constraint firstItem="KgF-qi-eFN" firstAttribute="top" secondItem="mav-hu-QhH" secondAttribute="top" constant="30" id="pI5-6G-OrI"/>
                                     <constraint firstAttribute="trailing" secondItem="pur-e0-Et3" secondAttribute="trailing" id="qzG-d6-onP"/>
+                                    <constraint firstItem="2vi-Aw-7cd" firstAttribute="top" secondItem="KgF-qi-eFN" secondAttribute="bottom" priority="250" constant="20" id="tT5-qn-Pwf"/>
                                     <constraint firstAttribute="trailing" secondItem="2vi-Aw-7cd" secondAttribute="trailing" constant="19" id="ttC-rC-vlQ"/>
                                     <constraint firstItem="KgF-qi-eFN" firstAttribute="leading" secondItem="mav-hu-QhH" secondAttribute="leading" constant="92" id="uRF-1g-NJd"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="Xb3-Wh-FUF"/>
                                         <exclude reference="oWN-A6-5xu"/>
                                         <exclude reference="uRF-1g-NJd"/>
+                                        <exclude reference="7fY-W7-XK1"/>
+                                        <exclude reference="U1O-Lq-WSe"/>
                                     </mask>
                                 </variation>
                             </view>

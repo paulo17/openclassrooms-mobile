@@ -53,7 +53,7 @@ class CardViewController: MainCardViewController, UICollectionViewDelegate, UICo
         let todayCards = getStaticLecons()
         
         let firstCard = Card(id: 0, title: "Jour 1 sur 20", time: 0, type: .None, cardType: .Start)
-        firstCard.subtitle = "Vous avez \(todayCards.count) cours aujourd'hui"
+        firstCard.subtitle = "Vous avez \(todayCards.count) chapitres aujourd'hui"
         
         let lastCard = Card(id: todayCards.count + 1, title: "Journée non terminée", time: 0, type: .None, cardType: .Finish)
         
