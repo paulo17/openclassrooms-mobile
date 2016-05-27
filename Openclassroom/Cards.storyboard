@@ -280,6 +280,9 @@
                                 <state key="normal" title="CHANGER D’OBJECTIF">
                                     <color key="titleColor" red="0.9529411793" green="0.58431375029999999" blue="0.22352941330000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="changeObjective:" destination="OeL-1e-wlI" eventType="touchUpInside" id="3UO-iy-kSy"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comprendre le web" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rzS-po-HYv">
                                 <rect key="frame" x="36" y="322" width="303" height="20"/>

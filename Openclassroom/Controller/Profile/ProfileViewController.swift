@@ -11,6 +11,7 @@ import UIKit
 class ProfileViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     // MARK: - IB Outlets
+    
     @IBOutlet weak var navigationBar: UINavigationBar!
     
     @IBOutlet weak var headerView: UIView!
@@ -99,6 +100,15 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         cell.objective = objective
         
         return cell
+    }
+    
+    // MARK: - IB Actions
+    
+    @IBAction func changeObjective(sender: AnyObject) {
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let parameterViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ParameterViewController")
+        
+        self.presentViewController(parameterViewController, animated: true, completion: nil)
     }
     
 }
