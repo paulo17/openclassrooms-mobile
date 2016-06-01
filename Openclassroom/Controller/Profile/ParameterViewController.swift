@@ -8,11 +8,15 @@
 
 import UIKit
 
+// MARK: - ParameterView Delegate
+
 protocol ParameterViewDelegate: class {
     func changeProfileParameter(parameterType: String)
 }
 
 class ParameterViewController: UIViewController, ParameterViewDelegate {
+    
+    // MARK: - IB Outlets
     
     @IBOutlet weak var objectiveView: ParameterView!
     @IBOutlet weak var dayView: ParameterView!
@@ -20,6 +24,8 @@ class ParameterViewController: UIViewController, ParameterViewDelegate {
     @IBOutlet weak var validateButton: UIButton!
     
     var objective: Objective?
+    
+    // MARK: - UI Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,8 +42,19 @@ class ParameterViewController: UIViewController, ParameterViewDelegate {
         showUserParemeters()
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.title = "Paramètres de l'objectif"
+        self.navigationItem.setHidesBackButton(true, animated: true)
+    }
+    
+    // MARK: - UI Setup
+    
     func showUserParemeters() {
-        objectiveView.content.text = DataContainer.sharedDataContainer.currentUser.category
+        if let objective = DataContainer.sharedDataContainer.currentUser.objective {
+            objectiveView.content.text = objective
+        }
         
         if let days = DataContainer.sharedDataContainer.currentUser.daysOfWeek {
             dayView.content.text = Days.humanReadable(days)
@@ -50,13 +67,6 @@ class ParameterViewController: UIViewController, ParameterViewDelegate {
     
     func setUI() {
         validateButton.OCborderButton(UIColor.OCDustyOrangeColor())
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        self.title = "Paramètres de l'objectif"
-        self.navigationItem.setHidesBackButton(true, animated: true)
     }
     
     // MARK: - ParameterView Delegate

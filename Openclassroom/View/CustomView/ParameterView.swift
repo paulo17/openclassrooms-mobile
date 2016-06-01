@@ -10,6 +10,8 @@ import UIKit
 
 class ParameterView: UIView {
     
+    // MARK: - IB Outlet
+    
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var content: UILabel!
     @IBOutlet weak var button: UIButton!
@@ -18,10 +20,20 @@ class ParameterView: UIView {
     
     weak var delegate: ParameterViewDelegate?
     
+    // MARK: - UI Lifecycle
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
         setUI()
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        self.content.numberOfLines = 0
+        self.content.adjustsFontSizeToFitWidth = true
+        self.content.minimumScaleFactor = 0.5
     }
     
     // MARK: - UI

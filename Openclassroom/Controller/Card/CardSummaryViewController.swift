@@ -40,6 +40,7 @@ class CardSummaryViewController: UIViewController, UITableViewDataSource, UITabl
         objectiveSummaryTableView.tableFooterView?.hidden = true
         
         self.addNavigationBar()
+        self.navigationBar.topItem?.title = "Avancement des étapes"
     }
     
     override func viewWillAppear(animated: Bool) {

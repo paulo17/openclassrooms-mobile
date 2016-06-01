@@ -11,9 +11,8 @@ import Cartography
 
 class StartCell: AbstractCard, CardProtocol {
     
-    /**
-     * Card Protocol fields
-     **/
+    // MARK: - Card Protocol fields
+    
     lazy var title: UILabel! = UILabel()
     lazy var subtitle: UILabel! = UILabel()
     lazy var percentage: UILabel! = UILabel()
@@ -31,6 +30,8 @@ class StartCell: AbstractCard, CardProtocol {
     static func cellIdentifier() -> String {
         return "StartCell"
     }
+    
+    // MARK: - UI Lifecycle
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -107,11 +108,12 @@ class StartCell: AbstractCard, CardProtocol {
     }
     
     private func setupNextButton() {
-        startButton.setTitle("Suivant", forState: .Normal)
+        startButton.setTitle("Commencer", forState: .Normal)
         startButton.setTitleColor(UIColor.OCDustyOrangeColor(), forState: .Normal)
         startButton.titleLabel?.textAlignment = .Center
         startButton.titleLabel?.font = UIFont.systemFontOfSize(14.0)
         startButton.OCdefaultButton(UIColor.whiteColor())
+        startButton.setTitleColor(UIColor.OCSilverColor(), forState: .Highlighted)
         startButton.addTarget(self, action: #selector(StartCell.start), forControlEvents: .TouchUpInside)
     }
     
