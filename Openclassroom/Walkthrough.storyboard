@@ -8,7 +8,7 @@
         <!--Expand Navigation Controller-->
         <scene sceneID="qRD-0Q-xtb">
             <objects>
-                <navigationController storyboardIdentifier="WalkthroughNavigationController" id="hEh-Cm-bGe" customClass="OCExpandNavigationController" customModule="Openclassrooms" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="WalkthroughNavigationController" id="hEh-Cm-bGe" customClass="OCExpandNavigationController" customModule="OpenClassrooms" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rKb-qu-EJD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -25,7 +25,7 @@
         <!--Onboarding View Controller-->
         <scene sceneID="VTW-Yj-0ga">
             <objects>
-                <viewController storyboardIdentifier="walkthrough_master" id="R6f-J0-OkJ" customClass="OCOnboardingViewController" customModule="Openclassrooms" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="walkthrough_master" id="R6f-J0-OkJ" customClass="OCOnboardingViewController" customModule="OpenClassrooms" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="T0W-h7-M5S"/>
                         <viewControllerLayoutGuide type="bottom" id="8cg-TR-BpX"/>
@@ -292,7 +292,7 @@
         <!--Custom Walkthrough Page View Controller-->
         <scene sceneID="ykS-So-GfJ">
             <objects>
-                <viewController storyboardIdentifier="walkthrough3" id="2So-ui-fvv" customClass="CustomWalkthroughPageViewController" customModule="Openclassrooms" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="walkthrough3" id="2So-ui-fvv" customClass="CustomWalkthroughPageViewController" customModule="OpenClassrooms" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aGz-iw-5nu"/>
                         <viewControllerLayoutGuide type="bottom" id="0mN-ed-Pzh"/>

@@ -130,7 +130,7 @@
 		6BE8D07C1CB5444B000D3243 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		6BE8D07E1CB54494000D3243 /* AbstractCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractCard.swift; sourceTree = "<group>"; };
 		6BEAA7181C5FBCB80043BEA2 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6BF23A981C5FAE94001B1006 /* Openclassrooms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Openclassrooms.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BF23A981C5FAE94001B1006 /* OpenClassrooms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenClassrooms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BF23A9B1C5FAE94001B1006 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BF23AA01C5FAE94001B1006 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6BF23AA21C5FAE94001B1006 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -387,7 +387,7 @@
 		6BF23A991C5FAE94001B1006 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6BF23A981C5FAE94001B1006 /* Openclassrooms.app */,
+				6BF23A981C5FAE94001B1006 /* OpenClassrooms.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -424,9 +424,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6BF23A971C5FAE94001B1006 /* Openclassrooms */ = {
+		6BF23A971C5FAE94001B1006 /* OpenClassrooms */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6BF23AAA1C5FAE94001B1006 /* Build configuration list for PBXNativeTarget "Openclassrooms" */;
+			buildConfigurationList = 6BF23AAA1C5FAE94001B1006 /* Build configuration list for PBXNativeTarget "OpenClassrooms" */;
 			buildPhases = (
 				7F7ED0B7A3E3F848E7C9F0E1 /* Check Pods Manifest.lock */,
 				6BF23A941C5FAE94001B1006 /* Sources */,
@@ -441,9 +441,9 @@
 			);
 			dependencies = (
 			);
-			name = Openclassrooms;
+			name = OpenClassrooms;
 			productName = Openclassroom;
-			productReference = 6BF23A981C5FAE94001B1006 /* Openclassrooms.app */;
+			productReference = 6BF23A981C5FAE94001B1006 /* OpenClassrooms.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -462,7 +462,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6BF23A931C5FAE94001B1006 /* Build configuration list for PBXProject "Openclassrooms" */;
+			buildConfigurationList = 6BF23A931C5FAE94001B1006 /* Build configuration list for PBXProject "OpenClassrooms" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -475,7 +475,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6BF23A971C5FAE94001B1006 /* Openclassrooms */,
+				6BF23A971C5FAE94001B1006 /* OpenClassrooms */,
 			);
 		};
 /* End PBXProject section */
@@ -752,7 +752,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.hetic.Openclassroom;
-				PRODUCT_NAME = Openclassrooms;
+				PRODUCT_NAME = OpenClassrooms;
 			};
 			name = Debug;
 		};
@@ -771,14 +771,14 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.hetic.Openclassroom;
-				PRODUCT_NAME = Openclassrooms;
+				PRODUCT_NAME = OpenClassrooms;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6BF23A931C5FAE94001B1006 /* Build configuration list for PBXProject "Openclassrooms" */ = {
+		6BF23A931C5FAE94001B1006 /* Build configuration list for PBXProject "OpenClassrooms" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6BF23AA81C5FAE94001B1006 /* Debug */,
@@ -787,7 +787,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6BF23AAA1C5FAE94001B1006 /* Build configuration list for PBXNativeTarget "Openclassrooms" */ = {
+		6BF23AAA1C5FAE94001B1006 /* Build configuration list for PBXNativeTarget "OpenClassrooms" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6BF23AAB1C5FAE94001B1006 /* Debug */,
